@@ -12,6 +12,7 @@
     ],
     "homepage": "https://github.com/Crypto-APIs/Crypto_APIs_2.0_SDK_PHP#readme",
     "license": "MIT",
+    "type": "library",
     "authors": [
         {
             "name": "CryptoAPIs",
