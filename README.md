@@ -660,7 +660,7 @@ vendor/bin/phpunit
 
 ## Author
 
-bizdev@cryptoapis.io
+developers@cryptoapis.io
 
 ## About this package
 
