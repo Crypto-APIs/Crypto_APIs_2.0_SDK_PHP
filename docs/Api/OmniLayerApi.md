@@ -1,4 +1,4 @@
-# OpenAPI\Client\OmniLayerApi
+# CryptoAPIs\OmniLayerApi
 
 All URIs are relative to https://rest.cryptoapis.io/v2.
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 ## `getOmniTransactionDetailsByTransactionIDTxid()`
 
 ```php
-getOmniTransactionDetailsByTransactionIDTxid($network, $blockchain, $transaction_id, $context): \OpenAPI\Client\Model\GetOmniTransactionDetailsByTransactionIDTxidResponse
+getOmniTransactionDetailsByTransactionIDTxid($network, $blockchain, $transaction_id, $context): \CryptoAPIs\Model\GetOmniTransactionDetailsByTransactionIDTxidR
 ```
 
 Get Omni Transaction Details By Transaction ID (Txid)
@@ -32,12 +32,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OmniLayerApi(
+$apiInstance = new CryptoAPIs\Api\OmniLayerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetOmniTransactionDetailsByTransactionIDTxidResponse**](../Model/GetOmniTransactionDetailsByTransactionIDTxidResponse.md)
+[**\CryptoAPIs\Model\GetOmniTransactionDetailsByTransactionIDTxidR**](../Model/GetOmniTransactionDetailsByTransactionIDTxidR.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 ## `getUnconfirmedOmniTransactionByTransactionIDTxid()`
 
 ```php
-getUnconfirmedOmniTransactionByTransactionIDTxid($network, $blockchain, $transaction_id, $context): \OpenAPI\Client\Model\GetUnconfirmedOmniTransactionByTransactionIDTxidResponse
+getUnconfirmedOmniTransactionByTransactionIDTxid($network, $blockchain, $transaction_id, $context): \CryptoAPIs\Model\GetUnconfirmedOmniTransactionByTransactionIDTxidR
 ```
 
 Get Unconfirmed Omni Transaction By Transaction ID (Txid)
@@ -100,12 +100,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OmniLayerApi(
+$apiInstance = new CryptoAPIs\Api\OmniLayerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetUnconfirmedOmniTransactionByTransactionIDTxidResponse**](../Model/GetUnconfirmedOmniTransactionByTransactionIDTxidResponse.md)
+[**\CryptoAPIs\Model\GetUnconfirmedOmniTransactionByTransactionIDTxidR**](../Model/GetUnconfirmedOmniTransactionByTransactionIDTxidR.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 ## `listOmniTokensByAddress()`
 
 ```php
-listOmniTokensByAddress($network, $blockchain, $address, $context): \OpenAPI\Client\Model\ListOmniTokensByAddressResponse
+listOmniTokensByAddress($network, $blockchain, $address, $context): \CryptoAPIs\Model\ListOmniTokensByAddressR
 ```
 
 List Omni Tokens By Address
@@ -168,12 +168,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OmniLayerApi(
+$apiInstance = new CryptoAPIs\Api\OmniLayerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListOmniTokensByAddressResponse**](../Model/ListOmniTokensByAddressResponse.md)
+[**\CryptoAPIs\Model\ListOmniTokensByAddressR**](../Model/ListOmniTokensByAddressR.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 ## `listOmniTransactionsByAddress()`
 
 ```php
-listOmniTransactionsByAddress($network, $blockchain, $address, $context, $limit, $offset): \OpenAPI\Client\Model\ListOmniTransactionsByAddressResponse
+listOmniTransactionsByAddress($network, $blockchain, $address, $context, $limit, $offset): \CryptoAPIs\Model\ListOmniTransactionsByAddressR
 ```
 
 List Omni Transactions By Address
@@ -236,12 +236,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OmniLayerApi(
+$apiInstance = new CryptoAPIs\Api\OmniLayerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListOmniTransactionsByAddressResponse**](../Model/ListOmniTransactionsByAddressResponse.md)
+[**\CryptoAPIs\Model\ListOmniTransactionsByAddressR**](../Model/ListOmniTransactionsByAddressR.md)
 
 ### Authorization
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 ## `listOmniTransactionsByBlockHash()`
 
 ```php
-listOmniTransactionsByBlockHash($network, $blockchain, $block_hash, $context, $limit, $offset): \OpenAPI\Client\Model\ListOmniTransactionsByBlockHashResponse
+listOmniTransactionsByBlockHash($network, $blockchain, $block_hash, $context, $limit, $offset): \CryptoAPIs\Model\ListOmniTransactionsByBlockHashR
 ```
 
 List Omni Transactions By Block Hash
@@ -308,12 +308,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OmniLayerApi(
+$apiInstance = new CryptoAPIs\Api\OmniLayerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -347,7 +347,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListOmniTransactionsByBlockHashResponse**](../Model/ListOmniTransactionsByBlockHashResponse.md)
+[**\CryptoAPIs\Model\ListOmniTransactionsByBlockHashR**](../Model/ListOmniTransactionsByBlockHashR.md)
 
 ### Authorization
 
@@ -365,7 +365,7 @@ Name | Type | Description  | Notes
 ## `listOmniTransactionsByBlockHeight()`
 
 ```php
-listOmniTransactionsByBlockHeight($network, $blockchain, $block_height, $context, $limit, $offset): \OpenAPI\Client\Model\ListOmniTransactionsByBlockHeightResponse
+listOmniTransactionsByBlockHeight($network, $blockchain, $block_height, $context, $limit, $offset): \CryptoAPIs\Model\ListOmniTransactionsByBlockHeightR
 ```
 
 List Omni Transactions By Block Height
@@ -380,12 +380,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OmniLayerApi(
+$apiInstance = new CryptoAPIs\Api\OmniLayerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -419,7 +419,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListOmniTransactionsByBlockHeightResponse**](../Model/ListOmniTransactionsByBlockHeightResponse.md)
+[**\CryptoAPIs\Model\ListOmniTransactionsByBlockHeightR**](../Model/ListOmniTransactionsByBlockHeightR.md)
 
 ### Authorization
 
@@ -437,7 +437,7 @@ Name | Type | Description  | Notes
 ## `listUnconfirmedOmniTransactionsByAddress()`
 
 ```php
-listUnconfirmedOmniTransactionsByAddress($network, $blockchain, $address, $context, $limit, $offset): \OpenAPI\Client\Model\ListUnconfirmedOmniTransactionsByAddressResponse
+listUnconfirmedOmniTransactionsByAddress($network, $blockchain, $address, $context, $limit, $offset): \CryptoAPIs\Model\ListUnconfirmedOmniTransactionsByAddressR
 ```
 
 List Unconfirmed Omni Transactions By Address
@@ -452,12 +452,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OmniLayerApi(
+$apiInstance = new CryptoAPIs\Api\OmniLayerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -491,7 +491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListUnconfirmedOmniTransactionsByAddressResponse**](../Model/ListUnconfirmedOmniTransactionsByAddressResponse.md)
+[**\CryptoAPIs\Model\ListUnconfirmedOmniTransactionsByAddressR**](../Model/ListUnconfirmedOmniTransactionsByAddressR.md)
 
 ### Authorization
 
@@ -509,7 +509,7 @@ Name | Type | Description  | Notes
 ## `listUnconfirmedOmniTransactionsByPropertyID()`
 
 ```php
-listUnconfirmedOmniTransactionsByPropertyID($network, $blockchain, $property_id, $context, $limit, $offset): \OpenAPI\Client\Model\ListUnconfirmedOmniTransactionsByPropertyIDResponse
+listUnconfirmedOmniTransactionsByPropertyID($network, $blockchain, $property_id, $context, $limit, $offset): \CryptoAPIs\Model\ListUnconfirmedOmniTransactionsByPropertyIDR
 ```
 
 List Unconfirmed Omni Transactions By Property ID
@@ -524,12 +524,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OmniLayerApi(
+$apiInstance = new CryptoAPIs\Api\OmniLayerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -563,7 +563,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListUnconfirmedOmniTransactionsByPropertyIDResponse**](../Model/ListUnconfirmedOmniTransactionsByPropertyIDResponse.md)
+[**\CryptoAPIs\Model\ListUnconfirmedOmniTransactionsByPropertyIDR**](../Model/ListUnconfirmedOmniTransactionsByPropertyIDR.md)
 
 ### Authorization
 

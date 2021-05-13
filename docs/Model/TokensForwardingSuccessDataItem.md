@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **trigger_transaction_id** | **string** | Defines the unique Transaction ID that triggered the token forwarding. |
 **forwarding_transaction_id** | **string** | Defines the unique Transaction ID that forwarded the tokens. |
 **token_type** | **string** | Defines the type of token sent with the transaction, e.g. ERC 20. |
-**token** | [**\OpenAPI\Client\Model\TokensForwardingSuccessToken**](TokensForwardingSuccessToken.md) |  |
+**token** | [**\CryptoAPIs\Model\TokensForwardingSuccessToken**](TokensForwardingSuccessToken.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

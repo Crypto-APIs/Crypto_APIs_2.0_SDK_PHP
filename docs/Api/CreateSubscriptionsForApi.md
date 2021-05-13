@@ -1,4 +1,4 @@
-# OpenAPI\Client\CreateSubscriptionsForApi
+# CryptoAPIs\CreateSubscriptionsForApi
 
 All URIs are relative to https://rest.cryptoapis.io/v2.
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 ## `minedTransaction()`
 
 ```php
-minedTransaction($blockchain, $network, $context, $mined_transaction_request_body): \OpenAPI\Client\Model\MinedTransactionResponse
+minedTransaction($blockchain, $network, $context, $mined_transaction_rb): \CryptoAPIs\Model\MinedTransactionR
 ```
 
 Mined transaction
@@ -32,12 +32,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
+$apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -46,10 +46,10 @@ $apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-$mined_transaction_request_body = new \OpenAPI\Client\Model\MinedTransactionRequestBody(); // \OpenAPI\Client\Model\MinedTransactionRequestBody
+$mined_transaction_rb = new \CryptoAPIs\Model\MinedTransactionRB(); // \CryptoAPIs\Model\MinedTransactionRB
 
 try {
-    $result = $apiInstance->minedTransaction($blockchain, $network, $context, $mined_transaction_request_body);
+    $result = $apiInstance->minedTransaction($blockchain, $network, $context, $mined_transaction_rb);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CreateSubscriptionsForApi->minedTransaction: ', $e->getMessage(), PHP_EOL;
@@ -63,11 +63,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
- **mined_transaction_request_body** | [**\OpenAPI\Client\Model\MinedTransactionRequestBody**](../Model/MinedTransactionRequestBody.md)|  | [optional]
+ **mined_transaction_rb** | [**\CryptoAPIs\Model\MinedTransactionRB**](../Model/MinedTransactionRB.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MinedTransactionResponse**](../Model/MinedTransactionResponse.md)
+[**\CryptoAPIs\Model\MinedTransactionR**](../Model/MinedTransactionR.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 ## `newBlock()`
 
 ```php
-newBlock($blockchain, $network, $context, $new_block_request_body): \OpenAPI\Client\Model\NewBlockResponse
+newBlock($blockchain, $network, $context, $new_block_rb): \CryptoAPIs\Model\NewBlockR
 ```
 
 New Block
@@ -100,12 +100,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
+$apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -114,10 +114,10 @@ $apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-$new_block_request_body = new \OpenAPI\Client\Model\NewBlockRequestBody(); // \OpenAPI\Client\Model\NewBlockRequestBody
+$new_block_rb = new \CryptoAPIs\Model\NewBlockRB(); // \CryptoAPIs\Model\NewBlockRB
 
 try {
-    $result = $apiInstance->newBlock($blockchain, $network, $context, $new_block_request_body);
+    $result = $apiInstance->newBlock($blockchain, $network, $context, $new_block_rb);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CreateSubscriptionsForApi->newBlock: ', $e->getMessage(), PHP_EOL;
@@ -131,11 +131,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
- **new_block_request_body** | [**\OpenAPI\Client\Model\NewBlockRequestBody**](../Model/NewBlockRequestBody.md)|  | [optional]
+ **new_block_rb** | [**\CryptoAPIs\Model\NewBlockRB**](../Model/NewBlockRB.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NewBlockResponse**](../Model/NewBlockResponse.md)
+[**\CryptoAPIs\Model\NewBlockR**](../Model/NewBlockR.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 ## `newConfirmedCoinsTransactions()`
 
 ```php
-newConfirmedCoinsTransactions($blockchain, $network, $context, $new_confirmed_coins_transactions_request_body): \OpenAPI\Client\Model\NewConfirmedCoinsTransactionsResponse
+newConfirmedCoinsTransactions($blockchain, $network, $context, $new_confirmed_coins_transactions_rb): \CryptoAPIs\Model\NewConfirmedCoinsTransactionsR
 ```
 
 New confirmed coins transactions
@@ -168,12 +168,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
+$apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -182,10 +182,10 @@ $apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-$new_confirmed_coins_transactions_request_body = new \OpenAPI\Client\Model\NewConfirmedCoinsTransactionsRequestBody(); // \OpenAPI\Client\Model\NewConfirmedCoinsTransactionsRequestBody
+$new_confirmed_coins_transactions_rb = new \CryptoAPIs\Model\NewConfirmedCoinsTransactionsRB(); // \CryptoAPIs\Model\NewConfirmedCoinsTransactionsRB
 
 try {
-    $result = $apiInstance->newConfirmedCoinsTransactions($blockchain, $network, $context, $new_confirmed_coins_transactions_request_body);
+    $result = $apiInstance->newConfirmedCoinsTransactions($blockchain, $network, $context, $new_confirmed_coins_transactions_rb);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CreateSubscriptionsForApi->newConfirmedCoinsTransactions: ', $e->getMessage(), PHP_EOL;
@@ -199,11 +199,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
- **new_confirmed_coins_transactions_request_body** | [**\OpenAPI\Client\Model\NewConfirmedCoinsTransactionsRequestBody**](../Model/NewConfirmedCoinsTransactionsRequestBody.md)|  | [optional]
+ **new_confirmed_coins_transactions_rb** | [**\CryptoAPIs\Model\NewConfirmedCoinsTransactionsRB**](../Model/NewConfirmedCoinsTransactionsRB.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NewConfirmedCoinsTransactionsResponse**](../Model/NewConfirmedCoinsTransactionsResponse.md)
+[**\CryptoAPIs\Model\NewConfirmedCoinsTransactionsR**](../Model/NewConfirmedCoinsTransactionsR.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 ## `newConfirmedCoinsTransactionsAndEachConfirmation()`
 
 ```php
-newConfirmedCoinsTransactionsAndEachConfirmation($blockchain, $network, $context, $new_confirmed_coins_transactions_and_each_confirmation_request_body): \OpenAPI\Client\Model\NewConfirmedCoinsTransactionsAndEachConfirmationResponse
+newConfirmedCoinsTransactionsAndEachConfirmation($blockchain, $network, $context, $new_confirmed_coins_transactions_and_each_confirmation_rb): \CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationR
 ```
 
 New confirmed coins transactions and each confirmation
@@ -236,12 +236,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
+$apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -250,10 +250,10 @@ $apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-$new_confirmed_coins_transactions_and_each_confirmation_request_body = new \OpenAPI\Client\Model\NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody(); // \OpenAPI\Client\Model\NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody
+$new_confirmed_coins_transactions_and_each_confirmation_rb = new \CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationRB(); // \CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationRB
 
 try {
-    $result = $apiInstance->newConfirmedCoinsTransactionsAndEachConfirmation($blockchain, $network, $context, $new_confirmed_coins_transactions_and_each_confirmation_request_body);
+    $result = $apiInstance->newConfirmedCoinsTransactionsAndEachConfirmation($blockchain, $network, $context, $new_confirmed_coins_transactions_and_each_confirmation_rb);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CreateSubscriptionsForApi->newConfirmedCoinsTransactionsAndEachConfirmation: ', $e->getMessage(), PHP_EOL;
@@ -267,11 +267,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
- **new_confirmed_coins_transactions_and_each_confirmation_request_body** | [**\OpenAPI\Client\Model\NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody**](../Model/NewConfirmedCoinsTransactionsAndEachConfirmationRequestBody.md)|  | [optional]
+ **new_confirmed_coins_transactions_and_each_confirmation_rb** | [**\CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationRB**](../Model/NewConfirmedCoinsTransactionsAndEachConfirmationRB.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NewConfirmedCoinsTransactionsAndEachConfirmationResponse**](../Model/NewConfirmedCoinsTransactionsAndEachConfirmationResponse.md)
+[**\CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationR**](../Model/NewConfirmedCoinsTransactionsAndEachConfirmationR.md)
 
 ### Authorization
 
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 ## `newConfirmedTokensTransactions()`
 
 ```php
-newConfirmedTokensTransactions($blockchain, $network, $context, $new_confirmed_tokens_transactions_request_body): \OpenAPI\Client\Model\NewConfirmedTokensTransactionsResponse
+newConfirmedTokensTransactions($blockchain, $network, $context, $new_confirmed_tokens_transactions_rb): \CryptoAPIs\Model\NewConfirmedTokensTransactionsR
 ```
 
 New confirmed tokens transactions
@@ -304,12 +304,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
+$apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -318,10 +318,10 @@ $apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-$new_confirmed_tokens_transactions_request_body = new \OpenAPI\Client\Model\NewConfirmedTokensTransactionsRequestBody(); // \OpenAPI\Client\Model\NewConfirmedTokensTransactionsRequestBody
+$new_confirmed_tokens_transactions_rb = new \CryptoAPIs\Model\NewConfirmedTokensTransactionsRB(); // \CryptoAPIs\Model\NewConfirmedTokensTransactionsRB
 
 try {
-    $result = $apiInstance->newConfirmedTokensTransactions($blockchain, $network, $context, $new_confirmed_tokens_transactions_request_body);
+    $result = $apiInstance->newConfirmedTokensTransactions($blockchain, $network, $context, $new_confirmed_tokens_transactions_rb);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CreateSubscriptionsForApi->newConfirmedTokensTransactions: ', $e->getMessage(), PHP_EOL;
@@ -335,11 +335,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
- **new_confirmed_tokens_transactions_request_body** | [**\OpenAPI\Client\Model\NewConfirmedTokensTransactionsRequestBody**](../Model/NewConfirmedTokensTransactionsRequestBody.md)|  | [optional]
+ **new_confirmed_tokens_transactions_rb** | [**\CryptoAPIs\Model\NewConfirmedTokensTransactionsRB**](../Model/NewConfirmedTokensTransactionsRB.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NewConfirmedTokensTransactionsResponse**](../Model/NewConfirmedTokensTransactionsResponse.md)
+[**\CryptoAPIs\Model\NewConfirmedTokensTransactionsR**](../Model/NewConfirmedTokensTransactionsR.md)
 
 ### Authorization
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 ## `newConfirmedTokensTransactionsAndEachConfirmation()`
 
 ```php
-newConfirmedTokensTransactionsAndEachConfirmation($blockchain, $network, $context, $new_confirmed_tokens_transactions_and_each_confirmation_request_body): \OpenAPI\Client\Model\NewConfirmedTokensTransactionsAndEachConfirmationResponse
+newConfirmedTokensTransactionsAndEachConfirmation($blockchain, $network, $context, $new_confirmed_tokens_transactions_and_each_confirmation_rb): \CryptoAPIs\Model\NewConfirmedTokensTransactionsAndEachConfirmationR
 ```
 
 New confirmed tokens transactions and each confirmation
@@ -372,12 +372,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
+$apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -386,10 +386,10 @@ $apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-$new_confirmed_tokens_transactions_and_each_confirmation_request_body = new \OpenAPI\Client\Model\NewConfirmedTokensTransactionsAndEachConfirmationRequestBody(); // \OpenAPI\Client\Model\NewConfirmedTokensTransactionsAndEachConfirmationRequestBody
+$new_confirmed_tokens_transactions_and_each_confirmation_rb = new \CryptoAPIs\Model\NewConfirmedTokensTransactionsAndEachConfirmationRB(); // \CryptoAPIs\Model\NewConfirmedTokensTransactionsAndEachConfirmationRB
 
 try {
-    $result = $apiInstance->newConfirmedTokensTransactionsAndEachConfirmation($blockchain, $network, $context, $new_confirmed_tokens_transactions_and_each_confirmation_request_body);
+    $result = $apiInstance->newConfirmedTokensTransactionsAndEachConfirmation($blockchain, $network, $context, $new_confirmed_tokens_transactions_and_each_confirmation_rb);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CreateSubscriptionsForApi->newConfirmedTokensTransactionsAndEachConfirmation: ', $e->getMessage(), PHP_EOL;
@@ -403,11 +403,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
- **new_confirmed_tokens_transactions_and_each_confirmation_request_body** | [**\OpenAPI\Client\Model\NewConfirmedTokensTransactionsAndEachConfirmationRequestBody**](../Model/NewConfirmedTokensTransactionsAndEachConfirmationRequestBody.md)|  | [optional]
+ **new_confirmed_tokens_transactions_and_each_confirmation_rb** | [**\CryptoAPIs\Model\NewConfirmedTokensTransactionsAndEachConfirmationRB**](../Model/NewConfirmedTokensTransactionsAndEachConfirmationRB.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NewConfirmedTokensTransactionsAndEachConfirmationResponse**](../Model/NewConfirmedTokensTransactionsAndEachConfirmationResponse.md)
+[**\CryptoAPIs\Model\NewConfirmedTokensTransactionsAndEachConfirmationR**](../Model/NewConfirmedTokensTransactionsAndEachConfirmationR.md)
 
 ### Authorization
 
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 ## `newUnconfirmedCoinsTransactions()`
 
 ```php
-newUnconfirmedCoinsTransactions($blockchain, $network, $context, $new_unconfirmed_coins_transactions_request_body): \OpenAPI\Client\Model\NewUnconfirmedCoinsTransactionsResponse
+newUnconfirmedCoinsTransactions($blockchain, $network, $context, $new_unconfirmed_coins_transactions_rb): \CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsR
 ```
 
 New unconfirmed coins transactions
@@ -440,12 +440,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
+$apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -454,10 +454,10 @@ $apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-$new_unconfirmed_coins_transactions_request_body = new \OpenAPI\Client\Model\NewUnconfirmedCoinsTransactionsRequestBody(); // \OpenAPI\Client\Model\NewUnconfirmedCoinsTransactionsRequestBody
+$new_unconfirmed_coins_transactions_rb = new \CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsRB(); // \CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsRB
 
 try {
-    $result = $apiInstance->newUnconfirmedCoinsTransactions($blockchain, $network, $context, $new_unconfirmed_coins_transactions_request_body);
+    $result = $apiInstance->newUnconfirmedCoinsTransactions($blockchain, $network, $context, $new_unconfirmed_coins_transactions_rb);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CreateSubscriptionsForApi->newUnconfirmedCoinsTransactions: ', $e->getMessage(), PHP_EOL;
@@ -471,11 +471,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
- **new_unconfirmed_coins_transactions_request_body** | [**\OpenAPI\Client\Model\NewUnconfirmedCoinsTransactionsRequestBody**](../Model/NewUnconfirmedCoinsTransactionsRequestBody.md)|  | [optional]
+ **new_unconfirmed_coins_transactions_rb** | [**\CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsRB**](../Model/NewUnconfirmedCoinsTransactionsRB.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NewUnconfirmedCoinsTransactionsResponse**](../Model/NewUnconfirmedCoinsTransactionsResponse.md)
+[**\CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsR**](../Model/NewUnconfirmedCoinsTransactionsR.md)
 
 ### Authorization
 
@@ -493,7 +493,7 @@ Name | Type | Description  | Notes
 ## `newUnconfirmedTokensTransactions()`
 
 ```php
-newUnconfirmedTokensTransactions($blockchain, $network, $context, $new_unconfirmed_tokens_transactions_request_body): \OpenAPI\Client\Model\NewUnconfirmedTokensTransactionsResponse
+newUnconfirmedTokensTransactions($blockchain, $network, $context, $new_unconfirmed_tokens_transactions_rb): \CryptoAPIs\Model\NewUnconfirmedTokensTransactionsR
 ```
 
 New unconfirmed tokens transactions
@@ -508,12 +508,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
+$apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -522,10 +522,10 @@ $apiInstance = new OpenAPI\Client\Api\CreateSubscriptionsForApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-$new_unconfirmed_tokens_transactions_request_body = new \OpenAPI\Client\Model\NewUnconfirmedTokensTransactionsRequestBody(); // \OpenAPI\Client\Model\NewUnconfirmedTokensTransactionsRequestBody
+$new_unconfirmed_tokens_transactions_rb = new \CryptoAPIs\Model\NewUnconfirmedTokensTransactionsRB(); // \CryptoAPIs\Model\NewUnconfirmedTokensTransactionsRB
 
 try {
-    $result = $apiInstance->newUnconfirmedTokensTransactions($blockchain, $network, $context, $new_unconfirmed_tokens_transactions_request_body);
+    $result = $apiInstance->newUnconfirmedTokensTransactions($blockchain, $network, $context, $new_unconfirmed_tokens_transactions_rb);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CreateSubscriptionsForApi->newUnconfirmedTokensTransactions: ', $e->getMessage(), PHP_EOL;
@@ -539,11 +539,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
- **new_unconfirmed_tokens_transactions_request_body** | [**\OpenAPI\Client\Model\NewUnconfirmedTokensTransactionsRequestBody**](../Model/NewUnconfirmedTokensTransactionsRequestBody.md)|  | [optional]
+ **new_unconfirmed_tokens_transactions_rb** | [**\CryptoAPIs\Model\NewUnconfirmedTokensTransactionsRB**](../Model/NewUnconfirmedTokensTransactionsRB.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NewUnconfirmedTokensTransactionsResponse**](../Model/NewUnconfirmedTokensTransactionsResponse.md)
+[**\CryptoAPIs\Model\NewUnconfirmedTokensTransactionsR**](../Model/NewUnconfirmedTokensTransactionsR.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# OpenAPI\Client\XRPRippleApi
+# CryptoAPIs\XRPRippleApi
 
 All URIs are relative to https://rest.cryptoapis.io/v2.
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 ## `getLatestMinedXRPRippleBlock()`
 
 ```php
-getLatestMinedXRPRippleBlock($network, $context): \OpenAPI\Client\Model\GetLatestMinedXRPRippleBlockResponse
+getLatestMinedXRPRippleBlock($network, $context): \CryptoAPIs\Model\GetLatestMinedXRPRippleBlockR
 ```
 
 Get Latest Mined XRP (Ripple) Block
@@ -31,12 +31,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\XRPRippleApi(
+$apiInstance = new CryptoAPIs\Api\XRPRippleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetLatestMinedXRPRippleBlockResponse**](../Model/GetLatestMinedXRPRippleBlockResponse.md)
+[**\CryptoAPIs\Model\GetLatestMinedXRPRippleBlockR**](../Model/GetLatestMinedXRPRippleBlockR.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 ## `getXRPRippleAddressDetails()`
 
 ```php
-getXRPRippleAddressDetails($network, $address, $context): \OpenAPI\Client\Model\GetXRPRippleAddressDetailsResponse
+getXRPRippleAddressDetails($network, $address, $context): \CryptoAPIs\Model\GetXRPRippleAddressDetailsR
 ```
 
 Get XRP (Ripple) Address Details
@@ -95,12 +95,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\XRPRippleApi(
+$apiInstance = new CryptoAPIs\Api\XRPRippleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetXRPRippleAddressDetailsResponse**](../Model/GetXRPRippleAddressDetailsResponse.md)
+[**\CryptoAPIs\Model\GetXRPRippleAddressDetailsR**](../Model/GetXRPRippleAddressDetailsR.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 ## `getXRPRippleBlockDetailsByBlockHash()`
 
 ```php
-getXRPRippleBlockDetailsByBlockHash($network, $block_hash, $context): \OpenAPI\Client\Model\GetXRPRippleBlockDetailsByBlockHashResponse
+getXRPRippleBlockDetailsByBlockHash($network, $block_hash, $context): \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHashR
 ```
 
 Get XRP (Ripple) Block Details By Block Hash
@@ -161,12 +161,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\XRPRippleApi(
+$apiInstance = new CryptoAPIs\Api\XRPRippleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetXRPRippleBlockDetailsByBlockHashResponse**](../Model/GetXRPRippleBlockDetailsByBlockHashResponse.md)
+[**\CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHashR**](../Model/GetXRPRippleBlockDetailsByBlockHashR.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 ## `getXRPRippleBlockDetailsByBlockHeight()`
 
 ```php
-getXRPRippleBlockDetailsByBlockHeight($network, $height, $context): \OpenAPI\Client\Model\GetXRPRippleBlockDetailsByBlockHeightResponse
+getXRPRippleBlockDetailsByBlockHeight($network, $height, $context): \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHeightR
 ```
 
 Get XRP (Ripple) Block Details By Block Height
@@ -227,12 +227,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\XRPRippleApi(
+$apiInstance = new CryptoAPIs\Api\XRPRippleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetXRPRippleBlockDetailsByBlockHeightResponse**](../Model/GetXRPRippleBlockDetailsByBlockHeightResponse.md)
+[**\CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHeightR**](../Model/GetXRPRippleBlockDetailsByBlockHeightR.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 ## `getXRPRippleTransactionDetailsByTransactionID()`
 
 ```php
-getXRPRippleTransactionDetailsByTransactionID($network, $transaction_hash, $context): \OpenAPI\Client\Model\GetXRPRippleTransactionDetailsByTransactionIDResponse
+getXRPRippleTransactionDetailsByTransactionID($network, $transaction_hash, $context): \CryptoAPIs\Model\GetXRPRippleTransactionDetailsByTransactionIDR
 ```
 
 Get XRP (Ripple) Transaction Details By Transaction ID
@@ -293,12 +293,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\XRPRippleApi(
+$apiInstance = new CryptoAPIs\Api\XRPRippleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetXRPRippleTransactionDetailsByTransactionIDResponse**](../Model/GetXRPRippleTransactionDetailsByTransactionIDResponse.md)
+[**\CryptoAPIs\Model\GetXRPRippleTransactionDetailsByTransactionIDR**](../Model/GetXRPRippleTransactionDetailsByTransactionIDR.md)
 
 ### Authorization
 
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 ## `listXRPRippleTransactionsByAddress()`
 
 ```php
-listXRPRippleTransactionsByAddress($network, $address, $context, $limit, $offset): \OpenAPI\Client\Model\ListXRPRippleTransactionsByAddressResponse
+listXRPRippleTransactionsByAddress($network, $address, $context, $limit, $offset): \CryptoAPIs\Model\ListXRPRippleTransactionsByAddressR
 ```
 
 List XRP (Ripple) Transactions by Address
@@ -359,12 +359,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\XRPRippleApi(
+$apiInstance = new CryptoAPIs\Api\XRPRippleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListXRPRippleTransactionsByAddressResponse**](../Model/ListXRPRippleTransactionsByAddressResponse.md)
+[**\CryptoAPIs\Model\ListXRPRippleTransactionsByAddressR**](../Model/ListXRPRippleTransactionsByAddressR.md)
 
 ### Authorization
 
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 ## `listXRPRippleTransactionsByBlockHash()`
 
 ```php
-listXRPRippleTransactionsByBlockHash($network, $block_hash, $context, $limit, $offset): \OpenAPI\Client\Model\ListXRPRippleTransactionsByBlockHashResponse
+listXRPRippleTransactionsByBlockHash($network, $block_hash, $context, $limit, $offset): \CryptoAPIs\Model\ListXRPRippleTransactionsByBlockHashR
 ```
 
 List XRP (Ripple) Transactions By Block Hash
@@ -429,12 +429,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\XRPRippleApi(
+$apiInstance = new CryptoAPIs\Api\XRPRippleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListXRPRippleTransactionsByBlockHashResponse**](../Model/ListXRPRippleTransactionsByBlockHashResponse.md)
+[**\CryptoAPIs\Model\ListXRPRippleTransactionsByBlockHashR**](../Model/ListXRPRippleTransactionsByBlockHashR.md)
 
 ### Authorization
 

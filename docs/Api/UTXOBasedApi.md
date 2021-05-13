@@ -1,4 +1,4 @@
-# OpenAPI\Client\UTXOBasedApi
+# CryptoAPIs\UTXOBasedApi
 
 All URIs are relative to https://rest.cryptoapis.io/v2.
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 ## `getHDWalletXPubYPubZPubDetails()`
 
 ```php
-getHDWalletXPubYPubZPubDetails($blockchain, $extended_public_key, $network, $context, $derivation): \OpenAPI\Client\Model\GetHDWalletxPubYPubZPubDetailsResponse
+getHDWalletXPubYPubZPubDetails($blockchain, $extended_public_key, $network, $context, $derivation): \CryptoAPIs\Model\GetHDWalletXPubYPubZPubDetailsR
 ```
 
 Get HD Wallet (xPub, yPub, zPub) Details
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UTXOBasedApi(
+$apiInstance = new CryptoAPIs\Api\UTXOBasedApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetHDWalletxPubYPubZPubDetailsResponse**](../Model/GetHDWalletxPubYPubZPubDetailsResponse.md)
+[**\CryptoAPIs\Model\GetHDWalletXPubYPubZPubDetailsR**](../Model/GetHDWalletXPubYPubZPubDetailsR.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 ## `listHDWalletXPubYPubZPubTransactions()`
 
 ```php
-listHDWalletXPubYPubZPubTransactions($blockchain, $extended_public_key, $network, $context, $derivation, $limit, $offset): \OpenAPI\Client\Model\ListHDWalletxPubYPubZPubTransactionsResponse
+listHDWalletXPubYPubZPubTransactions($blockchain, $extended_public_key, $network, $context, $derivation, $limit, $offset): \CryptoAPIs\Model\ListHDWalletXPubYPubZPubTransactionsR
 ```
 
 List HD Wallet (xPub, yPub, zPub) Transactions
@@ -97,12 +97,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UTXOBasedApi(
+$apiInstance = new CryptoAPIs\Api\UTXOBasedApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListHDWalletxPubYPubZPubTransactionsResponse**](../Model/ListHDWalletxPubYPubZPubTransactionsResponse.md)
+[**\CryptoAPIs\Model\ListHDWalletXPubYPubZPubTransactionsR**](../Model/ListHDWalletXPubYPubZPubTransactionsR.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 ## `syncHDWalletXPubYPubZPub()`
 
 ```php
-syncHDWalletXPubYPubZPub($blockchain, $network, $context, $sync_hd_walletx_pub_y_pub_z_pub_request_body): \OpenAPI\Client\Model\SyncHDWalletxPubYPubZPubResponse
+syncHDWalletXPubYPubZPub($blockchain, $network, $context, $sync_hd_wallet_x_pub_y_pub_z_pub_rb): \CryptoAPIs\Model\SyncHDWalletXPubYPubZPubR
 ```
 
 Sync HD Wallet (xPub, yPub, zPub)
@@ -171,12 +171,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UTXOBasedApi(
+$apiInstance = new CryptoAPIs\Api\UTXOBasedApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -185,10 +185,10 @@ $apiInstance = new OpenAPI\Client\Api\UTXOBasedApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-$sync_hd_walletx_pub_y_pub_z_pub_request_body = new \OpenAPI\Client\Model\SyncHDWalletxPubYPubZPubRequestBody(); // \OpenAPI\Client\Model\SyncHDWalletxPubYPubZPubRequestBody
+$sync_hd_wallet_x_pub_y_pub_z_pub_rb = new \CryptoAPIs\Model\SyncHDWalletXPubYPubZPubRB(); // \CryptoAPIs\Model\SyncHDWalletXPubYPubZPubRB
 
 try {
-    $result = $apiInstance->syncHDWalletXPubYPubZPub($blockchain, $network, $context, $sync_hd_walletx_pub_y_pub_z_pub_request_body);
+    $result = $apiInstance->syncHDWalletXPubYPubZPub($blockchain, $network, $context, $sync_hd_wallet_x_pub_y_pub_z_pub_rb);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UTXOBasedApi->syncHDWalletXPubYPubZPub: ', $e->getMessage(), PHP_EOL;
@@ -202,11 +202,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
- **sync_hd_walletx_pub_y_pub_z_pub_request_body** | [**\OpenAPI\Client\Model\SyncHDWalletxPubYPubZPubRequestBody**](../Model/SyncHDWalletxPubYPubZPubRequestBody.md)|  | [optional]
+ **sync_hd_wallet_x_pub_y_pub_z_pub_rb** | [**\CryptoAPIs\Model\SyncHDWalletXPubYPubZPubRB**](../Model/SyncHDWalletXPubYPubZPubRB.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SyncHDWalletxPubYPubZPubResponse**](../Model/SyncHDWalletxPubYPubZPubResponse.md)
+[**\CryptoAPIs\Model\SyncHDWalletXPubYPubZPubR**](../Model/SyncHDWalletXPubYPubZPubR.md)
 
 ### Authorization
 

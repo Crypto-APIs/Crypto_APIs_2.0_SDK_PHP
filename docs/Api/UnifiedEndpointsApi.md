@@ -1,4 +1,4 @@
-# OpenAPI\Client\UnifiedEndpointsApi
+# CryptoAPIs\UnifiedEndpointsApi
 
 All URIs are relative to https://rest.cryptoapis.io/v2.
 
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 ## `getAddressDetails()`
 
 ```php
-getAddressDetails($blockchain, $network, $address, $context): \OpenAPI\Client\Model\GetAddressDetailsResponse
+getAddressDetails($blockchain, $network, $address, $context): \CryptoAPIs\Model\GetAddressDetailsR
 ```
 
 Get Address Details
@@ -33,12 +33,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UnifiedEndpointsApi(
+$apiInstance = new CryptoAPIs\Api\UnifiedEndpointsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetAddressDetailsResponse**](../Model/GetAddressDetailsResponse.md)
+[**\CryptoAPIs\Model\GetAddressDetailsR**](../Model/GetAddressDetailsR.md)
 
 ### Authorization
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 ## `getBlockDetailsByBlockHash()`
 
 ```php
-getBlockDetailsByBlockHash($blockchain, $network, $block_hash, $context): \OpenAPI\Client\Model\GetBlockDetailsByBlockHashResponse
+getBlockDetailsByBlockHash($blockchain, $network, $block_hash, $context): \CryptoAPIs\Model\GetBlockDetailsByBlockHashR
 ```
 
 Get Block Details By Block Hash
@@ -101,12 +101,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UnifiedEndpointsApi(
+$apiInstance = new CryptoAPIs\Api\UnifiedEndpointsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetBlockDetailsByBlockHashResponse**](../Model/GetBlockDetailsByBlockHashResponse.md)
+[**\CryptoAPIs\Model\GetBlockDetailsByBlockHashR**](../Model/GetBlockDetailsByBlockHashR.md)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 ## `getBlockDetailsByBlockHeight()`
 
 ```php
-getBlockDetailsByBlockHeight($blockchain, $network, $height, $context): \OpenAPI\Client\Model\GetBlockDetailsByBlockHeightResponse
+getBlockDetailsByBlockHeight($blockchain, $network, $height, $context): \CryptoAPIs\Model\GetBlockDetailsByBlockHeightR
 ```
 
 Get Block Details By Block Height
@@ -169,12 +169,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UnifiedEndpointsApi(
+$apiInstance = new CryptoAPIs\Api\UnifiedEndpointsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetBlockDetailsByBlockHeightResponse**](../Model/GetBlockDetailsByBlockHeightResponse.md)
+[**\CryptoAPIs\Model\GetBlockDetailsByBlockHeightR**](../Model/GetBlockDetailsByBlockHeightR.md)
 
 ### Authorization
 
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 ## `getFeeRecommendations()`
 
 ```php
-getFeeRecommendations($blockchain, $network, $context): \OpenAPI\Client\Model\GetFeeRecommendationsResponse
+getFeeRecommendations($blockchain, $network, $context): \CryptoAPIs\Model\GetFeeRecommendationsR
 ```
 
 Get Fee Recommendations
@@ -237,12 +237,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UnifiedEndpointsApi(
+$apiInstance = new CryptoAPIs\Api\UnifiedEndpointsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetFeeRecommendationsResponse**](../Model/GetFeeRecommendationsResponse.md)
+[**\CryptoAPIs\Model\GetFeeRecommendationsR**](../Model/GetFeeRecommendationsR.md)
 
 ### Authorization
 
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 ## `getLatestMinedBlock()`
 
 ```php
-getLatestMinedBlock($blockchain, $network, $context): \OpenAPI\Client\Model\GetLatestMinedBlockResponse
+getLatestMinedBlock($blockchain, $network, $context): \CryptoAPIs\Model\GetLatestMinedBlockR
 ```
 
 Get Latest Mined Block
@@ -303,12 +303,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UnifiedEndpointsApi(
+$apiInstance = new CryptoAPIs\Api\UnifiedEndpointsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetLatestMinedBlockResponse**](../Model/GetLatestMinedBlockResponse.md)
+[**\CryptoAPIs\Model\GetLatestMinedBlockR**](../Model/GetLatestMinedBlockR.md)
 
 ### Authorization
 
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 ## `getTransactionDetailsByTransactionID()`
 
 ```php
-getTransactionDetailsByTransactionID($blockchain, $network, $transaction_id, $context): \OpenAPI\Client\Model\GetTransactionDetailsByTransactionIDResponse
+getTransactionDetailsByTransactionID($blockchain, $network, $transaction_id, $context): \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDR
 ```
 
 Get Transaction Details By Transaction ID
@@ -369,12 +369,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UnifiedEndpointsApi(
+$apiInstance = new CryptoAPIs\Api\UnifiedEndpointsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetTransactionDetailsByTransactionIDResponse**](../Model/GetTransactionDetailsByTransactionIDResponse.md)
+[**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDR**](../Model/GetTransactionDetailsByTransactionIDR.md)
 
 ### Authorization
 
@@ -422,7 +422,7 @@ Name | Type | Description  | Notes
 ## `listTransactionsByAddress()`
 
 ```php
-listTransactionsByAddress($blockchain, $network, $address, $context, $limit, $offset): \OpenAPI\Client\Model\ListTransactionsByAddressResponse
+listTransactionsByAddress($blockchain, $network, $address, $context, $limit, $offset): \CryptoAPIs\Model\ListTransactionsByAddressR
 ```
 
 List Transactions By Address
@@ -437,12 +437,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UnifiedEndpointsApi(
+$apiInstance = new CryptoAPIs\Api\UnifiedEndpointsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -476,7 +476,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListTransactionsByAddressResponse**](../Model/ListTransactionsByAddressResponse.md)
+[**\CryptoAPIs\Model\ListTransactionsByAddressR**](../Model/ListTransactionsByAddressR.md)
 
 ### Authorization
 
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 ## `listTransactionsByBlockHash()`
 
 ```php
-listTransactionsByBlockHash($blockchain, $network, $block_hash, $context, $limit, $offset): \OpenAPI\Client\Model\ListTransactionsByBlockHashResponse
+listTransactionsByBlockHash($blockchain, $network, $block_hash, $context, $limit, $offset): \CryptoAPIs\Model\ListTransactionsByBlockHashR
 ```
 
 List Transactions by Block Hash
@@ -509,12 +509,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UnifiedEndpointsApi(
+$apiInstance = new CryptoAPIs\Api\UnifiedEndpointsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListTransactionsByBlockHashResponse**](../Model/ListTransactionsByBlockHashResponse.md)
+[**\CryptoAPIs\Model\ListTransactionsByBlockHashR**](../Model/ListTransactionsByBlockHashR.md)
 
 ### Authorization
 
@@ -566,7 +566,7 @@ Name | Type | Description  | Notes
 ## `listTransactionsByBlockHeight()`
 
 ```php
-listTransactionsByBlockHeight($blockchain, $network, $height, $context, $limit, $offset): \OpenAPI\Client\Model\ListTransactionsByBlockHeightResponse
+listTransactionsByBlockHeight($blockchain, $network, $height, $context, $limit, $offset): \CryptoAPIs\Model\ListTransactionsByBlockHeightR
 ```
 
 List Transactions by Block Height
@@ -581,12 +581,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UnifiedEndpointsApi(
+$apiInstance = new CryptoAPIs\Api\UnifiedEndpointsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -620,7 +620,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListTransactionsByBlockHeightResponse**](../Model/ListTransactionsByBlockHeightResponse.md)
+[**\CryptoAPIs\Model\ListTransactionsByBlockHeightR**](../Model/ListTransactionsByBlockHeightR.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# OpenAPI\Client\TokensApi
+# CryptoAPIs\TokensApi
 
 All URIs are relative to https://rest.cryptoapis.io/v2.
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 ## `listTokensByAddress()`
 
 ```php
-listTokensByAddress($blockchain, $network, $address, $context, $limit, $offset): \OpenAPI\Client\Model\ListTokensByAddressResponse
+listTokensByAddress($blockchain, $network, $address, $context, $limit, $offset): \CryptoAPIs\Model\ListTokensByAddressR
 ```
 
 List Tokens By Address
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TokensApi(
+$apiInstance = new CryptoAPIs\Api\TokensApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListTokensByAddressResponse**](../Model/ListTokensByAddressResponse.md)
+[**\CryptoAPIs\Model\ListTokensByAddressR**](../Model/ListTokensByAddressR.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 ## `listTokensTransfersByAddress()`
 
 ```php
-listTokensTransfersByAddress($blockchain, $network, $address, $context, $limit, $offset): \OpenAPI\Client\Model\ListTokensTransfersByAddressResponse
+listTokensTransfersByAddress($blockchain, $network, $address, $context, $limit, $offset): \CryptoAPIs\Model\ListTokensTransfersByAddressR
 ```
 
 List Tokens Transfers By Address
@@ -99,12 +99,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TokensApi(
+$apiInstance = new CryptoAPIs\Api\TokensApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListTokensTransfersByAddressResponse**](../Model/ListTokensTransfersByAddressResponse.md)
+[**\CryptoAPIs\Model\ListTokensTransfersByAddressR**](../Model/ListTokensTransfersByAddressR.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 ## `listTokensTransfersByTransactionHash()`
 
 ```php
-listTokensTransfersByTransactionHash($blockchain, $network, $transaction_hash, $context, $limit, $offset): \OpenAPI\Client\Model\ListTokensTransfersByTransactionHashResponse
+listTokensTransfersByTransactionHash($blockchain, $network, $transaction_hash, $context, $limit, $offset): \CryptoAPIs\Model\ListTokensTransfersByTransactionHashR
 ```
 
 List Tokens Transfers By Transaction Hash
@@ -171,12 +171,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TokensApi(
+$apiInstance = new CryptoAPIs\Api\TokensApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListTokensTransfersByTransactionHashResponse**](../Model/ListTokensTransfersByTransactionHashResponse.md)
+[**\CryptoAPIs\Model\ListTokensTransfersByTransactionHashR**](../Model/ListTokensTransfersByTransactionHashR.md)
 
 ### Authorization
 

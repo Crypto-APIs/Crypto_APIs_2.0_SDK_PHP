@@ -1,4 +1,4 @@
-# OpenAPI\Client\AutomaticCoinsForwardingApi
+# CryptoAPIs\AutomaticCoinsForwardingApi
 
 All URIs are relative to https://rest.cryptoapis.io/v2.
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 ## `createAutomaticCoinsForwarding()`
 
 ```php
-createAutomaticCoinsForwarding($blockchain, $network, $context, $create_automatic_coins_forwarding_request_body): \OpenAPI\Client\Model\CreateAutomaticCoinsForwardingResponse
+createAutomaticCoinsForwarding($blockchain, $network, $context, $create_automatic_coins_forwarding_rb): \CryptoAPIs\Model\CreateAutomaticCoinsForwardingR
 ```
 
 Create Automatic Coins Forwarding
@@ -27,12 +27,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\AutomaticCoinsForwardingApi(
+$apiInstance = new CryptoAPIs\Api\AutomaticCoinsForwardingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -41,10 +41,10 @@ $apiInstance = new OpenAPI\Client\Api\AutomaticCoinsForwardingApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-$create_automatic_coins_forwarding_request_body = new \OpenAPI\Client\Model\CreateAutomaticCoinsForwardingRequestBody(); // \OpenAPI\Client\Model\CreateAutomaticCoinsForwardingRequestBody
+$create_automatic_coins_forwarding_rb = new \CryptoAPIs\Model\CreateAutomaticCoinsForwardingRB(); // \CryptoAPIs\Model\CreateAutomaticCoinsForwardingRB
 
 try {
-    $result = $apiInstance->createAutomaticCoinsForwarding($blockchain, $network, $context, $create_automatic_coins_forwarding_request_body);
+    $result = $apiInstance->createAutomaticCoinsForwarding($blockchain, $network, $context, $create_automatic_coins_forwarding_rb);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AutomaticCoinsForwardingApi->createAutomaticCoinsForwarding: ', $e->getMessage(), PHP_EOL;
@@ -58,11 +58,11 @@ Name | Type | Description  | Notes
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
- **create_automatic_coins_forwarding_request_body** | [**\OpenAPI\Client\Model\CreateAutomaticCoinsForwardingRequestBody**](../Model/CreateAutomaticCoinsForwardingRequestBody.md)|  | [optional]
+ **create_automatic_coins_forwarding_rb** | [**\CryptoAPIs\Model\CreateAutomaticCoinsForwardingRB**](../Model/CreateAutomaticCoinsForwardingRB.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreateAutomaticCoinsForwardingResponse**](../Model/CreateAutomaticCoinsForwardingResponse.md)
+[**\CryptoAPIs\Model\CreateAutomaticCoinsForwardingR**](../Model/CreateAutomaticCoinsForwardingR.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 ## `deleteAutomaticCoinsForwarding()`
 
 ```php
-deleteAutomaticCoinsForwarding($blockchain, $network, $reference_id, $context): \OpenAPI\Client\Model\DeleteAutomaticCoinsForwardingResponse
+deleteAutomaticCoinsForwarding($blockchain, $network, $reference_id, $context): \CryptoAPIs\Model\DeleteAutomaticCoinsForwardingR
 ```
 
 Delete Automatic Coins Forwarding
@@ -95,12 +95,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\AutomaticCoinsForwardingApi(
+$apiInstance = new CryptoAPIs\Api\AutomaticCoinsForwardingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DeleteAutomaticCoinsForwardingResponse**](../Model/DeleteAutomaticCoinsForwardingResponse.md)
+[**\CryptoAPIs\Model\DeleteAutomaticCoinsForwardingR**](../Model/DeleteAutomaticCoinsForwardingR.md)
 
 ### Authorization
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 ## `listCoinsForwardingAutomations()`
 
 ```php
-listCoinsForwardingAutomations($blockchain, $network, $context, $limit, $offset): \OpenAPI\Client\Model\ListCoinsForwardingAutomationsResponse
+listCoinsForwardingAutomations($blockchain, $network, $context, $limit, $offset): \CryptoAPIs\Model\ListCoinsForwardingAutomationsR
 ```
 
 List Coins Forwarding Automations
@@ -163,12 +163,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\AutomaticCoinsForwardingApi(
+$apiInstance = new CryptoAPIs\Api\AutomaticCoinsForwardingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListCoinsForwardingAutomationsResponse**](../Model/ListCoinsForwardingAutomationsResponse.md)
+[**\CryptoAPIs\Model\ListCoinsForwardingAutomationsR**](../Model/ListCoinsForwardingAutomationsR.md)
 
 ### Authorization
 

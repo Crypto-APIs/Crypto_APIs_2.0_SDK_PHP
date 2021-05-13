@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **address** | **string** | Defines the specific address to which the token transaction has been sent and is pending confirmation. |
 **transaction_id** | **string** | Defines the unique ID of the specific transaction, i.e. its identification number. |
 **token_type** | **string** | Defines the type of token sent with the transaction, e.g. ERC 20. |
-**token** | [**\OpenAPI\Client\Model\AddressTokensTransactionUnconfirmedToken**](AddressTokensTransactionUnconfirmedToken.md) |  |
+**token** | [**\CryptoAPIs\Model\AddressTokensTransactionUnconfirmedToken**](AddressTokensTransactionUnconfirmedToken.md) |  |
 **direction** | **string** | Defines whether the transaction is \&quot;incoming\&quot; or \&quot;outgoing\&quot;. |
 **first_seen_in_mempool_timestamp** | **int** | Defines the exact time the transaction has been first accepted into the mempool to await confirmation as timestamp. |
 

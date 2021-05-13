@@ -1,4 +1,4 @@
-# OpenAPI\Client\ExchangeRatesApi
+# CryptoAPIs\ExchangeRatesApi
 
 All URIs are relative to https://rest.cryptoapis.io/v2.
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `getExchangeRateByAssetSymbols()`
 
 ```php
-getExchangeRateByAssetSymbols($from_asset_symbol, $to_asset_symbol, $context): \OpenAPI\Client\Model\GetExchangeRateByAssetSymbolsResponse
+getExchangeRateByAssetSymbols($from_asset_symbol, $to_asset_symbol, $context): \CryptoAPIs\Model\GetExchangeRateByAssetSymbolsR
 ```
 
 Get Exchange Rate By Asset Symbols
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ExchangeRatesApi(
+$apiInstance = new CryptoAPIs\Api\ExchangeRatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetExchangeRateByAssetSymbolsResponse**](../Model/GetExchangeRateByAssetSymbolsResponse.md)
+[**\CryptoAPIs\Model\GetExchangeRateByAssetSymbolsR**](../Model/GetExchangeRateByAssetSymbolsR.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 ## `getExchangeRateByAssetsIDs()`
 
 ```php
-getExchangeRateByAssetsIDs($from_asset_id, $to_asset_id, $context): \OpenAPI\Client\Model\GetExchangeRateByAssetsIDsResponse
+getExchangeRateByAssetsIDs($from_asset_id, $to_asset_id, $context): \CryptoAPIs\Model\GetExchangeRateByAssetsIDsR
 ```
 
 Get Exchange Rate By Assets IDs
@@ -92,12 +92,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ExchangeRatesApi(
+$apiInstance = new CryptoAPIs\Api\ExchangeRatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetExchangeRateByAssetsIDsResponse**](../Model/GetExchangeRateByAssetsIDsResponse.md)
+[**\CryptoAPIs\Model\GetExchangeRateByAssetsIDsR**](../Model/GetExchangeRateByAssetsIDsR.md)
 
 ### Authorization
 

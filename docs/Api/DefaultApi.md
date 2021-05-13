@@ -1,4 +1,4 @@
-# OpenAPI\Client\DefaultApi
+# CryptoAPIs\DefaultApi
 
 All URIs are relative to https://rest.cryptoapis.io/v2.
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 ## `getContractDetailsByAddress()`
 
 ```php
-getContractDetailsByAddress($blockchain, $network, $contract_address, $context): \OpenAPI\Client\Model\GetContractDetailsByAddressResponse
+getContractDetailsByAddress($blockchain, $network, $contract_address, $context): \CryptoAPIs\Model\GetContractDetailsByAddressR
 ```
 
 Get Contract Details by Address
@@ -25,12 +25,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DefaultApi(
+$apiInstance = new CryptoAPIs\Api\DefaultApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetContractDetailsByAddressResponse**](../Model/GetContractDetailsByAddressResponse.md)
+[**\CryptoAPIs\Model\GetContractDetailsByAddressR**](../Model/GetContractDetailsByAddressR.md)
 
 ### Authorization
 

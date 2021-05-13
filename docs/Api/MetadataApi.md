@@ -1,4 +1,4 @@
-# OpenAPI\Client\MetadataApi
+# CryptoAPIs\MetadataApi
 
 All URIs are relative to https://rest.cryptoapis.io/v2.
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 ## `listSupportedAssets()`
 
 ```php
-listSupportedAssets($context, $asset_type, $limit, $offset): \OpenAPI\Client\Model\ListSupportedAssetsResponse
+listSupportedAssets($context, $asset_type, $limit, $offset): \CryptoAPIs\Model\ListSupportedAssetsR
 ```
 
 List Supported Assets
@@ -25,12 +25,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKey
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new CryptoAPIs\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListSupportedAssetsResponse**](../Model/ListSupportedAssetsResponse.md)
+[**\CryptoAPIs\Model\ListSupportedAssetsR**](../Model/ListSupportedAssetsR.md)
 
 ### Authorization
 

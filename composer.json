@@ -1,5 +1,6 @@
 {
     "name": "cryptoapis/sdk",
+    "version": "1.0.1",
     "description": "Crypto APIs 2.0 is a complex and innovative infrastructure layer that radically simplifies the development of any Blockchain and Crypto related applications. Organized around REST, Crypto APIs 2.0 can assist both novice Bitcoin/Ethereum enthusiasts and crypto experts with the development of their blockchain applications. Crypto APIs 2.0 provides unified endpoints and data, raw data, automatic tokens and coins forwardings, callback functionalities, and much more.",
     "keywords": [
         "cryptiapis",
@@ -31,9 +32,9 @@
         "friendsofphp/php-cs-fixer": "^2.12"
     },
     "autoload": {
-        "psr-4": { "OpenAPI\\Client\\" : "lib/" }
+        "psr-4": { "CryptoAPIs\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "OpenAPI\\Client\\Test\\" : "test/" }
+        "psr-4": { "CryptoAPIs\\Test\\" : "test/" }
     }
 }
