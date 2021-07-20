@@ -427,7 +427,7 @@ listTransactionsByAddress($blockchain, $network, $address, $context, $limit, $of
 
 List Transactions By Address
 
-This endpoint will list transactions by an attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.
+This endpoint will list transactions by an attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Example
 
@@ -499,7 +499,7 @@ listTransactionsByBlockHash($blockchain, $network, $block_hash, $context, $limit
 
 List Transactions by Block Hash
 
-This endpoint will list transactions by an attribute `transactionHash`. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.
+This endpoint will list transactions by an attribute `transactionHash`. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Example
 
@@ -571,7 +571,7 @@ listTransactionsByBlockHeight($blockchain, $network, $height, $context, $limit, 
 
 List Transactions by Block Height
 
-This endpoint will list transactions by an attribute `blockHeight`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.
+This endpoint will list transactions by an attribute `blockHeight`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Example
 

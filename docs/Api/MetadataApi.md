@@ -15,7 +15,7 @@ listSupportedAssets($context, $asset_type, $limit, $offset): \CryptoAPIs\Model\L
 
 List Supported Assets
 
-This endpoint will return a list of supported assets. The asset could be a cryptocurrency or FIAT assets that we support. Each asset has a unique identifier - `assetId` and a unique symbol in the form of a string, e.g. \"BTC\".
+This endpoint will return a list of supported assets. The asset could be a cryptocurrency or FIAT assets that we support. Each asset has a unique identifier - `assetId` and a unique symbol in the form of a string, e.g. \"BTC\".    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Example
 

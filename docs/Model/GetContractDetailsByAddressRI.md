@@ -4,13 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**confirmed_balance** | **string** | Token balance |
-**creator_address** | **string** | Token creator |
-**token_decimals** | **string** | Number of decimals | [optional]
-**token_name** | **string** | Token name | [optional]
-**token_symbol** | **string** | Token symbol | [optional]
-**token_type** | **string** | Token type | [optional]
-**tokens_balance** | **string** | Token balance |
-**total_supply** | **string** | Token total supply |
+**token_decimals** | **string** | Defines the number of decimals that the token possesses. |
+**token_name** | **string** | Specifies the token&#39;s name. | [optional]
+**token_symbol** | **string** | Defines the unique symbol of the token. | [optional]
+**token_type** | **string** | Defines the type of the token. |
+**total_supply** | **string** | Defines the total number of tokens created that exist on the market minus the ones that have been burned. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

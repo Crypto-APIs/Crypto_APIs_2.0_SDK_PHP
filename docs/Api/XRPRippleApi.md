@@ -4,13 +4,14 @@ All URIs are relative to https://rest.cryptoapis.io/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getLatestMinedXRPRippleBlock()**](XRPRippleApi.md#getLatestMinedXRPRippleBlock) | **GET** /blockchain-data/xrp/{network}/blocks/last | Get Latest Mined XRP (Ripple) Block
-[**getXRPRippleAddressDetails()**](XRPRippleApi.md#getXRPRippleAddressDetails) | **GET** /blockchain-data/xrp/{network}/addresses/{address} | Get XRP (Ripple) Address Details
-[**getXRPRippleBlockDetailsByBlockHash()**](XRPRippleApi.md#getXRPRippleBlockDetailsByBlockHash) | **GET** /blockchain-data/xrp/{network}/blocks/hash/{blockHash} | Get XRP (Ripple) Block Details By Block Hash
-[**getXRPRippleBlockDetailsByBlockHeight()**](XRPRippleApi.md#getXRPRippleBlockDetailsByBlockHeight) | **GET** /blockchain-data/xrp/{network}/blocks/height/{height} | Get XRP (Ripple) Block Details By Block Height
-[**getXRPRippleTransactionDetailsByTransactionID()**](XRPRippleApi.md#getXRPRippleTransactionDetailsByTransactionID) | **GET** /blockchain-data/xrp/{network}/transactions/{transactionHash} | Get XRP (Ripple) Transaction Details By Transaction ID
-[**listXRPRippleTransactionsByAddress()**](XRPRippleApi.md#listXRPRippleTransactionsByAddress) | **GET** /blockchain-data/xrp/{network}/addresses/{address}/transactions | List XRP (Ripple) Transactions by Address
-[**listXRPRippleTransactionsByBlockHash()**](XRPRippleApi.md#listXRPRippleTransactionsByBlockHash) | **GET** /blockchain-data/xrp/{network}/blocks/hash/{blockHash}/transactions | List XRP (Ripple) Transactions By Block Hash
+[**getLatestMinedXRPRippleBlock()**](XRPRippleApi.md#getLatestMinedXRPRippleBlock) | **GET** /blockchain-data/xrp-specific/{network}/blocks/last | Get Latest Mined XRP (Ripple) Block
+[**getXRPRippleAddressDetails()**](XRPRippleApi.md#getXRPRippleAddressDetails) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address} | Get XRP (Ripple) Address Details
+[**getXRPRippleBlockDetailsByBlockHash()**](XRPRippleApi.md#getXRPRippleBlockDetailsByBlockHash) | **GET** /blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash} | Get XRP (Ripple) Block Details By Block Hash
+[**getXRPRippleBlockDetailsByBlockHeight()**](XRPRippleApi.md#getXRPRippleBlockDetailsByBlockHeight) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight} | Get XRP (Ripple) Block Details By Block Height
+[**getXRPRippleTransactionDetailsByTransactionID()**](XRPRippleApi.md#getXRPRippleTransactionDetailsByTransactionID) | **GET** /blockchain-data/xrp-specific/{network}/transactions/{transactionHash} | Get XRP (Ripple) Transaction Details By Transaction ID
+[**listXRPRippleTransactionsByAddress()**](XRPRippleApi.md#listXRPRippleTransactionsByAddress) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address}/transactions | List XRP (Ripple) Transactions by Address
+[**listXRPRippleTransactionsByBlockHash()**](XRPRippleApi.md#listXRPRippleTransactionsByBlockHash) | **GET** /blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash}/transactions | List XRP (Ripple) Transactions By Block Hash
+[**listXRPRippleTransactionsByBlockHeight()**](XRPRippleApi.md#listXRPRippleTransactionsByBlockHeight) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight}/transactions | List XRP (Ripple) Transactions By Block Height
 
 
 ## `getLatestMinedXRPRippleBlock()`
@@ -212,7 +213,7 @@ Name | Type | Description  | Notes
 ## `getXRPRippleBlockDetailsByBlockHeight()`
 
 ```php
-getXRPRippleBlockDetailsByBlockHeight($network, $height, $context): \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHeightR
+getXRPRippleBlockDetailsByBlockHeight($network, $block_height, $context): \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHeightR
 ```
 
 Get XRP (Ripple) Block Details By Block Height
@@ -239,11 +240,11 @@ $apiInstance = new CryptoAPIs\Api\XRPRippleApi(
     $config
 );
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\",  are test networks.
-$height = 15886156; // string | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
+$block_height = 15886156; // string | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
-    $result = $apiInstance->getXRPRippleBlockDetailsByBlockHeight($network, $height, $context);
+    $result = $apiInstance->getXRPRippleBlockDetailsByBlockHeight($network, $block_height, $context);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling XRPRippleApi->getXRPRippleBlockDetailsByBlockHeight: ', $e->getMessage(), PHP_EOL;
@@ -255,7 +256,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;,  are test networks. |
- **height** | **string**| Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;. |
+ **block_height** | **string**| Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \&quot;Genesis block\&quot;. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
 
 ### Return type
@@ -349,7 +350,7 @@ listXRPRippleTransactionsByAddress($network, $address, $context, $limit, $offset
 
 List XRP (Ripple) Transactions by Address
 
-This endpoint will list XRP transactions by a attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.
+This endpoint will list XRP transactions by a attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Example
 
@@ -419,7 +420,7 @@ listXRPRippleTransactionsByBlockHash($network, $block_hash, $context, $limit, $o
 
 List XRP (Ripple) Transactions By Block Hash
 
-This endpoint will list transactions by an attribute `blockHash`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.
+This endpoint will list transactions by an attribute `blockHash`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
 
 ### Example
 
@@ -467,6 +468,76 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\CryptoAPIs\Model\ListXRPRippleTransactionsByBlockHashR**](../Model/ListXRPRippleTransactionsByBlockHashR.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listXRPRippleTransactionsByBlockHeight()`
+
+```php
+listXRPRippleTransactionsByBlockHeight($network, $block_height, $context, $limit, $offset): \CryptoAPIs\Model\ListXRPRippleTransactionsByBlockHeightR
+```
+
+List XRP (Ripple) Transactions By Block Height
+
+This endpoint will list transactions by an attribute `blockHeight`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new CryptoAPIs\Api\XRPRippleApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
+$block_height = 15971358; // int
+$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$limit = 50; // int | Defines how many items should be returned in the response per page basis.
+$offset = 10; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
+
+try {
+    $result = $apiInstance->listXRPRippleTransactionsByBlockHeight($network, $block_height, $context, $limit, $offset);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling XRPRippleApi->listXRPRippleTransactionsByBlockHeight: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |
+ **block_height** | **int**|  |
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
+ **limit** | **int**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
+ **offset** | **int**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
+
+### Return type
+
+[**\CryptoAPIs\Model\ListXRPRippleTransactionsByBlockHeightR**](../Model/ListXRPRippleTransactionsByBlockHeightR.md)
 
 ### Authorization
 

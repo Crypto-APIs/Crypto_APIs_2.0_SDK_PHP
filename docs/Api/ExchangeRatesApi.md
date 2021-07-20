@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `getExchangeRateByAssetSymbols()`
 
 ```php
-getExchangeRateByAssetSymbols($from_asset_symbol, $to_asset_symbol, $context): \CryptoAPIs\Model\GetExchangeRateByAssetSymbolsR
+getExchangeRateByAssetSymbols($from_asset_symbol, $to_asset_symbol, $context, $calculation_timestamp): \CryptoAPIs\Model\GetExchangeRateByAssetSymbolsR
 ```
 
 Get Exchange Rate By Asset Symbols
@@ -40,9 +40,10 @@ $apiInstance = new CryptoAPIs\Api\ExchangeRatesApi(
 $from_asset_symbol = btc; // string | Defines the base asset symbol to get a rate for.
 $to_asset_symbol = usd; // string | Defines the relation asset symbol in which the base asset rate will be displayed.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$calculation_timestamp = 1618577849; // int | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp.
 
 try {
-    $result = $apiInstance->getExchangeRateByAssetSymbols($from_asset_symbol, $to_asset_symbol, $context);
+    $result = $apiInstance->getExchangeRateByAssetSymbols($from_asset_symbol, $to_asset_symbol, $context, $calculation_timestamp);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ExchangeRatesApi->getExchangeRateByAssetSymbols: ', $e->getMessage(), PHP_EOL;
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
  **from_asset_symbol** | **string**| Defines the base asset symbol to get a rate for. |
  **to_asset_symbol** | **string**| Defines the relation asset symbol in which the base asset rate will be displayed. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
+ **calculation_timestamp** | **int**| Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. | [optional]
 
 ### Return type
 
@@ -77,7 +79,7 @@ Name | Type | Description  | Notes
 ## `getExchangeRateByAssetsIDs()`
 
 ```php
-getExchangeRateByAssetsIDs($from_asset_id, $to_asset_id, $context): \CryptoAPIs\Model\GetExchangeRateByAssetsIDsR
+getExchangeRateByAssetsIDs($from_asset_id, $to_asset_id, $context, $calculation_timestamp): \CryptoAPIs\Model\GetExchangeRateByAssetsIDsR
 ```
 
 Get Exchange Rate By Assets IDs
@@ -106,9 +108,10 @@ $apiInstance = new CryptoAPIs\Api\ExchangeRatesApi(
 $from_asset_id = 5b1ea92e584bf50020130612; // string | Defines the base asset Reference ID to get a rate for.
 $to_asset_id = 5b1ea92e584bf50020130615; // string | Defines the relation asset Reference ID in which the base asset rate will be displayed.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$calculation_timestamp = 1618577849; // int | Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp.
 
 try {
-    $result = $apiInstance->getExchangeRateByAssetsIDs($from_asset_id, $to_asset_id, $context);
+    $result = $apiInstance->getExchangeRateByAssetsIDs($from_asset_id, $to_asset_id, $context, $calculation_timestamp);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ExchangeRatesApi->getExchangeRateByAssetsIDs: ', $e->getMessage(), PHP_EOL;
@@ -122,6 +125,7 @@ Name | Type | Description  | Notes
  **from_asset_id** | **string**| Defines the base asset Reference ID to get a rate for. |
  **to_asset_id** | **string**| Defines the relation asset Reference ID in which the base asset rate will be displayed. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
+ **calculation_timestamp** | **int**| Defines the time of the market data used to calculate the exchange rate in UNIX Timestamp. | [optional]
 
 ### Return type
 
