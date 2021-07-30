@@ -363,7 +363,7 @@ class GetAddressDetailsRI implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets incoming_transactions_count
      *
-     * @param int $incoming_transactions_count Defines the count of all confirmed incoming transactions from the address for coins. This applies to **coins** only, **not** to tokens transfers e.g. for Ethereum.
+     * @param int $incoming_transactions_count Numeric representation of the received transaction count of the address
      *
      * @return self
      */
@@ -387,7 +387,7 @@ class GetAddressDetailsRI implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets outgoing_transactions_count
      *
-     * @param int $outgoing_transactions_count Defines the count of all confirmed outgoing transactions from the address for coins. This applies to **coins** only, **not** to tokens transfers e.g. for Ethereum.
+     * @param int $outgoing_transactions_count Numeric representation of the sent transaction count of the address
      *
      * @return self
      */

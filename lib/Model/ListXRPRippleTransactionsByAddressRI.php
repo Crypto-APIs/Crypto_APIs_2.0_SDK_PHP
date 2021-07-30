@@ -60,7 +60,6 @@ class ListXRPRippleTransactionsByAddressRI implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'additional_data' => 'string',
         'index' => 'int',
         'mined_in_block_hash' => 'string',
         'mined_in_block_height' => 'int',
@@ -85,7 +84,6 @@ class ListXRPRippleTransactionsByAddressRI implements ModelInterface, ArrayAcces
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'additional_data' => null,
         'index' => null,
         'mined_in_block_hash' => null,
         'mined_in_block_height' => null,
@@ -129,7 +127,6 @@ class ListXRPRippleTransactionsByAddressRI implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'additional_data' => 'additionalData',
         'index' => 'index',
         'mined_in_block_hash' => 'minedInBlockHash',
         'mined_in_block_height' => 'minedInBlockHeight',
@@ -152,7 +149,6 @@ class ListXRPRippleTransactionsByAddressRI implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'additional_data' => 'setAdditionalData',
         'index' => 'setIndex',
         'mined_in_block_hash' => 'setMinedInBlockHash',
         'mined_in_block_height' => 'setMinedInBlockHeight',
@@ -175,7 +171,6 @@ class ListXRPRippleTransactionsByAddressRI implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'additional_data' => 'getAdditionalData',
         'index' => 'getIndex',
         'mined_in_block_hash' => 'getMinedInBlockHash',
         'mined_in_block_height' => 'getMinedInBlockHeight',
@@ -249,7 +244,6 @@ class ListXRPRippleTransactionsByAddressRI implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
-        $this->container['additional_data'] = $data['additional_data'] ?? null;
         $this->container['index'] = $data['index'] ?? null;
         $this->container['mined_in_block_hash'] = $data['mined_in_block_hash'] ?? null;
         $this->container['mined_in_block_height'] = $data['mined_in_block_height'] ?? null;
@@ -275,9 +269,6 @@ class ListXRPRippleTransactionsByAddressRI implements ModelInterface, ArrayAcces
     {
         $invalidProperties = [];
 
-        if ($this->container['additional_data'] === null) {
-            $invalidProperties[] = "'additional_data' can't be null";
-        }
         if ($this->container['index'] === null) {
             $invalidProperties[] = "'index' can't be null";
         }
@@ -334,30 +325,6 @@ class ListXRPRippleTransactionsByAddressRI implements ModelInterface, ArrayAcces
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets additional_data
-     *
-     * @return string
-     */
-    public function getAdditionalData()
-    {
-        return $this->container['additional_data'];
-    }
-
-    /**
-     * Sets additional_data
-     *
-     * @param string $additional_data Represents any additional data that may be needed.
-     *
-     * @return self
-     */
-    public function setAdditionalData($additional_data)
-    {
-        $this->container['additional_data'] = $additional_data;
-
-        return $this;
-    }
 
     /**
      * Gets index

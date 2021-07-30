@@ -255,7 +255,7 @@ class GetAddressDetailsRITotalReceived implements ModelInterface, ArrayAccess, \
     /**
      * Sets unit
      *
-     * @param string $unit Defines the unit of the received amount, e.g. BTC, ETH, XRP.
+     * @param string $unit unit
      *
      * @return self
      */

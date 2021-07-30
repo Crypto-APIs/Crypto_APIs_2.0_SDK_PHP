@@ -158,7 +158,7 @@ listOmniTokensByAddress($network, $blockchain, $address, $context): \CryptoAPIs\
 
 List Omni Tokens By Address
 
-Through this endpoint the customer can receive basic information about a given Omni address based on confirmed/synced blocks only. In the case where there are any incoming or outgoing **unconfirmed** transactions for the specific address, they **will not** be counted or calculated here.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+Through this endpoint the customer can receive basic information about a given Omni address based on confirmed/synced blocks only. In the case where there are any incoming or outgoing **unconfirmed** transactions for the specific address, they **will not** be counted or calculated here.
 
 ### Example
 
@@ -226,7 +226,7 @@ listOmniTransactionsByAddress($network, $blockchain, $address, $context, $limit,
 
 List Omni Transactions By Address
 
-This endpoint will list Omni transactions by an attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+This endpoint will list Omni transactions by an attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.
 
 ### Example
 
@@ -298,7 +298,7 @@ listOmniTransactionsByBlockHash($network, $blockchain, $block_hash, $context, $l
 
 List Omni Transactions By Block Hash
 
-This endpoint will list Omni transactions by an attribute `transactionHash`. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+This endpoint will list Omni transactions by an attribute `transactionHash`. The transactions listed will detail additional information such as addresses, height, time of creation in Unix timestamp, etc.
 
 ### Example
 
@@ -370,7 +370,7 @@ listOmniTransactionsByBlockHeight($network, $blockchain, $block_height, $context
 
 List Omni Transactions By Block Height
 
-This endpoint will list Omni transactions by an attribute `blockHeight`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+This endpoint will list Omni transactions by an attribute `blockHeight`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.
 
 ### Example
 
@@ -442,7 +442,7 @@ listUnconfirmedOmniTransactionsByAddress($network, $blockchain, $address, $conte
 
 List Unconfirmed Omni Transactions By Address
 
-This endpoint will list unconfirmed Omni transactions by an attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Unconfirmed transactions are usually put in the Mempool and await verification so that they can be added to a block.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+This endpoint will list unconfirmed Omni transactions by an attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Unconfirmed transactions are usually put in the Mempool and await verification so that they can be added to a block.
 
 ### Example
 
@@ -514,7 +514,7 @@ listUnconfirmedOmniTransactionsByPropertyID($network, $blockchain, $property_id,
 
 List Unconfirmed Omni Transactions By Property ID
 
-This endpoint will list unconfirmed Omni transactions by an attribute `propertyId`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Unconfirmed transactions are usually put in the Mempool and await verification so that they can be added to a block.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+This endpoint will list unconfirmed Omni transactions by an attribute `propertyId`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Unconfirmed transactions are usually put in the Mempool and await verification so that they can be added to a block.
 
 ### Example
 

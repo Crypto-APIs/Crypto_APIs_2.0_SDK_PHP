@@ -60,6 +60,8 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
       * @var string[]
       */
     protected static $openAPITypes = [
+        'callback_secret_key' => 'string',
+        'callback_url' => 'string',
         'fee_priority' => 'string',
         'recipients' => '\CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressRIRecipients[]',
         'senders' => '\CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressRISenders',
@@ -74,6 +76,8 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'callback_secret_key' => null,
+        'callback_url' => null,
         'fee_priority' => null,
         'recipients' => null,
         'senders' => null,
@@ -107,6 +111,8 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
      * @var string[]
      */
     protected static $attributeMap = [
+        'callback_secret_key' => 'callbackSecretKey',
+        'callback_url' => 'callbackUrl',
         'fee_priority' => 'feePriority',
         'recipients' => 'recipients',
         'senders' => 'senders',
@@ -119,6 +125,8 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
      * @var string[]
      */
     protected static $setters = [
+        'callback_secret_key' => 'setCallbackSecretKey',
+        'callback_url' => 'setCallbackUrl',
         'fee_priority' => 'setFeePriority',
         'recipients' => 'setRecipients',
         'senders' => 'setSenders',
@@ -131,6 +139,8 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
      * @var string[]
      */
     protected static $getters = [
+        'callback_secret_key' => 'getCallbackSecretKey',
+        'callback_url' => 'getCallbackUrl',
         'fee_priority' => 'getFeePriority',
         'recipients' => 'getRecipients',
         'senders' => 'getSenders',
@@ -242,6 +252,8 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
      */
     public function __construct(array $data = null)
     {
+        $this->container['callback_secret_key'] = $data['callback_secret_key'] ?? null;
+        $this->container['callback_url'] = $data['callback_url'] ?? null;
         $this->container['fee_priority'] = $data['fee_priority'] ?? null;
         $this->container['recipients'] = $data['recipients'] ?? null;
         $this->container['senders'] = $data['senders'] ?? null;
@@ -301,6 +313,54 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets callback_secret_key
+     *
+     * @return string|null
+     */
+    public function getCallbackSecretKey()
+    {
+        return $this->container['callback_secret_key'];
+    }
+
+    /**
+     * Sets callback_secret_key
+     *
+     * @param string|null $callback_secret_key Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
+     *
+     * @return self
+     */
+    public function setCallbackSecretKey($callback_secret_key)
+    {
+        $this->container['callback_secret_key'] = $callback_secret_key;
+
+        return $this;
+    }
+
+    /**
+     * Gets callback_url
+     *
+     * @return string|null
+     */
+    public function getCallbackUrl()
+    {
+        return $this->container['callback_url'];
+    }
+
+    /**
+     * Sets callback_url
+     *
+     * @param string|null $callback_url Verified URL for sending callbacks
+     *
+     * @return self
+     */
+    public function setCallbackUrl($callback_url)
+    {
+        $this->container['callback_url'] = $callback_url;
+
+        return $this;
+    }
 
     /**
      * Gets fee_priority

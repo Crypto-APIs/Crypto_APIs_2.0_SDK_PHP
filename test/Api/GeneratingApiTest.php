@@ -73,12 +73,12 @@ class GeneratingApiTest extends TestCase
     }
 
     /**
-     * Test case for generateReceivingAddress
+     * Test case for generateDepositAddress
      *
-     * Generate Receiving Address.
+     * Generate Deposit Address.
      *
      */
-    public function testGenerateReceivingAddress()
+    public function testGenerateDepositAddress()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

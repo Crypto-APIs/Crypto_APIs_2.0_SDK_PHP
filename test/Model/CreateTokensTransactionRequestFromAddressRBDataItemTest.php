@@ -90,6 +90,15 @@ class CreateTokensTransactionRequestFromAddressRBDataItemTest extends TestCase
     }
 
     /**
+     * Test attribute "callback_secret_key"
+     */
+    public function testPropertyCallbackSecretKey()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "callback_url"
      */
     public function testPropertyCallbackUrl()
@@ -108,9 +117,9 @@ class CreateTokensTransactionRequestFromAddressRBDataItemTest extends TestCase
     }
 
     /**
-     * Test attribute "to_address"
+     * Test attribute "recipient_address"
      */
-    public function testPropertyToAddress()
+    public function testPropertyRecipientAddress()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -639,9 +639,9 @@ class InformativeApi
     }
 
     /**
-     * Operation listReceivingAddresses
+     * Operation listDepositAddresses
      *
-     * List Receiving Addresses
+     * List Deposit Addresses
      *
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
@@ -650,18 +650,18 @@ class InformativeApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListReceivingAddressesR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
+     * @return \CryptoAPIs\Model\ListDepositAddressesR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
      */
-    public function listReceivingAddresses($blockchain, $network, $wallet_id, $context = null)
+    public function listDepositAddresses($blockchain, $network, $wallet_id, $context = null)
     {
-        list($response) = $this->listReceivingAddressesWithHttpInfo($blockchain, $network, $wallet_id, $context);
+        list($response) = $this->listDepositAddressesWithHttpInfo($blockchain, $network, $wallet_id, $context);
         return $response;
     }
 
     /**
-     * Operation listReceivingAddressesWithHttpInfo
+     * Operation listDepositAddressesWithHttpInfo
      *
-     * List Receiving Addresses
+     * List Deposit Addresses
      *
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
@@ -670,11 +670,11 @@ class InformativeApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListReceivingAddressesR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListDepositAddressesR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listReceivingAddressesWithHttpInfo($blockchain, $network, $wallet_id, $context = null)
+    public function listDepositAddressesWithHttpInfo($blockchain, $network, $wallet_id, $context = null)
     {
-        $request = $this->listReceivingAddressesRequest($blockchain, $network, $wallet_id, $context);
+        $request = $this->listDepositAddressesRequest($blockchain, $network, $wallet_id, $context);
 
         try {
             $options = $this->createHttpClientOption();
@@ -706,14 +706,14 @@ class InformativeApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\CryptoAPIs\Model\ListReceivingAddressesR' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\ListDepositAddressesR' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\ListReceivingAddressesR', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\ListDepositAddressesR', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -839,7 +839,7 @@ class InformativeApi
                     ];
             }
 
-            $returnType = '\CryptoAPIs\Model\ListReceivingAddressesR';
+            $returnType = '\CryptoAPIs\Model\ListDepositAddressesR';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -857,7 +857,7 @@ class InformativeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\ListReceivingAddressesR',
+                        '\CryptoAPIs\Model\ListDepositAddressesR',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -948,9 +948,9 @@ class InformativeApi
     }
 
     /**
-     * Operation listReceivingAddressesAsync
+     * Operation listDepositAddressesAsync
      *
-     * List Receiving Addresses
+     * List Deposit Addresses
      *
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
@@ -960,9 +960,9 @@ class InformativeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listReceivingAddressesAsync($blockchain, $network, $wallet_id, $context = null)
+    public function listDepositAddressesAsync($blockchain, $network, $wallet_id, $context = null)
     {
-        return $this->listReceivingAddressesAsyncWithHttpInfo($blockchain, $network, $wallet_id, $context)
+        return $this->listDepositAddressesAsyncWithHttpInfo($blockchain, $network, $wallet_id, $context)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -971,9 +971,9 @@ class InformativeApi
     }
 
     /**
-     * Operation listReceivingAddressesAsyncWithHttpInfo
+     * Operation listDepositAddressesAsyncWithHttpInfo
      *
-     * List Receiving Addresses
+     * List Deposit Addresses
      *
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
@@ -983,10 +983,10 @@ class InformativeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listReceivingAddressesAsyncWithHttpInfo($blockchain, $network, $wallet_id, $context = null)
+    public function listDepositAddressesAsyncWithHttpInfo($blockchain, $network, $wallet_id, $context = null)
     {
-        $returnType = '\CryptoAPIs\Model\ListReceivingAddressesR';
-        $request = $this->listReceivingAddressesRequest($blockchain, $network, $wallet_id, $context);
+        $returnType = '\CryptoAPIs\Model\ListDepositAddressesR';
+        $request = $this->listDepositAddressesRequest($blockchain, $network, $wallet_id, $context);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1022,7 +1022,7 @@ class InformativeApi
     }
 
     /**
-     * Create request for operation 'listReceivingAddresses'
+     * Create request for operation 'listDepositAddresses'
      *
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
@@ -1032,24 +1032,24 @@ class InformativeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listReceivingAddressesRequest($blockchain, $network, $wallet_id, $context = null)
+    public function listDepositAddressesRequest($blockchain, $network, $wallet_id, $context = null)
     {
         // verify the required parameter 'blockchain' is set
         if ($blockchain === null || (is_array($blockchain) && count($blockchain) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $blockchain when calling listReceivingAddresses'
+                'Missing the required parameter $blockchain when calling listDepositAddresses'
             );
         }
         // verify the required parameter 'network' is set
         if ($network === null || (is_array($network) && count($network) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $network when calling listReceivingAddresses'
+                'Missing the required parameter $network when calling listDepositAddresses'
             );
         }
         // verify the required parameter 'wallet_id' is set
         if ($wallet_id === null || (is_array($wallet_id) && count($wallet_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $wallet_id when calling listReceivingAddresses'
+                'Missing the required parameter $wallet_id when calling listDepositAddresses'
             );
         }
 

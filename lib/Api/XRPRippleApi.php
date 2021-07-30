@@ -2606,14 +2606,15 @@ class XRPRippleApi
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
      * @param  int $limit Defines how many items should be returned in the response per page basis. (optional, default to 50)
      * @param  int $offset The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)
+     * @param  string $transaction_type transaction_type (optional)
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \CryptoAPIs\Model\ListXRPRippleTransactionsByAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
      */
-    public function listXRPRippleTransactionsByAddress($network, $address, $context = null, $limit = 50, $offset = 0)
+    public function listXRPRippleTransactionsByAddress($network, $address, $context = null, $limit = 50, $offset = 0, $transaction_type = null)
     {
-        list($response) = $this->listXRPRippleTransactionsByAddressWithHttpInfo($network, $address, $context, $limit, $offset);
+        list($response) = $this->listXRPRippleTransactionsByAddressWithHttpInfo($network, $address, $context, $limit, $offset, $transaction_type);
         return $response;
     }
 
@@ -2627,14 +2628,15 @@ class XRPRippleApi
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
      * @param  int $limit Defines how many items should be returned in the response per page basis. (optional, default to 50)
      * @param  int $offset The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)
+     * @param  string $transaction_type (optional)
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \CryptoAPIs\Model\ListXRPRippleTransactionsByAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listXRPRippleTransactionsByAddressWithHttpInfo($network, $address, $context = null, $limit = 50, $offset = 0)
+    public function listXRPRippleTransactionsByAddressWithHttpInfo($network, $address, $context = null, $limit = 50, $offset = 0, $transaction_type = null)
     {
-        $request = $this->listXRPRippleTransactionsByAddressRequest($network, $address, $context, $limit, $offset);
+        $request = $this->listXRPRippleTransactionsByAddressRequest($network, $address, $context, $limit, $offset, $transaction_type);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2897,13 +2899,14 @@ class XRPRippleApi
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
      * @param  int $limit Defines how many items should be returned in the response per page basis. (optional, default to 50)
      * @param  int $offset The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)
+     * @param  string $transaction_type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listXRPRippleTransactionsByAddressAsync($network, $address, $context = null, $limit = 50, $offset = 0)
+    public function listXRPRippleTransactionsByAddressAsync($network, $address, $context = null, $limit = 50, $offset = 0, $transaction_type = null)
     {
-        return $this->listXRPRippleTransactionsByAddressAsyncWithHttpInfo($network, $address, $context, $limit, $offset)
+        return $this->listXRPRippleTransactionsByAddressAsyncWithHttpInfo($network, $address, $context, $limit, $offset, $transaction_type)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2921,14 +2924,15 @@ class XRPRippleApi
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
      * @param  int $limit Defines how many items should be returned in the response per page basis. (optional, default to 50)
      * @param  int $offset The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)
+     * @param  string $transaction_type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listXRPRippleTransactionsByAddressAsyncWithHttpInfo($network, $address, $context = null, $limit = 50, $offset = 0)
+    public function listXRPRippleTransactionsByAddressAsyncWithHttpInfo($network, $address, $context = null, $limit = 50, $offset = 0, $transaction_type = null)
     {
         $returnType = '\CryptoAPIs\Model\ListXRPRippleTransactionsByAddressR';
-        $request = $this->listXRPRippleTransactionsByAddressRequest($network, $address, $context, $limit, $offset);
+        $request = $this->listXRPRippleTransactionsByAddressRequest($network, $address, $context, $limit, $offset, $transaction_type);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2971,11 +2975,12 @@ class XRPRippleApi
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
      * @param  int $limit Defines how many items should be returned in the response per page basis. (optional, default to 50)
      * @param  int $offset The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)
+     * @param  string $transaction_type (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listXRPRippleTransactionsByAddressRequest($network, $address, $context = null, $limit = 50, $offset = 0)
+    public function listXRPRippleTransactionsByAddressRequest($network, $address, $context = null, $limit = 50, $offset = 0, $transaction_type = null)
     {
         // verify the required parameter 'network' is set
         if ($network === null || (is_array($network) && count($network) === 0)) {
@@ -3028,6 +3033,17 @@ class XRPRippleApi
             }
             else {
                 $queryParams['offset'] = $offset;
+            }
+        }
+        // query params
+        if ($transaction_type !== null) {
+            if('form' === 'form' && is_array($transaction_type)) {
+                foreach($transaction_type as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['transactionType'] = $transaction_type;
             }
         }
 

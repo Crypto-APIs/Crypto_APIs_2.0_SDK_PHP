@@ -68,7 +68,7 @@ class ListAssetsDetailsRI implements ModelInterface, ArrayAccess, \JsonSerializa
         'asset_type' => 'string',
         'latest_rate' => '\CryptoAPIs\Model\ListAssetsDetailsRILatestRate',
         'slug' => 'string',
-        'specific_data' => '\CryptoAPIs\Model\ListAssetsDetailsRISpecificData'
+        'specific_data' => '\CryptoAPIs\Model\ListAssetsDetailsRIS'
     ];
 
     /**
@@ -507,7 +507,7 @@ class ListAssetsDetailsRI implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets specific_data
      *
-     * @return \CryptoAPIs\Model\ListAssetsDetailsRISpecificData
+     * @return \CryptoAPIs\Model\ListAssetsDetailsRIS
      */
     public function getSpecificData()
     {
@@ -517,7 +517,7 @@ class ListAssetsDetailsRI implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets specific_data
      *
-     * @param \CryptoAPIs\Model\ListAssetsDetailsRISpecificData $specific_data specific_data
+     * @param \CryptoAPIs\Model\ListAssetsDetailsRIS $specific_data specific_data
      *
      * @return self
      */

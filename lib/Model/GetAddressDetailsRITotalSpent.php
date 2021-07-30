@@ -255,7 +255,7 @@ class GetAddressDetailsRITotalSpent implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets unit
      *
-     * @param string $unit Defines the unit of the spent amount, e.g. BTC, ETH, XRP.
+     * @param string $unit unit
      *
      * @return self
      */

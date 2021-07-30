@@ -81,15 +81,6 @@ class ListXRPRippleTransactionsByAddressRITest extends TestCase
     }
 
     /**
-     * Test attribute "additional_data"
-     */
-    public function testPropertyAdditionalData()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "index"
      */
     public function testPropertyIndex()

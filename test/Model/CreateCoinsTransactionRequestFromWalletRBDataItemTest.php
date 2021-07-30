@@ -81,9 +81,18 @@ class CreateCoinsTransactionRequestFromWalletRBDataItemTest extends TestCase
     }
 
     /**
-     * Test attribute "destinations"
+     * Test attribute "callback_secret_key"
      */
-    public function testPropertyDestinations()
+    public function testPropertyCallbackSecretKey()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "callback_url"
+     */
+    public function testPropertyCallbackUrl()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -93,6 +102,15 @@ class CreateCoinsTransactionRequestFromWalletRBDataItemTest extends TestCase
      * Test attribute "fee_priority"
      */
     public function testPropertyFeePriority()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "recipients"
+     */
+    public function testPropertyRecipients()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

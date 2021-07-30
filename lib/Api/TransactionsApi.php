@@ -186,7 +186,7 @@ class TransactionsApi
             }
 
             switch($statusCode) {
-                case 200:
+                case 201:
                     if ('\CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressR' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
@@ -323,7 +323,7 @@ class TransactionsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
+                case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressR',
@@ -717,7 +717,7 @@ class TransactionsApi
             }
 
             switch($statusCode) {
-                case 200:
+                case 201:
                     if ('\CryptoAPIs\Model\CreateCoinsTransactionRequestFromWalletR' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
@@ -854,7 +854,7 @@ class TransactionsApi
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
+                case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\CryptoAPIs\Model\CreateCoinsTransactionRequestFromWalletR',
@@ -1167,9 +1167,9 @@ class TransactionsApi
      *
      * Create Tokens Transaction Request from Address
      *
-     * @param  string $address Defines the specific source address for the transaction. (required)
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
+     * @param  string $sender_address Defines the specific source address for the transaction. (required)
      * @param  string $wallet_id Defines the unique ID of the Wallet. (required)
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
      * @param  \CryptoAPIs\Model\CreateTokensTransactionRequestFromAddressRB $create_tokens_transaction_request_from_address_rb create_tokens_transaction_request_from_address_rb (optional)
@@ -1178,9 +1178,9 @@ class TransactionsApi
      * @throws \InvalidArgumentException
      * @return \CryptoAPIs\Model\CreateTokensTransactionRequestFromAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\WalletAsAServiceTokenNotSupported|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
      */
-    public function createTokensTransactionRequestFromAddress($address, $blockchain, $network, $wallet_id, $context = null, $create_tokens_transaction_request_from_address_rb = null)
+    public function createTokensTransactionRequestFromAddress($blockchain, $network, $sender_address, $wallet_id, $context = null, $create_tokens_transaction_request_from_address_rb = null)
     {
-        list($response) = $this->createTokensTransactionRequestFromAddressWithHttpInfo($address, $blockchain, $network, $wallet_id, $context, $create_tokens_transaction_request_from_address_rb);
+        list($response) = $this->createTokensTransactionRequestFromAddressWithHttpInfo($blockchain, $network, $sender_address, $wallet_id, $context, $create_tokens_transaction_request_from_address_rb);
         return $response;
     }
 
@@ -1189,9 +1189,9 @@ class TransactionsApi
      *
      * Create Tokens Transaction Request from Address
      *
-     * @param  string $address Defines the specific source address for the transaction. (required)
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
+     * @param  string $sender_address Defines the specific source address for the transaction. (required)
      * @param  string $wallet_id Defines the unique ID of the Wallet. (required)
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
      * @param  \CryptoAPIs\Model\CreateTokensTransactionRequestFromAddressRB $create_tokens_transaction_request_from_address_rb (optional)
@@ -1200,9 +1200,9 @@ class TransactionsApi
      * @throws \InvalidArgumentException
      * @return array of \CryptoAPIs\Model\CreateTokensTransactionRequestFromAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\WalletAsAServiceTokenNotSupported|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTokensTransactionRequestFromAddressWithHttpInfo($address, $blockchain, $network, $wallet_id, $context = null, $create_tokens_transaction_request_from_address_rb = null)
+    public function createTokensTransactionRequestFromAddressWithHttpInfo($blockchain, $network, $sender_address, $wallet_id, $context = null, $create_tokens_transaction_request_from_address_rb = null)
     {
-        $request = $this->createTokensTransactionRequestFromAddressRequest($address, $blockchain, $network, $wallet_id, $context, $create_tokens_transaction_request_from_address_rb);
+        $request = $this->createTokensTransactionRequestFromAddressRequest($blockchain, $network, $sender_address, $wallet_id, $context, $create_tokens_transaction_request_from_address_rb);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1460,9 +1460,9 @@ class TransactionsApi
      *
      * Create Tokens Transaction Request from Address
      *
-     * @param  string $address Defines the specific source address for the transaction. (required)
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
+     * @param  string $sender_address Defines the specific source address for the transaction. (required)
      * @param  string $wallet_id Defines the unique ID of the Wallet. (required)
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
      * @param  \CryptoAPIs\Model\CreateTokensTransactionRequestFromAddressRB $create_tokens_transaction_request_from_address_rb (optional)
@@ -1470,9 +1470,9 @@ class TransactionsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTokensTransactionRequestFromAddressAsync($address, $blockchain, $network, $wallet_id, $context = null, $create_tokens_transaction_request_from_address_rb = null)
+    public function createTokensTransactionRequestFromAddressAsync($blockchain, $network, $sender_address, $wallet_id, $context = null, $create_tokens_transaction_request_from_address_rb = null)
     {
-        return $this->createTokensTransactionRequestFromAddressAsyncWithHttpInfo($address, $blockchain, $network, $wallet_id, $context, $create_tokens_transaction_request_from_address_rb)
+        return $this->createTokensTransactionRequestFromAddressAsyncWithHttpInfo($blockchain, $network, $sender_address, $wallet_id, $context, $create_tokens_transaction_request_from_address_rb)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1485,9 +1485,9 @@ class TransactionsApi
      *
      * Create Tokens Transaction Request from Address
      *
-     * @param  string $address Defines the specific source address for the transaction. (required)
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
+     * @param  string $sender_address Defines the specific source address for the transaction. (required)
      * @param  string $wallet_id Defines the unique ID of the Wallet. (required)
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
      * @param  \CryptoAPIs\Model\CreateTokensTransactionRequestFromAddressRB $create_tokens_transaction_request_from_address_rb (optional)
@@ -1495,10 +1495,10 @@ class TransactionsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTokensTransactionRequestFromAddressAsyncWithHttpInfo($address, $blockchain, $network, $wallet_id, $context = null, $create_tokens_transaction_request_from_address_rb = null)
+    public function createTokensTransactionRequestFromAddressAsyncWithHttpInfo($blockchain, $network, $sender_address, $wallet_id, $context = null, $create_tokens_transaction_request_from_address_rb = null)
     {
         $returnType = '\CryptoAPIs\Model\CreateTokensTransactionRequestFromAddressR';
-        $request = $this->createTokensTransactionRequestFromAddressRequest($address, $blockchain, $network, $wallet_id, $context, $create_tokens_transaction_request_from_address_rb);
+        $request = $this->createTokensTransactionRequestFromAddressRequest($blockchain, $network, $sender_address, $wallet_id, $context, $create_tokens_transaction_request_from_address_rb);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1536,9 +1536,9 @@ class TransactionsApi
     /**
      * Create request for operation 'createTokensTransactionRequestFromAddress'
      *
-     * @param  string $address Defines the specific source address for the transaction. (required)
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
+     * @param  string $sender_address Defines the specific source address for the transaction. (required)
      * @param  string $wallet_id Defines the unique ID of the Wallet. (required)
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
      * @param  \CryptoAPIs\Model\CreateTokensTransactionRequestFromAddressRB $create_tokens_transaction_request_from_address_rb (optional)
@@ -1546,14 +1546,8 @@ class TransactionsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function createTokensTransactionRequestFromAddressRequest($address, $blockchain, $network, $wallet_id, $context = null, $create_tokens_transaction_request_from_address_rb = null)
+    public function createTokensTransactionRequestFromAddressRequest($blockchain, $network, $sender_address, $wallet_id, $context = null, $create_tokens_transaction_request_from_address_rb = null)
     {
-        // verify the required parameter 'address' is set
-        if ($address === null || (is_array($address) && count($address) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $address when calling createTokensTransactionRequestFromAddress'
-            );
-        }
         // verify the required parameter 'blockchain' is set
         if ($blockchain === null || (is_array($blockchain) && count($blockchain) === 0)) {
             throw new \InvalidArgumentException(
@@ -1566,6 +1560,12 @@ class TransactionsApi
                 'Missing the required parameter $network when calling createTokensTransactionRequestFromAddress'
             );
         }
+        // verify the required parameter 'sender_address' is set
+        if ($sender_address === null || (is_array($sender_address) && count($sender_address) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $sender_address when calling createTokensTransactionRequestFromAddress'
+            );
+        }
         // verify the required parameter 'wallet_id' is set
         if ($wallet_id === null || (is_array($wallet_id) && count($wallet_id) === 0)) {
             throw new \InvalidArgumentException(
@@ -1573,7 +1573,7 @@ class TransactionsApi
             );
         }
 
-        $resourcePath = '/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/token-transaction-requests';
+        $resourcePath = '/wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{senderAddress}/token-transaction-requests';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1594,14 +1594,6 @@ class TransactionsApi
 
 
         // path params
-        if ($address !== null) {
-            $resourcePath = str_replace(
-                '{' . 'address' . '}',
-                ObjectSerializer::toPathValue($address),
-                $resourcePath
-            );
-        }
-        // path params
         if ($blockchain !== null) {
             $resourcePath = str_replace(
                 '{' . 'blockchain' . '}',
@@ -1614,6 +1606,14 @@ class TransactionsApi
             $resourcePath = str_replace(
                 '{' . 'network' . '}',
                 ObjectSerializer::toPathValue($network),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($sender_address !== null) {
+            $resourcePath = str_replace(
+                '{' . 'senderAddress' . '}',
+                ObjectSerializer::toPathValue($sender_address),
                 $resourcePath
             );
         }

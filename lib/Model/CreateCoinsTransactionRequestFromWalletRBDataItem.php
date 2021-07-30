@@ -60,8 +60,10 @@ class CreateCoinsTransactionRequestFromWalletRBDataItem implements ModelInterfac
       * @var string[]
       */
     protected static $openAPITypes = [
-        'destinations' => '\CryptoAPIs\Model\CreateCoinsTransactionRequestFromWalletRBDataItemDestinations[]',
-        'fee_priority' => 'string'
+        'callback_secret_key' => 'string',
+        'callback_url' => 'string',
+        'fee_priority' => 'string',
+        'recipients' => '\CryptoAPIs\Model\CreateCoinsTransactionRequestFromWalletRBDataItemRecipients[]'
     ];
 
     /**
@@ -72,8 +74,10 @@ class CreateCoinsTransactionRequestFromWalletRBDataItem implements ModelInterfac
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'destinations' => null,
-        'fee_priority' => null
+        'callback_secret_key' => null,
+        'callback_url' => null,
+        'fee_priority' => null,
+        'recipients' => null
     ];
 
     /**
@@ -103,8 +107,10 @@ class CreateCoinsTransactionRequestFromWalletRBDataItem implements ModelInterfac
      * @var string[]
      */
     protected static $attributeMap = [
-        'destinations' => 'destinations',
-        'fee_priority' => 'feePriority'
+        'callback_secret_key' => 'callbackSecretKey',
+        'callback_url' => 'callbackUrl',
+        'fee_priority' => 'feePriority',
+        'recipients' => 'recipients'
     ];
 
     /**
@@ -113,8 +119,10 @@ class CreateCoinsTransactionRequestFromWalletRBDataItem implements ModelInterfac
      * @var string[]
      */
     protected static $setters = [
-        'destinations' => 'setDestinations',
-        'fee_priority' => 'setFeePriority'
+        'callback_secret_key' => 'setCallbackSecretKey',
+        'callback_url' => 'setCallbackUrl',
+        'fee_priority' => 'setFeePriority',
+        'recipients' => 'setRecipients'
     ];
 
     /**
@@ -123,8 +131,10 @@ class CreateCoinsTransactionRequestFromWalletRBDataItem implements ModelInterfac
      * @var string[]
      */
     protected static $getters = [
-        'destinations' => 'getDestinations',
-        'fee_priority' => 'getFeePriority'
+        'callback_secret_key' => 'getCallbackSecretKey',
+        'callback_url' => 'getCallbackUrl',
+        'fee_priority' => 'getFeePriority',
+        'recipients' => 'getRecipients'
     ];
 
     /**
@@ -201,8 +211,10 @@ class CreateCoinsTransactionRequestFromWalletRBDataItem implements ModelInterfac
      */
     public function __construct(array $data = null)
     {
-        $this->container['destinations'] = $data['destinations'] ?? null;
+        $this->container['callback_secret_key'] = $data['callback_secret_key'] ?? null;
+        $this->container['callback_url'] = $data['callback_url'] ?? null;
         $this->container['fee_priority'] = $data['fee_priority'] ?? null;
+        $this->container['recipients'] = $data['recipients'] ?? null;
     }
 
     /**
@@ -214,9 +226,6 @@ class CreateCoinsTransactionRequestFromWalletRBDataItem implements ModelInterfac
     {
         $invalidProperties = [];
 
-        if ($this->container['destinations'] === null) {
-            $invalidProperties[] = "'destinations' can't be null";
-        }
         if ($this->container['fee_priority'] === null) {
             $invalidProperties[] = "'fee_priority' can't be null";
         }
@@ -229,6 +238,9 @@ class CreateCoinsTransactionRequestFromWalletRBDataItem implements ModelInterfac
             );
         }
 
+        if ($this->container['recipients'] === null) {
+            $invalidProperties[] = "'recipients' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -245,25 +257,49 @@ class CreateCoinsTransactionRequestFromWalletRBDataItem implements ModelInterfac
 
 
     /**
-     * Gets destinations
+     * Gets callback_secret_key
      *
-     * @return \CryptoAPIs\Model\CreateCoinsTransactionRequestFromWalletRBDataItemDestinations[]
+     * @return string|null
      */
-    public function getDestinations()
+    public function getCallbackSecretKey()
     {
-        return $this->container['destinations'];
+        return $this->container['callback_secret_key'];
     }
 
     /**
-     * Sets destinations
+     * Sets callback_secret_key
      *
-     * @param \CryptoAPIs\Model\CreateCoinsTransactionRequestFromWalletRBDataItemDestinations[] $destinations Defines the destination of the transaction, whether it is incoming or outgoing.
+     * @param string|null $callback_secret_key Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
      *
      * @return self
      */
-    public function setDestinations($destinations)
+    public function setCallbackSecretKey($callback_secret_key)
     {
-        $this->container['destinations'] = $destinations;
+        $this->container['callback_secret_key'] = $callback_secret_key;
+
+        return $this;
+    }
+
+    /**
+     * Gets callback_url
+     *
+     * @return string|null
+     */
+    public function getCallbackUrl()
+    {
+        return $this->container['callback_url'];
+    }
+
+    /**
+     * Sets callback_url
+     *
+     * @param string|null $callback_url Verified URL for sending callbacks
+     *
+     * @return self
+     */
+    public function setCallbackUrl($callback_url)
+    {
+        $this->container['callback_url'] = $callback_url;
 
         return $this;
     }
@@ -298,6 +334,30 @@ class CreateCoinsTransactionRequestFromWalletRBDataItem implements ModelInterfac
             );
         }
         $this->container['fee_priority'] = $fee_priority;
+
+        return $this;
+    }
+
+    /**
+     * Gets recipients
+     *
+     * @return \CryptoAPIs\Model\CreateCoinsTransactionRequestFromWalletRBDataItemRecipients[]
+     */
+    public function getRecipients()
+    {
+        return $this->container['recipients'];
+    }
+
+    /**
+     * Sets recipients
+     *
+     * @param \CryptoAPIs\Model\CreateCoinsTransactionRequestFromWalletRBDataItemRecipients[] $recipients Defines the destination of the transaction, whether it is incoming or outgoing.
+     *
+     * @return self
+     */
+    public function setRecipients($recipients)
+    {
+        $this->container['recipients'] = $recipients;
 
         return $this;
     }

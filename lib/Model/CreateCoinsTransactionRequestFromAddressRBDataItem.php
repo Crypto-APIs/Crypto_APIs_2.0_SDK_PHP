@@ -61,8 +61,10 @@ class CreateCoinsTransactionRequestFromAddressRBDataItem implements ModelInterfa
       */
     protected static $openAPITypes = [
         'amount' => 'string',
+        'callback_secret_key' => 'string',
+        'callback_url' => 'string',
         'fee_priority' => 'string',
-        'to_address' => 'string'
+        'recipient_address' => 'string'
     ];
 
     /**
@@ -74,8 +76,10 @@ class CreateCoinsTransactionRequestFromAddressRBDataItem implements ModelInterfa
       */
     protected static $openAPIFormats = [
         'amount' => null,
+        'callback_secret_key' => null,
+        'callback_url' => null,
         'fee_priority' => null,
-        'to_address' => null
+        'recipient_address' => null
     ];
 
     /**
@@ -106,8 +110,10 @@ class CreateCoinsTransactionRequestFromAddressRBDataItem implements ModelInterfa
      */
     protected static $attributeMap = [
         'amount' => 'amount',
+        'callback_secret_key' => 'callbackSecretKey',
+        'callback_url' => 'callbackUrl',
         'fee_priority' => 'feePriority',
-        'to_address' => 'toAddress'
+        'recipient_address' => 'recipientAddress'
     ];
 
     /**
@@ -117,8 +123,10 @@ class CreateCoinsTransactionRequestFromAddressRBDataItem implements ModelInterfa
      */
     protected static $setters = [
         'amount' => 'setAmount',
+        'callback_secret_key' => 'setCallbackSecretKey',
+        'callback_url' => 'setCallbackUrl',
         'fee_priority' => 'setFeePriority',
-        'to_address' => 'setToAddress'
+        'recipient_address' => 'setRecipientAddress'
     ];
 
     /**
@@ -128,8 +136,10 @@ class CreateCoinsTransactionRequestFromAddressRBDataItem implements ModelInterfa
      */
     protected static $getters = [
         'amount' => 'getAmount',
+        'callback_secret_key' => 'getCallbackSecretKey',
+        'callback_url' => 'getCallbackUrl',
         'fee_priority' => 'getFeePriority',
-        'to_address' => 'getToAddress'
+        'recipient_address' => 'getRecipientAddress'
     ];
 
     /**
@@ -207,8 +217,10 @@ class CreateCoinsTransactionRequestFromAddressRBDataItem implements ModelInterfa
     public function __construct(array $data = null)
     {
         $this->container['amount'] = $data['amount'] ?? null;
+        $this->container['callback_secret_key'] = $data['callback_secret_key'] ?? null;
+        $this->container['callback_url'] = $data['callback_url'] ?? null;
         $this->container['fee_priority'] = $data['fee_priority'] ?? null;
-        $this->container['to_address'] = $data['to_address'] ?? null;
+        $this->container['recipient_address'] = $data['recipient_address'] ?? null;
     }
 
     /**
@@ -235,8 +247,8 @@ class CreateCoinsTransactionRequestFromAddressRBDataItem implements ModelInterfa
             );
         }
 
-        if ($this->container['to_address'] === null) {
-            $invalidProperties[] = "'to_address' can't be null";
+        if ($this->container['recipient_address'] === null) {
+            $invalidProperties[] = "'recipient_address' can't be null";
         }
         return $invalidProperties;
     }
@@ -278,6 +290,54 @@ class CreateCoinsTransactionRequestFromAddressRBDataItem implements ModelInterfa
     }
 
     /**
+     * Gets callback_secret_key
+     *
+     * @return string|null
+     */
+    public function getCallbackSecretKey()
+    {
+        return $this->container['callback_secret_key'];
+    }
+
+    /**
+     * Sets callback_secret_key
+     *
+     * @param string|null $callback_secret_key Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs.
+     *
+     * @return self
+     */
+    public function setCallbackSecretKey($callback_secret_key)
+    {
+        $this->container['callback_secret_key'] = $callback_secret_key;
+
+        return $this;
+    }
+
+    /**
+     * Gets callback_url
+     *
+     * @return string|null
+     */
+    public function getCallbackUrl()
+    {
+        return $this->container['callback_url'];
+    }
+
+    /**
+     * Sets callback_url
+     *
+     * @param string|null $callback_url Verified URL for sending callbacks
+     *
+     * @return self
+     */
+    public function setCallbackUrl($callback_url)
+    {
+        $this->container['callback_url'] = $callback_url;
+
+        return $this;
+    }
+
+    /**
      * Gets fee_priority
      *
      * @return string
@@ -312,25 +372,25 @@ class CreateCoinsTransactionRequestFromAddressRBDataItem implements ModelInterfa
     }
 
     /**
-     * Gets to_address
+     * Gets recipient_address
      *
      * @return string
      */
-    public function getToAddress()
+    public function getRecipientAddress()
     {
-        return $this->container['to_address'];
+        return $this->container['recipient_address'];
     }
 
     /**
-     * Sets to_address
+     * Sets recipient_address
      *
-     * @param string $to_address Defines the specific recipient address for the transaction.
+     * @param string $recipient_address Defines the specific recipient address for the transaction.
      *
      * @return self
      */
-    public function setToAddress($to_address)
+    public function setRecipientAddress($recipient_address)
     {
-        $this->container['to_address'] = $to_address;
+        $this->container['recipient_address'] = $recipient_address;
 
         return $this;
     }

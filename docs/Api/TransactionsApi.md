@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createCoinsTransactionRequestFromAddress()**](TransactionsApi.md#createCoinsTransactionRequestFromAddress) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/transaction-requests | Create Coins Transaction Request from Address
 [**createCoinsTransactionRequestFromWallet()**](TransactionsApi.md#createCoinsTransactionRequestFromWallet) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/transaction-requests | Create Coins Transaction Request from Wallet
-[**createTokensTransactionRequestFromAddress()**](TransactionsApi.md#createTokensTransactionRequestFromAddress) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/token-transaction-requests | Create Tokens Transaction Request from Address
+[**createTokensTransactionRequestFromAddress()**](TransactionsApi.md#createTokensTransactionRequestFromAddress) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{senderAddress}/token-transaction-requests | Create Tokens Transaction Request from Address
 
 
 ## `createCoinsTransactionRequestFromAddress()`
@@ -154,12 +154,12 @@ Name | Type | Description  | Notes
 ## `createTokensTransactionRequestFromAddress()`
 
 ```php
-createTokensTransactionRequestFromAddress($address, $blockchain, $network, $wallet_id, $context, $create_tokens_transaction_request_from_address_rb): \CryptoAPIs\Model\CreateTokensTransactionRequestFromAddressR
+createTokensTransactionRequestFromAddress($blockchain, $network, $sender_address, $wallet_id, $context, $create_tokens_transaction_request_from_address_rb): \CryptoAPIs\Model\CreateTokensTransactionRequestFromAddressR
 ```
 
 Create Tokens Transaction Request from Address
 
-Through this endpoint users can make a single token transaction.    {warning}This applies only to **fungible** tokens, **not** NFTs (non-fungible tokens).{/warning}
+Through this endpoint users can make a single token transaction.    {warning}This applies only to **fungible** tokens, **not** NFTs (non-fungible tokens).{/warning}    {note}To have an operational callback subscription, you need to first verify a domain for the Callback URL. Please see more information on Callbacks [here](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-url).{/note}    {warning}Crypto APIs will notify the user **only when** the event occurs. There are cases when the specific event doesn't happen at all, or takes a long time to do so. A callback notification **will not** be sent if the event does not or cannot occur, or will take long time to occur.{/warning}
 
 ### Example
 
@@ -180,15 +180,15 @@ $apiInstance = new CryptoAPIs\Api\TransactionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$address = 0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5; // string | Defines the specific source address for the transaction.
 $blockchain = ethereum; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = 'mainnet'; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
+$sender_address = 0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5; // string | Defines the specific source address for the transaction.
 $wallet_id = 609e221675d04500068718dc; // string | Defines the unique ID of the Wallet.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $create_tokens_transaction_request_from_address_rb = new \CryptoAPIs\Model\CreateTokensTransactionRequestFromAddressRB(); // \CryptoAPIs\Model\CreateTokensTransactionRequestFromAddressRB
 
 try {
-    $result = $apiInstance->createTokensTransactionRequestFromAddress($address, $blockchain, $network, $wallet_id, $context, $create_tokens_transaction_request_from_address_rb);
+    $result = $apiInstance->createTokensTransactionRequestFromAddress($blockchain, $network, $sender_address, $wallet_id, $context, $create_tokens_transaction_request_from_address_rb);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TransactionsApi->createTokensTransactionRequestFromAddress: ', $e->getMessage(), PHP_EOL;
@@ -199,9 +199,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address** | **string**| Defines the specific source address for the transaction. |
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. | [default to &#39;ethereum&#39;]
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. | [default to &#39;mainnet&#39;]
+ **sender_address** | **string**| Defines the specific source address for the transaction. |
  **wallet_id** | **string**| Defines the unique ID of the Wallet. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
  **create_tokens_transaction_request_from_address_rb** | [**\CryptoAPIs\Model\CreateTokensTransactionRequestFromAddressRB**](../Model/CreateTokensTransactionRequestFromAddressRB.md)|  | [optional]

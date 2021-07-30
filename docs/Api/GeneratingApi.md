@@ -4,16 +4,16 @@ All URIs are relative to https://rest.cryptoapis.io/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**generateReceivingAddress()**](GeneratingApi.md#generateReceivingAddress) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | Generate Receiving Address
+[**generateDepositAddress()**](GeneratingApi.md#generateDepositAddress) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | Generate Deposit Address
 
 
-## `generateReceivingAddress()`
+## `generateDepositAddress()`
 
 ```php
-generateReceivingAddress($blockchain, $network, $wallet_id, $context, $generate_receiving_address_rb): \CryptoAPIs\Model\GenerateReceivingAddressR
+generateDepositAddress($blockchain, $network, $wallet_id, $context, $generate_deposit_address_rb): \CryptoAPIs\Model\GenerateDepositAddressR
 ```
 
-Generate Receiving Address
+Generate Deposit Address
 
 Through this endpoint customers can generate a new Receiving/Deposit Addresses into their Wallet.
 
@@ -40,13 +40,13 @@ $blockchain = bitcoin; // string | Represents the specific blockchain protocol n
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
 $wallet_id = 60c9d9921c38030006675ff6; // string | Represents the unique ID of the specific Wallet.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-$generate_receiving_address_rb = new \CryptoAPIs\Model\GenerateReceivingAddressRB(); // \CryptoAPIs\Model\GenerateReceivingAddressRB
+$generate_deposit_address_rb = new \CryptoAPIs\Model\GenerateDepositAddressRB(); // \CryptoAPIs\Model\GenerateDepositAddressRB
 
 try {
-    $result = $apiInstance->generateReceivingAddress($blockchain, $network, $wallet_id, $context, $generate_receiving_address_rb);
+    $result = $apiInstance->generateDepositAddress($blockchain, $network, $wallet_id, $context, $generate_deposit_address_rb);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GeneratingApi->generateReceivingAddress: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GeneratingApi->generateDepositAddress: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -58,11 +58,11 @@ Name | Type | Description  | Notes
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. |
  **wallet_id** | **string**| Represents the unique ID of the specific Wallet. |
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
- **generate_receiving_address_rb** | [**\CryptoAPIs\Model\GenerateReceivingAddressRB**](../Model/GenerateReceivingAddressRB.md)|  | [optional]
+ **generate_deposit_address_rb** | [**\CryptoAPIs\Model\GenerateDepositAddressRB**](../Model/GenerateDepositAddressRB.md)|  | [optional]
 
 ### Return type
 
-[**\CryptoAPIs\Model\GenerateReceivingAddressR**](../Model/GenerateReceivingAddressR.md)
+[**\CryptoAPIs\Model\GenerateDepositAddressR**](../Model/GenerateDepositAddressR.md)
 
 ### Authorization
 

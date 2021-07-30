@@ -36,6 +36,7 @@ use \CryptoAPIs\ObjectSerializer;
  * TransactionRequestBroadcastedDataItem Class Doc Comment
  *
  * @category Class
+ * @description Defines an &#x60;item&#x60; as one result.
  * @package  CryptoAPIs
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -62,10 +63,10 @@ class TransactionRequestBroadcastedDataItem implements ModelInterface, ArrayAcce
     protected static $openAPITypes = [
         'blockchain' => 'string',
         'network' => 'string',
-        'required_approves' => 'int',
-        'required_rejects' => 'int',
-        'current_approves' => 'int',
-        'current_rejects' => 'int',
+        'required_approvals' => 'int',
+        'required_rejections' => 'int',
+        'current_approvals' => 'int',
+        'current_rejections' => 'int',
         'transaction_id' => 'string'
     ];
 
@@ -79,10 +80,10 @@ class TransactionRequestBroadcastedDataItem implements ModelInterface, ArrayAcce
     protected static $openAPIFormats = [
         'blockchain' => null,
         'network' => null,
-        'required_approves' => null,
-        'required_rejects' => null,
-        'current_approves' => null,
-        'current_rejects' => null,
+        'required_approvals' => null,
+        'required_rejections' => null,
+        'current_approvals' => null,
+        'current_rejections' => null,
         'transaction_id' => null
     ];
 
@@ -115,10 +116,10 @@ class TransactionRequestBroadcastedDataItem implements ModelInterface, ArrayAcce
     protected static $attributeMap = [
         'blockchain' => 'blockchain',
         'network' => 'network',
-        'required_approves' => 'requiredApproves',
-        'required_rejects' => 'requiredRejects',
-        'current_approves' => 'currentApproves',
-        'current_rejects' => 'currentRejects',
+        'required_approvals' => 'requiredApprovals',
+        'required_rejections' => 'requiredRejections',
+        'current_approvals' => 'currentApprovals',
+        'current_rejections' => 'currentRejections',
         'transaction_id' => 'transactionId'
     ];
 
@@ -130,10 +131,10 @@ class TransactionRequestBroadcastedDataItem implements ModelInterface, ArrayAcce
     protected static $setters = [
         'blockchain' => 'setBlockchain',
         'network' => 'setNetwork',
-        'required_approves' => 'setRequiredApproves',
-        'required_rejects' => 'setRequiredRejects',
-        'current_approves' => 'setCurrentApproves',
-        'current_rejects' => 'setCurrentRejects',
+        'required_approvals' => 'setRequiredApprovals',
+        'required_rejections' => 'setRequiredRejections',
+        'current_approvals' => 'setCurrentApprovals',
+        'current_rejections' => 'setCurrentRejections',
         'transaction_id' => 'setTransactionId'
     ];
 
@@ -145,10 +146,10 @@ class TransactionRequestBroadcastedDataItem implements ModelInterface, ArrayAcce
     protected static $getters = [
         'blockchain' => 'getBlockchain',
         'network' => 'getNetwork',
-        'required_approves' => 'getRequiredApproves',
-        'required_rejects' => 'getRequiredRejects',
-        'current_approves' => 'getCurrentApproves',
-        'current_rejects' => 'getCurrentRejects',
+        'required_approvals' => 'getRequiredApprovals',
+        'required_rejections' => 'getRequiredRejections',
+        'current_approvals' => 'getCurrentApprovals',
+        'current_rejections' => 'getCurrentRejections',
         'transaction_id' => 'getTransactionId'
     ];
 
@@ -211,10 +212,10 @@ class TransactionRequestBroadcastedDataItem implements ModelInterface, ArrayAcce
     {
         $this->container['blockchain'] = $data['blockchain'] ?? null;
         $this->container['network'] = $data['network'] ?? null;
-        $this->container['required_approves'] = $data['required_approves'] ?? null;
-        $this->container['required_rejects'] = $data['required_rejects'] ?? null;
-        $this->container['current_approves'] = $data['current_approves'] ?? null;
-        $this->container['current_rejects'] = $data['current_rejects'] ?? null;
+        $this->container['required_approvals'] = $data['required_approvals'] ?? null;
+        $this->container['required_rejections'] = $data['required_rejections'] ?? null;
+        $this->container['current_approvals'] = $data['current_approvals'] ?? null;
+        $this->container['current_rejections'] = $data['current_rejections'] ?? null;
         $this->container['transaction_id'] = $data['transaction_id'] ?? null;
     }
 
@@ -233,17 +234,17 @@ class TransactionRequestBroadcastedDataItem implements ModelInterface, ArrayAcce
         if ($this->container['network'] === null) {
             $invalidProperties[] = "'network' can't be null";
         }
-        if ($this->container['required_approves'] === null) {
-            $invalidProperties[] = "'required_approves' can't be null";
+        if ($this->container['required_approvals'] === null) {
+            $invalidProperties[] = "'required_approvals' can't be null";
         }
-        if ($this->container['required_rejects'] === null) {
-            $invalidProperties[] = "'required_rejects' can't be null";
+        if ($this->container['required_rejections'] === null) {
+            $invalidProperties[] = "'required_rejections' can't be null";
         }
-        if ($this->container['current_approves'] === null) {
-            $invalidProperties[] = "'current_approves' can't be null";
+        if ($this->container['current_approvals'] === null) {
+            $invalidProperties[] = "'current_approvals' can't be null";
         }
-        if ($this->container['current_rejects'] === null) {
-            $invalidProperties[] = "'current_rejects' can't be null";
+        if ($this->container['current_rejections'] === null) {
+            $invalidProperties[] = "'current_rejections' can't be null";
         }
         if ($this->container['transaction_id'] === null) {
             $invalidProperties[] = "'transaction_id' can't be null";
@@ -276,7 +277,7 @@ class TransactionRequestBroadcastedDataItem implements ModelInterface, ArrayAcce
     /**
      * Sets blockchain
      *
-     * @param string $blockchain blockchain
+     * @param string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
      *
      * @return self
      */
@@ -300,7 +301,7 @@ class TransactionRequestBroadcastedDataItem implements ModelInterface, ArrayAcce
     /**
      * Sets network
      *
-     * @param string $network network
+     * @param string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\", \"rinkeby\" are test networks.
      *
      * @return self
      */
@@ -312,97 +313,97 @@ class TransactionRequestBroadcastedDataItem implements ModelInterface, ArrayAcce
     }
 
     /**
-     * Gets required_approves
+     * Gets required_approvals
      *
      * @return int
      */
-    public function getRequiredApproves()
+    public function getRequiredApprovals()
     {
-        return $this->container['required_approves'];
+        return $this->container['required_approvals'];
     }
 
     /**
-     * Sets required_approves
+     * Sets required_approvals
      *
-     * @param int $required_approves required_approves
+     * @param int $required_approvals The required number of approvals needed to approve the transaction.
      *
      * @return self
      */
-    public function setRequiredApproves($required_approves)
+    public function setRequiredApprovals($required_approvals)
     {
-        $this->container['required_approves'] = $required_approves;
+        $this->container['required_approvals'] = $required_approvals;
 
         return $this;
     }
 
     /**
-     * Gets required_rejects
+     * Gets required_rejections
      *
      * @return int
      */
-    public function getRequiredRejects()
+    public function getRequiredRejections()
     {
-        return $this->container['required_rejects'];
+        return $this->container['required_rejections'];
     }
 
     /**
-     * Sets required_rejects
+     * Sets required_rejections
      *
-     * @param int $required_rejects required_rejects
+     * @param int $required_rejections The required number of rejections needed to reject the transaction.
      *
      * @return self
      */
-    public function setRequiredRejects($required_rejects)
+    public function setRequiredRejections($required_rejections)
     {
-        $this->container['required_rejects'] = $required_rejects;
+        $this->container['required_rejections'] = $required_rejections;
 
         return $this;
     }
 
     /**
-     * Gets current_approves
+     * Gets current_approvals
      *
      * @return int
      */
-    public function getCurrentApproves()
+    public function getCurrentApprovals()
     {
-        return $this->container['current_approves'];
+        return $this->container['current_approvals'];
     }
 
     /**
-     * Sets current_approves
+     * Sets current_approvals
      *
-     * @param int $current_approves current_approves
+     * @param int $current_approvals The current number of approvals given for the transaction.
      *
      * @return self
      */
-    public function setCurrentApproves($current_approves)
+    public function setCurrentApprovals($current_approvals)
     {
-        $this->container['current_approves'] = $current_approves;
+        $this->container['current_approvals'] = $current_approvals;
 
         return $this;
     }
 
     /**
-     * Gets current_rejects
+     * Gets current_rejections
      *
      * @return int
      */
-    public function getCurrentRejects()
+    public function getCurrentRejections()
     {
-        return $this->container['current_rejects'];
+        return $this->container['current_rejections'];
     }
 
     /**
-     * Sets current_rejects
+     * Sets current_rejections
      *
-     * @param int $current_rejects current_rejects
+     * @param int $current_rejections The current number of rejections given for the transaction.
      *
      * @return self
      */
-    public function setCurrentRejects($current_rejects)
+    public function setCurrentRejections($current_rejections)
     {
-        $this->container['current_rejects'] = $current_rejects;
+        $this->container['current_rejections'] = $current_rejections;
 
         return $this;
     }
@@ -420,7 +421,7 @@ class TransactionRequestBroadcastedDataItem implements ModelInterface, ArrayAcce
     /**
      * Sets transaction_id
      *
-     * @param string $transaction_id transaction_id
+     * @param string $transaction_id Defines the unique ID of the specific transaction, i.e. its identification number.
      *
      * @return self
      */

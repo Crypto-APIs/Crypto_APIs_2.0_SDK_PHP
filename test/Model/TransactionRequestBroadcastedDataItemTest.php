@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * TransactionRequestBroadcastedDataItemTest Class Doc Comment
  *
  * @category    Class
- * @description TransactionRequestBroadcastedDataItem
+ * @description Defines an &#x60;item&#x60; as one result.
  * @package     CryptoAPIs
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -99,36 +99,36 @@ class TransactionRequestBroadcastedDataItemTest extends TestCase
     }
 
     /**
-     * Test attribute "required_approves"
+     * Test attribute "required_approvals"
      */
-    public function testPropertyRequiredApproves()
+    public function testPropertyRequiredApprovals()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "required_rejects"
+     * Test attribute "required_rejections"
      */
-    public function testPropertyRequiredRejects()
+    public function testPropertyRequiredRejections()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "current_approves"
+     * Test attribute "current_approvals"
      */
-    public function testPropertyCurrentApproves()
+    public function testPropertyCurrentApprovals()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "current_rejects"
+     * Test attribute "current_rejections"
      */
-    public function testPropertyCurrentRejects()
+    public function testPropertyCurrentRejections()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -85,12 +85,12 @@ class InformativeApiTest extends TestCase
     }
 
     /**
-     * Test case for listReceivingAddresses
+     * Test case for listDepositAddresses
      *
-     * List Receiving Addresses.
+     * List Deposit Addresses.
      *
      */
-    public function testListReceivingAddresses()
+    public function testListDepositAddresses()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

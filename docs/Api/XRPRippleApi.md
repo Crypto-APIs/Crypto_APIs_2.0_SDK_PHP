@@ -345,12 +345,12 @@ Name | Type | Description  | Notes
 ## `listXRPRippleTransactionsByAddress()`
 
 ```php
-listXRPRippleTransactionsByAddress($network, $address, $context, $limit, $offset): \CryptoAPIs\Model\ListXRPRippleTransactionsByAddressR
+listXRPRippleTransactionsByAddress($network, $address, $context, $limit, $offset, $transaction_type): \CryptoAPIs\Model\ListXRPRippleTransactionsByAddressR
 ```
 
 List XRP (Ripple) Transactions by Address
 
-This endpoint will list XRP transactions by a attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+This endpoint will list XRP transactions by a attribute `address`. The transactions listed will detail additional information such as hash, height, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.
 
 ### Example
 
@@ -376,9 +376,10 @@ $address = rA9bXGJcXvZKaWofrRphdJsBWzhyCfH3z; // string | Represents the public 
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $limit = 50; // int | Defines how many items should be returned in the response per page basis.
 $offset = 10; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
+$transaction_type = payment; // string
 
 try {
-    $result = $apiInstance->listXRPRippleTransactionsByAddress($network, $address, $context, $limit, $offset);
+    $result = $apiInstance->listXRPRippleTransactionsByAddress($network, $address, $context, $limit, $offset, $transaction_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling XRPRippleApi->listXRPRippleTransactionsByAddress: ', $e->getMessage(), PHP_EOL;
@@ -394,6 +395,7 @@ Name | Type | Description  | Notes
  **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
  **limit** | **int**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
  **offset** | **int**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
+ **transaction_type** | **string**|  | [optional]
 
 ### Return type
 
@@ -420,7 +422,7 @@ listXRPRippleTransactionsByBlockHash($network, $block_hash, $context, $limit, $o
 
 List XRP (Ripple) Transactions By Block Hash
 
-This endpoint will list transactions by an attribute `blockHash`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+This endpoint will list transactions by an attribute `blockHash`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.
 
 ### Example
 
@@ -490,7 +492,7 @@ listXRPRippleTransactionsByBlockHeight($network, $block_height, $context, $limit
 
 List XRP (Ripple) Transactions By Block Height
 
-This endpoint will list transactions by an attribute `blockHeight`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.    {note}Please note that listing data from the same type will apply pagination on the results.{/note}
+This endpoint will list transactions by an attribute `blockHeight`. The transactions listed will detail additional information such as hash, addresses, time of creation in Unix timestamp, etc.    Since XRP is a different blockchain than Bitcoin and Ethereum, it isn't unified.
 
 ### Example
 

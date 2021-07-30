@@ -81,6 +81,24 @@ class CreateCoinsTransactionRequestFromAddressRITest extends TestCase
     }
 
     /**
+     * Test attribute "callback_secret_key"
+     */
+    public function testPropertyCallbackSecretKey()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "callback_url"
+     */
+    public function testPropertyCallbackUrl()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "fee_priority"
      */
     public function testPropertyFeePriority()

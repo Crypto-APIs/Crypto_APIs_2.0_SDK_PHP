@@ -116,44 +116,44 @@ class GeneratingApi
     }
 
     /**
-     * Operation generateReceivingAddress
+     * Operation generateDepositAddress
      *
-     * Generate Receiving Address
+     * Generate Deposit Address
      *
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
      * @param  string $wallet_id Represents the unique ID of the specific Wallet. (required)
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
-     * @param  \CryptoAPIs\Model\GenerateReceivingAddressRB $generate_receiving_address_rb generate_receiving_address_rb (optional)
+     * @param  \CryptoAPIs\Model\GenerateDepositAddressRB $generate_deposit_address_rb generate_deposit_address_rb (optional)
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GenerateReceivingAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\WalletAsAServiceDepositAddressesLimitReached|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
+     * @return \CryptoAPIs\Model\GenerateDepositAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\WalletAsAServiceDepositAddressesLimitReached|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
      */
-    public function generateReceivingAddress($blockchain, $network, $wallet_id, $context = null, $generate_receiving_address_rb = null)
+    public function generateDepositAddress($blockchain, $network, $wallet_id, $context = null, $generate_deposit_address_rb = null)
     {
-        list($response) = $this->generateReceivingAddressWithHttpInfo($blockchain, $network, $wallet_id, $context, $generate_receiving_address_rb);
+        list($response) = $this->generateDepositAddressWithHttpInfo($blockchain, $network, $wallet_id, $context, $generate_deposit_address_rb);
         return $response;
     }
 
     /**
-     * Operation generateReceivingAddressWithHttpInfo
+     * Operation generateDepositAddressWithHttpInfo
      *
-     * Generate Receiving Address
+     * Generate Deposit Address
      *
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
      * @param  string $wallet_id Represents the unique ID of the specific Wallet. (required)
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
-     * @param  \CryptoAPIs\Model\GenerateReceivingAddressRB $generate_receiving_address_rb (optional)
+     * @param  \CryptoAPIs\Model\GenerateDepositAddressRB $generate_deposit_address_rb (optional)
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GenerateReceivingAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\WalletAsAServiceDepositAddressesLimitReached|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GenerateDepositAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\WalletAsAServiceDepositAddressesLimitReached|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function generateReceivingAddressWithHttpInfo($blockchain, $network, $wallet_id, $context = null, $generate_receiving_address_rb = null)
+    public function generateDepositAddressWithHttpInfo($blockchain, $network, $wallet_id, $context = null, $generate_deposit_address_rb = null)
     {
-        $request = $this->generateReceivingAddressRequest($blockchain, $network, $wallet_id, $context, $generate_receiving_address_rb);
+        $request = $this->generateDepositAddressRequest($blockchain, $network, $wallet_id, $context, $generate_deposit_address_rb);
 
         try {
             $options = $this->createHttpClientOption();
@@ -185,14 +185,14 @@ class GeneratingApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\CryptoAPIs\Model\GenerateReceivingAddressR' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\GenerateDepositAddressR' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\GenerateReceivingAddressR', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\GenerateDepositAddressR', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -318,7 +318,7 @@ class GeneratingApi
                     ];
             }
 
-            $returnType = '\CryptoAPIs\Model\GenerateReceivingAddressR';
+            $returnType = '\CryptoAPIs\Model\GenerateDepositAddressR';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -336,7 +336,7 @@ class GeneratingApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\GenerateReceivingAddressR',
+                        '\CryptoAPIs\Model\GenerateDepositAddressR',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -427,22 +427,22 @@ class GeneratingApi
     }
 
     /**
-     * Operation generateReceivingAddressAsync
+     * Operation generateDepositAddressAsync
      *
-     * Generate Receiving Address
+     * Generate Deposit Address
      *
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
      * @param  string $wallet_id Represents the unique ID of the specific Wallet. (required)
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
-     * @param  \CryptoAPIs\Model\GenerateReceivingAddressRB $generate_receiving_address_rb (optional)
+     * @param  \CryptoAPIs\Model\GenerateDepositAddressRB $generate_deposit_address_rb (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function generateReceivingAddressAsync($blockchain, $network, $wallet_id, $context = null, $generate_receiving_address_rb = null)
+    public function generateDepositAddressAsync($blockchain, $network, $wallet_id, $context = null, $generate_deposit_address_rb = null)
     {
-        return $this->generateReceivingAddressAsyncWithHttpInfo($blockchain, $network, $wallet_id, $context, $generate_receiving_address_rb)
+        return $this->generateDepositAddressAsyncWithHttpInfo($blockchain, $network, $wallet_id, $context, $generate_deposit_address_rb)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -451,23 +451,23 @@ class GeneratingApi
     }
 
     /**
-     * Operation generateReceivingAddressAsyncWithHttpInfo
+     * Operation generateDepositAddressAsyncWithHttpInfo
      *
-     * Generate Receiving Address
+     * Generate Deposit Address
      *
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
      * @param  string $wallet_id Represents the unique ID of the specific Wallet. (required)
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
-     * @param  \CryptoAPIs\Model\GenerateReceivingAddressRB $generate_receiving_address_rb (optional)
+     * @param  \CryptoAPIs\Model\GenerateDepositAddressRB $generate_deposit_address_rb (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function generateReceivingAddressAsyncWithHttpInfo($blockchain, $network, $wallet_id, $context = null, $generate_receiving_address_rb = null)
+    public function generateDepositAddressAsyncWithHttpInfo($blockchain, $network, $wallet_id, $context = null, $generate_deposit_address_rb = null)
     {
-        $returnType = '\CryptoAPIs\Model\GenerateReceivingAddressR';
-        $request = $this->generateReceivingAddressRequest($blockchain, $network, $wallet_id, $context, $generate_receiving_address_rb);
+        $returnType = '\CryptoAPIs\Model\GenerateDepositAddressR';
+        $request = $this->generateDepositAddressRequest($blockchain, $network, $wallet_id, $context, $generate_deposit_address_rb);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -503,35 +503,35 @@ class GeneratingApi
     }
 
     /**
-     * Create request for operation 'generateReceivingAddress'
+     * Create request for operation 'generateDepositAddress'
      *
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot;, \&quot;rinkeby\&quot; are test networks. (required)
      * @param  string $wallet_id Represents the unique ID of the specific Wallet. (required)
      * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
-     * @param  \CryptoAPIs\Model\GenerateReceivingAddressRB $generate_receiving_address_rb (optional)
+     * @param  \CryptoAPIs\Model\GenerateDepositAddressRB $generate_deposit_address_rb (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function generateReceivingAddressRequest($blockchain, $network, $wallet_id, $context = null, $generate_receiving_address_rb = null)
+    public function generateDepositAddressRequest($blockchain, $network, $wallet_id, $context = null, $generate_deposit_address_rb = null)
     {
         // verify the required parameter 'blockchain' is set
         if ($blockchain === null || (is_array($blockchain) && count($blockchain) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $blockchain when calling generateReceivingAddress'
+                'Missing the required parameter $blockchain when calling generateDepositAddress'
             );
         }
         // verify the required parameter 'network' is set
         if ($network === null || (is_array($network) && count($network) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $network when calling generateReceivingAddress'
+                'Missing the required parameter $network when calling generateDepositAddress'
             );
         }
         // verify the required parameter 'wallet_id' is set
         if ($wallet_id === null || (is_array($wallet_id) && count($wallet_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $wallet_id when calling generateReceivingAddress'
+                'Missing the required parameter $wallet_id when calling generateDepositAddress'
             );
         }
 
@@ -593,11 +593,11 @@ class GeneratingApi
         }
 
         // for model (json/xml)
-        if (isset($generate_receiving_address_rb)) {
+        if (isset($generate_deposit_address_rb)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($generate_receiving_address_rb));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($generate_deposit_address_rb));
             } else {
-                $httpBody = $generate_receiving_address_rb;
+                $httpBody = $generate_deposit_address_rb;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
