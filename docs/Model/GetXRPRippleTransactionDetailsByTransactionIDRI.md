@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **additional_data** | **string** | Represents additional data that may be needed. |
+**destination_tag** | **int** |  | [optional]
 **index** | **string** | Defines the index of the transaction, i.e. the consecutive place it takes in the blockchain. |
 **mined_in_block_hash** | **string** | Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm. |
 **mined_in_block_height** | **string** | Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block. |

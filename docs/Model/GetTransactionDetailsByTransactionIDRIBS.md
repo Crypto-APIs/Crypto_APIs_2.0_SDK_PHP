@@ -10,13 +10,12 @@ Name | Type | Description | Notes
 **version** | **int** | Represents transaction version number. |
 **vin** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSD2Vin[]**](GetTransactionDetailsByTransactionIDRIBSD2Vin.md) | Represents the transaction inputs. |
 **vout** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSD2Vout[]**](GetTransactionDetailsByTransactionIDRIBSD2Vout.md) | Represents the transaction outputs. |
-**vsize** | **int** | Represents the virtual size of this transaction. |
-**contract** | **string** | Represents the specific transaction contract. |
+**contract** | **string** | Represents the specific transaction contract |
 **gas_limit** | **string** | Represents the amount of gas used by this specific transaction alone. |
-**gas_price** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSECGasPrice**](GetTransactionDetailsByTransactionIDRIBSECGasPrice.md) |  |
-**gas_used** | **string** | Represents the exact unit of gas that was used for the transaction. |
+**gas_price** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSBSCGasPrice**](GetTransactionDetailsByTransactionIDRIBSBSCGasPrice.md) |  |
+**gas_used** | **string** | Defines the unit of the gas price amount, e.g. BTC, ETH, XRP. |
 **input_data** | **string** | Represents additional information that is required for the transaction. |
-**nonce** | **string** | Represents the sequential running number for an address, starting from 0 for the first transaction. E.g., if the nonce of a transaction is 10, it would be the 11th transaction sent from the sender&#39;s address. |
+**nonce** | **int** | Represents the sequential running number for an address, starting from 0 for the first transaction. E.g., if the nonce of a transaction is 10, it would be the 11th transaction sent from the sender&#39;s address. |
 **transaction_status** | **string** | Represents the status of this transaction. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
