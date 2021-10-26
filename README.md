@@ -17,7 +17,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 ```json
 {
   "require": {
-    "cryptoapis/sdk": "^1.3.0"
+    "cryptoapis/sdk": "^1.3.3"
   }
 }
 ```
