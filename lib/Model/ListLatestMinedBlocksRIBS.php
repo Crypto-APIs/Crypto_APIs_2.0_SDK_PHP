@@ -79,7 +79,6 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         'ds_difficulty' => 'string',
         'ds_leader' => 'string',
         'micro_blocks' => 'string[]',
-        'merkleroot' => 'string',
         'nonce' => 'string',
         'size' => 'int'
     ];
@@ -111,7 +110,6 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         'ds_difficulty' => null,
         'ds_leader' => null,
         'micro_blocks' => null,
-        'merkleroot' => null,
         'nonce' => null,
         'size' => null
     ];
@@ -162,7 +160,6 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         'ds_difficulty' => 'dsDifficulty',
         'ds_leader' => 'dsLeader',
         'micro_blocks' => 'microBlocks',
-        'merkleroot' => 'merkleroot',
         'nonce' => 'nonce',
         'size' => 'size'
     ];
@@ -192,7 +189,6 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         'ds_difficulty' => 'setDsDifficulty',
         'ds_leader' => 'setDsLeader',
         'micro_blocks' => 'setMicroBlocks',
-        'merkleroot' => 'setMerkleroot',
         'nonce' => 'setNonce',
         'size' => 'setSize'
     ];
@@ -222,7 +218,6 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         'ds_difficulty' => 'getDsDifficulty',
         'ds_leader' => 'getDsLeader',
         'micro_blocks' => 'getMicroBlocks',
-        'merkleroot' => 'getMerkleroot',
         'nonce' => 'getNonce',
         'size' => 'getSize'
     ];
@@ -303,7 +298,6 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         $this->container['ds_difficulty'] = $data['ds_difficulty'] ?? null;
         $this->container['ds_leader'] = $data['ds_leader'] ?? null;
         $this->container['micro_blocks'] = $data['micro_blocks'] ?? null;
-        $this->container['merkleroot'] = $data['merkleroot'] ?? null;
         $this->container['nonce'] = $data['nonce'] ?? null;
         $this->container['size'] = $data['size'] ?? null;
     }
@@ -373,9 +367,6 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         }
         if ($this->container['micro_blocks'] === null) {
             $invalidProperties[] = "'micro_blocks' can't be null";
-        }
-        if ($this->container['merkleroot'] === null) {
-            $invalidProperties[] = "'merkleroot' can't be null";
         }
         if ($this->container['nonce'] === null) {
             $invalidProperties[] = "'nonce' can't be null";
@@ -850,30 +841,6 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
     public function setMicroBlocks($micro_blocks)
     {
         $this->container['micro_blocks'] = $micro_blocks;
-
-        return $this;
-    }
-
-    /**
-     * Gets merkleroot
-     *
-     * @return string
-     */
-    public function getMerkleroot()
-    {
-        return $this->container['merkleroot'];
-    }
-
-    /**
-     * Sets merkleroot
-     *
-     * @param string $merkleroot Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions' hashes that are part of a blockchain block.
-     *
-     * @return self
-     */
-    public function setMerkleroot($merkleroot)
-    {
-        $this->container['merkleroot'] = $merkleroot;
 
         return $this;
     }

@@ -66,7 +66,7 @@ class GetBlockDetailsByBlockHashRIBSBC implements ModelInterface, ArrayAccess, \
         'size' => 'int',
         'bits' => 'string',
         'chainwork' => 'string',
-        'merkleroot' => 'string',
+        'merkle_root' => 'string',
         'version' => 'int',
         'version_hex' => 'string'
     ];
@@ -84,7 +84,7 @@ class GetBlockDetailsByBlockHashRIBSBC implements ModelInterface, ArrayAccess, \
         'size' => null,
         'bits' => null,
         'chainwork' => null,
-        'merkleroot' => null,
+        'merkle_root' => null,
         'version' => null,
         'version_hex' => null
     ];
@@ -121,7 +121,7 @@ class GetBlockDetailsByBlockHashRIBSBC implements ModelInterface, ArrayAccess, \
         'size' => 'size',
         'bits' => 'bits',
         'chainwork' => 'chainwork',
-        'merkleroot' => 'merkleroot',
+        'merkle_root' => 'merkleRoot',
         'version' => 'version',
         'version_hex' => 'versionHex'
     ];
@@ -137,7 +137,7 @@ class GetBlockDetailsByBlockHashRIBSBC implements ModelInterface, ArrayAccess, \
         'size' => 'setSize',
         'bits' => 'setBits',
         'chainwork' => 'setChainwork',
-        'merkleroot' => 'setMerkleroot',
+        'merkle_root' => 'setMerkleRoot',
         'version' => 'setVersion',
         'version_hex' => 'setVersionHex'
     ];
@@ -153,7 +153,7 @@ class GetBlockDetailsByBlockHashRIBSBC implements ModelInterface, ArrayAccess, \
         'size' => 'getSize',
         'bits' => 'getBits',
         'chainwork' => 'getChainwork',
-        'merkleroot' => 'getMerkleroot',
+        'merkle_root' => 'getMerkleRoot',
         'version' => 'getVersion',
         'version_hex' => 'getVersionHex'
     ];
@@ -220,7 +220,7 @@ class GetBlockDetailsByBlockHashRIBSBC implements ModelInterface, ArrayAccess, \
         $this->container['size'] = $data['size'] ?? null;
         $this->container['bits'] = $data['bits'] ?? null;
         $this->container['chainwork'] = $data['chainwork'] ?? null;
-        $this->container['merkleroot'] = $data['merkleroot'] ?? null;
+        $this->container['merkle_root'] = $data['merkle_root'] ?? null;
         $this->container['version'] = $data['version'] ?? null;
         $this->container['version_hex'] = $data['version_hex'] ?? null;
     }
@@ -249,8 +249,8 @@ class GetBlockDetailsByBlockHashRIBSBC implements ModelInterface, ArrayAccess, \
         if ($this->container['chainwork'] === null) {
             $invalidProperties[] = "'chainwork' can't be null";
         }
-        if ($this->container['merkleroot'] === null) {
-            $invalidProperties[] = "'merkleroot' can't be null";
+        if ($this->container['merkle_root'] === null) {
+            $invalidProperties[] = "'merkle_root' can't be null";
         }
         if ($this->container['version'] === null) {
             $invalidProperties[] = "'version' can't be null";
@@ -394,25 +394,25 @@ class GetBlockDetailsByBlockHashRIBSBC implements ModelInterface, ArrayAccess, \
     }
 
     /**
-     * Gets merkleroot
+     * Gets merkle_root
      *
      * @return string
      */
-    public function getMerkleroot()
+    public function getMerkleRoot()
     {
-        return $this->container['merkleroot'];
+        return $this->container['merkle_root'];
     }
 
     /**
-     * Sets merkleroot
+     * Sets merkle_root
      *
-     * @param string $merkleroot Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions' hashes that are part of a blockchain block.
+     * @param string $merkle_root Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions' hashes that are part of a blockchain block.
      *
      * @return self
      */
-    public function setMerkleroot($merkleroot)
+    public function setMerkleRoot($merkle_root)
     {
-        $this->container['merkleroot'] = $merkleroot;
+        $this->container['merkle_root'] = $merkle_root;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * GetBlockDetailsByBlockHashRIBSBCTest
+ * GetTransactionDetailsByTransactionIDRIBSZTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace CryptoAPIs\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * GetBlockDetailsByBlockHashRIBSBCTest Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZTest Class Doc Comment
  *
  * @category    Class
- * @description Bitcoin Cash
+ * @description Zcash
  * @package     CryptoAPIs
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class GetBlockDetailsByBlockHashRIBSBCTest extends TestCase
+class GetTransactionDetailsByTransactionIDRIBSZTest extends TestCase
 {
 
     /**
@@ -72,27 +72,72 @@ class GetBlockDetailsByBlockHashRIBSBCTest extends TestCase
     }
 
     /**
-     * Test "GetBlockDetailsByBlockHashRIBSBC"
+     * Test "GetTransactionDetailsByTransactionIDRIBSZ"
      */
-    public function testGetBlockDetailsByBlockHashRIBSBC()
+    public function testGetTransactionDetailsByTransactionIDRIBSZ()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "difficulty"
+     * Test attribute "binding_sig"
      */
-    public function testPropertyDifficulty()
+    public function testPropertyBindingSig()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "nonce"
+     * Test attribute "expiry_height"
      */
-    public function testPropertyNonce()
+    public function testPropertyExpiryHeight()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "fee"
+     */
+    public function testPropertyFee()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "join_split_pub_key"
+     */
+    public function testPropertyJoinSplitPubKey()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "join_split_sig"
+     */
+    public function testPropertyJoinSplitSig()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "locktime"
+     */
+    public function testPropertyLocktime()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "overwintered"
+     */
+    public function testPropertyOverwintered()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -108,27 +153,36 @@ class GetBlockDetailsByBlockHashRIBSBCTest extends TestCase
     }
 
     /**
-     * Test attribute "bits"
+     * Test attribute "v_join_split"
      */
-    public function testPropertyBits()
+    public function testPropertyVJoinSplit()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "chainwork"
+     * Test attribute "v_shielded_output"
      */
-    public function testPropertyChainwork()
+    public function testPropertyVShieldedOutput()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "merkle_root"
+     * Test attribute "v_shielded_spend"
      */
-    public function testPropertyMerkleRoot()
+    public function testPropertyVShieldedSpend()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "value_balance"
+     */
+    public function testPropertyValueBalance()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -144,9 +198,27 @@ class GetBlockDetailsByBlockHashRIBSBCTest extends TestCase
     }
 
     /**
-     * Test attribute "version_hex"
+     * Test attribute "version_group_id"
      */
-    public function testPropertyVersionHex()
+    public function testPropertyVersionGroupId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "vin"
+     */
+    public function testPropertyVin()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "vout"
+     */
+    public function testPropertyVout()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

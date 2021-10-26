@@ -70,7 +70,7 @@ class ListTransactionsByBlockHeightRIBSZ implements ModelInterface, ArrayAccess,
         'size' => 'int',
         'v_join_split' => '\CryptoAPIs\Model\ListTransactionsByBlockHeightRIBSZVJoinSplit[]',
         'v_shielded_output' => '\CryptoAPIs\Model\ListTransactionsByBlockHeightRIBSZVShieldedOutput[]',
-        'v_shielded_spend' => '\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedSpend[]',
+        'v_shielded_spend' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[]',
         'value_balance' => 'string',
         'version' => 'int',
         'version_group_id' => 'string',
@@ -555,7 +555,7 @@ class ListTransactionsByBlockHeightRIBSZ implements ModelInterface, ArrayAccess,
     /**
      * Gets v_shielded_spend
      *
-     * @return \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedSpend[]
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[]
      */
     public function getVShieldedSpend()
     {
@@ -565,7 +565,7 @@ class ListTransactionsByBlockHeightRIBSZ implements ModelInterface, ArrayAccess,
     /**
      * Sets v_shielded_spend
      *
-     * @param \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedSpend[] $v_shielded_spend Object Array representation of transaction spend descriptions
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[] $v_shielded_spend Object Array representation of transaction spend descriptions
      *
      * @return self
      */

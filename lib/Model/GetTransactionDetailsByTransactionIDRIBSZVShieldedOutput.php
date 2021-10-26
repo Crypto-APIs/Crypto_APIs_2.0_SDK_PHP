@@ -1,6 +1,6 @@
 <?php
 /**
- * ListConfirmedTransactionsByAddressRIBSZVShieldedSpend
+ * GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput
  *
  * PHP version 7.3
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \CryptoAPIs\ObjectSerializer;
 
 /**
- * ListConfirmedTransactionsByAddressRIBSZVShieldedSpend Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput Class Doc Comment
  *
  * @category Class
  * @package  CryptoAPIs
@@ -43,7 +43,7 @@ use \CryptoAPIs\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ListConfirmedTransactionsByAddressRIBSZVShieldedSpend implements ModelInterface, ArrayAccess, \JsonSerializable
+class GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedSpend implements ModelInte
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ListConfirmedTransactionsByAddressRIBSZ_vShieldedSpend';
+    protected static $openAPIModelName = 'GetTransactionDetailsByTransactionIDRIBSZ_vShieldedOutput';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,12 +60,12 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedSpend implements ModelInte
       * @var string[]
       */
     protected static $openAPITypes = [
-        'anchor' => 'string',
+        'cmu' => 'string',
         'cv' => 'string',
-        'nullifier' => 'string',
-        'proof' => 'string',
-        'rk' => 'string',
-        'spend_auth_sig' => 'string'
+        'enc_cipher_text' => 'string',
+        'ephemeral_key' => 'string',
+        'out_cipher_text' => 'string',
+        'proof' => 'string'
     ];
 
     /**
@@ -76,12 +76,12 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedSpend implements ModelInte
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'anchor' => null,
+        'cmu' => null,
         'cv' => null,
-        'nullifier' => null,
-        'proof' => null,
-        'rk' => null,
-        'spend_auth_sig' => null
+        'enc_cipher_text' => null,
+        'ephemeral_key' => null,
+        'out_cipher_text' => null,
+        'proof' => null
     ];
 
     /**
@@ -111,12 +111,12 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedSpend implements ModelInte
      * @var string[]
      */
     protected static $attributeMap = [
-        'anchor' => 'anchor',
+        'cmu' => 'cmu',
         'cv' => 'cv',
-        'nullifier' => 'nullifier',
-        'proof' => 'proof',
-        'rk' => 'rk',
-        'spend_auth_sig' => 'spendAuthSig'
+        'enc_cipher_text' => 'encCipherText',
+        'ephemeral_key' => 'ephemeralKey',
+        'out_cipher_text' => 'outCipherText',
+        'proof' => 'proof'
     ];
 
     /**
@@ -125,12 +125,12 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedSpend implements ModelInte
      * @var string[]
      */
     protected static $setters = [
-        'anchor' => 'setAnchor',
+        'cmu' => 'setCmu',
         'cv' => 'setCv',
-        'nullifier' => 'setNullifier',
-        'proof' => 'setProof',
-        'rk' => 'setRk',
-        'spend_auth_sig' => 'setSpendAuthSig'
+        'enc_cipher_text' => 'setEncCipherText',
+        'ephemeral_key' => 'setEphemeralKey',
+        'out_cipher_text' => 'setOutCipherText',
+        'proof' => 'setProof'
     ];
 
     /**
@@ -139,12 +139,12 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedSpend implements ModelInte
      * @var string[]
      */
     protected static $getters = [
-        'anchor' => 'getAnchor',
+        'cmu' => 'getCmu',
         'cv' => 'getCv',
-        'nullifier' => 'getNullifier',
-        'proof' => 'getProof',
-        'rk' => 'getRk',
-        'spend_auth_sig' => 'getSpendAuthSig'
+        'enc_cipher_text' => 'getEncCipherText',
+        'ephemeral_key' => 'getEphemeralKey',
+        'out_cipher_text' => 'getOutCipherText',
+        'proof' => 'getProof'
     ];
 
     /**
@@ -204,12 +204,12 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedSpend implements ModelInte
      */
     public function __construct(array $data = null)
     {
-        $this->container['anchor'] = $data['anchor'] ?? null;
+        $this->container['cmu'] = $data['cmu'] ?? null;
         $this->container['cv'] = $data['cv'] ?? null;
-        $this->container['nullifier'] = $data['nullifier'] ?? null;
+        $this->container['enc_cipher_text'] = $data['enc_cipher_text'] ?? null;
+        $this->container['ephemeral_key'] = $data['ephemeral_key'] ?? null;
+        $this->container['out_cipher_text'] = $data['out_cipher_text'] ?? null;
         $this->container['proof'] = $data['proof'] ?? null;
-        $this->container['rk'] = $data['rk'] ?? null;
-        $this->container['spend_auth_sig'] = $data['spend_auth_sig'] ?? null;
     }
 
     /**
@@ -221,23 +221,23 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedSpend implements ModelInte
     {
         $invalidProperties = [];
 
-        if ($this->container['anchor'] === null) {
-            $invalidProperties[] = "'anchor' can't be null";
+        if ($this->container['cmu'] === null) {
+            $invalidProperties[] = "'cmu' can't be null";
         }
         if ($this->container['cv'] === null) {
             $invalidProperties[] = "'cv' can't be null";
         }
-        if ($this->container['nullifier'] === null) {
-            $invalidProperties[] = "'nullifier' can't be null";
+        if ($this->container['enc_cipher_text'] === null) {
+            $invalidProperties[] = "'enc_cipher_text' can't be null";
+        }
+        if ($this->container['ephemeral_key'] === null) {
+            $invalidProperties[] = "'ephemeral_key' can't be null";
+        }
+        if ($this->container['out_cipher_text'] === null) {
+            $invalidProperties[] = "'out_cipher_text' can't be null";
         }
         if ($this->container['proof'] === null) {
             $invalidProperties[] = "'proof' can't be null";
-        }
-        if ($this->container['rk'] === null) {
-            $invalidProperties[] = "'rk' can't be null";
-        }
-        if ($this->container['spend_auth_sig'] === null) {
-            $invalidProperties[] = "'spend_auth_sig' can't be null";
         }
         return $invalidProperties;
     }
@@ -255,25 +255,25 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedSpend implements ModelInte
 
 
     /**
-     * Gets anchor
+     * Gets cmu
      *
      * @return string
      */
-    public function getAnchor()
+    public function getCmu()
     {
-        return $this->container['anchor'];
+        return $this->container['cmu'];
     }
 
     /**
-     * Sets anchor
+     * Sets cmu
      *
-     * @param string $anchor Defines a Merkle tree root of a note commitment tree which uniquely identifies a note commitment tree state given the assumed security properties of the Merkle tree’s  hash function.
+     * @param string $cmu Represents the 𝑢-coordinate of the note commitment for the output note.
      *
      * @return self
      */
-    public function setAnchor($anchor)
+    public function setCmu($cmu)
     {
-        $this->container['anchor'] = $anchor;
+        $this->container['cmu'] = $cmu;
 
         return $this;
     }
@@ -303,25 +303,73 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedSpend implements ModelInte
     }
 
     /**
-     * Gets nullifier
+     * Gets enc_cipher_text
      *
      * @return string
      */
-    public function getNullifier()
+    public function getEncCipherText()
     {
-        return $this->container['nullifier'];
+        return $this->container['enc_cipher_text'];
     }
 
     /**
-     * Sets nullifier
+     * Sets enc_cipher_text
      *
-     * @param string $nullifier Represents a sequence of nullifiers of the input notes.
+     * @param string $enc_cipher_text Represents a ciphertext component for the encrypted output note.
      *
      * @return self
      */
-    public function setNullifier($nullifier)
+    public function setEncCipherText($enc_cipher_text)
     {
-        $this->container['nullifier'] = $nullifier;
+        $this->container['enc_cipher_text'] = $enc_cipher_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets ephemeral_key
+     *
+     * @return string
+     */
+    public function getEphemeralKey()
+    {
+        return $this->container['ephemeral_key'];
+    }
+
+    /**
+     * Sets ephemeral_key
+     *
+     * @param string $ephemeral_key Represents an encoding of an ephemeral Jubjub public key.
+     *
+     * @return self
+     */
+    public function setEphemeralKey($ephemeral_key)
+    {
+        $this->container['ephemeral_key'] = $ephemeral_key;
+
+        return $this;
+    }
+
+    /**
+     * Gets out_cipher_text
+     *
+     * @return string
+     */
+    public function getOutCipherText()
+    {
+        return $this->container['out_cipher_text'];
+    }
+
+    /**
+     * Sets out_cipher_text
+     *
+     * @param string $out_cipher_text Represents a ciphertext component that allows the holder of the outgoing cipher key to recover the diversified transmission key pkd and ephemeral private key esk, hence the entire note plaintext.
+     *
+     * @return self
+     */
+    public function setOutCipherText($out_cipher_text)
+    {
+        $this->container['out_cipher_text'] = $out_cipher_text;
 
         return $this;
     }
@@ -346,54 +394,6 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedSpend implements ModelInte
     public function setProof($proof)
     {
         $this->container['proof'] = $proof;
-
-        return $this;
-    }
-
-    /**
-     * Gets rk
-     *
-     * @return string
-     */
-    public function getRk()
-    {
-        return $this->container['rk'];
-    }
-
-    /**
-     * Sets rk
-     *
-     * @param string $rk Represents the randomized validating key for spendAuthSig.
-     *
-     * @return self
-     */
-    public function setRk($rk)
-    {
-        $this->container['rk'] = $rk;
-
-        return $this;
-    }
-
-    /**
-     * Gets spend_auth_sig
-     *
-     * @return string
-     */
-    public function getSpendAuthSig()
-    {
-        return $this->container['spend_auth_sig'];
-    }
-
-    /**
-     * Sets spend_auth_sig
-     *
-     * @param string $spend_auth_sig Used to prove knowledge of the spending key authorizing spending of an input note.
-     *
-     * @return self
-     */
-    public function setSpendAuthSig($spend_auth_sig)
-    {
-        $this->container['spend_auth_sig'] = $spend_auth_sig;
 
         return $this;
     }

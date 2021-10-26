@@ -1,6 +1,6 @@
 <?php
 /**
- * ListConfirmedTransactionsByAddressRIBSZVin
+ * GetTransactionDetailsByTransactionIDRIBSZVin
  *
  * PHP version 7.3
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \CryptoAPIs\ObjectSerializer;
 
 /**
- * ListConfirmedTransactionsByAddressRIBSZVin Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZVin Class Doc Comment
  *
  * @category Class
  * @package  CryptoAPIs
@@ -43,7 +43,7 @@ use \CryptoAPIs\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, ArrayAccess, \JsonSerializable
+class GetTransactionDetailsByTransactionIDRIBSZVin implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ListConfirmedTransactionsByAddressRIBSZ_vin';
+    protected static $openAPIModelName = 'GetTransactionDetailsByTransactionIDRIBSZ_vin';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,7 +61,6 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
       */
     protected static $openAPITypes = [
         'addresses' => 'string[]',
-        'coinbase' => 'string',
         'script_sig' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZScriptSig',
         'sequence' => 'int',
         'txid' => 'string',
@@ -79,7 +78,6 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
       */
     protected static $openAPIFormats = [
         'addresses' => null,
-        'coinbase' => null,
         'script_sig' => null,
         'sequence' => null,
         'txid' => null,
@@ -116,7 +114,6 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
      */
     protected static $attributeMap = [
         'addresses' => 'addresses',
-        'coinbase' => 'coinbase',
         'script_sig' => 'scriptSig',
         'sequence' => 'sequence',
         'txid' => 'txid',
@@ -132,7 +129,6 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
      */
     protected static $setters = [
         'addresses' => 'setAddresses',
-        'coinbase' => 'setCoinbase',
         'script_sig' => 'setScriptSig',
         'sequence' => 'setSequence',
         'txid' => 'setTxid',
@@ -148,7 +144,6 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
      */
     protected static $getters = [
         'addresses' => 'getAddresses',
-        'coinbase' => 'getCoinbase',
         'script_sig' => 'getScriptSig',
         'sequence' => 'getSequence',
         'txid' => 'getTxid',
@@ -215,7 +210,6 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
     public function __construct(array $data = null)
     {
         $this->container['addresses'] = $data['addresses'] ?? null;
-        $this->container['coinbase'] = $data['coinbase'] ?? null;
         $this->container['script_sig'] = $data['script_sig'] ?? null;
         $this->container['sequence'] = $data['sequence'] ?? null;
         $this->container['txid'] = $data['txid'] ?? null;
@@ -235,9 +229,6 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
 
         if ($this->container['addresses'] === null) {
             $invalidProperties[] = "'addresses' can't be null";
-        }
-        if ($this->container['coinbase'] === null) {
-            $invalidProperties[] = "'coinbase' can't be null";
         }
         if ($this->container['script_sig'] === null) {
             $invalidProperties[] = "'script_sig' can't be null";
@@ -292,30 +283,6 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
     public function setAddresses($addresses)
     {
         $this->container['addresses'] = $addresses;
-
-        return $this;
-    }
-
-    /**
-     * Gets coinbase
-     *
-     * @return string
-     */
-    public function getCoinbase()
-    {
-        return $this->container['coinbase'];
-    }
-
-    /**
-     * Sets coinbase
-     *
-     * @param string $coinbase Represents the coinbase hex.
-     *
-     * @return self
-     */
-    public function setCoinbase($coinbase)
-    {
-        $this->container['coinbase'] = $coinbase;
 
         return $this;
     }

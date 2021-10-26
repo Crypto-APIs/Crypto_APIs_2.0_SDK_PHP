@@ -1,11 +1,11 @@
-# # ListUnconfirmedTransactionsByAddressRIBSZVin
+# # GetTransactionDetailsByTransactionIDRIBSZVin
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **addresses** | **string[]** |  |
-**script_sig** | [**\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZScriptSig**](ListConfirmedTransactionsByAddressRIBSZScriptSig.md) |  |
+**script_sig** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZScriptSig**](GetTransactionDetailsByTransactionIDRIBSZScriptSig.md) |  |
 **sequence** | **int** | Represents the script sequence number. |
 **txid** | **string** | Represents the reference transaction identifier. |
 **txinwitness** | **string[]** |  |

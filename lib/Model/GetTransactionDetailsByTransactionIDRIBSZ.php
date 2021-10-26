@@ -1,6 +1,6 @@
 <?php
 /**
- * ListConfirmedTransactionsByAddressRIBSZ
+ * GetTransactionDetailsByTransactionIDRIBSZ
  *
  * PHP version 7.3
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \CryptoAPIs\ObjectSerializer;
 
 /**
- * ListConfirmedTransactionsByAddressRIBSZ Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZ Class Doc Comment
  *
  * @category Class
  * @description Zcash
@@ -44,7 +44,7 @@ use \CryptoAPIs\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAccess, \JsonSerializable
+class GetTransactionDetailsByTransactionIDRIBSZ implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -53,7 +53,7 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ListConfirmedTransactionsByAddressRIBSZ';
+    protected static $openAPIModelName = 'GetTransactionDetailsByTransactionIDRIBSZ';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -63,18 +63,19 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
     protected static $openAPITypes = [
         'binding_sig' => 'string',
         'expiry_height' => 'int',
+        'fee' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZFee',
         'join_split_pub_key' => 'string',
         'join_split_sig' => 'string',
         'locktime' => 'int',
         'overwintered' => 'bool',
         'size' => 'int',
-        'v_join_split' => '\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVJoinSplit[]',
+        'v_join_split' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVJoinSplit[]',
         'v_shielded_output' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[]',
         'v_shielded_spend' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[]',
         'value_balance' => 'string',
         'version' => 'int',
         'version_group_id' => 'string',
-        'vin' => '\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVin[]',
+        'vin' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVin[]',
         'vout' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVout[]'
     ];
 
@@ -88,6 +89,7 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
     protected static $openAPIFormats = [
         'binding_sig' => null,
         'expiry_height' => null,
+        'fee' => null,
         'join_split_pub_key' => null,
         'join_split_sig' => null,
         'locktime' => null,
@@ -132,6 +134,7 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
     protected static $attributeMap = [
         'binding_sig' => 'bindingSig',
         'expiry_height' => 'expiryHeight',
+        'fee' => 'fee',
         'join_split_pub_key' => 'joinSplitPubKey',
         'join_split_sig' => 'joinSplitSig',
         'locktime' => 'locktime',
@@ -155,6 +158,7 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
     protected static $setters = [
         'binding_sig' => 'setBindingSig',
         'expiry_height' => 'setExpiryHeight',
+        'fee' => 'setFee',
         'join_split_pub_key' => 'setJoinSplitPubKey',
         'join_split_sig' => 'setJoinSplitSig',
         'locktime' => 'setLocktime',
@@ -178,6 +182,7 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
     protected static $getters = [
         'binding_sig' => 'getBindingSig',
         'expiry_height' => 'getExpiryHeight',
+        'fee' => 'getFee',
         'join_split_pub_key' => 'getJoinSplitPubKey',
         'join_split_sig' => 'getJoinSplitSig',
         'locktime' => 'getLocktime',
@@ -252,6 +257,7 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
     {
         $this->container['binding_sig'] = $data['binding_sig'] ?? null;
         $this->container['expiry_height'] = $data['expiry_height'] ?? null;
+        $this->container['fee'] = $data['fee'] ?? null;
         $this->container['join_split_pub_key'] = $data['join_split_pub_key'] ?? null;
         $this->container['join_split_sig'] = $data['join_split_sig'] ?? null;
         $this->container['locktime'] = $data['locktime'] ?? null;
@@ -281,6 +287,9 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
         }
         if ($this->container['expiry_height'] === null) {
             $invalidProperties[] = "'expiry_height' can't be null";
+        }
+        if ($this->container['fee'] === null) {
+            $invalidProperties[] = "'fee' can't be null";
         }
         if ($this->container['join_split_pub_key'] === null) {
             $invalidProperties[] = "'join_split_pub_key' can't be null";
@@ -380,6 +389,30 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
     public function setExpiryHeight($expiry_height)
     {
         $this->container['expiry_height'] = $expiry_height;
+
+        return $this;
+    }
+
+    /**
+     * Gets fee
+     *
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZFee
+     */
+    public function getFee()
+    {
+        return $this->container['fee'];
+    }
+
+    /**
+     * Sets fee
+     *
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZFee $fee fee
+     *
+     * @return self
+     */
+    public function setFee($fee)
+    {
+        $this->container['fee'] = $fee;
 
         return $this;
     }
@@ -507,7 +540,7 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
     /**
      * Gets v_join_split
      *
-     * @return \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVJoinSplit[]
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVJoinSplit[]
      */
     public function getVJoinSplit()
     {
@@ -517,7 +550,7 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
     /**
      * Sets v_join_split
      *
-     * @param \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVJoinSplit[] $v_join_split Represents a sequence of JoinSplit descriptions using BCTV14 proofs.
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVJoinSplit[] $v_join_split Represents a sequence of JoinSplit descriptions using BCTV14 proofs.
      *
      * @return self
      */
@@ -589,7 +622,7 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
     /**
      * Sets value_balance
      *
-     * @param string $value_balance Defines the transaction value balance.
+     * @param string $value_balance String representation of the transaction value balance
      *
      * @return self
      */
@@ -651,7 +684,7 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
     /**
      * Gets vin
      *
-     * @return \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVin[]
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVin[]
      */
     public function getVin()
     {
@@ -661,7 +694,7 @@ class ListConfirmedTransactionsByAddressRIBSZ implements ModelInterface, ArrayAc
     /**
      * Sets vin
      *
-     * @param \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVin[] $vin Object Array representation of transaction inputs
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVin[] $vin Object Array representation of transaction inputs
      *
      * @return self
      */

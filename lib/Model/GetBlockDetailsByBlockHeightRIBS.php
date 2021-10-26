@@ -75,8 +75,7 @@ class GetBlockDetailsByBlockHeightRIBS implements ModelInterface, ArrayAccess, \
         'gas_used' => 'string',
         'mined_in_seconds' => 'int',
         'sha3_uncles' => 'string',
-        'total_difficulty' => 'string',
-        'merkleroot' => 'string'
+        'total_difficulty' => 'string'
     ];
 
     /**
@@ -102,8 +101,7 @@ class GetBlockDetailsByBlockHeightRIBS implements ModelInterface, ArrayAccess, \
         'gas_used' => null,
         'mined_in_seconds' => null,
         'sha3_uncles' => null,
-        'total_difficulty' => null,
-        'merkleroot' => null
+        'total_difficulty' => null
     ];
 
     /**
@@ -148,8 +146,7 @@ class GetBlockDetailsByBlockHeightRIBS implements ModelInterface, ArrayAccess, \
         'gas_used' => 'gasUsed',
         'mined_in_seconds' => 'minedInSeconds',
         'sha3_uncles' => 'sha3Uncles',
-        'total_difficulty' => 'totalDifficulty',
-        'merkleroot' => 'merkleroot'
+        'total_difficulty' => 'totalDifficulty'
     ];
 
     /**
@@ -173,8 +170,7 @@ class GetBlockDetailsByBlockHeightRIBS implements ModelInterface, ArrayAccess, \
         'gas_used' => 'setGasUsed',
         'mined_in_seconds' => 'setMinedInSeconds',
         'sha3_uncles' => 'setSha3Uncles',
-        'total_difficulty' => 'setTotalDifficulty',
-        'merkleroot' => 'setMerkleroot'
+        'total_difficulty' => 'setTotalDifficulty'
     ];
 
     /**
@@ -198,8 +194,7 @@ class GetBlockDetailsByBlockHeightRIBS implements ModelInterface, ArrayAccess, \
         'gas_used' => 'getGasUsed',
         'mined_in_seconds' => 'getMinedInSeconds',
         'sha3_uncles' => 'getSha3Uncles',
-        'total_difficulty' => 'getTotalDifficulty',
-        'merkleroot' => 'getMerkleroot'
+        'total_difficulty' => 'getTotalDifficulty'
     ];
 
     /**
@@ -275,7 +270,6 @@ class GetBlockDetailsByBlockHeightRIBS implements ModelInterface, ArrayAccess, \
         $this->container['mined_in_seconds'] = $data['mined_in_seconds'] ?? null;
         $this->container['sha3_uncles'] = $data['sha3_uncles'] ?? null;
         $this->container['total_difficulty'] = $data['total_difficulty'] ?? null;
-        $this->container['merkleroot'] = $data['merkleroot'] ?? null;
     }
 
     /**
@@ -334,9 +328,6 @@ class GetBlockDetailsByBlockHeightRIBS implements ModelInterface, ArrayAccess, \
         }
         if ($this->container['total_difficulty'] === null) {
             $invalidProperties[] = "'total_difficulty' can't be null";
-        }
-        if ($this->container['merkleroot'] === null) {
-            $invalidProperties[] = "'merkleroot' can't be null";
         }
         return $invalidProperties;
     }
@@ -733,30 +724,6 @@ class GetBlockDetailsByBlockHeightRIBS implements ModelInterface, ArrayAccess, \
     public function setTotalDifficulty($total_difficulty)
     {
         $this->container['total_difficulty'] = $total_difficulty;
-
-        return $this;
-    }
-
-    /**
-     * Gets merkleroot
-     *
-     * @return string
-     */
-    public function getMerkleroot()
-    {
-        return $this->container['merkleroot'];
-    }
-
-    /**
-     * Sets merkleroot
-     *
-     * @param string $merkleroot Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions' hashes that are part of a blockchain block.
-     *
-     * @return self
-     */
-    public function setMerkleroot($merkleroot)
-    {
-        $this->container['merkleroot'] = $merkleroot;
 
         return $this;
     }

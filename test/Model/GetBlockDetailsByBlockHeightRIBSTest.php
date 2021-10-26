@@ -223,13 +223,4 @@ class GetBlockDetailsByBlockHeightRIBSTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "merkleroot"
-     */
-    public function testPropertyMerkleroot()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

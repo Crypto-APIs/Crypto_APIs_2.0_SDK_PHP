@@ -64,15 +64,26 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
         'size' => 'int',
         'v_size' => 'int',
         'version' => 'int',
-        'vin' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSD2Vin[]',
-        'vout' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSD2Vout[]',
+        'vin' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVin[]',
+        'vout' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVout[]',
         'contract' => 'string',
         'gas_limit' => 'string',
         'gas_price' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSBSCGasPrice',
         'gas_used' => 'string',
         'input_data' => 'string',
         'nonce' => 'int',
-        'transaction_status' => 'string'
+        'transaction_status' => 'string',
+        'binding_sig' => 'string',
+        'expiry_height' => 'int',
+        'fee' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZFee',
+        'join_split_pub_key' => 'string',
+        'join_split_sig' => 'string',
+        'overwintered' => 'bool',
+        'v_join_split' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVJoinSplit[]',
+        'v_shielded_output' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[]',
+        'v_shielded_spend' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[]',
+        'value_balance' => 'string',
+        'version_group_id' => 'string'
     ];
 
     /**
@@ -95,7 +106,18 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
         'gas_used' => null,
         'input_data' => null,
         'nonce' => null,
-        'transaction_status' => null
+        'transaction_status' => null,
+        'binding_sig' => null,
+        'expiry_height' => null,
+        'fee' => null,
+        'join_split_pub_key' => null,
+        'join_split_sig' => null,
+        'overwintered' => null,
+        'v_join_split' => null,
+        'v_shielded_output' => null,
+        'v_shielded_spend' => null,
+        'value_balance' => null,
+        'version_group_id' => null
     ];
 
     /**
@@ -137,7 +159,18 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
         'gas_used' => 'gasUsed',
         'input_data' => 'inputData',
         'nonce' => 'nonce',
-        'transaction_status' => 'transactionStatus'
+        'transaction_status' => 'transactionStatus',
+        'binding_sig' => 'bindingSig',
+        'expiry_height' => 'expiryHeight',
+        'fee' => 'fee',
+        'join_split_pub_key' => 'joinSplitPubKey',
+        'join_split_sig' => 'joinSplitSig',
+        'overwintered' => 'overwintered',
+        'v_join_split' => 'vJoinSplit',
+        'v_shielded_output' => 'vShieldedOutput',
+        'v_shielded_spend' => 'vShieldedSpend',
+        'value_balance' => 'valueBalance',
+        'version_group_id' => 'versionGroupId'
     ];
 
     /**
@@ -158,7 +191,18 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
         'gas_used' => 'setGasUsed',
         'input_data' => 'setInputData',
         'nonce' => 'setNonce',
-        'transaction_status' => 'setTransactionStatus'
+        'transaction_status' => 'setTransactionStatus',
+        'binding_sig' => 'setBindingSig',
+        'expiry_height' => 'setExpiryHeight',
+        'fee' => 'setFee',
+        'join_split_pub_key' => 'setJoinSplitPubKey',
+        'join_split_sig' => 'setJoinSplitSig',
+        'overwintered' => 'setOverwintered',
+        'v_join_split' => 'setVJoinSplit',
+        'v_shielded_output' => 'setVShieldedOutput',
+        'v_shielded_spend' => 'setVShieldedSpend',
+        'value_balance' => 'setValueBalance',
+        'version_group_id' => 'setVersionGroupId'
     ];
 
     /**
@@ -179,7 +223,18 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
         'gas_used' => 'getGasUsed',
         'input_data' => 'getInputData',
         'nonce' => 'getNonce',
-        'transaction_status' => 'getTransactionStatus'
+        'transaction_status' => 'getTransactionStatus',
+        'binding_sig' => 'getBindingSig',
+        'expiry_height' => 'getExpiryHeight',
+        'fee' => 'getFee',
+        'join_split_pub_key' => 'getJoinSplitPubKey',
+        'join_split_sig' => 'getJoinSplitSig',
+        'overwintered' => 'getOverwintered',
+        'v_join_split' => 'getVJoinSplit',
+        'v_shielded_output' => 'getVShieldedOutput',
+        'v_shielded_spend' => 'getVShieldedSpend',
+        'value_balance' => 'getValueBalance',
+        'version_group_id' => 'getVersionGroupId'
     ];
 
     /**
@@ -252,6 +307,17 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
         $this->container['input_data'] = $data['input_data'] ?? null;
         $this->container['nonce'] = $data['nonce'] ?? null;
         $this->container['transaction_status'] = $data['transaction_status'] ?? null;
+        $this->container['binding_sig'] = $data['binding_sig'] ?? null;
+        $this->container['expiry_height'] = $data['expiry_height'] ?? null;
+        $this->container['fee'] = $data['fee'] ?? null;
+        $this->container['join_split_pub_key'] = $data['join_split_pub_key'] ?? null;
+        $this->container['join_split_sig'] = $data['join_split_sig'] ?? null;
+        $this->container['overwintered'] = $data['overwintered'] ?? null;
+        $this->container['v_join_split'] = $data['v_join_split'] ?? null;
+        $this->container['v_shielded_output'] = $data['v_shielded_output'] ?? null;
+        $this->container['v_shielded_spend'] = $data['v_shielded_spend'] ?? null;
+        $this->container['value_balance'] = $data['value_balance'] ?? null;
+        $this->container['version_group_id'] = $data['version_group_id'] ?? null;
     }
 
     /**
@@ -302,6 +368,39 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
         if ($this->container['transaction_status'] === null) {
             $invalidProperties[] = "'transaction_status' can't be null";
         }
+        if ($this->container['binding_sig'] === null) {
+            $invalidProperties[] = "'binding_sig' can't be null";
+        }
+        if ($this->container['expiry_height'] === null) {
+            $invalidProperties[] = "'expiry_height' can't be null";
+        }
+        if ($this->container['fee'] === null) {
+            $invalidProperties[] = "'fee' can't be null";
+        }
+        if ($this->container['join_split_pub_key'] === null) {
+            $invalidProperties[] = "'join_split_pub_key' can't be null";
+        }
+        if ($this->container['join_split_sig'] === null) {
+            $invalidProperties[] = "'join_split_sig' can't be null";
+        }
+        if ($this->container['overwintered'] === null) {
+            $invalidProperties[] = "'overwintered' can't be null";
+        }
+        if ($this->container['v_join_split'] === null) {
+            $invalidProperties[] = "'v_join_split' can't be null";
+        }
+        if ($this->container['v_shielded_output'] === null) {
+            $invalidProperties[] = "'v_shielded_output' can't be null";
+        }
+        if ($this->container['v_shielded_spend'] === null) {
+            $invalidProperties[] = "'v_shielded_spend' can't be null";
+        }
+        if ($this->container['value_balance'] === null) {
+            $invalidProperties[] = "'value_balance' can't be null";
+        }
+        if ($this->container['version_group_id'] === null) {
+            $invalidProperties[] = "'version_group_id' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -330,7 +429,7 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
     /**
      * Sets locktime
      *
-     * @param int $locktime Represents the time at which a particular transaction can be added to the blockchain.
+     * @param int $locktime Represents the locktime on the transaction on the specific blockchain, i.e. the blockheight at which the transaction is valid.
      *
      * @return self
      */
@@ -402,7 +501,7 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
     /**
      * Sets version
      *
-     * @param int $version Represents transaction version number.
+     * @param int $version Defines the version of the transaction.
      *
      * @return self
      */
@@ -416,7 +515,7 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
     /**
      * Gets vin
      *
-     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSD2Vin[]
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVin[]
      */
     public function getVin()
     {
@@ -426,7 +525,7 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
     /**
      * Sets vin
      *
-     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSD2Vin[] $vin Represents the transaction inputs.
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVin[] $vin Object Array representation of transaction inputs
      *
      * @return self
      */
@@ -440,7 +539,7 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
     /**
      * Gets vout
      *
-     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSD2Vout[]
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVout[]
      */
     public function getVout()
     {
@@ -450,7 +549,7 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
     /**
      * Sets vout
      *
-     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSD2Vout[] $vout Represents the transaction outputs.
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVout[] $vout Object Array representation of transaction outputs
      *
      * @return self
      */
@@ -625,6 +724,270 @@ class GetTransactionDetailsByTransactionIDRIBS implements ModelInterface, ArrayA
     public function setTransactionStatus($transaction_status)
     {
         $this->container['transaction_status'] = $transaction_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets binding_sig
+     *
+     * @return string
+     */
+    public function getBindingSig()
+    {
+        return $this->container['binding_sig'];
+    }
+
+    /**
+     * Sets binding_sig
+     *
+     * @param string $binding_sig It is used to enforce balance of Spend and Output transfers, in order to prevent their replay across transactions.
+     *
+     * @return self
+     */
+    public function setBindingSig($binding_sig)
+    {
+        $this->container['binding_sig'] = $binding_sig;
+
+        return $this;
+    }
+
+    /**
+     * Gets expiry_height
+     *
+     * @return int
+     */
+    public function getExpiryHeight()
+    {
+        return $this->container['expiry_height'];
+    }
+
+    /**
+     * Sets expiry_height
+     *
+     * @param int $expiry_height Represents a block height after which the transaction will expire.
+     *
+     * @return self
+     */
+    public function setExpiryHeight($expiry_height)
+    {
+        $this->container['expiry_height'] = $expiry_height;
+
+        return $this;
+    }
+
+    /**
+     * Gets fee
+     *
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZFee
+     */
+    public function getFee()
+    {
+        return $this->container['fee'];
+    }
+
+    /**
+     * Sets fee
+     *
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZFee $fee fee
+     *
+     * @return self
+     */
+    public function setFee($fee)
+    {
+        $this->container['fee'] = $fee;
+
+        return $this;
+    }
+
+    /**
+     * Gets join_split_pub_key
+     *
+     * @return string
+     */
+    public function getJoinSplitPubKey()
+    {
+        return $this->container['join_split_pub_key'];
+    }
+
+    /**
+     * Sets join_split_pub_key
+     *
+     * @param string $join_split_pub_key Represents an encoding of a JoinSplitSig public validating key.
+     *
+     * @return self
+     */
+    public function setJoinSplitPubKey($join_split_pub_key)
+    {
+        $this->container['join_split_pub_key'] = $join_split_pub_key;
+
+        return $this;
+    }
+
+    /**
+     * Gets join_split_sig
+     *
+     * @return string
+     */
+    public function getJoinSplitSig()
+    {
+        return $this->container['join_split_sig'];
+    }
+
+    /**
+     * Sets join_split_sig
+     *
+     * @param string $join_split_sig Is used to sign transactions that contain at least one JoinSplit description.
+     *
+     * @return self
+     */
+    public function setJoinSplitSig($join_split_sig)
+    {
+        $this->container['join_split_sig'] = $join_split_sig;
+
+        return $this;
+    }
+
+    /**
+     * Gets overwintered
+     *
+     * @return bool
+     */
+    public function getOverwintered()
+    {
+        return $this->container['overwintered'];
+    }
+
+    /**
+     * Sets overwintered
+     *
+     * @param bool $overwintered \"Overwinter\" is the network upgrade for the Zcash blockchain.
+     *
+     * @return self
+     */
+    public function setOverwintered($overwintered)
+    {
+        $this->container['overwintered'] = $overwintered;
+
+        return $this;
+    }
+
+    /**
+     * Gets v_join_split
+     *
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVJoinSplit[]
+     */
+    public function getVJoinSplit()
+    {
+        return $this->container['v_join_split'];
+    }
+
+    /**
+     * Sets v_join_split
+     *
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVJoinSplit[] $v_join_split Represents a sequence of JoinSplit descriptions using BCTV14 proofs.
+     *
+     * @return self
+     */
+    public function setVJoinSplit($v_join_split)
+    {
+        $this->container['v_join_split'] = $v_join_split;
+
+        return $this;
+    }
+
+    /**
+     * Gets v_shielded_output
+     *
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[]
+     */
+    public function getVShieldedOutput()
+    {
+        return $this->container['v_shielded_output'];
+    }
+
+    /**
+     * Sets v_shielded_output
+     *
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[] $v_shielded_output Object Array representation of transaction output descriptions
+     *
+     * @return self
+     */
+    public function setVShieldedOutput($v_shielded_output)
+    {
+        $this->container['v_shielded_output'] = $v_shielded_output;
+
+        return $this;
+    }
+
+    /**
+     * Gets v_shielded_spend
+     *
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[]
+     */
+    public function getVShieldedSpend()
+    {
+        return $this->container['v_shielded_spend'];
+    }
+
+    /**
+     * Sets v_shielded_spend
+     *
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[] $v_shielded_spend Object Array representation of transaction spend descriptions
+     *
+     * @return self
+     */
+    public function setVShieldedSpend($v_shielded_spend)
+    {
+        $this->container['v_shielded_spend'] = $v_shielded_spend;
+
+        return $this;
+    }
+
+    /**
+     * Gets value_balance
+     *
+     * @return string
+     */
+    public function getValueBalance()
+    {
+        return $this->container['value_balance'];
+    }
+
+    /**
+     * Sets value_balance
+     *
+     * @param string $value_balance String representation of the transaction value balance
+     *
+     * @return self
+     */
+    public function setValueBalance($value_balance)
+    {
+        $this->container['value_balance'] = $value_balance;
+
+        return $this;
+    }
+
+    /**
+     * Gets version_group_id
+     *
+     * @return string
+     */
+    public function getVersionGroupId()
+    {
+        return $this->container['version_group_id'];
+    }
+
+    /**
+     * Sets version_group_id
+     *
+     * @param string $version_group_id Represents the transaction version group ID.
+     *
+     * @return self
+     */
+    public function setVersionGroupId($version_group_id)
+    {
+        $this->container['version_group_id'] = $version_group_id;
 
         return $this;
     }

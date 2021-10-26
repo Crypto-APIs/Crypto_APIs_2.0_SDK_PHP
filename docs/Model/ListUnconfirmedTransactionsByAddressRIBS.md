@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **size** | **int** | Represents the total size of this transaction. |
 **v_size** | **int** | Represents the virtual size of this transaction. |
 **version** | **int** | Defines the version of the transaction. |
-**vin** | [**\CryptoAPIs\Model\ListUnconfirmedTransactionsByAddressRIBSZVin[]**](ListUnconfirmedTransactionsByAddressRIBSZVin.md) | Object Array representation of transaction inputs |
-**vout** | [**\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVout[]**](ListConfirmedTransactionsByAddressRIBSZVout.md) | Object Array representation of transaction outputs |
+**vin** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVin[]**](GetTransactionDetailsByTransactionIDRIBSZVin.md) | Object Array representation of transaction inputs |
+**vout** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVout[]**](GetTransactionDetailsByTransactionIDRIBSZVout.md) | Object Array representation of transaction outputs |
 **fee** | [**\CryptoAPIs\Model\ListUnconfirmedTransactionsByAddressRIBSECFee**](ListUnconfirmedTransactionsByAddressRIBSECFee.md) |  |
 **gas_limit** | **string** | Represents the amount of gas used by this specific transaction alone. |
 **gas_price** | [**\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSBSCGasPrice**](ListConfirmedTransactionsByAddressRIBSBSCGasPrice.md) |  |
@@ -22,8 +22,8 @@ Name | Type | Description | Notes
 **join_split_sig** | **string** | Is used to sign transactions that contain at least one JoinSplit description. |
 **overwintered** | **bool** | \&quot;Overwinter\&quot; is the network upgrade for the Zcash blockchain. |
 **v_join_split** | [**\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVJoinSplit[]**](ListConfirmedTransactionsByAddressRIBSZVJoinSplit.md) | Represents a sequence of JoinSplit descriptions using BCTV14 proofs. |
-**v_shielded_output** | [**\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedOutput[]**](ListConfirmedTransactionsByAddressRIBSZVShieldedOutput.md) | Object Array representation of transaction output descriptions |
-**v_shielded_spend** | [**\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedSpend[]**](ListConfirmedTransactionsByAddressRIBSZVShieldedSpend.md) | Object Array representation of transaction spend descriptions |
+**v_shielded_output** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[]**](GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput.md) | Object Array representation of transaction output descriptions |
+**v_shielded_spend** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[]**](GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend.md) | Object Array representation of transaction spend descriptions |
 **value_balance** | **string** | Defines the transaction value balance. |
 **version_group_id** | **string** | Represents the transaction version group ID. |
 

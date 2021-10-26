@@ -1,6 +1,6 @@
 <?php
 /**
- * ListConfirmedTransactionsByAddressRIBSZVoutTest
+ * GetTransactionDetailsByTransactionIDRIBSZVinTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace CryptoAPIs\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ListConfirmedTransactionsByAddressRIBSZVoutTest Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZVinTest Class Doc Comment
  *
  * @category    Class
- * @description ListConfirmedTransactionsByAddressRIBSZVout
+ * @description GetTransactionDetailsByTransactionIDRIBSZVin
  * @package     CryptoAPIs
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ListConfirmedTransactionsByAddressRIBSZVoutTest extends TestCase
+class GetTransactionDetailsByTransactionIDRIBSZVinTest extends TestCase
 {
 
     /**
@@ -72,27 +72,54 @@ class ListConfirmedTransactionsByAddressRIBSZVoutTest extends TestCase
     }
 
     /**
-     * Test "ListConfirmedTransactionsByAddressRIBSZVout"
+     * Test "GetTransactionDetailsByTransactionIDRIBSZVin"
      */
-    public function testListConfirmedTransactionsByAddressRIBSZVout()
+    public function testGetTransactionDetailsByTransactionIDRIBSZVin()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "is_spent"
+     * Test attribute "addresses"
      */
-    public function testPropertyIsSpent()
+    public function testPropertyAddresses()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "script_pub_key"
+     * Test attribute "script_sig"
      */
-    public function testPropertyScriptPubKey()
+    public function testPropertyScriptSig()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "sequence"
+     */
+    public function testPropertySequence()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "txid"
+     */
+    public function testPropertyTxid()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "txinwitness"
+     */
+    public function testPropertyTxinwitness()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -102,6 +129,15 @@ class ListConfirmedTransactionsByAddressRIBSZVoutTest extends TestCase
      * Test attribute "value"
      */
     public function testPropertyValue()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "vout"
+     */
+    public function testPropertyVout()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

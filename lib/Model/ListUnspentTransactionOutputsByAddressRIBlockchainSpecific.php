@@ -67,7 +67,7 @@ class ListUnspentTransactionOutputsByAddressRIBlockchainSpecific implements Mode
         'join_split_sig' => 'string',
         'overwintered' => 'bool',
         'v_join_split' => '\CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVJoinSplit[]',
-        'v_shielded_output' => '\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedOutput[]',
+        'v_shielded_output' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[]',
         'v_shielded_spend' => '\CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVShieldedSpend[]',
         'value_balance' => 'string',
         'version_group_id' => 'string'
@@ -464,7 +464,7 @@ class ListUnspentTransactionOutputsByAddressRIBlockchainSpecific implements Mode
     /**
      * Gets v_shielded_output
      *
-     * @return \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedOutput[]|null
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[]|null
      */
     public function getVShieldedOutput()
     {
@@ -474,7 +474,7 @@ class ListUnspentTransactionOutputsByAddressRIBlockchainSpecific implements Mode
     /**
      * Sets v_shielded_output
      *
-     * @param \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedOutput[]|null $v_shielded_output Object Array representation of transaction output descriptions
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[]|null $v_shielded_output Object Array representation of transaction output descriptions
      *
      * @return self
      */

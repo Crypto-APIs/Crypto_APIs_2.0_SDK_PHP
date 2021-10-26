@@ -1,6 +1,6 @@
 <?php
 /**
- * ListConfirmedTransactionsByAddressRIBSZVShieldedOutputTest
+ * GetTransactionDetailsByTransactionIDRIBSZVoutTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace CryptoAPIs\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ListConfirmedTransactionsByAddressRIBSZVShieldedOutputTest Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZVoutTest Class Doc Comment
  *
  * @category    Class
- * @description ListConfirmedTransactionsByAddressRIBSZVShieldedOutput
+ * @description GetTransactionDetailsByTransactionIDRIBSZVout
  * @package     CryptoAPIs
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ListConfirmedTransactionsByAddressRIBSZVShieldedOutputTest extends TestCase
+class GetTransactionDetailsByTransactionIDRIBSZVoutTest extends TestCase
 {
 
     /**
@@ -72,63 +72,36 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedOutputTest extends TestCas
     }
 
     /**
-     * Test "ListConfirmedTransactionsByAddressRIBSZVShieldedOutput"
+     * Test "GetTransactionDetailsByTransactionIDRIBSZVout"
      */
-    public function testListConfirmedTransactionsByAddressRIBSZVShieldedOutput()
+    public function testGetTransactionDetailsByTransactionIDRIBSZVout()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "cmu"
+     * Test attribute "is_spent"
      */
-    public function testPropertyCmu()
+    public function testPropertyIsSpent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "cv"
+     * Test attribute "script_pub_key"
      */
-    public function testPropertyCv()
+    public function testPropertyScriptPubKey()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "enc_cipher_text"
+     * Test attribute "value"
      */
-    public function testPropertyEncCipherText()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ephemeral_key"
-     */
-    public function testPropertyEphemeralKey()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "out_cipher_text"
-     */
-    public function testPropertyOutCipherText()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "proof"
-     */
-    public function testPropertyProof()
+    public function testPropertyValue()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

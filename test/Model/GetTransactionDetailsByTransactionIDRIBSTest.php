@@ -196,4 +196,103 @@ class GetTransactionDetailsByTransactionIDRIBSTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "binding_sig"
+     */
+    public function testPropertyBindingSig()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "expiry_height"
+     */
+    public function testPropertyExpiryHeight()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "fee"
+     */
+    public function testPropertyFee()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "join_split_pub_key"
+     */
+    public function testPropertyJoinSplitPubKey()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "join_split_sig"
+     */
+    public function testPropertyJoinSplitSig()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "overwintered"
+     */
+    public function testPropertyOverwintered()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "v_join_split"
+     */
+    public function testPropertyVJoinSplit()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "v_shielded_output"
+     */
+    public function testPropertyVShieldedOutput()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "v_shielded_spend"
+     */
+    public function testPropertyVShieldedSpend()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "value_balance"
+     */
+    public function testPropertyValueBalance()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "version_group_id"
+     */
+    public function testPropertyVersionGroupId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

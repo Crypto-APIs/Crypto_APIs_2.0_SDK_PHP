@@ -69,13 +69,13 @@ class ListUnconfirmedTransactionsByAddressRIBSZ implements ModelInterface, Array
         'overwintered' => 'bool',
         'size' => 'int',
         'v_join_split' => '\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVJoinSplit[]',
-        'v_shielded_output' => '\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedOutput[]',
-        'v_shielded_spend' => '\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedSpend[]',
+        'v_shielded_output' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[]',
+        'v_shielded_spend' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[]',
         'value_balance' => 'string',
         'version' => 'int',
         'version_group_id' => 'string',
-        'vin' => '\CryptoAPIs\Model\ListUnconfirmedTransactionsByAddressRIBSZVin[]',
-        'vout' => '\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVout[]'
+        'vin' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVin[]',
+        'vout' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVout[]'
     ];
 
     /**
@@ -531,7 +531,7 @@ class ListUnconfirmedTransactionsByAddressRIBSZ implements ModelInterface, Array
     /**
      * Gets v_shielded_output
      *
-     * @return \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedOutput[]
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[]
      */
     public function getVShieldedOutput()
     {
@@ -541,7 +541,7 @@ class ListUnconfirmedTransactionsByAddressRIBSZ implements ModelInterface, Array
     /**
      * Sets v_shielded_output
      *
-     * @param \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedOutput[] $v_shielded_output Object Array representation of transaction output descriptions
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[] $v_shielded_output Object Array representation of transaction output descriptions
      *
      * @return self
      */
@@ -555,7 +555,7 @@ class ListUnconfirmedTransactionsByAddressRIBSZ implements ModelInterface, Array
     /**
      * Gets v_shielded_spend
      *
-     * @return \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedSpend[]
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[]
      */
     public function getVShieldedSpend()
     {
@@ -565,7 +565,7 @@ class ListUnconfirmedTransactionsByAddressRIBSZ implements ModelInterface, Array
     /**
      * Sets v_shielded_spend
      *
-     * @param \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedSpend[] $v_shielded_spend Object Array representation of transaction spend descriptions
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[] $v_shielded_spend Object Array representation of transaction spend descriptions
      *
      * @return self
      */
@@ -651,7 +651,7 @@ class ListUnconfirmedTransactionsByAddressRIBSZ implements ModelInterface, Array
     /**
      * Gets vin
      *
-     * @return \CryptoAPIs\Model\ListUnconfirmedTransactionsByAddressRIBSZVin[]
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVin[]
      */
     public function getVin()
     {
@@ -661,7 +661,7 @@ class ListUnconfirmedTransactionsByAddressRIBSZ implements ModelInterface, Array
     /**
      * Sets vin
      *
-     * @param \CryptoAPIs\Model\ListUnconfirmedTransactionsByAddressRIBSZVin[] $vin Object Array representation of transaction inputs
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVin[] $vin Object Array representation of transaction inputs
      *
      * @return self
      */
@@ -675,7 +675,7 @@ class ListUnconfirmedTransactionsByAddressRIBSZ implements ModelInterface, Array
     /**
      * Gets vout
      *
-     * @return \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVout[]
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVout[]
      */
     public function getVout()
     {
@@ -685,7 +685,7 @@ class ListUnconfirmedTransactionsByAddressRIBSZ implements ModelInterface, Array
     /**
      * Sets vout
      *
-     * @param \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVout[] $vout Object Array representation of transaction outputs
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVout[] $vout Object Array representation of transaction outputs
      *
      * @return self
      */

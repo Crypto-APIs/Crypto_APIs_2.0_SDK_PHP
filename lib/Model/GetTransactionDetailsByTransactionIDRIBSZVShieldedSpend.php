@@ -1,6 +1,6 @@
 <?php
 /**
- * ListConfirmedTransactionsByAddressRIBSZScriptPubKey
+ * GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend
  *
  * PHP version 7.3
  *
@@ -33,10 +33,9 @@ use \ArrayAccess;
 use \CryptoAPIs\ObjectSerializer;
 
 /**
- * ListConfirmedTransactionsByAddressRIBSZScriptPubKey Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend Class Doc Comment
  *
  * @category Class
- * @description Represents the script public key.
  * @package  CryptoAPIs
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -44,7 +43,7 @@ use \CryptoAPIs\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ListConfirmedTransactionsByAddressRIBSZScriptPubKey implements ModelInterface, ArrayAccess, \JsonSerializable
+class GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -53,7 +52,7 @@ class ListConfirmedTransactionsByAddressRIBSZScriptPubKey implements ModelInterf
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ListConfirmedTransactionsByAddressRIBSZ_scriptPubKey';
+    protected static $openAPIModelName = 'GetTransactionDetailsByTransactionIDRIBSZ_vShieldedSpend';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,11 +60,12 @@ class ListConfirmedTransactionsByAddressRIBSZScriptPubKey implements ModelInterf
       * @var string[]
       */
     protected static $openAPITypes = [
-        'addresses' => 'string[]',
-        'asm' => 'string',
-        'hex' => 'string',
-        'req_sigs' => 'int',
-        'type' => 'string'
+        'anchor' => 'string',
+        'cv' => 'string',
+        'nullifier' => 'string',
+        'proof' => 'string',
+        'rk' => 'string',
+        'spend_auth_sig' => 'string'
     ];
 
     /**
@@ -76,11 +76,12 @@ class ListConfirmedTransactionsByAddressRIBSZScriptPubKey implements ModelInterf
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'addresses' => null,
-        'asm' => null,
-        'hex' => null,
-        'req_sigs' => null,
-        'type' => null
+        'anchor' => null,
+        'cv' => null,
+        'nullifier' => null,
+        'proof' => null,
+        'rk' => null,
+        'spend_auth_sig' => null
     ];
 
     /**
@@ -110,11 +111,12 @@ class ListConfirmedTransactionsByAddressRIBSZScriptPubKey implements ModelInterf
      * @var string[]
      */
     protected static $attributeMap = [
-        'addresses' => 'addresses',
-        'asm' => 'asm',
-        'hex' => 'hex',
-        'req_sigs' => 'reqSigs',
-        'type' => 'type'
+        'anchor' => 'anchor',
+        'cv' => 'cv',
+        'nullifier' => 'nullifier',
+        'proof' => 'proof',
+        'rk' => 'rk',
+        'spend_auth_sig' => 'spendAuthSig'
     ];
 
     /**
@@ -123,11 +125,12 @@ class ListConfirmedTransactionsByAddressRIBSZScriptPubKey implements ModelInterf
      * @var string[]
      */
     protected static $setters = [
-        'addresses' => 'setAddresses',
-        'asm' => 'setAsm',
-        'hex' => 'setHex',
-        'req_sigs' => 'setReqSigs',
-        'type' => 'setType'
+        'anchor' => 'setAnchor',
+        'cv' => 'setCv',
+        'nullifier' => 'setNullifier',
+        'proof' => 'setProof',
+        'rk' => 'setRk',
+        'spend_auth_sig' => 'setSpendAuthSig'
     ];
 
     /**
@@ -136,11 +139,12 @@ class ListConfirmedTransactionsByAddressRIBSZScriptPubKey implements ModelInterf
      * @var string[]
      */
     protected static $getters = [
-        'addresses' => 'getAddresses',
-        'asm' => 'getAsm',
-        'hex' => 'getHex',
-        'req_sigs' => 'getReqSigs',
-        'type' => 'getType'
+        'anchor' => 'getAnchor',
+        'cv' => 'getCv',
+        'nullifier' => 'getNullifier',
+        'proof' => 'getProof',
+        'rk' => 'getRk',
+        'spend_auth_sig' => 'getSpendAuthSig'
     ];
 
     /**
@@ -200,11 +204,12 @@ class ListConfirmedTransactionsByAddressRIBSZScriptPubKey implements ModelInterf
      */
     public function __construct(array $data = null)
     {
-        $this->container['addresses'] = $data['addresses'] ?? null;
-        $this->container['asm'] = $data['asm'] ?? null;
-        $this->container['hex'] = $data['hex'] ?? null;
-        $this->container['req_sigs'] = $data['req_sigs'] ?? null;
-        $this->container['type'] = $data['type'] ?? null;
+        $this->container['anchor'] = $data['anchor'] ?? null;
+        $this->container['cv'] = $data['cv'] ?? null;
+        $this->container['nullifier'] = $data['nullifier'] ?? null;
+        $this->container['proof'] = $data['proof'] ?? null;
+        $this->container['rk'] = $data['rk'] ?? null;
+        $this->container['spend_auth_sig'] = $data['spend_auth_sig'] ?? null;
     }
 
     /**
@@ -216,20 +221,23 @@ class ListConfirmedTransactionsByAddressRIBSZScriptPubKey implements ModelInterf
     {
         $invalidProperties = [];
 
-        if ($this->container['addresses'] === null) {
-            $invalidProperties[] = "'addresses' can't be null";
+        if ($this->container['anchor'] === null) {
+            $invalidProperties[] = "'anchor' can't be null";
         }
-        if ($this->container['asm'] === null) {
-            $invalidProperties[] = "'asm' can't be null";
+        if ($this->container['cv'] === null) {
+            $invalidProperties[] = "'cv' can't be null";
         }
-        if ($this->container['hex'] === null) {
-            $invalidProperties[] = "'hex' can't be null";
+        if ($this->container['nullifier'] === null) {
+            $invalidProperties[] = "'nullifier' can't be null";
         }
-        if ($this->container['req_sigs'] === null) {
-            $invalidProperties[] = "'req_sigs' can't be null";
+        if ($this->container['proof'] === null) {
+            $invalidProperties[] = "'proof' can't be null";
         }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
+        if ($this->container['rk'] === null) {
+            $invalidProperties[] = "'rk' can't be null";
+        }
+        if ($this->container['spend_auth_sig'] === null) {
+            $invalidProperties[] = "'spend_auth_sig' can't be null";
         }
         return $invalidProperties;
     }
@@ -247,121 +255,145 @@ class ListConfirmedTransactionsByAddressRIBSZScriptPubKey implements ModelInterf
 
 
     /**
-     * Gets addresses
-     *
-     * @return string[]
-     */
-    public function getAddresses()
-    {
-        return $this->container['addresses'];
-    }
-
-    /**
-     * Sets addresses
-     *
-     * @param string[] $addresses addresses
-     *
-     * @return self
-     */
-    public function setAddresses($addresses)
-    {
-        $this->container['addresses'] = $addresses;
-
-        return $this;
-    }
-
-    /**
-     * Gets asm
+     * Gets anchor
      *
      * @return string
      */
-    public function getAsm()
+    public function getAnchor()
     {
-        return $this->container['asm'];
+        return $this->container['anchor'];
     }
 
     /**
-     * Sets asm
+     * Sets anchor
      *
-     * @param string $asm Represents the assembly of the script public key of the address.
+     * @param string $anchor Defines a Merkle tree root of a note commitment tree which uniquely identifies a note commitment tree state given the assumed security properties of the Merkle tree’s  hash function.
      *
      * @return self
      */
-    public function setAsm($asm)
+    public function setAnchor($anchor)
     {
-        $this->container['asm'] = $asm;
+        $this->container['anchor'] = $anchor;
 
         return $this;
     }
 
     /**
-     * Gets hex
+     * Gets cv
      *
      * @return string
      */
-    public function getHex()
+    public function getCv()
     {
-        return $this->container['hex'];
+        return $this->container['cv'];
     }
 
     /**
-     * Sets hex
+     * Sets cv
      *
-     * @param string $hex Represents the hex of the script public key of the address.
+     * @param string $cv Defines a value commitment to the value of the input note.
      *
      * @return self
      */
-    public function setHex($hex)
+    public function setCv($cv)
     {
-        $this->container['hex'] = $hex;
+        $this->container['cv'] = $cv;
 
         return $this;
     }
 
     /**
-     * Gets req_sigs
-     *
-     * @return int
-     */
-    public function getReqSigs()
-    {
-        return $this->container['req_sigs'];
-    }
-
-    /**
-     * Sets req_sigs
-     *
-     * @param int $req_sigs Represents the required signatures.
-     *
-     * @return self
-     */
-    public function setReqSigs($req_sigs)
-    {
-        $this->container['req_sigs'] = $req_sigs;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
+     * Gets nullifier
      *
      * @return string
      */
-    public function getType()
+    public function getNullifier()
     {
-        return $this->container['type'];
+        return $this->container['nullifier'];
     }
 
     /**
-     * Sets type
+     * Sets nullifier
      *
-     * @param string $type Represents the script type.
+     * @param string $nullifier Represents a sequence of nullifiers of the input notes.
      *
      * @return self
      */
-    public function setType($type)
+    public function setNullifier($nullifier)
     {
-        $this->container['type'] = $type;
+        $this->container['nullifier'] = $nullifier;
+
+        return $this;
+    }
+
+    /**
+     * Gets proof
+     *
+     * @return string
+     */
+    public function getProof()
+    {
+        return $this->container['proof'];
+    }
+
+    /**
+     * Sets proof
+     *
+     * @param string $proof Represents the proof.
+     *
+     * @return self
+     */
+    public function setProof($proof)
+    {
+        $this->container['proof'] = $proof;
+
+        return $this;
+    }
+
+    /**
+     * Gets rk
+     *
+     * @return string
+     */
+    public function getRk()
+    {
+        return $this->container['rk'];
+    }
+
+    /**
+     * Sets rk
+     *
+     * @param string $rk Represents the randomized validating key for spendAuthSig.
+     *
+     * @return self
+     */
+    public function setRk($rk)
+    {
+        $this->container['rk'] = $rk;
+
+        return $this;
+    }
+
+    /**
+     * Gets spend_auth_sig
+     *
+     * @return string
+     */
+    public function getSpendAuthSig()
+    {
+        return $this->container['spend_auth_sig'];
+    }
+
+    /**
+     * Sets spend_auth_sig
+     *
+     * @param string $spend_auth_sig Used to prove knowledge of the spending key authorizing spending of an input note.
+     *
+     * @return self
+     */
+    public function setSpendAuthSig($spend_auth_sig)
+    {
+        $this->container['spend_auth_sig'] = $spend_auth_sig;
 
         return $this;
     }

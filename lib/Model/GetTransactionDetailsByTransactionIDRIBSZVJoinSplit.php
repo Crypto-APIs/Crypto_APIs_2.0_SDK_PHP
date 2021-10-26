@@ -1,6 +1,6 @@
 <?php
 /**
- * ListConfirmedTransactionsByAddressRIBSZVShieldedOutput
+ * GetTransactionDetailsByTransactionIDRIBSZVJoinSplit
  *
  * PHP version 7.3
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \CryptoAPIs\ObjectSerializer;
 
 /**
- * ListConfirmedTransactionsByAddressRIBSZVShieldedOutput Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZVJoinSplit Class Doc Comment
  *
  * @category Class
  * @package  CryptoAPIs
@@ -43,7 +43,7 @@ use \CryptoAPIs\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ListConfirmedTransactionsByAddressRIBSZVShieldedOutput implements ModelInterface, ArrayAccess, \JsonSerializable
+class GetTransactionDetailsByTransactionIDRIBSZVJoinSplit implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedOutput implements ModelInt
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ListConfirmedTransactionsByAddressRIBSZ_vShieldedOutput';
+    protected static $openAPIModelName = 'GetTransactionDetailsByTransactionIDRIBSZ_vJoinSplit';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,12 +60,16 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedOutput implements ModelInt
       * @var string[]
       */
     protected static $openAPITypes = [
-        'cmu' => 'string',
-        'cv' => 'string',
-        'enc_cipher_text' => 'string',
-        'ephemeral_key' => 'string',
-        'out_cipher_text' => 'string',
-        'proof' => 'string'
+        'anchor' => 'string',
+        'cipher_texts' => 'string[]',
+        'commitments' => 'string[]',
+        'macs' => 'string[]',
+        'nullifiers' => 'string[]',
+        'one_time_pub_key' => 'string',
+        'proof' => 'string',
+        'random_seed' => 'string',
+        'v_pub_new' => 'string',
+        'v_pub_old' => 'string'
     ];
 
     /**
@@ -76,12 +80,16 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedOutput implements ModelInt
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'cmu' => null,
-        'cv' => null,
-        'enc_cipher_text' => null,
-        'ephemeral_key' => null,
-        'out_cipher_text' => null,
-        'proof' => null
+        'anchor' => null,
+        'cipher_texts' => null,
+        'commitments' => null,
+        'macs' => null,
+        'nullifiers' => null,
+        'one_time_pub_key' => null,
+        'proof' => null,
+        'random_seed' => null,
+        'v_pub_new' => null,
+        'v_pub_old' => null
     ];
 
     /**
@@ -111,12 +119,16 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedOutput implements ModelInt
      * @var string[]
      */
     protected static $attributeMap = [
-        'cmu' => 'cmu',
-        'cv' => 'cv',
-        'enc_cipher_text' => 'encCipherText',
-        'ephemeral_key' => 'ephemeralKey',
-        'out_cipher_text' => 'outCipherText',
-        'proof' => 'proof'
+        'anchor' => 'anchor',
+        'cipher_texts' => 'cipherTexts',
+        'commitments' => 'commitments',
+        'macs' => 'macs',
+        'nullifiers' => 'nullifiers',
+        'one_time_pub_key' => 'oneTimePubKey',
+        'proof' => 'proof',
+        'random_seed' => 'randomSeed',
+        'v_pub_new' => 'vPubNew',
+        'v_pub_old' => 'vPubOld'
     ];
 
     /**
@@ -125,12 +137,16 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedOutput implements ModelInt
      * @var string[]
      */
     protected static $setters = [
-        'cmu' => 'setCmu',
-        'cv' => 'setCv',
-        'enc_cipher_text' => 'setEncCipherText',
-        'ephemeral_key' => 'setEphemeralKey',
-        'out_cipher_text' => 'setOutCipherText',
-        'proof' => 'setProof'
+        'anchor' => 'setAnchor',
+        'cipher_texts' => 'setCipherTexts',
+        'commitments' => 'setCommitments',
+        'macs' => 'setMacs',
+        'nullifiers' => 'setNullifiers',
+        'one_time_pub_key' => 'setOneTimePubKey',
+        'proof' => 'setProof',
+        'random_seed' => 'setRandomSeed',
+        'v_pub_new' => 'setVPubNew',
+        'v_pub_old' => 'setVPubOld'
     ];
 
     /**
@@ -139,12 +155,16 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedOutput implements ModelInt
      * @var string[]
      */
     protected static $getters = [
-        'cmu' => 'getCmu',
-        'cv' => 'getCv',
-        'enc_cipher_text' => 'getEncCipherText',
-        'ephemeral_key' => 'getEphemeralKey',
-        'out_cipher_text' => 'getOutCipherText',
-        'proof' => 'getProof'
+        'anchor' => 'getAnchor',
+        'cipher_texts' => 'getCipherTexts',
+        'commitments' => 'getCommitments',
+        'macs' => 'getMacs',
+        'nullifiers' => 'getNullifiers',
+        'one_time_pub_key' => 'getOneTimePubKey',
+        'proof' => 'getProof',
+        'random_seed' => 'getRandomSeed',
+        'v_pub_new' => 'getVPubNew',
+        'v_pub_old' => 'getVPubOld'
     ];
 
     /**
@@ -204,12 +224,16 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedOutput implements ModelInt
      */
     public function __construct(array $data = null)
     {
-        $this->container['cmu'] = $data['cmu'] ?? null;
-        $this->container['cv'] = $data['cv'] ?? null;
-        $this->container['enc_cipher_text'] = $data['enc_cipher_text'] ?? null;
-        $this->container['ephemeral_key'] = $data['ephemeral_key'] ?? null;
-        $this->container['out_cipher_text'] = $data['out_cipher_text'] ?? null;
+        $this->container['anchor'] = $data['anchor'] ?? null;
+        $this->container['cipher_texts'] = $data['cipher_texts'] ?? null;
+        $this->container['commitments'] = $data['commitments'] ?? null;
+        $this->container['macs'] = $data['macs'] ?? null;
+        $this->container['nullifiers'] = $data['nullifiers'] ?? null;
+        $this->container['one_time_pub_key'] = $data['one_time_pub_key'] ?? null;
         $this->container['proof'] = $data['proof'] ?? null;
+        $this->container['random_seed'] = $data['random_seed'] ?? null;
+        $this->container['v_pub_new'] = $data['v_pub_new'] ?? null;
+        $this->container['v_pub_old'] = $data['v_pub_old'] ?? null;
     }
 
     /**
@@ -221,23 +245,35 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedOutput implements ModelInt
     {
         $invalidProperties = [];
 
-        if ($this->container['cmu'] === null) {
-            $invalidProperties[] = "'cmu' can't be null";
+        if ($this->container['anchor'] === null) {
+            $invalidProperties[] = "'anchor' can't be null";
         }
-        if ($this->container['cv'] === null) {
-            $invalidProperties[] = "'cv' can't be null";
+        if ($this->container['cipher_texts'] === null) {
+            $invalidProperties[] = "'cipher_texts' can't be null";
         }
-        if ($this->container['enc_cipher_text'] === null) {
-            $invalidProperties[] = "'enc_cipher_text' can't be null";
+        if ($this->container['commitments'] === null) {
+            $invalidProperties[] = "'commitments' can't be null";
         }
-        if ($this->container['ephemeral_key'] === null) {
-            $invalidProperties[] = "'ephemeral_key' can't be null";
+        if ($this->container['macs'] === null) {
+            $invalidProperties[] = "'macs' can't be null";
         }
-        if ($this->container['out_cipher_text'] === null) {
-            $invalidProperties[] = "'out_cipher_text' can't be null";
+        if ($this->container['nullifiers'] === null) {
+            $invalidProperties[] = "'nullifiers' can't be null";
+        }
+        if ($this->container['one_time_pub_key'] === null) {
+            $invalidProperties[] = "'one_time_pub_key' can't be null";
         }
         if ($this->container['proof'] === null) {
             $invalidProperties[] = "'proof' can't be null";
+        }
+        if ($this->container['random_seed'] === null) {
+            $invalidProperties[] = "'random_seed' can't be null";
+        }
+        if ($this->container['v_pub_new'] === null) {
+            $invalidProperties[] = "'v_pub_new' can't be null";
+        }
+        if ($this->container['v_pub_old'] === null) {
+            $invalidProperties[] = "'v_pub_old' can't be null";
         }
         return $invalidProperties;
     }
@@ -255,121 +291,145 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedOutput implements ModelInt
 
 
     /**
-     * Gets cmu
+     * Gets anchor
      *
      * @return string
      */
-    public function getCmu()
+    public function getAnchor()
     {
-        return $this->container['cmu'];
+        return $this->container['anchor'];
     }
 
     /**
-     * Sets cmu
+     * Sets anchor
      *
-     * @param string $cmu Represents the 𝑢-coordinate of the note commitment for the output note.
+     * @param string $anchor Defines a Merkle tree root of a note commitment tree which uniquely identifies a note commitment tree state given the assumed security properties of the Merkle tree’s  hash function.
      *
      * @return self
      */
-    public function setCmu($cmu)
+    public function setAnchor($anchor)
     {
-        $this->container['cmu'] = $cmu;
+        $this->container['anchor'] = $anchor;
 
         return $this;
     }
 
     /**
-     * Gets cv
+     * Gets cipher_texts
      *
-     * @return string
+     * @return string[]
      */
-    public function getCv()
+    public function getCipherTexts()
     {
-        return $this->container['cv'];
+        return $this->container['cipher_texts'];
     }
 
     /**
-     * Sets cv
+     * Sets cipher_texts
      *
-     * @param string $cv Defines a value commitment to the value of the input note.
+     * @param string[] $cipher_texts cipher_texts
      *
      * @return self
      */
-    public function setCv($cv)
+    public function setCipherTexts($cipher_texts)
     {
-        $this->container['cv'] = $cv;
+        $this->container['cipher_texts'] = $cipher_texts;
 
         return $this;
     }
 
     /**
-     * Gets enc_cipher_text
+     * Gets commitments
      *
-     * @return string
+     * @return string[]
      */
-    public function getEncCipherText()
+    public function getCommitments()
     {
-        return $this->container['enc_cipher_text'];
+        return $this->container['commitments'];
     }
 
     /**
-     * Sets enc_cipher_text
+     * Sets commitments
      *
-     * @param string $enc_cipher_text Represents a ciphertext component for the encrypted output note.
+     * @param string[] $commitments commitments
      *
      * @return self
      */
-    public function setEncCipherText($enc_cipher_text)
+    public function setCommitments($commitments)
     {
-        $this->container['enc_cipher_text'] = $enc_cipher_text;
+        $this->container['commitments'] = $commitments;
 
         return $this;
     }
 
     /**
-     * Gets ephemeral_key
+     * Gets macs
      *
-     * @return string
+     * @return string[]
      */
-    public function getEphemeralKey()
+    public function getMacs()
     {
-        return $this->container['ephemeral_key'];
+        return $this->container['macs'];
     }
 
     /**
-     * Sets ephemeral_key
+     * Sets macs
      *
-     * @param string $ephemeral_key Represents an encoding of an ephemeral Jubjub public key.
+     * @param string[] $macs macs
      *
      * @return self
      */
-    public function setEphemeralKey($ephemeral_key)
+    public function setMacs($macs)
     {
-        $this->container['ephemeral_key'] = $ephemeral_key;
+        $this->container['macs'] = $macs;
 
         return $this;
     }
 
     /**
-     * Gets out_cipher_text
+     * Gets nullifiers
      *
-     * @return string
+     * @return string[]
      */
-    public function getOutCipherText()
+    public function getNullifiers()
     {
-        return $this->container['out_cipher_text'];
+        return $this->container['nullifiers'];
     }
 
     /**
-     * Sets out_cipher_text
+     * Sets nullifiers
      *
-     * @param string $out_cipher_text Represents a ciphertext component that allows the holder of the outgoing cipher key to recover the diversified transmission key pkd and ephemeral private key esk, hence the entire note plaintext.
+     * @param string[] $nullifiers nullifiers
      *
      * @return self
      */
-    public function setOutCipherText($out_cipher_text)
+    public function setNullifiers($nullifiers)
     {
-        $this->container['out_cipher_text'] = $out_cipher_text;
+        $this->container['nullifiers'] = $nullifiers;
+
+        return $this;
+    }
+
+    /**
+     * Gets one_time_pub_key
+     *
+     * @return string
+     */
+    public function getOneTimePubKey()
+    {
+        return $this->container['one_time_pub_key'];
+    }
+
+    /**
+     * Sets one_time_pub_key
+     *
+     * @param string $one_time_pub_key Defines the one time public key.
+     *
+     * @return self
+     */
+    public function setOneTimePubKey($one_time_pub_key)
+    {
+        $this->container['one_time_pub_key'] = $one_time_pub_key;
 
         return $this;
     }
@@ -387,13 +447,85 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedOutput implements ModelInt
     /**
      * Sets proof
      *
-     * @param string $proof Represents the proof.
+     * @param string $proof Defines the proof.
      *
      * @return self
      */
     public function setProof($proof)
     {
         $this->container['proof'] = $proof;
+
+        return $this;
+    }
+
+    /**
+     * Gets random_seed
+     *
+     * @return string
+     */
+    public function getRandomSeed()
+    {
+        return $this->container['random_seed'];
+    }
+
+    /**
+     * Sets random_seed
+     *
+     * @param string $random_seed Represents a 256-bit seed that must be chosen independently at random for each JoinSplit description.
+     *
+     * @return self
+     */
+    public function setRandomSeed($random_seed)
+    {
+        $this->container['random_seed'] = $random_seed;
+
+        return $this;
+    }
+
+    /**
+     * Gets v_pub_new
+     *
+     * @return string
+     */
+    public function getVPubNew()
+    {
+        return $this->container['v_pub_new'];
+    }
+
+    /**
+     * Sets v_pub_new
+     *
+     * @param string $v_pub_new Defines the value that the joinSplit transfer will insert into the transparent transaction value pool
+     *
+     * @return self
+     */
+    public function setVPubNew($v_pub_new)
+    {
+        $this->container['v_pub_new'] = $v_pub_new;
+
+        return $this;
+    }
+
+    /**
+     * Gets v_pub_old
+     *
+     * @return string
+     */
+    public function getVPubOld()
+    {
+        return $this->container['v_pub_old'];
+    }
+
+    /**
+     * Sets v_pub_old
+     *
+     * @param string $v_pub_old Defines the value that the joinSplit transfer will remove from the transparent transaction value pool.
+     *
+     * @return self
+     */
+    public function setVPubOld($v_pub_old)
+    {
+        $this->container['v_pub_old'] = $v_pub_old;
 
         return $this;
     }

@@ -252,15 +252,6 @@ class ListLatestMinedBlocksRIBSTest extends TestCase
     }
 
     /**
-     * Test attribute "merkleroot"
-     */
-    public function testPropertyMerkleroot()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "nonce"
      */
     public function testPropertyNonce()

@@ -1,4 +1,4 @@
-# # ListConfirmedTransactionsByAddressRIBSZVShieldedOutput
+# # GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput
 
 ## Properties
 

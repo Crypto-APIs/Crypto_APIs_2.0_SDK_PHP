@@ -1,4 +1,4 @@
-# # ListConfirmedTransactionsByAddressRIBSZVShieldedSpend
+# # GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend
 
 ## Properties
 

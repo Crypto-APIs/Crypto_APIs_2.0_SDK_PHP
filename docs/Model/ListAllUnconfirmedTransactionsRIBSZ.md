@@ -12,12 +12,12 @@ Name | Type | Description | Notes
 **overwintered** | **bool** | \&quot;Overwinter\&quot; is the network upgrade for the Zcash blockchain. |
 **size** | **int** | Represents the total size of this transaction. |
 **v_join_split** | [**\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVJoinSplit[]**](ListConfirmedTransactionsByAddressRIBSZVJoinSplit.md) | Represents a sequence of JoinSplit descriptions using BCTV14 proofs. |
-**v_shielded_output** | [**\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedOutput[]**](ListConfirmedTransactionsByAddressRIBSZVShieldedOutput.md) | Object Array representation of transaction output descriptions |
-**v_shielded_spend** | [**\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedSpend[]**](ListConfirmedTransactionsByAddressRIBSZVShieldedSpend.md) | Object Array representation of transaction spend descriptions |
+**v_shielded_output** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[]**](GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput.md) | Object Array representation of transaction output descriptions |
+**v_shielded_spend** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[]**](GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend.md) | Object Array representation of transaction spend descriptions |
 **value_balance** | **string** | Defines the transaction value balance. |
 **version** | **int** | Defines the version of the transaction. |
 **version_group_id** | **string** | Represents the transaction version group ID. |
-**vin** | [**\CryptoAPIs\Model\ListUnconfirmedTransactionsByAddressRIBSZVin[]**](ListUnconfirmedTransactionsByAddressRIBSZVin.md) | Object Array representation of transaction inputs |
-**vout** | [**\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVout[]**](ListConfirmedTransactionsByAddressRIBSZVout.md) | Object Array representation of transaction outputs |
+**vin** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVin[]**](GetTransactionDetailsByTransactionIDRIBSZVin.md) | Object Array representation of transaction inputs |
+**vout** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVout[]**](GetTransactionDetailsByTransactionIDRIBSZVout.md) | Object Array representation of transaction outputs |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -1,6 +1,6 @@
 <?php
 /**
- * ListConfirmedTransactionsByAddressRIBSZVShieldedSpendTest
+ * GetTransactionDetailsByTransactionIDRIBSZVShieldedSpendTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace CryptoAPIs\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ListConfirmedTransactionsByAddressRIBSZVShieldedSpendTest Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZVShieldedSpendTest Class Doc Comment
  *
  * @category    Class
- * @description ListConfirmedTransactionsByAddressRIBSZVShieldedSpend
+ * @description GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend
  * @package     CryptoAPIs
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ListConfirmedTransactionsByAddressRIBSZVShieldedSpendTest extends TestCase
+class GetTransactionDetailsByTransactionIDRIBSZVShieldedSpendTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class ListConfirmedTransactionsByAddressRIBSZVShieldedSpendTest extends TestCase
     }
 
     /**
-     * Test "ListConfirmedTransactionsByAddressRIBSZVShieldedSpend"
+     * Test "GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend"
      */
-    public function testListConfirmedTransactionsByAddressRIBSZVShieldedSpend()
+    public function testGetTransactionDetailsByTransactionIDRIBSZVShieldedSpend()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

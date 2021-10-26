@@ -65,7 +65,7 @@ class ListTransactionsByBlockHashRIBS implements ModelInterface, ArrayAccess, \J
         'v_size' => 'int',
         'version' => 'int',
         'vin' => '\CryptoAPIs\Model\ListTransactionsByBlockHashRIBSZVin[]',
-        'vout' => '\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVout[]',
+        'vout' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVout[]',
         'contract' => 'string',
         'gas_limit' => 'string',
         'gas_price' => '\CryptoAPIs\Model\ListTransactionsByBlockHashRIBSBSCGasPrice',
@@ -79,8 +79,8 @@ class ListTransactionsByBlockHashRIBS implements ModelInterface, ArrayAccess, \J
         'join_split_sig' => 'string',
         'overwintered' => 'bool',
         'v_join_split' => '\CryptoAPIs\Model\ListTransactionsByBlockHashRIBSZVJoinSplit[]',
-        'v_shielded_output' => '\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedOutput[]',
-        'v_shielded_spend' => '\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedSpend[]',
+        'v_shielded_output' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[]',
+        'v_shielded_spend' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[]',
         'value_balance' => 'string',
         'version_group_id' => 'string'
     ];
@@ -530,7 +530,7 @@ class ListTransactionsByBlockHashRIBS implements ModelInterface, ArrayAccess, \J
     /**
      * Gets vout
      *
-     * @return \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVout[]
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVout[]
      */
     public function getVout()
     {
@@ -540,7 +540,7 @@ class ListTransactionsByBlockHashRIBS implements ModelInterface, ArrayAccess, \J
     /**
      * Sets vout
      *
-     * @param \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVout[] $vout Object Array representation of transaction outputs
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVout[] $vout Object Array representation of transaction outputs
      *
      * @return self
      */
@@ -866,7 +866,7 @@ class ListTransactionsByBlockHashRIBS implements ModelInterface, ArrayAccess, \J
     /**
      * Gets v_shielded_output
      *
-     * @return \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedOutput[]
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[]
      */
     public function getVShieldedOutput()
     {
@@ -876,7 +876,7 @@ class ListTransactionsByBlockHashRIBS implements ModelInterface, ArrayAccess, \J
     /**
      * Sets v_shielded_output
      *
-     * @param \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedOutput[] $v_shielded_output Object Array representation of transaction output descriptions
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedOutput[] $v_shielded_output Object Array representation of transaction output descriptions
      *
      * @return self
      */
@@ -890,7 +890,7 @@ class ListTransactionsByBlockHashRIBS implements ModelInterface, ArrayAccess, \J
     /**
      * Gets v_shielded_spend
      *
-     * @return \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedSpend[]
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[]
      */
     public function getVShieldedSpend()
     {
@@ -900,7 +900,7 @@ class ListTransactionsByBlockHashRIBS implements ModelInterface, ArrayAccess, \J
     /**
      * Sets v_shielded_spend
      *
-     * @param \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZVShieldedSpend[] $v_shielded_spend Object Array representation of transaction spend descriptions
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVShieldedSpend[] $v_shielded_spend Object Array representation of transaction spend descriptions
      *
      * @return self
      */

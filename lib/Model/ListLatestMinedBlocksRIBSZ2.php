@@ -63,7 +63,7 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPITypes = [
         'bits' => 'string',
         'chainwork' => 'string',
-        'merkleroot' => 'string',
+        'merkle_root' => 'string',
         'nonce' => 'string',
         'size' => 'int',
         'version' => 'int'
@@ -79,7 +79,7 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPIFormats = [
         'bits' => null,
         'chainwork' => null,
-        'merkleroot' => null,
+        'merkle_root' => null,
         'nonce' => null,
         'size' => null,
         'version' => null
@@ -114,7 +114,7 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $attributeMap = [
         'bits' => 'bits',
         'chainwork' => 'chainwork',
-        'merkleroot' => 'merkleroot',
+        'merkle_root' => 'merkleRoot',
         'nonce' => 'nonce',
         'size' => 'size',
         'version' => 'version'
@@ -128,7 +128,7 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $setters = [
         'bits' => 'setBits',
         'chainwork' => 'setChainwork',
-        'merkleroot' => 'setMerkleroot',
+        'merkle_root' => 'setMerkleRoot',
         'nonce' => 'setNonce',
         'size' => 'setSize',
         'version' => 'setVersion'
@@ -142,7 +142,7 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $getters = [
         'bits' => 'getBits',
         'chainwork' => 'getChainwork',
-        'merkleroot' => 'getMerkleroot',
+        'merkle_root' => 'getMerkleRoot',
         'nonce' => 'getNonce',
         'size' => 'getSize',
         'version' => 'getVersion'
@@ -207,7 +207,7 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     {
         $this->container['bits'] = $data['bits'] ?? null;
         $this->container['chainwork'] = $data['chainwork'] ?? null;
-        $this->container['merkleroot'] = $data['merkleroot'] ?? null;
+        $this->container['merkle_root'] = $data['merkle_root'] ?? null;
         $this->container['nonce'] = $data['nonce'] ?? null;
         $this->container['size'] = $data['size'] ?? null;
         $this->container['version'] = $data['version'] ?? null;
@@ -228,8 +228,8 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
         if ($this->container['chainwork'] === null) {
             $invalidProperties[] = "'chainwork' can't be null";
         }
-        if ($this->container['merkleroot'] === null) {
-            $invalidProperties[] = "'merkleroot' can't be null";
+        if ($this->container['merkle_root'] === null) {
+            $invalidProperties[] = "'merkle_root' can't be null";
         }
         if ($this->container['nonce'] === null) {
             $invalidProperties[] = "'nonce' can't be null";
@@ -304,25 +304,25 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets merkleroot
+     * Gets merkle_root
      *
      * @return string
      */
-    public function getMerkleroot()
+    public function getMerkleRoot()
     {
-        return $this->container['merkleroot'];
+        return $this->container['merkle_root'];
     }
 
     /**
-     * Sets merkleroot
+     * Sets merkle_root
      *
-     * @param string $merkleroot Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions' hashes that are part of a blockchain block.
+     * @param string $merkle_root Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions' hashes that are part of a blockchain block.
      *
      * @return self
      */
-    public function setMerkleroot($merkleroot)
+    public function setMerkleRoot($merkle_root)
     {
-        $this->container['merkleroot'] = $merkleroot;
+        $this->container['merkle_root'] = $merkle_root;
 
         return $this;
     }

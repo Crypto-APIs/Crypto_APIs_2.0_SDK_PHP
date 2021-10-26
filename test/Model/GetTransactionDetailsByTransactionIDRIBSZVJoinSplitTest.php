@@ -1,6 +1,6 @@
 <?php
 /**
- * ListUnconfirmedTransactionsByAddressRIBSZVinTest
+ * GetTransactionDetailsByTransactionIDRIBSZVJoinSplitTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace CryptoAPIs\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ListUnconfirmedTransactionsByAddressRIBSZVinTest Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZVJoinSplitTest Class Doc Comment
  *
  * @category    Class
- * @description ListUnconfirmedTransactionsByAddressRIBSZVin
+ * @description GetTransactionDetailsByTransactionIDRIBSZVJoinSplit
  * @package     CryptoAPIs
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ListUnconfirmedTransactionsByAddressRIBSZVinTest extends TestCase
+class GetTransactionDetailsByTransactionIDRIBSZVJoinSplitTest extends TestCase
 {
 
     /**
@@ -72,72 +72,99 @@ class ListUnconfirmedTransactionsByAddressRIBSZVinTest extends TestCase
     }
 
     /**
-     * Test "ListUnconfirmedTransactionsByAddressRIBSZVin"
+     * Test "GetTransactionDetailsByTransactionIDRIBSZVJoinSplit"
      */
-    public function testListUnconfirmedTransactionsByAddressRIBSZVin()
+    public function testGetTransactionDetailsByTransactionIDRIBSZVJoinSplit()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "addresses"
+     * Test attribute "anchor"
      */
-    public function testPropertyAddresses()
+    public function testPropertyAnchor()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "script_sig"
+     * Test attribute "cipher_texts"
      */
-    public function testPropertyScriptSig()
+    public function testPropertyCipherTexts()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "sequence"
+     * Test attribute "commitments"
      */
-    public function testPropertySequence()
+    public function testPropertyCommitments()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "txid"
+     * Test attribute "macs"
      */
-    public function testPropertyTxid()
+    public function testPropertyMacs()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "txinwitness"
+     * Test attribute "nullifiers"
      */
-    public function testPropertyTxinwitness()
+    public function testPropertyNullifiers()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "value"
+     * Test attribute "one_time_pub_key"
      */
-    public function testPropertyValue()
+    public function testPropertyOneTimePubKey()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "vout"
+     * Test attribute "proof"
      */
-    public function testPropertyVout()
+    public function testPropertyProof()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "random_seed"
+     */
+    public function testPropertyRandomSeed()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "v_pub_new"
+     */
+    public function testPropertyVPubNew()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "v_pub_old"
+     */
+    public function testPropertyVPubOld()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

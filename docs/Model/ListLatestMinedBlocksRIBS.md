@@ -23,7 +23,6 @@ Name | Type | Description | Notes
 **ds_difficulty** | **string** | Defines how difficult it is to mine the dsBlocks. |
 **ds_leader** | **string** | Represents a part of the DS Committee which leads the consensus protocol for the epoch. |
 **micro_blocks** | **string[]** |  |
-**merkleroot** | **string** | Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions&#39; hashes that are part of a blockchain block. |
 **nonce** | **string** | Represents a random value that can be adjusted to satisfy the proof of work |
 **size** | **int** | Represents the total size of the block in Bytes. |
 

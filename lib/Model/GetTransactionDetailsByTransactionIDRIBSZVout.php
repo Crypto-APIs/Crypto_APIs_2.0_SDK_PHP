@@ -1,6 +1,6 @@
 <?php
 /**
- * ListConfirmedTransactionsByAddressRIBSZVin
+ * GetTransactionDetailsByTransactionIDRIBSZVout
  *
  * PHP version 7.3
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \CryptoAPIs\ObjectSerializer;
 
 /**
- * ListConfirmedTransactionsByAddressRIBSZVin Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZVout Class Doc Comment
  *
  * @category Class
  * @package  CryptoAPIs
@@ -43,7 +43,7 @@ use \CryptoAPIs\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, ArrayAccess, \JsonSerializable
+class GetTransactionDetailsByTransactionIDRIBSZVout implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +52,7 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ListConfirmedTransactionsByAddressRIBSZ_vin';
+    protected static $openAPIModelName = 'GetTransactionDetailsByTransactionIDRIBSZ_vout';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,14 +60,9 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
       * @var string[]
       */
     protected static $openAPITypes = [
-        'addresses' => 'string[]',
-        'coinbase' => 'string',
-        'script_sig' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZScriptSig',
-        'sequence' => 'int',
-        'txid' => 'string',
-        'txinwitness' => 'string[]',
-        'value' => 'string',
-        'vout' => 'int'
+        'is_spent' => 'bool',
+        'script_pub_key' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZScriptPubKey',
+        'value' => 'string'
     ];
 
     /**
@@ -78,14 +73,9 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'addresses' => null,
-        'coinbase' => null,
-        'script_sig' => null,
-        'sequence' => null,
-        'txid' => null,
-        'txinwitness' => null,
-        'value' => null,
-        'vout' => null
+        'is_spent' => null,
+        'script_pub_key' => null,
+        'value' => null
     ];
 
     /**
@@ -115,14 +105,9 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
      * @var string[]
      */
     protected static $attributeMap = [
-        'addresses' => 'addresses',
-        'coinbase' => 'coinbase',
-        'script_sig' => 'scriptSig',
-        'sequence' => 'sequence',
-        'txid' => 'txid',
-        'txinwitness' => 'txinwitness',
-        'value' => 'value',
-        'vout' => 'vout'
+        'is_spent' => 'isSpent',
+        'script_pub_key' => 'scriptPubKey',
+        'value' => 'value'
     ];
 
     /**
@@ -131,14 +116,9 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
      * @var string[]
      */
     protected static $setters = [
-        'addresses' => 'setAddresses',
-        'coinbase' => 'setCoinbase',
-        'script_sig' => 'setScriptSig',
-        'sequence' => 'setSequence',
-        'txid' => 'setTxid',
-        'txinwitness' => 'setTxinwitness',
-        'value' => 'setValue',
-        'vout' => 'setVout'
+        'is_spent' => 'setIsSpent',
+        'script_pub_key' => 'setScriptPubKey',
+        'value' => 'setValue'
     ];
 
     /**
@@ -147,14 +127,9 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
      * @var string[]
      */
     protected static $getters = [
-        'addresses' => 'getAddresses',
-        'coinbase' => 'getCoinbase',
-        'script_sig' => 'getScriptSig',
-        'sequence' => 'getSequence',
-        'txid' => 'getTxid',
-        'txinwitness' => 'getTxinwitness',
-        'value' => 'getValue',
-        'vout' => 'getVout'
+        'is_spent' => 'getIsSpent',
+        'script_pub_key' => 'getScriptPubKey',
+        'value' => 'getValue'
     ];
 
     /**
@@ -214,14 +189,9 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
      */
     public function __construct(array $data = null)
     {
-        $this->container['addresses'] = $data['addresses'] ?? null;
-        $this->container['coinbase'] = $data['coinbase'] ?? null;
-        $this->container['script_sig'] = $data['script_sig'] ?? null;
-        $this->container['sequence'] = $data['sequence'] ?? null;
-        $this->container['txid'] = $data['txid'] ?? null;
-        $this->container['txinwitness'] = $data['txinwitness'] ?? null;
+        $this->container['is_spent'] = $data['is_spent'] ?? null;
+        $this->container['script_pub_key'] = $data['script_pub_key'] ?? null;
         $this->container['value'] = $data['value'] ?? null;
-        $this->container['vout'] = $data['vout'] ?? null;
     }
 
     /**
@@ -233,29 +203,14 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
     {
         $invalidProperties = [];
 
-        if ($this->container['addresses'] === null) {
-            $invalidProperties[] = "'addresses' can't be null";
+        if ($this->container['is_spent'] === null) {
+            $invalidProperties[] = "'is_spent' can't be null";
         }
-        if ($this->container['coinbase'] === null) {
-            $invalidProperties[] = "'coinbase' can't be null";
-        }
-        if ($this->container['script_sig'] === null) {
-            $invalidProperties[] = "'script_sig' can't be null";
-        }
-        if ($this->container['sequence'] === null) {
-            $invalidProperties[] = "'sequence' can't be null";
-        }
-        if ($this->container['txid'] === null) {
-            $invalidProperties[] = "'txid' can't be null";
-        }
-        if ($this->container['txinwitness'] === null) {
-            $invalidProperties[] = "'txinwitness' can't be null";
+        if ($this->container['script_pub_key'] === null) {
+            $invalidProperties[] = "'script_pub_key' can't be null";
         }
         if ($this->container['value'] === null) {
             $invalidProperties[] = "'value' can't be null";
-        }
-        if ($this->container['vout'] === null) {
-            $invalidProperties[] = "'vout' can't be null";
         }
         return $invalidProperties;
     }
@@ -273,145 +228,49 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
 
 
     /**
-     * Gets addresses
+     * Gets is_spent
      *
-     * @return string[]
+     * @return bool
      */
-    public function getAddresses()
+    public function getIsSpent()
     {
-        return $this->container['addresses'];
+        return $this->container['is_spent'];
     }
 
     /**
-     * Sets addresses
+     * Sets is_spent
      *
-     * @param string[] $addresses addresses
+     * @param bool $is_spent Defines whether the transaction output has been spent or not.
      *
      * @return self
      */
-    public function setAddresses($addresses)
+    public function setIsSpent($is_spent)
     {
-        $this->container['addresses'] = $addresses;
+        $this->container['is_spent'] = $is_spent;
 
         return $this;
     }
 
     /**
-     * Gets coinbase
+     * Gets script_pub_key
      *
-     * @return string
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZScriptPubKey
      */
-    public function getCoinbase()
+    public function getScriptPubKey()
     {
-        return $this->container['coinbase'];
+        return $this->container['script_pub_key'];
     }
 
     /**
-     * Sets coinbase
+     * Sets script_pub_key
      *
-     * @param string $coinbase Represents the coinbase hex.
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZScriptPubKey $script_pub_key script_pub_key
      *
      * @return self
      */
-    public function setCoinbase($coinbase)
+    public function setScriptPubKey($script_pub_key)
     {
-        $this->container['coinbase'] = $coinbase;
-
-        return $this;
-    }
-
-    /**
-     * Gets script_sig
-     *
-     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZScriptSig
-     */
-    public function getScriptSig()
-    {
-        return $this->container['script_sig'];
-    }
-
-    /**
-     * Sets script_sig
-     *
-     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZScriptSig $script_sig script_sig
-     *
-     * @return self
-     */
-    public function setScriptSig($script_sig)
-    {
-        $this->container['script_sig'] = $script_sig;
-
-        return $this;
-    }
-
-    /**
-     * Gets sequence
-     *
-     * @return int
-     */
-    public function getSequence()
-    {
-        return $this->container['sequence'];
-    }
-
-    /**
-     * Sets sequence
-     *
-     * @param int $sequence Represents the script sequence number.
-     *
-     * @return self
-     */
-    public function setSequence($sequence)
-    {
-        $this->container['sequence'] = $sequence;
-
-        return $this;
-    }
-
-    /**
-     * Gets txid
-     *
-     * @return string
-     */
-    public function getTxid()
-    {
-        return $this->container['txid'];
-    }
-
-    /**
-     * Sets txid
-     *
-     * @param string $txid Represents the reference transaction identifier.
-     *
-     * @return self
-     */
-    public function setTxid($txid)
-    {
-        $this->container['txid'] = $txid;
-
-        return $this;
-    }
-
-    /**
-     * Gets txinwitness
-     *
-     * @return string[]
-     */
-    public function getTxinwitness()
-    {
-        return $this->container['txinwitness'];
-    }
-
-    /**
-     * Sets txinwitness
-     *
-     * @param string[] $txinwitness txinwitness
-     *
-     * @return self
-     */
-    public function setTxinwitness($txinwitness)
-    {
-        $this->container['txinwitness'] = $txinwitness;
+        $this->container['script_pub_key'] = $script_pub_key;
 
         return $this;
     }
@@ -429,37 +288,13 @@ class ListConfirmedTransactionsByAddressRIBSZVin implements ModelInterface, Arra
     /**
      * Sets value
      *
-     * @param string $value Defines the specific amount.
+     * @param string $value Represents the specific amount.
      *
      * @return self
      */
     public function setValue($value)
     {
         $this->container['value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * Gets vout
-     *
-     * @return int
-     */
-    public function getVout()
-    {
-        return $this->container['vout'];
-    }
-
-    /**
-     * Sets vout
-     *
-     * @param int $vout It refers to the index of the output address of this transaction. The index starts from 0.
-     *
-     * @return self
-     */
-    public function setVout($vout)
-    {
-        $this->container['vout'] = $vout;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * GetBlockDetailsByBlockHashRIBSBCTest
+ * GetTransactionDetailsByTransactionIDRIBSZFeeTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace CryptoAPIs\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * GetBlockDetailsByBlockHashRIBSBCTest Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZFeeTest Class Doc Comment
  *
  * @category    Class
- * @description Bitcoin Cash
+ * @description GetTransactionDetailsByTransactionIDRIBSZFee
  * @package     CryptoAPIs
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class GetBlockDetailsByBlockHashRIBSBCTest extends TestCase
+class GetTransactionDetailsByTransactionIDRIBSZFeeTest extends TestCase
 {
 
     /**
@@ -72,81 +72,27 @@ class GetBlockDetailsByBlockHashRIBSBCTest extends TestCase
     }
 
     /**
-     * Test "GetBlockDetailsByBlockHashRIBSBC"
+     * Test "GetTransactionDetailsByTransactionIDRIBSZFee"
      */
-    public function testGetBlockDetailsByBlockHashRIBSBC()
+    public function testGetTransactionDetailsByTransactionIDRIBSZFee()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "difficulty"
+     * Test attribute "amount"
      */
-    public function testPropertyDifficulty()
+    public function testPropertyAmount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "nonce"
+     * Test attribute "unit"
      */
-    public function testPropertyNonce()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "size"
-     */
-    public function testPropertySize()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "bits"
-     */
-    public function testPropertyBits()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "chainwork"
-     */
-    public function testPropertyChainwork()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "merkle_root"
-     */
-    public function testPropertyMerkleRoot()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "version"
-     */
-    public function testPropertyVersion()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "version_hex"
-     */
-    public function testPropertyVersionHex()
+    public function testPropertyUnit()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -1,6 +1,6 @@
 <?php
 /**
- * ListConfirmedTransactionsByAddressRIBSZScriptSigTest
+ * GetTransactionDetailsByTransactionIDRIBSZScriptSigTest
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ namespace CryptoAPIs\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ListConfirmedTransactionsByAddressRIBSZScriptSigTest Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZScriptSigTest Class Doc Comment
  *
  * @category    Class
  * @description Specifies the required signatures.
@@ -40,7 +40,7 @@ use PHPUnit\Framework\TestCase;
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ListConfirmedTransactionsByAddressRIBSZScriptSigTest extends TestCase
+class GetTransactionDetailsByTransactionIDRIBSZScriptSigTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class ListConfirmedTransactionsByAddressRIBSZScriptSigTest extends TestCase
     }
 
     /**
-     * Test "ListConfirmedTransactionsByAddressRIBSZScriptSig"
+     * Test "GetTransactionDetailsByTransactionIDRIBSZScriptSig"
      */
-    public function testListConfirmedTransactionsByAddressRIBSZScriptSig()
+    public function testGetTransactionDetailsByTransactionIDRIBSZScriptSig()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

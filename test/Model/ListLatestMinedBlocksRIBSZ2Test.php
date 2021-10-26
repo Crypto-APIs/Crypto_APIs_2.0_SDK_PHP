@@ -99,9 +99,9 @@ class ListLatestMinedBlocksRIBSZ2Test extends TestCase
     }
 
     /**
-     * Test attribute "merkleroot"
+     * Test attribute "merkle_root"
      */
-    public function testPropertyMerkleroot()
+    public function testPropertyMerkleRoot()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

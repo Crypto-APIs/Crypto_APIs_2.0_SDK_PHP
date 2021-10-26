@@ -1,6 +1,6 @@
 <?php
 /**
- * ListConfirmedTransactionsByAddressRIBSZVout
+ * GetTransactionDetailsByTransactionIDRIBSZScriptSig
  *
  * PHP version 7.3
  *
@@ -33,9 +33,10 @@ use \ArrayAccess;
 use \CryptoAPIs\ObjectSerializer;
 
 /**
- * ListConfirmedTransactionsByAddressRIBSZVout Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZScriptSig Class Doc Comment
  *
  * @category Class
+ * @description Specifies the required signatures.
  * @package  CryptoAPIs
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -43,7 +44,7 @@ use \CryptoAPIs\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ListConfirmedTransactionsByAddressRIBSZVout implements ModelInterface, ArrayAccess, \JsonSerializable
+class GetTransactionDetailsByTransactionIDRIBSZScriptSig implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -52,7 +53,7 @@ class ListConfirmedTransactionsByAddressRIBSZVout implements ModelInterface, Arr
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ListConfirmedTransactionsByAddressRIBSZ_vout';
+    protected static $openAPIModelName = 'GetTransactionDetailsByTransactionIDRIBSZ_scriptSig';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,9 +61,9 @@ class ListConfirmedTransactionsByAddressRIBSZVout implements ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'is_spent' => 'bool',
-        'script_pub_key' => '\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZScriptPubKey',
-        'value' => 'string'
+        'asm' => 'string',
+        'hex' => 'string',
+        'type' => 'string'
     ];
 
     /**
@@ -73,9 +74,9 @@ class ListConfirmedTransactionsByAddressRIBSZVout implements ModelInterface, Arr
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'is_spent' => null,
-        'script_pub_key' => null,
-        'value' => null
+        'asm' => null,
+        'hex' => null,
+        'type' => null
     ];
 
     /**
@@ -105,9 +106,9 @@ class ListConfirmedTransactionsByAddressRIBSZVout implements ModelInterface, Arr
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_spent' => 'isSpent',
-        'script_pub_key' => 'scriptPubKey',
-        'value' => 'value'
+        'asm' => 'asm',
+        'hex' => 'hex',
+        'type' => 'type'
     ];
 
     /**
@@ -116,9 +117,9 @@ class ListConfirmedTransactionsByAddressRIBSZVout implements ModelInterface, Arr
      * @var string[]
      */
     protected static $setters = [
-        'is_spent' => 'setIsSpent',
-        'script_pub_key' => 'setScriptPubKey',
-        'value' => 'setValue'
+        'asm' => 'setAsm',
+        'hex' => 'setHex',
+        'type' => 'setType'
     ];
 
     /**
@@ -127,9 +128,9 @@ class ListConfirmedTransactionsByAddressRIBSZVout implements ModelInterface, Arr
      * @var string[]
      */
     protected static $getters = [
-        'is_spent' => 'getIsSpent',
-        'script_pub_key' => 'getScriptPubKey',
-        'value' => 'getValue'
+        'asm' => 'getAsm',
+        'hex' => 'getHex',
+        'type' => 'getType'
     ];
 
     /**
@@ -189,9 +190,9 @@ class ListConfirmedTransactionsByAddressRIBSZVout implements ModelInterface, Arr
      */
     public function __construct(array $data = null)
     {
-        $this->container['is_spent'] = $data['is_spent'] ?? null;
-        $this->container['script_pub_key'] = $data['script_pub_key'] ?? null;
-        $this->container['value'] = $data['value'] ?? null;
+        $this->container['asm'] = $data['asm'] ?? null;
+        $this->container['hex'] = $data['hex'] ?? null;
+        $this->container['type'] = $data['type'] ?? null;
     }
 
     /**
@@ -203,14 +204,14 @@ class ListConfirmedTransactionsByAddressRIBSZVout implements ModelInterface, Arr
     {
         $invalidProperties = [];
 
-        if ($this->container['is_spent'] === null) {
-            $invalidProperties[] = "'is_spent' can't be null";
+        if ($this->container['asm'] === null) {
+            $invalidProperties[] = "'asm' can't be null";
         }
-        if ($this->container['script_pub_key'] === null) {
-            $invalidProperties[] = "'script_pub_key' can't be null";
+        if ($this->container['hex'] === null) {
+            $invalidProperties[] = "'hex' can't be null";
         }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
         return $invalidProperties;
     }
@@ -228,73 +229,73 @@ class ListConfirmedTransactionsByAddressRIBSZVout implements ModelInterface, Arr
 
 
     /**
-     * Gets is_spent
-     *
-     * @return bool
-     */
-    public function getIsSpent()
-    {
-        return $this->container['is_spent'];
-    }
-
-    /**
-     * Sets is_spent
-     *
-     * @param bool $is_spent Defines whether the transaction output has been spent or not.
-     *
-     * @return self
-     */
-    public function setIsSpent($is_spent)
-    {
-        $this->container['is_spent'] = $is_spent;
-
-        return $this;
-    }
-
-    /**
-     * Gets script_pub_key
-     *
-     * @return \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZScriptPubKey
-     */
-    public function getScriptPubKey()
-    {
-        return $this->container['script_pub_key'];
-    }
-
-    /**
-     * Sets script_pub_key
-     *
-     * @param \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSZScriptPubKey $script_pub_key script_pub_key
-     *
-     * @return self
-     */
-    public function setScriptPubKey($script_pub_key)
-    {
-        $this->container['script_pub_key'] = $script_pub_key;
-
-        return $this;
-    }
-
-    /**
-     * Gets value
+     * Gets asm
      *
      * @return string
      */
-    public function getValue()
+    public function getAsm()
     {
-        return $this->container['value'];
+        return $this->container['asm'];
     }
 
     /**
-     * Sets value
+     * Sets asm
      *
-     * @param string $value Represents the specific amount.
+     * @param string $asm The asm strands for assembly, which is the symbolic representation of the Bitcoin's Script language op-codes.
      *
      * @return self
      */
-    public function setValue($value)
+    public function setAsm($asm)
     {
-        $this->container['value'] = $value;
+        $this->container['asm'] = $asm;
+
+        return $this;
+    }
+
+    /**
+     * Gets hex
+     *
+     * @return string
+     */
+    public function getHex()
+    {
+        return $this->container['hex'];
+    }
+
+    /**
+     * Sets hex
+     *
+     * @param string $hex Represents the hex of the public key of the address.
+     *
+     * @return self
+     */
+    public function setHex($hex)
+    {
+        $this->container['hex'] = $hex;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type Represents the script type of the reference transaction identifier.
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
 
         return $this;
     }

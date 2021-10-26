@@ -1,6 +1,6 @@
 <?php
 /**
- * GetBlockDetailsByBlockHashRIBSBCTest
+ * GetTransactionDetailsByTransactionIDRIBSZScriptPubKeyTest
  *
  * PHP version 7.3
  *
@@ -32,15 +32,15 @@ namespace CryptoAPIs\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * GetBlockDetailsByBlockHashRIBSBCTest Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZScriptPubKeyTest Class Doc Comment
  *
  * @category    Class
- * @description Bitcoin Cash
+ * @description Represents the script public key.
  * @package     CryptoAPIs
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class GetBlockDetailsByBlockHashRIBSBCTest extends TestCase
+class GetTransactionDetailsByTransactionIDRIBSZScriptPubKeyTest extends TestCase
 {
 
     /**
@@ -72,81 +72,54 @@ class GetBlockDetailsByBlockHashRIBSBCTest extends TestCase
     }
 
     /**
-     * Test "GetBlockDetailsByBlockHashRIBSBC"
+     * Test "GetTransactionDetailsByTransactionIDRIBSZScriptPubKey"
      */
-    public function testGetBlockDetailsByBlockHashRIBSBC()
+    public function testGetTransactionDetailsByTransactionIDRIBSZScriptPubKey()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "difficulty"
+     * Test attribute "addresses"
      */
-    public function testPropertyDifficulty()
+    public function testPropertyAddresses()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "nonce"
+     * Test attribute "asm"
      */
-    public function testPropertyNonce()
+    public function testPropertyAsm()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "size"
+     * Test attribute "hex"
      */
-    public function testPropertySize()
+    public function testPropertyHex()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "bits"
+     * Test attribute "req_sigs"
      */
-    public function testPropertyBits()
+    public function testPropertyReqSigs()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "chainwork"
+     * Test attribute "type"
      */
-    public function testPropertyChainwork()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "merkle_root"
-     */
-    public function testPropertyMerkleRoot()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "version"
-     */
-    public function testPropertyVersion()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "version_hex"
-     */
-    public function testPropertyVersionHex()
+    public function testPropertyType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

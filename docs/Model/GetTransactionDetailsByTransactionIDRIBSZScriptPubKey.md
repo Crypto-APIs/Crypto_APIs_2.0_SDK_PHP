@@ -1,4 +1,4 @@
-# # ListConfirmedTransactionsByAddressRIBSZScriptPubKey
+# # GetTransactionDetailsByTransactionIDRIBSZScriptPubKey
 
 ## Properties
 

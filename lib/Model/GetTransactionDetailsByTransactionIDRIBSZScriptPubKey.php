@@ -1,6 +1,6 @@
 <?php
 /**
- * ListConfirmedTransactionsByAddressRIBSZScriptSig
+ * GetTransactionDetailsByTransactionIDRIBSZScriptPubKey
  *
  * PHP version 7.3
  *
@@ -33,10 +33,10 @@ use \ArrayAccess;
 use \CryptoAPIs\ObjectSerializer;
 
 /**
- * ListConfirmedTransactionsByAddressRIBSZScriptSig Class Doc Comment
+ * GetTransactionDetailsByTransactionIDRIBSZScriptPubKey Class Doc Comment
  *
  * @category Class
- * @description Specifies the required signatures.
+ * @description Represents the script public key.
  * @package  CryptoAPIs
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -44,7 +44,7 @@ use \CryptoAPIs\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ListConfirmedTransactionsByAddressRIBSZScriptSig implements ModelInterface, ArrayAccess, \JsonSerializable
+class GetTransactionDetailsByTransactionIDRIBSZScriptPubKey implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -53,7 +53,7 @@ class ListConfirmedTransactionsByAddressRIBSZScriptSig implements ModelInterface
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ListConfirmedTransactionsByAddressRIBSZ_scriptSig';
+    protected static $openAPIModelName = 'GetTransactionDetailsByTransactionIDRIBSZ_scriptPubKey';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,8 +61,10 @@ class ListConfirmedTransactionsByAddressRIBSZScriptSig implements ModelInterface
       * @var string[]
       */
     protected static $openAPITypes = [
+        'addresses' => 'string[]',
         'asm' => 'string',
         'hex' => 'string',
+        'req_sigs' => 'int',
         'type' => 'string'
     ];
 
@@ -74,8 +76,10 @@ class ListConfirmedTransactionsByAddressRIBSZScriptSig implements ModelInterface
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'addresses' => null,
         'asm' => null,
         'hex' => null,
+        'req_sigs' => null,
         'type' => null
     ];
 
@@ -106,8 +110,10 @@ class ListConfirmedTransactionsByAddressRIBSZScriptSig implements ModelInterface
      * @var string[]
      */
     protected static $attributeMap = [
+        'addresses' => 'addresses',
         'asm' => 'asm',
         'hex' => 'hex',
+        'req_sigs' => 'reqSigs',
         'type' => 'type'
     ];
 
@@ -117,8 +123,10 @@ class ListConfirmedTransactionsByAddressRIBSZScriptSig implements ModelInterface
      * @var string[]
      */
     protected static $setters = [
+        'addresses' => 'setAddresses',
         'asm' => 'setAsm',
         'hex' => 'setHex',
+        'req_sigs' => 'setReqSigs',
         'type' => 'setType'
     ];
 
@@ -128,8 +136,10 @@ class ListConfirmedTransactionsByAddressRIBSZScriptSig implements ModelInterface
      * @var string[]
      */
     protected static $getters = [
+        'addresses' => 'getAddresses',
         'asm' => 'getAsm',
         'hex' => 'getHex',
+        'req_sigs' => 'getReqSigs',
         'type' => 'getType'
     ];
 
@@ -190,8 +200,10 @@ class ListConfirmedTransactionsByAddressRIBSZScriptSig implements ModelInterface
      */
     public function __construct(array $data = null)
     {
+        $this->container['addresses'] = $data['addresses'] ?? null;
         $this->container['asm'] = $data['asm'] ?? null;
         $this->container['hex'] = $data['hex'] ?? null;
+        $this->container['req_sigs'] = $data['req_sigs'] ?? null;
         $this->container['type'] = $data['type'] ?? null;
     }
 
@@ -204,11 +216,17 @@ class ListConfirmedTransactionsByAddressRIBSZScriptSig implements ModelInterface
     {
         $invalidProperties = [];
 
+        if ($this->container['addresses'] === null) {
+            $invalidProperties[] = "'addresses' can't be null";
+        }
         if ($this->container['asm'] === null) {
             $invalidProperties[] = "'asm' can't be null";
         }
         if ($this->container['hex'] === null) {
             $invalidProperties[] = "'hex' can't be null";
+        }
+        if ($this->container['req_sigs'] === null) {
+            $invalidProperties[] = "'req_sigs' can't be null";
         }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
@@ -229,6 +247,30 @@ class ListConfirmedTransactionsByAddressRIBSZScriptSig implements ModelInterface
 
 
     /**
+     * Gets addresses
+     *
+     * @return string[]
+     */
+    public function getAddresses()
+    {
+        return $this->container['addresses'];
+    }
+
+    /**
+     * Sets addresses
+     *
+     * @param string[] $addresses addresses
+     *
+     * @return self
+     */
+    public function setAddresses($addresses)
+    {
+        $this->container['addresses'] = $addresses;
+
+        return $this;
+    }
+
+    /**
      * Gets asm
      *
      * @return string
@@ -241,7 +283,7 @@ class ListConfirmedTransactionsByAddressRIBSZScriptSig implements ModelInterface
     /**
      * Sets asm
      *
-     * @param string $asm The asm strands for assembly, which is the symbolic representation of the Bitcoin's Script language op-codes.
+     * @param string $asm Represents the assembly of the script public key of the address.
      *
      * @return self
      */
@@ -265,13 +307,37 @@ class ListConfirmedTransactionsByAddressRIBSZScriptSig implements ModelInterface
     /**
      * Sets hex
      *
-     * @param string $hex Represents the hex of the public key of the address.
+     * @param string $hex Represents the hex of the script public key of the address.
      *
      * @return self
      */
     public function setHex($hex)
     {
         $this->container['hex'] = $hex;
+
+        return $this;
+    }
+
+    /**
+     * Gets req_sigs
+     *
+     * @return int
+     */
+    public function getReqSigs()
+    {
+        return $this->container['req_sigs'];
+    }
+
+    /**
+     * Sets req_sigs
+     *
+     * @param int $req_sigs Represents the required signatures.
+     *
+     * @return self
+     */
+    public function setReqSigs($req_sigs)
+    {
+        $this->container['req_sigs'] = $req_sigs;
 
         return $this;
     }
@@ -289,7 +355,7 @@ class ListConfirmedTransactionsByAddressRIBSZScriptSig implements ModelInterface
     /**
      * Sets type
      *
-     * @param string $type Represents the script type of the reference transaction identifier.
+     * @param string $type Represents the script type.
      *
      * @return self
      */
