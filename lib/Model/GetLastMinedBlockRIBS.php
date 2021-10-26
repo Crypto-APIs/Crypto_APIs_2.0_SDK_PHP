@@ -76,8 +76,7 @@ class GetLastMinedBlockRIBS implements ModelInterface, ArrayAccess, \JsonSeriali
         'mined_in_seconds' => 'int',
         'sha3_uncles' => 'string',
         'total_difficulty' => 'string',
-        'uncles' => 'string[]',
-        'merkleroot' => 'string'
+        'uncles' => 'string[]'
     ];
 
     /**
@@ -104,8 +103,7 @@ class GetLastMinedBlockRIBS implements ModelInterface, ArrayAccess, \JsonSeriali
         'mined_in_seconds' => null,
         'sha3_uncles' => null,
         'total_difficulty' => null,
-        'uncles' => null,
-        'merkleroot' => null
+        'uncles' => null
     ];
 
     /**
@@ -151,8 +149,7 @@ class GetLastMinedBlockRIBS implements ModelInterface, ArrayAccess, \JsonSeriali
         'mined_in_seconds' => 'minedInSeconds',
         'sha3_uncles' => 'sha3Uncles',
         'total_difficulty' => 'totalDifficulty',
-        'uncles' => 'uncles',
-        'merkleroot' => 'merkleroot'
+        'uncles' => 'uncles'
     ];
 
     /**
@@ -177,8 +174,7 @@ class GetLastMinedBlockRIBS implements ModelInterface, ArrayAccess, \JsonSeriali
         'mined_in_seconds' => 'setMinedInSeconds',
         'sha3_uncles' => 'setSha3Uncles',
         'total_difficulty' => 'setTotalDifficulty',
-        'uncles' => 'setUncles',
-        'merkleroot' => 'setMerkleroot'
+        'uncles' => 'setUncles'
     ];
 
     /**
@@ -203,8 +199,7 @@ class GetLastMinedBlockRIBS implements ModelInterface, ArrayAccess, \JsonSeriali
         'mined_in_seconds' => 'getMinedInSeconds',
         'sha3_uncles' => 'getSha3Uncles',
         'total_difficulty' => 'getTotalDifficulty',
-        'uncles' => 'getUncles',
-        'merkleroot' => 'getMerkleroot'
+        'uncles' => 'getUncles'
     ];
 
     /**
@@ -281,7 +276,6 @@ class GetLastMinedBlockRIBS implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->container['sha3_uncles'] = $data['sha3_uncles'] ?? null;
         $this->container['total_difficulty'] = $data['total_difficulty'] ?? null;
         $this->container['uncles'] = $data['uncles'] ?? null;
-        $this->container['merkleroot'] = $data['merkleroot'] ?? null;
     }
 
     /**
@@ -343,9 +337,6 @@ class GetLastMinedBlockRIBS implements ModelInterface, ArrayAccess, \JsonSeriali
         }
         if ($this->container['uncles'] === null) {
             $invalidProperties[] = "'uncles' can't be null";
-        }
-        if ($this->container['merkleroot'] === null) {
-            $invalidProperties[] = "'merkleroot' can't be null";
         }
         return $invalidProperties;
     }
@@ -766,30 +757,6 @@ class GetLastMinedBlockRIBS implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setUncles($uncles)
     {
         $this->container['uncles'] = $uncles;
-
-        return $this;
-    }
-
-    /**
-     * Gets merkleroot
-     *
-     * @return string
-     */
-    public function getMerkleroot()
-    {
-        return $this->container['merkleroot'];
-    }
-
-    /**
-     * Sets merkleroot
-     *
-     * @param string $merkleroot Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions' hashes that are part of a blockchain block.
-     *
-     * @return self
-     */
-    public function setMerkleroot($merkleroot)
-    {
-        $this->container['merkleroot'] = $merkleroot;
 
         return $this;
     }

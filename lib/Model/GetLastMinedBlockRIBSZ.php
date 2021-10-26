@@ -66,7 +66,7 @@ class GetLastMinedBlockRIBSZ implements ModelInterface, ArrayAccess, \JsonSerial
         'size' => 'int',
         'bits' => 'string',
         'chainwork' => 'string',
-        'merkleroot' => 'string',
+        'merkle_root' => 'string',
         'version' => 'int'
     ];
 
@@ -83,7 +83,7 @@ class GetLastMinedBlockRIBSZ implements ModelInterface, ArrayAccess, \JsonSerial
         'size' => null,
         'bits' => null,
         'chainwork' => null,
-        'merkleroot' => null,
+        'merkle_root' => null,
         'version' => null
     ];
 
@@ -119,7 +119,7 @@ class GetLastMinedBlockRIBSZ implements ModelInterface, ArrayAccess, \JsonSerial
         'size' => 'size',
         'bits' => 'bits',
         'chainwork' => 'chainwork',
-        'merkleroot' => 'merkleroot',
+        'merkle_root' => 'merkleRoot',
         'version' => 'version'
     ];
 
@@ -134,7 +134,7 @@ class GetLastMinedBlockRIBSZ implements ModelInterface, ArrayAccess, \JsonSerial
         'size' => 'setSize',
         'bits' => 'setBits',
         'chainwork' => 'setChainwork',
-        'merkleroot' => 'setMerkleroot',
+        'merkle_root' => 'setMerkleRoot',
         'version' => 'setVersion'
     ];
 
@@ -149,7 +149,7 @@ class GetLastMinedBlockRIBSZ implements ModelInterface, ArrayAccess, \JsonSerial
         'size' => 'getSize',
         'bits' => 'getBits',
         'chainwork' => 'getChainwork',
-        'merkleroot' => 'getMerkleroot',
+        'merkle_root' => 'getMerkleRoot',
         'version' => 'getVersion'
     ];
 
@@ -215,7 +215,7 @@ class GetLastMinedBlockRIBSZ implements ModelInterface, ArrayAccess, \JsonSerial
         $this->container['size'] = $data['size'] ?? null;
         $this->container['bits'] = $data['bits'] ?? null;
         $this->container['chainwork'] = $data['chainwork'] ?? null;
-        $this->container['merkleroot'] = $data['merkleroot'] ?? null;
+        $this->container['merkle_root'] = $data['merkle_root'] ?? null;
         $this->container['version'] = $data['version'] ?? null;
     }
 
@@ -243,8 +243,8 @@ class GetLastMinedBlockRIBSZ implements ModelInterface, ArrayAccess, \JsonSerial
         if ($this->container['chainwork'] === null) {
             $invalidProperties[] = "'chainwork' can't be null";
         }
-        if ($this->container['merkleroot'] === null) {
-            $invalidProperties[] = "'merkleroot' can't be null";
+        if ($this->container['merkle_root'] === null) {
+            $invalidProperties[] = "'merkle_root' can't be null";
         }
         if ($this->container['version'] === null) {
             $invalidProperties[] = "'version' can't be null";
@@ -385,25 +385,25 @@ class GetLastMinedBlockRIBSZ implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets merkleroot
+     * Gets merkle_root
      *
      * @return string
      */
-    public function getMerkleroot()
+    public function getMerkleRoot()
     {
-        return $this->container['merkleroot'];
+        return $this->container['merkle_root'];
     }
 
     /**
-     * Sets merkleroot
+     * Sets merkle_root
      *
-     * @param string $merkleroot Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions' hashes that are part of a blockchain block.
+     * @param string $merkle_root Defines the single and final (root) node of a Merkle tree. It is the combined hash of all transactions' hashes that are part of a blockchain block.
      *
      * @return self
      */
-    public function setMerkleroot($merkleroot)
+    public function setMerkleRoot($merkle_root)
     {
-        $this->container['merkleroot'] = $merkleroot;
+        $this->container['merkle_root'] = $merkle_root;
 
         return $this;
     }

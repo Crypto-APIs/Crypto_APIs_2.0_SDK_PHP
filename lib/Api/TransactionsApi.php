@@ -129,7 +129,7 @@ class TransactionsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\CreateCoinsTransactionFromAddressForWholeAmountR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\WalletAsAServiceAddressBalanceNotEnough|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
+     * @return \CryptoAPIs\Model\CreateCoinsTransactionFromAddressForWholeAmountR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\WalletAsAServiceWalletBalanceNotEnough|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
      */
     public function createCoinsTransactionFromAddressForWholeAmount($address, $blockchain, $network, $wallet_id, $context = null, $create_coins_transaction_from_address_for_whole_amount_rb = null)
     {
@@ -151,7 +151,7 @@ class TransactionsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\CreateCoinsTransactionFromAddressForWholeAmountR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\WalletAsAServiceAddressBalanceNotEnough|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\CreateCoinsTransactionFromAddressForWholeAmountR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\WalletAsAServiceWalletBalanceNotEnough|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCoinsTransactionFromAddressForWholeAmountWithHttpInfo($address, $blockchain, $network, $wallet_id, $context = null, $create_coins_transaction_from_address_for_whole_amount_rb = null)
     {
@@ -247,14 +247,14 @@ class TransactionsApi
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\CryptoAPIs\Model\WalletAsAServiceAddressBalanceNotEnough' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\WalletAsAServiceWalletBalanceNotEnough' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\WalletAsAServiceAddressBalanceNotEnough', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\WalletAsAServiceWalletBalanceNotEnough', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -366,7 +366,7 @@ class TransactionsApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\WalletAsAServiceAddressBalanceNotEnough',
+                        '\CryptoAPIs\Model\WalletAsAServiceWalletBalanceNotEnough',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -662,7 +662,7 @@ class TransactionsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\WalletAsAServiceAddressBalanceNotEnough|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
+     * @return \CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\WalletAsAServiceWalletBalanceNotEnough|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
      */
     public function createCoinsTransactionRequestFromAddress($address, $blockchain, $network, $wallet_id, $context = null, $create_coins_transaction_request_from_address_rb = null)
     {
@@ -684,7 +684,7 @@ class TransactionsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\WalletAsAServiceAddressBalanceNotEnough|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\WalletAsAServiceWalletBalanceNotEnough|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCoinsTransactionRequestFromAddressWithHttpInfo($address, $blockchain, $network, $wallet_id, $context = null, $create_coins_transaction_request_from_address_rb = null)
     {
@@ -780,14 +780,14 @@ class TransactionsApi
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\CryptoAPIs\Model\WalletAsAServiceAddressBalanceNotEnough' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\WalletAsAServiceWalletBalanceNotEnough' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\WalletAsAServiceAddressBalanceNotEnough', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\WalletAsAServiceWalletBalanceNotEnough', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -899,7 +899,7 @@ class TransactionsApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\WalletAsAServiceAddressBalanceNotEnough',
+                        '\CryptoAPIs\Model\WalletAsAServiceWalletBalanceNotEnough',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
