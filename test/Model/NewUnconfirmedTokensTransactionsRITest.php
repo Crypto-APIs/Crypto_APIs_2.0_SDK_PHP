@@ -142,13 +142,4 @@ class NewUnconfirmedTokensTransactionsRITest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "transaction_id"
-     */
-    public function testPropertyTransactionId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

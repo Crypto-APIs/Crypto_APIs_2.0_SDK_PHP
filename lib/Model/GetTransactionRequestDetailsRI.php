@@ -214,6 +214,7 @@ class GetTransactionRequestDetailsRI implements ModelInterface, ArrayAccess, \Js
     const BLOCKCHAIN_DOGECOIN = 'dogecoin';
     const BLOCKCHAIN_DASH = 'dash';
     const BLOCKCHAIN_ETHEREUM = 'ethereum';
+    const BLOCKCHAIN_ETHEREUM_CLASSIC = 'ethereum-classic';
     const BLOCKCHAIN_ZCASH = 'zcash';
     const FEE_PRIORITY_SLOW = 'slow';
     const FEE_PRIORITY_STANDARD = 'standard';
@@ -221,6 +222,7 @@ class GetTransactionRequestDetailsRI implements ModelInterface, ArrayAccess, \Js
     const NETWORK_MAINNET = 'mainnet';
     const NETWORK_TESTNET = 'testnet';
     const NETWORK_ROPSTEN = 'ropsten';
+    const NETWORK_MORDOR = 'mordor';
     const TRANSACTION_REQUEST_STATUS_CREATED = 'created';
     const TRANSACTION_REQUEST_STATUS_AWAIT_APPROVAL = 'await-approval';
     const TRANSACTION_REQUEST_STATUS_PENDING = 'pending';
@@ -248,6 +250,7 @@ class GetTransactionRequestDetailsRI implements ModelInterface, ArrayAccess, \Js
             self::BLOCKCHAIN_DOGECOIN,
             self::BLOCKCHAIN_DASH,
             self::BLOCKCHAIN_ETHEREUM,
+            self::BLOCKCHAIN_ETHEREUM_CLASSIC,
             self::BLOCKCHAIN_ZCASH,
         ];
     }
@@ -277,6 +280,7 @@ class GetTransactionRequestDetailsRI implements ModelInterface, ArrayAccess, \Js
             self::NETWORK_MAINNET,
             self::NETWORK_TESTNET,
             self::NETWORK_ROPSTEN,
+            self::NETWORK_MORDOR,
         ];
     }
 

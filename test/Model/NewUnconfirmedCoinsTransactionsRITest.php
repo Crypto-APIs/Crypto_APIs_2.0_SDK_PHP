@@ -99,15 +99,6 @@ class NewUnconfirmedCoinsTransactionsRITest extends TestCase
     }
 
     /**
-     * Test attribute "confirmations_count"
-     */
-    public function testPropertyConfirmationsCount()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "created_timestamp"
      */
     public function testPropertyCreatedTimestamp()
@@ -138,15 +129,6 @@ class NewUnconfirmedCoinsTransactionsRITest extends TestCase
      * Test attribute "reference_id"
      */
     public function testPropertyReferenceId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "transaction_id"
-     */
-    public function testPropertyTransactionId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

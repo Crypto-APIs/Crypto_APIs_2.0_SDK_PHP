@@ -90,6 +90,15 @@ class ListDepositAddressesRITest extends TestCase
     }
 
     /**
+     * Test attribute "confirmed_balance"
+     */
+    public function testPropertyConfirmedBalance()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "created_timestamp"
      */
     public function testPropertyCreatedTimestamp()
@@ -99,9 +108,36 @@ class ListDepositAddressesRITest extends TestCase
     }
 
     /**
+     * Test attribute "fungible_tokens"
+     */
+    public function testPropertyFungibleTokens()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "index"
+     */
+    public function testPropertyIndex()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "label"
      */
     public function testPropertyLabel()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "non_fungible_tokens"
+     */
+    public function testPropertyNonFungibleTokens()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

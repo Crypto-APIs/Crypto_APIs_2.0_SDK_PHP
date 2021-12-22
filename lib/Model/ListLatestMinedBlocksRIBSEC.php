@@ -61,11 +61,14 @@ class ListLatestMinedBlocksRIBSEC implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
+        'difficulty' => 'string',
         'extra_data' => 'string',
         'gas_limit' => 'string',
         'gas_used' => 'string',
         'mined_in_seconds' => 'int',
+        'nonce' => 'string',
         'sha3_uncles' => 'string',
+        'size' => 'int',
         'total_difficulty' => 'string',
         'uncles' => 'string[]'
     ];
@@ -78,11 +81,14 @@ class ListLatestMinedBlocksRIBSEC implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'difficulty' => null,
         'extra_data' => null,
         'gas_limit' => null,
         'gas_used' => null,
         'mined_in_seconds' => null,
+        'nonce' => null,
         'sha3_uncles' => null,
+        'size' => null,
         'total_difficulty' => null,
         'uncles' => null
     ];
@@ -114,11 +120,14 @@ class ListLatestMinedBlocksRIBSEC implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
+        'difficulty' => 'difficulty',
         'extra_data' => 'extraData',
         'gas_limit' => 'gasLimit',
         'gas_used' => 'gasUsed',
         'mined_in_seconds' => 'minedInSeconds',
+        'nonce' => 'nonce',
         'sha3_uncles' => 'sha3Uncles',
+        'size' => 'size',
         'total_difficulty' => 'totalDifficulty',
         'uncles' => 'uncles'
     ];
@@ -129,11 +138,14 @@ class ListLatestMinedBlocksRIBSEC implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
+        'difficulty' => 'setDifficulty',
         'extra_data' => 'setExtraData',
         'gas_limit' => 'setGasLimit',
         'gas_used' => 'setGasUsed',
         'mined_in_seconds' => 'setMinedInSeconds',
+        'nonce' => 'setNonce',
         'sha3_uncles' => 'setSha3Uncles',
+        'size' => 'setSize',
         'total_difficulty' => 'setTotalDifficulty',
         'uncles' => 'setUncles'
     ];
@@ -144,11 +156,14 @@ class ListLatestMinedBlocksRIBSEC implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
+        'difficulty' => 'getDifficulty',
         'extra_data' => 'getExtraData',
         'gas_limit' => 'getGasLimit',
         'gas_used' => 'getGasUsed',
         'mined_in_seconds' => 'getMinedInSeconds',
+        'nonce' => 'getNonce',
         'sha3_uncles' => 'getSha3Uncles',
+        'size' => 'getSize',
         'total_difficulty' => 'getTotalDifficulty',
         'uncles' => 'getUncles'
     ];
@@ -210,11 +225,14 @@ class ListLatestMinedBlocksRIBSEC implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(array $data = null)
     {
+        $this->container['difficulty'] = $data['difficulty'] ?? null;
         $this->container['extra_data'] = $data['extra_data'] ?? null;
         $this->container['gas_limit'] = $data['gas_limit'] ?? null;
         $this->container['gas_used'] = $data['gas_used'] ?? null;
         $this->container['mined_in_seconds'] = $data['mined_in_seconds'] ?? null;
+        $this->container['nonce'] = $data['nonce'] ?? null;
         $this->container['sha3_uncles'] = $data['sha3_uncles'] ?? null;
+        $this->container['size'] = $data['size'] ?? null;
         $this->container['total_difficulty'] = $data['total_difficulty'] ?? null;
         $this->container['uncles'] = $data['uncles'] ?? null;
     }
@@ -228,6 +246,9 @@ class ListLatestMinedBlocksRIBSEC implements ModelInterface, ArrayAccess, \JsonS
     {
         $invalidProperties = [];
 
+        if ($this->container['difficulty'] === null) {
+            $invalidProperties[] = "'difficulty' can't be null";
+        }
         if ($this->container['extra_data'] === null) {
             $invalidProperties[] = "'extra_data' can't be null";
         }
@@ -240,8 +261,14 @@ class ListLatestMinedBlocksRIBSEC implements ModelInterface, ArrayAccess, \JsonS
         if ($this->container['mined_in_seconds'] === null) {
             $invalidProperties[] = "'mined_in_seconds' can't be null";
         }
+        if ($this->container['nonce'] === null) {
+            $invalidProperties[] = "'nonce' can't be null";
+        }
         if ($this->container['sha3_uncles'] === null) {
             $invalidProperties[] = "'sha3_uncles' can't be null";
+        }
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
         }
         if ($this->container['total_difficulty'] === null) {
             $invalidProperties[] = "'total_difficulty' can't be null";
@@ -263,6 +290,30 @@ class ListLatestMinedBlocksRIBSEC implements ModelInterface, ArrayAccess, \JsonS
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets difficulty
+     *
+     * @return string
+     */
+    public function getDifficulty()
+    {
+        return $this->container['difficulty'];
+    }
+
+    /**
+     * Sets difficulty
+     *
+     * @param string $difficulty Represents a mathematical value of how hard it is to find a valid hash for this block.
+     *
+     * @return self
+     */
+    public function setDifficulty($difficulty)
+    {
+        $this->container['difficulty'] = $difficulty;
+
+        return $this;
+    }
 
     /**
      * Gets extra_data
@@ -361,6 +412,30 @@ class ListLatestMinedBlocksRIBSEC implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
+     * Gets nonce
+     *
+     * @return string
+     */
+    public function getNonce()
+    {
+        return $this->container['nonce'];
+    }
+
+    /**
+     * Sets nonce
+     *
+     * @param string $nonce Represents a random value that can be adjusted to satisfy the proof of work
+     *
+     * @return self
+     */
+    public function setNonce($nonce)
+    {
+        $this->container['nonce'] = $nonce;
+
+        return $this;
+    }
+
+    /**
      * Gets sha3_uncles
      *
      * @return string
@@ -380,6 +455,30 @@ class ListLatestMinedBlocksRIBSEC implements ModelInterface, ArrayAccess, \JsonS
     public function setSha3Uncles($sha3_uncles)
     {
         $this->container['sha3_uncles'] = $sha3_uncles;
+
+        return $this;
+    }
+
+    /**
+     * Gets size
+     *
+     * @return int
+     */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+     * Sets size
+     *
+     * @param int $size Represents the total size of the block in Bytes.
+     *
+     * @return self
+     */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
 
         return $this;
     }

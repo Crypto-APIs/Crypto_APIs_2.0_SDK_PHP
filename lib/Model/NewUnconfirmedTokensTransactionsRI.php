@@ -66,8 +66,7 @@ class NewUnconfirmedTokensTransactionsRI implements ModelInterface, ArrayAccess,
         'created_timestamp' => 'int',
         'event_type' => 'string',
         'is_active' => 'bool',
-        'reference_id' => 'string',
-        'transaction_id' => 'string'
+        'reference_id' => 'string'
     ];
 
     /**
@@ -84,8 +83,7 @@ class NewUnconfirmedTokensTransactionsRI implements ModelInterface, ArrayAccess,
         'created_timestamp' => null,
         'event_type' => null,
         'is_active' => null,
-        'reference_id' => null,
-        'transaction_id' => null
+        'reference_id' => null
     ];
 
     /**
@@ -121,8 +119,7 @@ class NewUnconfirmedTokensTransactionsRI implements ModelInterface, ArrayAccess,
         'created_timestamp' => 'createdTimestamp',
         'event_type' => 'eventType',
         'is_active' => 'isActive',
-        'reference_id' => 'referenceId',
-        'transaction_id' => 'transactionId'
+        'reference_id' => 'referenceId'
     ];
 
     /**
@@ -137,8 +134,7 @@ class NewUnconfirmedTokensTransactionsRI implements ModelInterface, ArrayAccess,
         'created_timestamp' => 'setCreatedTimestamp',
         'event_type' => 'setEventType',
         'is_active' => 'setIsActive',
-        'reference_id' => 'setReferenceId',
-        'transaction_id' => 'setTransactionId'
+        'reference_id' => 'setReferenceId'
     ];
 
     /**
@@ -153,8 +149,7 @@ class NewUnconfirmedTokensTransactionsRI implements ModelInterface, ArrayAccess,
         'created_timestamp' => 'getCreatedTimestamp',
         'event_type' => 'getEventType',
         'is_active' => 'getIsActive',
-        'reference_id' => 'getReferenceId',
-        'transaction_id' => 'getTransactionId'
+        'reference_id' => 'getReferenceId'
     ];
 
     /**
@@ -221,7 +216,6 @@ class NewUnconfirmedTokensTransactionsRI implements ModelInterface, ArrayAccess,
         $this->container['event_type'] = $data['event_type'] ?? null;
         $this->container['is_active'] = $data['is_active'] ?? null;
         $this->container['reference_id'] = $data['reference_id'] ?? null;
-        $this->container['transaction_id'] = $data['transaction_id'] ?? null;
     }
 
     /**
@@ -253,9 +247,6 @@ class NewUnconfirmedTokensTransactionsRI implements ModelInterface, ArrayAccess,
         }
         if ($this->container['reference_id'] === null) {
             $invalidProperties[] = "'reference_id' can't be null";
-        }
-        if ($this->container['transaction_id'] === null) {
-            $invalidProperties[] = "'transaction_id' can't be null";
         }
         return $invalidProperties;
     }
@@ -436,30 +427,6 @@ class NewUnconfirmedTokensTransactionsRI implements ModelInterface, ArrayAccess,
     public function setReferenceId($reference_id)
     {
         $this->container['reference_id'] = $reference_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets transaction_id
-     *
-     * @return string
-     */
-    public function getTransactionId()
-    {
-        return $this->container['transaction_id'];
-    }
-
-    /**
-     * Sets transaction_id
-     *
-     * @param string $transaction_id Represents the unique identification string that defines the transaction.
-     *
-     * @return self
-     */
-    public function setTransactionId($transaction_id)
-    {
-        $this->container['transaction_id'] = $transaction_id;
 
         return $this;
     }

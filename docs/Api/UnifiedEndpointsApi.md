@@ -26,7 +26,7 @@ getAddressDetails($blockchain, $network, $address, $context): \CryptoAPIs\Model\
 
 Get Address Details
 
-Through this endpoint the customer can receive basic information about a given address based on confirmed/synced blocks only. In the case where there are any incoming or outgoing **unconfirmed** transactions for the specific address, they **will not** be counted or calculated here.
+Through this endpoint the customer can receive basic information about a given address based on confirmed/synced blocks only. In the case where there are any incoming or outgoing **unconfirmed** transactions for the specific address, they **will not** be counted or calculated here. Applies only for coins.
 
 ### Example
 
@@ -455,7 +455,7 @@ $blockchain = bitcoin; // string | Represents the specific blockchain protocol n
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $limit = 50; // int | Defines how many items should be returned in the response per page basis.
-$offset = 10; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
+$offset = 0; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
 
 try {
     $result = $apiInstance->listAllUnconfirmedTransactions($blockchain, $network, $context, $limit, $offset);
@@ -572,7 +572,7 @@ listLatestMinedBlocks($network, $blockchain, $count, $context): \CryptoAPIs\Mode
 
 List Latest Mined Blocks
 
-Through this endpoint customers can list the latest 50 blocks that were mined.
+Through this endpoint customers can list **up to 50** from the latest blocks that were mined.
 
 ### Example
 
@@ -807,7 +807,7 @@ $apiInstance = new CryptoAPIs\Api\UnifiedEndpointsApi(
 );
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$address = mzYijhgmzZrmuB7wBDazRKirnChKyow4M3; // string | Represents the public address, which is a compressed and shortened form of a public key.
+$address = 2NDt6eztswLiVgVYaGUhkTPmugUGovVypAe; // string | Represents the public address, which is a compressed and shortened form of a public key.
 $context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $limit = 50; // int | Defines how many items should be returned in the response per page basis.
 $offset = 10; // int | The starting index of the response items, i.e. where the response should start listing the returned items.

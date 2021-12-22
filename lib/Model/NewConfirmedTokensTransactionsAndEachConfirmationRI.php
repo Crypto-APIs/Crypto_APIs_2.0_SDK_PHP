@@ -62,6 +62,7 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
     protected static $openAPITypes = [
         'address' => 'string',
         'callback_url' => 'string',
+        'confirmations_count' => 'int',
         'created_timestamp' => 'int',
         'event_type' => 'string',
         'reference_id' => 'string'
@@ -77,6 +78,7 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
     protected static $openAPIFormats = [
         'address' => null,
         'callback_url' => null,
+        'confirmations_count' => null,
         'created_timestamp' => null,
         'event_type' => null,
         'reference_id' => null
@@ -111,6 +113,7 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
     protected static $attributeMap = [
         'address' => 'address',
         'callback_url' => 'callbackUrl',
+        'confirmations_count' => 'confirmationsCount',
         'created_timestamp' => 'createdTimestamp',
         'event_type' => 'eventType',
         'reference_id' => 'referenceId'
@@ -124,6 +127,7 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
     protected static $setters = [
         'address' => 'setAddress',
         'callback_url' => 'setCallbackUrl',
+        'confirmations_count' => 'setConfirmationsCount',
         'created_timestamp' => 'setCreatedTimestamp',
         'event_type' => 'setEventType',
         'reference_id' => 'setReferenceId'
@@ -137,6 +141,7 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
     protected static $getters = [
         'address' => 'getAddress',
         'callback_url' => 'getCallbackUrl',
+        'confirmations_count' => 'getConfirmationsCount',
         'created_timestamp' => 'getCreatedTimestamp',
         'event_type' => 'getEventType',
         'reference_id' => 'getReferenceId'
@@ -201,6 +206,7 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
     {
         $this->container['address'] = $data['address'] ?? null;
         $this->container['callback_url'] = $data['callback_url'] ?? null;
+        $this->container['confirmations_count'] = $data['confirmations_count'] ?? null;
         $this->container['created_timestamp'] = $data['created_timestamp'] ?? null;
         $this->container['event_type'] = $data['event_type'] ?? null;
         $this->container['reference_id'] = $data['reference_id'] ?? null;
@@ -289,6 +295,30 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
     public function setCallbackUrl($callback_url)
     {
         $this->container['callback_url'] = $callback_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets confirmations_count
+     *
+     * @return int|null
+     */
+    public function getConfirmationsCount()
+    {
+        return $this->container['confirmations_count'];
+    }
+
+    /**
+     * Sets confirmations_count
+     *
+     * @param int|null $confirmations_count Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block.
+     *
+     * @return self
+     */
+    public function setConfirmationsCount($confirmations_count)
+    {
+        $this->container['confirmations_count'] = $confirmations_count;
 
         return $this;
     }

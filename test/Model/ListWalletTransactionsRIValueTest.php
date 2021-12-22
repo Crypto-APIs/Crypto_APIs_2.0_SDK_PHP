@@ -115,13 +115,4 @@ class ListWalletTransactionsRIValueTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "token_identifier"
-     */
-    public function testPropertyTokenIdentifier()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

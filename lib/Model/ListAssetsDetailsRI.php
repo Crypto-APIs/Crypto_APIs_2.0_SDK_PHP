@@ -493,7 +493,7 @@ class ListAssetsDetailsRI implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets slug
      *
-     * @param string|null $slug Asset`s unique slug string in Crypto APIs listings
+     * @param string|null $slug Represents the asset`s unique slug string in Crypto APIs listings.
      *
      * @return self
      */

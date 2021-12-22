@@ -203,9 +203,6 @@ class BroadcastLocallySignedTransactionRBDataItem implements ModelInterface, Arr
     {
         $invalidProperties = [];
 
-        if ($this->container['callback_url'] === null) {
-            $invalidProperties[] = "'callback_url' can't be null";
-        }
         if ($this->container['signed_transaction_hex'] === null) {
             $invalidProperties[] = "'signed_transaction_hex' can't be null";
         }
@@ -251,7 +248,7 @@ class BroadcastLocallySignedTransactionRBDataItem implements ModelInterface, Arr
     /**
      * Gets callback_url
      *
-     * @return string
+     * @return string|null
      */
     public function getCallbackUrl()
     {
@@ -261,7 +258,7 @@ class BroadcastLocallySignedTransactionRBDataItem implements ModelInterface, Arr
     /**
      * Sets callback_url
      *
-     * @param string $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+     * @param string|null $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
      *
      * @return self
      */

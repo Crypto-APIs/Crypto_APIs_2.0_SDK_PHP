@@ -61,8 +61,12 @@ class ListDepositAddressesRI implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'address' => 'string',
+        'confirmed_balance' => '\CryptoAPIs\Model\ListDepositAddressesRIConfirmedBalance',
         'created_timestamp' => 'int',
-        'label' => 'string'
+        'fungible_tokens' => '\CryptoAPIs\Model\ListDepositAddressesRIFungibleTokens[]',
+        'index' => 'string',
+        'label' => 'string',
+        'non_fungible_tokens' => '\CryptoAPIs\Model\ListDepositAddressesRINonFungibleTokens[]'
     ];
 
     /**
@@ -74,8 +78,12 @@ class ListDepositAddressesRI implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPIFormats = [
         'address' => null,
+        'confirmed_balance' => null,
         'created_timestamp' => null,
-        'label' => null
+        'fungible_tokens' => null,
+        'index' => null,
+        'label' => null,
+        'non_fungible_tokens' => null
     ];
 
     /**
@@ -106,8 +114,12 @@ class ListDepositAddressesRI implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $attributeMap = [
         'address' => 'address',
+        'confirmed_balance' => 'confirmedBalance',
         'created_timestamp' => 'createdTimestamp',
-        'label' => 'label'
+        'fungible_tokens' => 'fungibleTokens',
+        'index' => 'index',
+        'label' => 'label',
+        'non_fungible_tokens' => 'nonFungibleTokens'
     ];
 
     /**
@@ -117,8 +129,12 @@ class ListDepositAddressesRI implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $setters = [
         'address' => 'setAddress',
+        'confirmed_balance' => 'setConfirmedBalance',
         'created_timestamp' => 'setCreatedTimestamp',
-        'label' => 'setLabel'
+        'fungible_tokens' => 'setFungibleTokens',
+        'index' => 'setIndex',
+        'label' => 'setLabel',
+        'non_fungible_tokens' => 'setNonFungibleTokens'
     ];
 
     /**
@@ -128,8 +144,12 @@ class ListDepositAddressesRI implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $getters = [
         'address' => 'getAddress',
+        'confirmed_balance' => 'getConfirmedBalance',
         'created_timestamp' => 'getCreatedTimestamp',
-        'label' => 'getLabel'
+        'fungible_tokens' => 'getFungibleTokens',
+        'index' => 'getIndex',
+        'label' => 'getLabel',
+        'non_fungible_tokens' => 'getNonFungibleTokens'
     ];
 
     /**
@@ -190,8 +210,12 @@ class ListDepositAddressesRI implements ModelInterface, ArrayAccess, \JsonSerial
     public function __construct(array $data = null)
     {
         $this->container['address'] = $data['address'] ?? null;
+        $this->container['confirmed_balance'] = $data['confirmed_balance'] ?? null;
         $this->container['created_timestamp'] = $data['created_timestamp'] ?? null;
+        $this->container['fungible_tokens'] = $data['fungible_tokens'] ?? null;
+        $this->container['index'] = $data['index'] ?? null;
         $this->container['label'] = $data['label'] ?? null;
+        $this->container['non_fungible_tokens'] = $data['non_fungible_tokens'] ?? null;
     }
 
     /**
@@ -206,11 +230,23 @@ class ListDepositAddressesRI implements ModelInterface, ArrayAccess, \JsonSerial
         if ($this->container['address'] === null) {
             $invalidProperties[] = "'address' can't be null";
         }
+        if ($this->container['confirmed_balance'] === null) {
+            $invalidProperties[] = "'confirmed_balance' can't be null";
+        }
         if ($this->container['created_timestamp'] === null) {
             $invalidProperties[] = "'created_timestamp' can't be null";
         }
+        if ($this->container['fungible_tokens'] === null) {
+            $invalidProperties[] = "'fungible_tokens' can't be null";
+        }
+        if ($this->container['index'] === null) {
+            $invalidProperties[] = "'index' can't be null";
+        }
         if ($this->container['label'] === null) {
             $invalidProperties[] = "'label' can't be null";
+        }
+        if ($this->container['non_fungible_tokens'] === null) {
+            $invalidProperties[] = "'non_fungible_tokens' can't be null";
         }
         return $invalidProperties;
     }
@@ -252,6 +288,30 @@ class ListDepositAddressesRI implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
+     * Gets confirmed_balance
+     *
+     * @return \CryptoAPIs\Model\ListDepositAddressesRIConfirmedBalance
+     */
+    public function getConfirmedBalance()
+    {
+        return $this->container['confirmed_balance'];
+    }
+
+    /**
+     * Sets confirmed_balance
+     *
+     * @param \CryptoAPIs\Model\ListDepositAddressesRIConfirmedBalance $confirmed_balance confirmed_balance
+     *
+     * @return self
+     */
+    public function setConfirmedBalance($confirmed_balance)
+    {
+        $this->container['confirmed_balance'] = $confirmed_balance;
+
+        return $this;
+    }
+
+    /**
      * Gets created_timestamp
      *
      * @return int
@@ -276,6 +336,54 @@ class ListDepositAddressesRI implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
+     * Gets fungible_tokens
+     *
+     * @return \CryptoAPIs\Model\ListDepositAddressesRIFungibleTokens[]
+     */
+    public function getFungibleTokens()
+    {
+        return $this->container['fungible_tokens'];
+    }
+
+    /**
+     * Sets fungible_tokens
+     *
+     * @param \CryptoAPIs\Model\ListDepositAddressesRIFungibleTokens[] $fungible_tokens Represents fungible tokens'es detailed information
+     *
+     * @return self
+     */
+    public function setFungibleTokens($fungible_tokens)
+    {
+        $this->container['fungible_tokens'] = $fungible_tokens;
+
+        return $this;
+    }
+
+    /**
+     * Gets index
+     *
+     * @return string
+     */
+    public function getIndex()
+    {
+        return $this->container['index'];
+    }
+
+    /**
+     * Sets index
+     *
+     * @param string $index Represents the index of the address in the wallet.
+     *
+     * @return self
+     */
+    public function setIndex($index)
+    {
+        $this->container['index'] = $index;
+
+        return $this;
+    }
+
+    /**
      * Gets label
      *
      * @return string
@@ -295,6 +403,30 @@ class ListDepositAddressesRI implements ModelInterface, ArrayAccess, \JsonSerial
     public function setLabel($label)
     {
         $this->container['label'] = $label;
+
+        return $this;
+    }
+
+    /**
+     * Gets non_fungible_tokens
+     *
+     * @return \CryptoAPIs\Model\ListDepositAddressesRINonFungibleTokens[]
+     */
+    public function getNonFungibleTokens()
+    {
+        return $this->container['non_fungible_tokens'];
+    }
+
+    /**
+     * Sets non_fungible_tokens
+     *
+     * @param \CryptoAPIs\Model\ListDepositAddressesRINonFungibleTokens[] $non_fungible_tokens Represents non-fungible tokens'es detailed information.
+     *
+     * @return self
+     */
+    public function setNonFungibleTokens($non_fungible_tokens)
+    {
+        $this->container['non_fungible_tokens'] = $non_fungible_tokens;
 
         return $this;
     }

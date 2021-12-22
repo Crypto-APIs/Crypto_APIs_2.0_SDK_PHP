@@ -66,7 +66,7 @@ class ListTransactionsByBlockHashRIBSB implements ModelInterface, ArrayAccess, \
         'v_size' => 'int',
         'version' => 'int',
         'vin' => '\CryptoAPIs\Model\ListTransactionsByBlockHashRIBSBVin[]',
-        'vout' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSBVout[]'
+        'vout' => '\CryptoAPIs\Model\ListTransactionsByBlockHashRIBSBVout[]'
     ];
 
     /**
@@ -378,7 +378,7 @@ class ListTransactionsByBlockHashRIBSB implements ModelInterface, ArrayAccess, \
     /**
      * Gets vout
      *
-     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSBVout[]
+     * @return \CryptoAPIs\Model\ListTransactionsByBlockHashRIBSBVout[]
      */
     public function getVout()
     {
@@ -388,7 +388,7 @@ class ListTransactionsByBlockHashRIBSB implements ModelInterface, ArrayAccess, \
     /**
      * Sets vout
      *
-     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSBVout[] $vout Represents the transaction outputs.
+     * @param \CryptoAPIs\Model\ListTransactionsByBlockHashRIBSBVout[] $vout Represents the transaction outputs.
      *
      * @return self
      */

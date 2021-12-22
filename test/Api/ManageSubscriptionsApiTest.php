@@ -73,6 +73,18 @@ class ManageSubscriptionsApiTest extends TestCase
     }
 
     /**
+     * Test case for activateBlockchainEventSubscription
+     *
+     * Activate Blockchain Event Subscription.
+     *
+     */
+    public function testActivateBlockchainEventSubscription()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for deleteBlockchainEventSubscription
      *
      * Delete Blockchain Event Subscription.

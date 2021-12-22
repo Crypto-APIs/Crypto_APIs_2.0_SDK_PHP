@@ -125,7 +125,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetLatestMinedXRPRippleBlockR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
+     * @return \CryptoAPIs\Model\GetLatestMinedXRPRippleBlockR|\CryptoAPIs\Model\InlineResponse40039|\CryptoAPIs\Model\InlineResponse40139|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40339|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getLatestMinedXRPRippleBlock($network, $context = null)
     {
@@ -143,7 +143,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetLatestMinedXRPRippleBlockR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetLatestMinedXRPRippleBlockR|\CryptoAPIs\Model\InlineResponse40039|\CryptoAPIs\Model\InlineResponse40139|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40339|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLatestMinedXRPRippleBlockWithHttpInfo($network, $context = null)
     {
@@ -191,122 +191,122 @@ class XRPRippleApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InvalidPagination' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40039' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidPagination', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40039', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InvalidApiKey' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40139' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidApiKey', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40139', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('\CryptoAPIs\Model\InsufficientCredits' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse402' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InsufficientCredits', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse402', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40339' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40339', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\CryptoAPIs\Model\ResourceNotFound' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse4041' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\ResourceNotFound', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4041', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\CryptoAPIs\Model\InvalidData' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse409' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidData', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse409', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 415:
-                    if ('\CryptoAPIs\Model\UnsupportedMediaType' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse415' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnsupportedMediaType', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse415', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\CryptoAPIs\Model\InvalidRequestBodyStructure' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse422' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidRequestBodyStructure', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse422', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\CryptoAPIs\Model\RequestLimitReached' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse429' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\RequestLimitReached', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse429', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\CryptoAPIs\Model\UnexpectedServerError' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse500' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnexpectedServerError', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse500', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -338,7 +338,7 @@ class XRPRippleApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidPagination',
+                        '\CryptoAPIs\Model\InlineResponse40039',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -346,7 +346,7 @@ class XRPRippleApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidApiKey',
+                        '\CryptoAPIs\Model\InlineResponse40139',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -354,7 +354,7 @@ class XRPRippleApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InsufficientCredits',
+                        '\CryptoAPIs\Model\InlineResponse402',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -362,7 +362,7 @@ class XRPRippleApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan',
+                        '\CryptoAPIs\Model\InlineResponse40339',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -370,7 +370,7 @@ class XRPRippleApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\ResourceNotFound',
+                        '\CryptoAPIs\Model\InlineResponse4041',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -378,7 +378,7 @@ class XRPRippleApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidData',
+                        '\CryptoAPIs\Model\InlineResponse409',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -386,7 +386,7 @@ class XRPRippleApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnsupportedMediaType',
+                        '\CryptoAPIs\Model\InlineResponse415',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -394,7 +394,7 @@ class XRPRippleApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidRequestBodyStructure',
+                        '\CryptoAPIs\Model\InlineResponse422',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -402,7 +402,7 @@ class XRPRippleApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\RequestLimitReached',
+                        '\CryptoAPIs\Model\InlineResponse429',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -410,7 +410,7 @@ class XRPRippleApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnexpectedServerError',
+                        '\CryptoAPIs\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -611,7 +611,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetXRPRippleAddressDetailsR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
+     * @return \CryptoAPIs\Model\GetXRPRippleAddressDetailsR|\CryptoAPIs\Model\InlineResponse4002|\CryptoAPIs\Model\InlineResponse4012|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse4032|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getXRPRippleAddressDetails($network, $address, $context = null)
     {
@@ -630,7 +630,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetXRPRippleAddressDetailsR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetXRPRippleAddressDetailsR|\CryptoAPIs\Model\InlineResponse4002|\CryptoAPIs\Model\InlineResponse4012|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse4032|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getXRPRippleAddressDetailsWithHttpInfo($network, $address, $context = null)
     {
@@ -678,110 +678,110 @@ class XRPRippleApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InvalidPagination' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse4002' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidPagination', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4002', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InvalidApiKey' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse4012' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidApiKey', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4012', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('\CryptoAPIs\Model\InsufficientCredits' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse402' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InsufficientCredits', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse402', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse4032' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4032', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\CryptoAPIs\Model\InvalidData' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse409' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidData', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse409', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 415:
-                    if ('\CryptoAPIs\Model\UnsupportedMediaType' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse415' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnsupportedMediaType', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse415', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\CryptoAPIs\Model\InvalidRequestBodyStructure' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse422' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidRequestBodyStructure', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse422', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\CryptoAPIs\Model\RequestLimitReached' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse429' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\RequestLimitReached', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse429', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\CryptoAPIs\Model\UnexpectedServerError' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse500' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnexpectedServerError', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse500', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -813,7 +813,7 @@ class XRPRippleApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidPagination',
+                        '\CryptoAPIs\Model\InlineResponse4002',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -821,7 +821,7 @@ class XRPRippleApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidApiKey',
+                        '\CryptoAPIs\Model\InlineResponse4012',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -829,7 +829,7 @@ class XRPRippleApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InsufficientCredits',
+                        '\CryptoAPIs\Model\InlineResponse402',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -837,7 +837,7 @@ class XRPRippleApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan',
+                        '\CryptoAPIs\Model\InlineResponse4032',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -845,7 +845,7 @@ class XRPRippleApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidData',
+                        '\CryptoAPIs\Model\InlineResponse409',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -853,7 +853,7 @@ class XRPRippleApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnsupportedMediaType',
+                        '\CryptoAPIs\Model\InlineResponse415',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -861,7 +861,7 @@ class XRPRippleApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidRequestBodyStructure',
+                        '\CryptoAPIs\Model\InlineResponse422',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -869,7 +869,7 @@ class XRPRippleApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\RequestLimitReached',
+                        '\CryptoAPIs\Model\InlineResponse429',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -877,7 +877,7 @@ class XRPRippleApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnexpectedServerError',
+                        '\CryptoAPIs\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1095,7 +1095,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHashR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
+     * @return \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHashR|\CryptoAPIs\Model\InlineResponse40031|\CryptoAPIs\Model\InlineResponse40131|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40331|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getXRPRippleBlockDetailsByBlockHash($network, $block_hash, $context = null)
     {
@@ -1114,7 +1114,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHashR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHashR|\CryptoAPIs\Model\InlineResponse40031|\CryptoAPIs\Model\InlineResponse40131|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40331|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getXRPRippleBlockDetailsByBlockHashWithHttpInfo($network, $block_hash, $context = null)
     {
@@ -1162,122 +1162,122 @@ class XRPRippleApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InvalidPagination' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40031' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidPagination', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40031', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InvalidApiKey' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40131' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidApiKey', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40131', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('\CryptoAPIs\Model\InsufficientCredits' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse402' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InsufficientCredits', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse402', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40331' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40331', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\CryptoAPIs\Model\ResourceNotFound' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse4041' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\ResourceNotFound', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4041', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\CryptoAPIs\Model\InvalidData' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse409' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidData', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse409', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 415:
-                    if ('\CryptoAPIs\Model\UnsupportedMediaType' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse415' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnsupportedMediaType', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse415', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\CryptoAPIs\Model\InvalidRequestBodyStructure' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse422' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidRequestBodyStructure', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse422', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\CryptoAPIs\Model\RequestLimitReached' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse429' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\RequestLimitReached', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse429', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\CryptoAPIs\Model\UnexpectedServerError' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse500' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnexpectedServerError', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse500', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1309,7 +1309,7 @@ class XRPRippleApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidPagination',
+                        '\CryptoAPIs\Model\InlineResponse40031',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1317,7 +1317,7 @@ class XRPRippleApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidApiKey',
+                        '\CryptoAPIs\Model\InlineResponse40131',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1325,7 +1325,7 @@ class XRPRippleApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InsufficientCredits',
+                        '\CryptoAPIs\Model\InlineResponse402',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1333,7 +1333,7 @@ class XRPRippleApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan',
+                        '\CryptoAPIs\Model\InlineResponse40331',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1341,7 +1341,7 @@ class XRPRippleApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\ResourceNotFound',
+                        '\CryptoAPIs\Model\InlineResponse4041',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1349,7 +1349,7 @@ class XRPRippleApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidData',
+                        '\CryptoAPIs\Model\InlineResponse409',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1357,7 +1357,7 @@ class XRPRippleApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnsupportedMediaType',
+                        '\CryptoAPIs\Model\InlineResponse415',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1365,7 +1365,7 @@ class XRPRippleApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidRequestBodyStructure',
+                        '\CryptoAPIs\Model\InlineResponse422',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1373,7 +1373,7 @@ class XRPRippleApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\RequestLimitReached',
+                        '\CryptoAPIs\Model\InlineResponse429',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1381,7 +1381,7 @@ class XRPRippleApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnexpectedServerError',
+                        '\CryptoAPIs\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1599,7 +1599,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHeightR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
+     * @return \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40027|\CryptoAPIs\Model\InlineResponse40127|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40327|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getXRPRippleBlockDetailsByBlockHeight($network, $block_height, $context = null)
     {
@@ -1618,7 +1618,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHeightR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40027|\CryptoAPIs\Model\InlineResponse40127|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40327|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getXRPRippleBlockDetailsByBlockHeightWithHttpInfo($network, $block_height, $context = null)
     {
@@ -1666,122 +1666,122 @@ class XRPRippleApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InvalidPagination' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40027' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidPagination', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40027', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InvalidApiKey' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40127' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidApiKey', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40127', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('\CryptoAPIs\Model\InsufficientCredits' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse402' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InsufficientCredits', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse402', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40327' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40327', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\CryptoAPIs\Model\ResourceNotFound' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse4041' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\ResourceNotFound', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4041', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\CryptoAPIs\Model\InvalidData' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse409' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidData', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse409', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 415:
-                    if ('\CryptoAPIs\Model\UnsupportedMediaType' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse415' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnsupportedMediaType', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse415', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\CryptoAPIs\Model\InvalidRequestBodyStructure' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse422' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidRequestBodyStructure', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse422', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\CryptoAPIs\Model\RequestLimitReached' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse429' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\RequestLimitReached', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse429', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\CryptoAPIs\Model\UnexpectedServerError' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse500' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnexpectedServerError', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse500', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1813,7 +1813,7 @@ class XRPRippleApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidPagination',
+                        '\CryptoAPIs\Model\InlineResponse40027',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1821,7 +1821,7 @@ class XRPRippleApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidApiKey',
+                        '\CryptoAPIs\Model\InlineResponse40127',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1829,7 +1829,7 @@ class XRPRippleApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InsufficientCredits',
+                        '\CryptoAPIs\Model\InlineResponse402',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1837,7 +1837,7 @@ class XRPRippleApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan',
+                        '\CryptoAPIs\Model\InlineResponse40327',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1845,7 +1845,7 @@ class XRPRippleApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\ResourceNotFound',
+                        '\CryptoAPIs\Model\InlineResponse4041',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1853,7 +1853,7 @@ class XRPRippleApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidData',
+                        '\CryptoAPIs\Model\InlineResponse409',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1861,7 +1861,7 @@ class XRPRippleApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnsupportedMediaType',
+                        '\CryptoAPIs\Model\InlineResponse415',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1869,7 +1869,7 @@ class XRPRippleApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidRequestBodyStructure',
+                        '\CryptoAPIs\Model\InlineResponse422',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1877,7 +1877,7 @@ class XRPRippleApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\RequestLimitReached',
+                        '\CryptoAPIs\Model\InlineResponse429',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1885,7 +1885,7 @@ class XRPRippleApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnexpectedServerError',
+                        '\CryptoAPIs\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2103,7 +2103,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetXRPRippleTransactionDetailsByTransactionIDR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
+     * @return \CryptoAPIs\Model\GetXRPRippleTransactionDetailsByTransactionIDR|\CryptoAPIs\Model\InlineResponse4006|\CryptoAPIs\Model\InlineResponse4016|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse4036|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getXRPRippleTransactionDetailsByTransactionID($network, $transaction_hash, $context = null)
     {
@@ -2122,7 +2122,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetXRPRippleTransactionDetailsByTransactionIDR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\ResourceNotFound|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetXRPRippleTransactionDetailsByTransactionIDR|\CryptoAPIs\Model\InlineResponse4006|\CryptoAPIs\Model\InlineResponse4016|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse4036|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getXRPRippleTransactionDetailsByTransactionIDWithHttpInfo($network, $transaction_hash, $context = null)
     {
@@ -2170,122 +2170,122 @@ class XRPRippleApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InvalidPagination' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse4006' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidPagination', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4006', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InvalidApiKey' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse4016' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidApiKey', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4016', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('\CryptoAPIs\Model\InsufficientCredits' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse402' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InsufficientCredits', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse402', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse4036' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4036', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\CryptoAPIs\Model\ResourceNotFound' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse4041' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\ResourceNotFound', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4041', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\CryptoAPIs\Model\InvalidData' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse409' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidData', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse409', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 415:
-                    if ('\CryptoAPIs\Model\UnsupportedMediaType' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse415' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnsupportedMediaType', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse415', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\CryptoAPIs\Model\InvalidRequestBodyStructure' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse422' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidRequestBodyStructure', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse422', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\CryptoAPIs\Model\RequestLimitReached' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse429' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\RequestLimitReached', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse429', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\CryptoAPIs\Model\UnexpectedServerError' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse500' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnexpectedServerError', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse500', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2317,7 +2317,7 @@ class XRPRippleApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidPagination',
+                        '\CryptoAPIs\Model\InlineResponse4006',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2325,7 +2325,7 @@ class XRPRippleApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidApiKey',
+                        '\CryptoAPIs\Model\InlineResponse4016',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2333,7 +2333,7 @@ class XRPRippleApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InsufficientCredits',
+                        '\CryptoAPIs\Model\InlineResponse402',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2341,7 +2341,7 @@ class XRPRippleApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan',
+                        '\CryptoAPIs\Model\InlineResponse4036',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2349,7 +2349,7 @@ class XRPRippleApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\ResourceNotFound',
+                        '\CryptoAPIs\Model\InlineResponse4041',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2357,7 +2357,7 @@ class XRPRippleApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidData',
+                        '\CryptoAPIs\Model\InlineResponse409',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2365,7 +2365,7 @@ class XRPRippleApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnsupportedMediaType',
+                        '\CryptoAPIs\Model\InlineResponse415',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2373,7 +2373,7 @@ class XRPRippleApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidRequestBodyStructure',
+                        '\CryptoAPIs\Model\InlineResponse422',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2381,7 +2381,7 @@ class XRPRippleApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\RequestLimitReached',
+                        '\CryptoAPIs\Model\InlineResponse429',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2389,7 +2389,7 @@ class XRPRippleApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnexpectedServerError',
+                        '\CryptoAPIs\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2610,7 +2610,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListXRPRippleTransactionsByAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
+     * @return \CryptoAPIs\Model\ListXRPRippleTransactionsByAddressR|\CryptoAPIs\Model\InlineResponse40011|\CryptoAPIs\Model\InlineResponse40111|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40311|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listXRPRippleTransactionsByAddress($network, $address, $context = null, $limit = 50, $offset = 0, $transaction_type = null)
     {
@@ -2632,7 +2632,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListXRPRippleTransactionsByAddressR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListXRPRippleTransactionsByAddressR|\CryptoAPIs\Model\InlineResponse40011|\CryptoAPIs\Model\InlineResponse40111|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40311|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listXRPRippleTransactionsByAddressWithHttpInfo($network, $address, $context = null, $limit = 50, $offset = 0, $transaction_type = null)
     {
@@ -2680,110 +2680,110 @@ class XRPRippleApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InvalidPagination' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40011' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidPagination', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40011', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InvalidApiKey' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40111' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidApiKey', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40111', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('\CryptoAPIs\Model\InsufficientCredits' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse402' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InsufficientCredits', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse402', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40311' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40311', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\CryptoAPIs\Model\InvalidData' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse409' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidData', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse409', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 415:
-                    if ('\CryptoAPIs\Model\UnsupportedMediaType' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse415' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnsupportedMediaType', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse415', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\CryptoAPIs\Model\InvalidRequestBodyStructure' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse422' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidRequestBodyStructure', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse422', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\CryptoAPIs\Model\RequestLimitReached' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse429' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\RequestLimitReached', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse429', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\CryptoAPIs\Model\UnexpectedServerError' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse500' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnexpectedServerError', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse500', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2815,7 +2815,7 @@ class XRPRippleApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidPagination',
+                        '\CryptoAPIs\Model\InlineResponse40011',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2823,7 +2823,7 @@ class XRPRippleApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidApiKey',
+                        '\CryptoAPIs\Model\InlineResponse40111',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2831,7 +2831,7 @@ class XRPRippleApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InsufficientCredits',
+                        '\CryptoAPIs\Model\InlineResponse402',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2839,7 +2839,7 @@ class XRPRippleApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan',
+                        '\CryptoAPIs\Model\InlineResponse40311',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2847,7 +2847,7 @@ class XRPRippleApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidData',
+                        '\CryptoAPIs\Model\InlineResponse409',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2855,7 +2855,7 @@ class XRPRippleApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnsupportedMediaType',
+                        '\CryptoAPIs\Model\InlineResponse415',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2863,7 +2863,7 @@ class XRPRippleApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidRequestBodyStructure',
+                        '\CryptoAPIs\Model\InlineResponse422',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2871,7 +2871,7 @@ class XRPRippleApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\RequestLimitReached',
+                        '\CryptoAPIs\Model\InlineResponse429',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2879,7 +2879,7 @@ class XRPRippleApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnexpectedServerError',
+                        '\CryptoAPIs\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3141,7 +3141,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListXRPRippleTransactionsByBlockHashR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
+     * @return \CryptoAPIs\Model\ListXRPRippleTransactionsByBlockHashR|\CryptoAPIs\Model\InlineResponse40018|\CryptoAPIs\Model\InlineResponse40118|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40318|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listXRPRippleTransactionsByBlockHash($network, $block_hash, $context = null, $limit = 50, $offset = 0)
     {
@@ -3162,7 +3162,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListXRPRippleTransactionsByBlockHashR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListXRPRippleTransactionsByBlockHashR|\CryptoAPIs\Model\InlineResponse40018|\CryptoAPIs\Model\InlineResponse40118|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40318|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listXRPRippleTransactionsByBlockHashWithHttpInfo($network, $block_hash, $context = null, $limit = 50, $offset = 0)
     {
@@ -3210,110 +3210,110 @@ class XRPRippleApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InvalidPagination' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40018' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidPagination', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40018', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InvalidApiKey' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40118' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidApiKey', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40118', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('\CryptoAPIs\Model\InsufficientCredits' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse402' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InsufficientCredits', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse402', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40318' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40318', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\CryptoAPIs\Model\InvalidData' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse409' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidData', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse409', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 415:
-                    if ('\CryptoAPIs\Model\UnsupportedMediaType' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse415' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnsupportedMediaType', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse415', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\CryptoAPIs\Model\InvalidRequestBodyStructure' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse422' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidRequestBodyStructure', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse422', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\CryptoAPIs\Model\RequestLimitReached' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse429' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\RequestLimitReached', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse429', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\CryptoAPIs\Model\UnexpectedServerError' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse500' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnexpectedServerError', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse500', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3345,7 +3345,7 @@ class XRPRippleApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidPagination',
+                        '\CryptoAPIs\Model\InlineResponse40018',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3353,7 +3353,7 @@ class XRPRippleApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidApiKey',
+                        '\CryptoAPIs\Model\InlineResponse40118',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3361,7 +3361,7 @@ class XRPRippleApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InsufficientCredits',
+                        '\CryptoAPIs\Model\InlineResponse402',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3369,7 +3369,7 @@ class XRPRippleApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan',
+                        '\CryptoAPIs\Model\InlineResponse40318',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3377,7 +3377,7 @@ class XRPRippleApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidData',
+                        '\CryptoAPIs\Model\InlineResponse409',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3385,7 +3385,7 @@ class XRPRippleApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnsupportedMediaType',
+                        '\CryptoAPIs\Model\InlineResponse415',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3393,7 +3393,7 @@ class XRPRippleApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidRequestBodyStructure',
+                        '\CryptoAPIs\Model\InlineResponse422',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3401,7 +3401,7 @@ class XRPRippleApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\RequestLimitReached',
+                        '\CryptoAPIs\Model\InlineResponse429',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3409,7 +3409,7 @@ class XRPRippleApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnexpectedServerError',
+                        '\CryptoAPIs\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3657,7 +3657,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListXRPRippleTransactionsByBlockHeightR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError
+     * @return \CryptoAPIs\Model\ListXRPRippleTransactionsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40023|\CryptoAPIs\Model\InlineResponse40123|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40323|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listXRPRippleTransactionsByBlockHeight($network, $block_height, $context = null, $limit = 50, $offset = 0)
     {
@@ -3678,7 +3678,7 @@ class XRPRippleApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListXRPRippleTransactionsByBlockHeightR|\CryptoAPIs\Model\InvalidPagination|\CryptoAPIs\Model\InvalidApiKey|\CryptoAPIs\Model\InsufficientCredits|\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan|\CryptoAPIs\Model\InvalidData|\CryptoAPIs\Model\UnsupportedMediaType|\CryptoAPIs\Model\InvalidRequestBodyStructure|\CryptoAPIs\Model\RequestLimitReached|\CryptoAPIs\Model\UnexpectedServerError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListXRPRippleTransactionsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40023|\CryptoAPIs\Model\InlineResponse40123|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40323|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listXRPRippleTransactionsByBlockHeightWithHttpInfo($network, $block_height, $context = null, $limit = 50, $offset = 0)
     {
@@ -3726,110 +3726,110 @@ class XRPRippleApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InvalidPagination' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40023' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidPagination', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40023', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InvalidApiKey' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40123' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidApiKey', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40123', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 402:
-                    if ('\CryptoAPIs\Model\InsufficientCredits' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse402' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InsufficientCredits', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse402', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40323' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40323', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\CryptoAPIs\Model\InvalidData' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse409' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidData', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse409', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 415:
-                    if ('\CryptoAPIs\Model\UnsupportedMediaType' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse415' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnsupportedMediaType', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse415', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\CryptoAPIs\Model\InvalidRequestBodyStructure' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse422' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InvalidRequestBodyStructure', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse422', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\CryptoAPIs\Model\RequestLimitReached' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse429' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\RequestLimitReached', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse429', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\CryptoAPIs\Model\UnexpectedServerError' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse500' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\UnexpectedServerError', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse500', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3861,7 +3861,7 @@ class XRPRippleApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidPagination',
+                        '\CryptoAPIs\Model\InlineResponse40023',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3869,7 +3869,7 @@ class XRPRippleApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidApiKey',
+                        '\CryptoAPIs\Model\InlineResponse40123',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3877,7 +3877,7 @@ class XRPRippleApi
                 case 402:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InsufficientCredits',
+                        '\CryptoAPIs\Model\InlineResponse402',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3885,7 +3885,7 @@ class XRPRippleApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\FeatureMainnetsNotAllowedForPlan',
+                        '\CryptoAPIs\Model\InlineResponse40323',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3893,7 +3893,7 @@ class XRPRippleApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidData',
+                        '\CryptoAPIs\Model\InlineResponse409',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3901,7 +3901,7 @@ class XRPRippleApi
                 case 415:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnsupportedMediaType',
+                        '\CryptoAPIs\Model\InlineResponse415',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3909,7 +3909,7 @@ class XRPRippleApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InvalidRequestBodyStructure',
+                        '\CryptoAPIs\Model\InlineResponse422',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3917,7 +3917,7 @@ class XRPRippleApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\RequestLimitReached',
+                        '\CryptoAPIs\Model\InlineResponse429',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3925,7 +3925,7 @@ class XRPRippleApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\UnexpectedServerError',
+                        '\CryptoAPIs\Model\InlineResponse500',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

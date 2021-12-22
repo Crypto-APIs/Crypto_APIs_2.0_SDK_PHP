@@ -63,6 +63,7 @@ class ListAllUnconfirmedTransactionsRI implements ModelInterface, ArrayAccess, \
         'recipients' => '\CryptoAPIs\Model\ListUnconfirmedTransactionsByAddressRIRecipients[]',
         'senders' => '\CryptoAPIs\Model\ListUnconfirmedTransactionsByAddressRISenders[]',
         'timestamp' => 'int',
+        'transaction_hash' => 'string',
         'transaction_id' => 'string',
         'blockchain_specific' => '\CryptoAPIs\Model\ListAllUnconfirmedTransactionsRIBS'
     ];
@@ -78,6 +79,7 @@ class ListAllUnconfirmedTransactionsRI implements ModelInterface, ArrayAccess, \
         'recipients' => null,
         'senders' => null,
         'timestamp' => null,
+        'transaction_hash' => null,
         'transaction_id' => null,
         'blockchain_specific' => null
     ];
@@ -112,6 +114,7 @@ class ListAllUnconfirmedTransactionsRI implements ModelInterface, ArrayAccess, \
         'recipients' => 'recipients',
         'senders' => 'senders',
         'timestamp' => 'timestamp',
+        'transaction_hash' => 'transactionHash',
         'transaction_id' => 'transactionId',
         'blockchain_specific' => 'blockchainSpecific'
     ];
@@ -125,6 +128,7 @@ class ListAllUnconfirmedTransactionsRI implements ModelInterface, ArrayAccess, \
         'recipients' => 'setRecipients',
         'senders' => 'setSenders',
         'timestamp' => 'setTimestamp',
+        'transaction_hash' => 'setTransactionHash',
         'transaction_id' => 'setTransactionId',
         'blockchain_specific' => 'setBlockchainSpecific'
     ];
@@ -138,6 +142,7 @@ class ListAllUnconfirmedTransactionsRI implements ModelInterface, ArrayAccess, \
         'recipients' => 'getRecipients',
         'senders' => 'getSenders',
         'timestamp' => 'getTimestamp',
+        'transaction_hash' => 'getTransactionHash',
         'transaction_id' => 'getTransactionId',
         'blockchain_specific' => 'getBlockchainSpecific'
     ];
@@ -202,6 +207,7 @@ class ListAllUnconfirmedTransactionsRI implements ModelInterface, ArrayAccess, \
         $this->container['recipients'] = $data['recipients'] ?? null;
         $this->container['senders'] = $data['senders'] ?? null;
         $this->container['timestamp'] = $data['timestamp'] ?? null;
+        $this->container['transaction_hash'] = $data['transaction_hash'] ?? null;
         $this->container['transaction_id'] = $data['transaction_id'] ?? null;
         $this->container['blockchain_specific'] = $data['blockchain_specific'] ?? null;
     }
@@ -223,6 +229,9 @@ class ListAllUnconfirmedTransactionsRI implements ModelInterface, ArrayAccess, \
         }
         if ($this->container['timestamp'] === null) {
             $invalidProperties[] = "'timestamp' can't be null";
+        }
+        if ($this->container['transaction_hash'] === null) {
+            $invalidProperties[] = "'transaction_hash' can't be null";
         }
         if ($this->container['transaction_id'] === null) {
             $invalidProperties[] = "'transaction_id' can't be null";
@@ -313,6 +322,30 @@ class ListAllUnconfirmedTransactionsRI implements ModelInterface, ArrayAccess, \
     public function setTimestamp($timestamp)
     {
         $this->container['timestamp'] = $timestamp;
+
+        return $this;
+    }
+
+    /**
+     * Gets transaction_hash
+     *
+     * @return string
+     */
+    public function getTransactionHash()
+    {
+        return $this->container['transaction_hash'];
+    }
+
+    /**
+     * Sets transaction_hash
+     *
+     * @param string $transaction_hash String representation of the transaction hash
+     *
+     * @return self
+     */
+    public function setTransactionHash($transaction_hash)
+    {
+        $this->container['transaction_hash'] = $transaction_hash;
 
         return $this;
     }

@@ -65,8 +65,8 @@ class ListLatestMinedBlocksRI implements ModelInterface, ArrayAccess, \JsonSeria
         'previous_block_hash' => 'string',
         'timestamp' => 'int',
         'transactions_count' => 'int',
-        'total_coins' => '\CryptoAPIs\Model\GetLatestMinedXRPRippleBlockRITotalCoins',
-        'total_fees' => '\CryptoAPIs\Model\GetLatestMinedXRPRippleBlockRITotalFees',
+        'total_coins' => '\CryptoAPIs\Model\ListLatestMinedBlocksRITotalCoins',
+        'total_fees' => '\CryptoAPIs\Model\ListLatestMinedBlocksRITotalFees',
         'blockchain_specific' => '\CryptoAPIs\Model\ListLatestMinedBlocksRIBS'
     ];
 
@@ -395,7 +395,7 @@ class ListLatestMinedBlocksRI implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets total_coins
      *
-     * @return \CryptoAPIs\Model\GetLatestMinedXRPRippleBlockRITotalCoins
+     * @return \CryptoAPIs\Model\ListLatestMinedBlocksRITotalCoins
      */
     public function getTotalCoins()
     {
@@ -405,7 +405,7 @@ class ListLatestMinedBlocksRI implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets total_coins
      *
-     * @param \CryptoAPIs\Model\GetLatestMinedXRPRippleBlockRITotalCoins $total_coins total_coins
+     * @param \CryptoAPIs\Model\ListLatestMinedBlocksRITotalCoins $total_coins total_coins
      *
      * @return self
      */
@@ -419,7 +419,7 @@ class ListLatestMinedBlocksRI implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets total_fees
      *
-     * @return \CryptoAPIs\Model\GetLatestMinedXRPRippleBlockRITotalFees
+     * @return \CryptoAPIs\Model\ListLatestMinedBlocksRITotalFees
      */
     public function getTotalFees()
     {
@@ -429,7 +429,7 @@ class ListLatestMinedBlocksRI implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets total_fees
      *
-     * @param \CryptoAPIs\Model\GetLatestMinedXRPRippleBlockRITotalFees $total_fees total_fees
+     * @param \CryptoAPIs\Model\ListLatestMinedBlocksRITotalFees $total_fees total_fees
      *
      * @return self
      */

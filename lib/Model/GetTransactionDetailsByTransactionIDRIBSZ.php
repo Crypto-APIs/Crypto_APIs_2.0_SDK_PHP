@@ -63,7 +63,6 @@ class GetTransactionDetailsByTransactionIDRIBSZ implements ModelInterface, Array
     protected static $openAPITypes = [
         'binding_sig' => 'string',
         'expiry_height' => 'int',
-        'fee' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZFee',
         'join_split_pub_key' => 'string',
         'join_split_sig' => 'string',
         'locktime' => 'int',
@@ -89,7 +88,6 @@ class GetTransactionDetailsByTransactionIDRIBSZ implements ModelInterface, Array
     protected static $openAPIFormats = [
         'binding_sig' => null,
         'expiry_height' => null,
-        'fee' => null,
         'join_split_pub_key' => null,
         'join_split_sig' => null,
         'locktime' => null,
@@ -134,7 +132,6 @@ class GetTransactionDetailsByTransactionIDRIBSZ implements ModelInterface, Array
     protected static $attributeMap = [
         'binding_sig' => 'bindingSig',
         'expiry_height' => 'expiryHeight',
-        'fee' => 'fee',
         'join_split_pub_key' => 'joinSplitPubKey',
         'join_split_sig' => 'joinSplitSig',
         'locktime' => 'locktime',
@@ -158,7 +155,6 @@ class GetTransactionDetailsByTransactionIDRIBSZ implements ModelInterface, Array
     protected static $setters = [
         'binding_sig' => 'setBindingSig',
         'expiry_height' => 'setExpiryHeight',
-        'fee' => 'setFee',
         'join_split_pub_key' => 'setJoinSplitPubKey',
         'join_split_sig' => 'setJoinSplitSig',
         'locktime' => 'setLocktime',
@@ -182,7 +178,6 @@ class GetTransactionDetailsByTransactionIDRIBSZ implements ModelInterface, Array
     protected static $getters = [
         'binding_sig' => 'getBindingSig',
         'expiry_height' => 'getExpiryHeight',
-        'fee' => 'getFee',
         'join_split_pub_key' => 'getJoinSplitPubKey',
         'join_split_sig' => 'getJoinSplitSig',
         'locktime' => 'getLocktime',
@@ -257,7 +252,6 @@ class GetTransactionDetailsByTransactionIDRIBSZ implements ModelInterface, Array
     {
         $this->container['binding_sig'] = $data['binding_sig'] ?? null;
         $this->container['expiry_height'] = $data['expiry_height'] ?? null;
-        $this->container['fee'] = $data['fee'] ?? null;
         $this->container['join_split_pub_key'] = $data['join_split_pub_key'] ?? null;
         $this->container['join_split_sig'] = $data['join_split_sig'] ?? null;
         $this->container['locktime'] = $data['locktime'] ?? null;
@@ -287,9 +281,6 @@ class GetTransactionDetailsByTransactionIDRIBSZ implements ModelInterface, Array
         }
         if ($this->container['expiry_height'] === null) {
             $invalidProperties[] = "'expiry_height' can't be null";
-        }
-        if ($this->container['fee'] === null) {
-            $invalidProperties[] = "'fee' can't be null";
         }
         if ($this->container['join_split_pub_key'] === null) {
             $invalidProperties[] = "'join_split_pub_key' can't be null";
@@ -389,30 +380,6 @@ class GetTransactionDetailsByTransactionIDRIBSZ implements ModelInterface, Array
     public function setExpiryHeight($expiry_height)
     {
         $this->container['expiry_height'] = $expiry_height;
-
-        return $this;
-    }
-
-    /**
-     * Gets fee
-     *
-     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZFee
-     */
-    public function getFee()
-    {
-        return $this->container['fee'];
-    }
-
-    /**
-     * Sets fee
-     *
-     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZFee $fee fee
-     *
-     * @return self
-     */
-    public function setFee($fee)
-    {
-        $this->container['fee'] = $fee;
 
         return $this;
     }

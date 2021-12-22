@@ -63,7 +63,7 @@ class GetTransactionDetailsByTransactionIDRIBSLVin implements ModelInterface, Ar
         'addresses' => 'string[]',
         'coinbase' => 'string',
         'script_sig' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSLScriptSig',
-        'sequence' => 'string',
+        'sequence' => 'int',
         'txid' => 'string',
         'txinwitness' => 'string[]',
         'value' => 'string',
@@ -335,7 +335,7 @@ class GetTransactionDetailsByTransactionIDRIBSLVin implements ModelInterface, Ar
     /**
      * Gets sequence
      *
-     * @return string
+     * @return int
      */
     public function getSequence()
     {
@@ -345,7 +345,7 @@ class GetTransactionDetailsByTransactionIDRIBSLVin implements ModelInterface, Ar
     /**
      * Sets sequence
      *
-     * @param string $sequence Represents the script sequence number.
+     * @param int $sequence Represents the script sequence number.
      *
      * @return self
      */

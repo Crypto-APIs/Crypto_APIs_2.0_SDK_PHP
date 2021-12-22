@@ -61,7 +61,7 @@ class GetTransactionDetailsByTransactionIDRI implements ModelInterface, ArrayAcc
       */
     protected static $openAPITypes = [
         'index' => 'int',
-        'is_confirmed' => 'string',
+        'is_confirmed' => 'bool',
         'mined_in_block_hash' => 'string',
         'mined_in_block_height' => 'int',
         'recipients' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIRecipients[]',
@@ -320,7 +320,7 @@ class GetTransactionDetailsByTransactionIDRI implements ModelInterface, ArrayAcc
     /**
      * Gets is_confirmed
      *
-     * @return string
+     * @return bool
      */
     public function getIsConfirmed()
     {
@@ -330,7 +330,7 @@ class GetTransactionDetailsByTransactionIDRI implements ModelInterface, ArrayAcc
     /**
      * Sets is_confirmed
      *
-     * @param string $is_confirmed Represents the state of the transaction whether it is confirmed or not confirmed.
+     * @param bool $is_confirmed Represents the state of the transaction whether it is confirmed or not confirmed.
      *
      * @return self
      */

@@ -62,7 +62,9 @@ class GetWalletAssetDetailsRI implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPITypes = [
         'confirmed_balance' => '\CryptoAPIs\Model\GetWalletAssetDetailsRIConfirmedBalance',
         'deposit_addresses_count' => 'int',
+        'fungible_tokens' => '\CryptoAPIs\Model\GetWalletAssetDetailsRIFungibleTokens[]',
         'name' => 'string',
+        'non_fungible_tokens' => '\CryptoAPIs\Model\GetWalletAssetDetailsRINonFungibleTokens[]',
         'recieved_confirmed_amount' => '\CryptoAPIs\Model\GetWalletAssetDetailsRIRecievedConfirmedAmount',
         'sent_confirmed_amount' => '\CryptoAPIs\Model\GetWalletAssetDetailsRISentConfirmedAmount'
     ];
@@ -77,7 +79,9 @@ class GetWalletAssetDetailsRI implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPIFormats = [
         'confirmed_balance' => null,
         'deposit_addresses_count' => null,
+        'fungible_tokens' => null,
         'name' => null,
+        'non_fungible_tokens' => null,
         'recieved_confirmed_amount' => null,
         'sent_confirmed_amount' => null
     ];
@@ -111,7 +115,9 @@ class GetWalletAssetDetailsRI implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $attributeMap = [
         'confirmed_balance' => 'confirmedBalance',
         'deposit_addresses_count' => 'depositAddressesCount',
+        'fungible_tokens' => 'fungibleTokens',
         'name' => 'name',
+        'non_fungible_tokens' => 'nonFungibleTokens',
         'recieved_confirmed_amount' => 'recievedConfirmedAmount',
         'sent_confirmed_amount' => 'sentConfirmedAmount'
     ];
@@ -124,7 +130,9 @@ class GetWalletAssetDetailsRI implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $setters = [
         'confirmed_balance' => 'setConfirmedBalance',
         'deposit_addresses_count' => 'setDepositAddressesCount',
+        'fungible_tokens' => 'setFungibleTokens',
         'name' => 'setName',
+        'non_fungible_tokens' => 'setNonFungibleTokens',
         'recieved_confirmed_amount' => 'setRecievedConfirmedAmount',
         'sent_confirmed_amount' => 'setSentConfirmedAmount'
     ];
@@ -137,7 +145,9 @@ class GetWalletAssetDetailsRI implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $getters = [
         'confirmed_balance' => 'getConfirmedBalance',
         'deposit_addresses_count' => 'getDepositAddressesCount',
+        'fungible_tokens' => 'getFungibleTokens',
         'name' => 'getName',
+        'non_fungible_tokens' => 'getNonFungibleTokens',
         'recieved_confirmed_amount' => 'getRecievedConfirmedAmount',
         'sent_confirmed_amount' => 'getSentConfirmedAmount'
     ];
@@ -201,7 +211,9 @@ class GetWalletAssetDetailsRI implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $this->container['confirmed_balance'] = $data['confirmed_balance'] ?? null;
         $this->container['deposit_addresses_count'] = $data['deposit_addresses_count'] ?? null;
+        $this->container['fungible_tokens'] = $data['fungible_tokens'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
+        $this->container['non_fungible_tokens'] = $data['non_fungible_tokens'] ?? null;
         $this->container['recieved_confirmed_amount'] = $data['recieved_confirmed_amount'] ?? null;
         $this->container['sent_confirmed_amount'] = $data['sent_confirmed_amount'] ?? null;
     }
@@ -221,8 +233,14 @@ class GetWalletAssetDetailsRI implements ModelInterface, ArrayAccess, \JsonSeria
         if ($this->container['deposit_addresses_count'] === null) {
             $invalidProperties[] = "'deposit_addresses_count' can't be null";
         }
+        if ($this->container['fungible_tokens'] === null) {
+            $invalidProperties[] = "'fungible_tokens' can't be null";
+        }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['non_fungible_tokens'] === null) {
+            $invalidProperties[] = "'non_fungible_tokens' can't be null";
         }
         if ($this->container['recieved_confirmed_amount'] === null) {
             $invalidProperties[] = "'recieved_confirmed_amount' can't be null";
@@ -294,6 +312,30 @@ class GetWalletAssetDetailsRI implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
+     * Gets fungible_tokens
+     *
+     * @return \CryptoAPIs\Model\GetWalletAssetDetailsRIFungibleTokens[]
+     */
+    public function getFungibleTokens()
+    {
+        return $this->container['fungible_tokens'];
+    }
+
+    /**
+     * Sets fungible_tokens
+     *
+     * @param \CryptoAPIs\Model\GetWalletAssetDetailsRIFungibleTokens[] $fungible_tokens Represents fungible tokens'es detailed information
+     *
+     * @return self
+     */
+    public function setFungibleTokens($fungible_tokens)
+    {
+        $this->container['fungible_tokens'] = $fungible_tokens;
+
+        return $this;
+    }
+
+    /**
      * Gets name
      *
      * @return string
@@ -313,6 +355,30 @@ class GetWalletAssetDetailsRI implements ModelInterface, ArrayAccess, \JsonSeria
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets non_fungible_tokens
+     *
+     * @return \CryptoAPIs\Model\GetWalletAssetDetailsRINonFungibleTokens[]
+     */
+    public function getNonFungibleTokens()
+    {
+        return $this->container['non_fungible_tokens'];
+    }
+
+    /**
+     * Sets non_fungible_tokens
+     *
+     * @param \CryptoAPIs\Model\GetWalletAssetDetailsRINonFungibleTokens[] $non_fungible_tokens Represents non-fungible tokens'es detailed information.
+     *
+     * @return self
+     */
+    public function setNonFungibleTokens($non_fungible_tokens)
+    {
+        $this->container['non_fungible_tokens'] = $non_fungible_tokens;
 
         return $this;
     }

@@ -62,6 +62,9 @@ class ListWalletTransactionsRI implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $openAPITypes = [
         'direction' => 'string',
         'fee' => '\CryptoAPIs\Model\ListWalletTransactionsRIFee',
+        'fungible_tokens' => '\CryptoAPIs\Model\ListWalletTransactionsRIFungibleTokens[]',
+        'internal_transactions' => '\CryptoAPIs\Model\ListWalletTransactionsRIInternalTransactions[]',
+        'non_fungible_tokens' => '\CryptoAPIs\Model\ListWalletTransactionsRINonFungibleTokens[]',
         'recipients' => '\CryptoAPIs\Model\ListWalletTransactionsRIRecipients[]',
         'senders' => '\CryptoAPIs\Model\ListWalletTransactionsRISenders[]',
         'status' => 'string',
@@ -80,6 +83,9 @@ class ListWalletTransactionsRI implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $openAPIFormats = [
         'direction' => null,
         'fee' => null,
+        'fungible_tokens' => null,
+        'internal_transactions' => null,
+        'non_fungible_tokens' => null,
         'recipients' => null,
         'senders' => null,
         'status' => null,
@@ -117,6 +123,9 @@ class ListWalletTransactionsRI implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $attributeMap = [
         'direction' => 'direction',
         'fee' => 'fee',
+        'fungible_tokens' => 'fungibleTokens',
+        'internal_transactions' => 'internalTransactions',
+        'non_fungible_tokens' => 'nonFungibleTokens',
         'recipients' => 'recipients',
         'senders' => 'senders',
         'status' => 'status',
@@ -133,6 +142,9 @@ class ListWalletTransactionsRI implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $setters = [
         'direction' => 'setDirection',
         'fee' => 'setFee',
+        'fungible_tokens' => 'setFungibleTokens',
+        'internal_transactions' => 'setInternalTransactions',
+        'non_fungible_tokens' => 'setNonFungibleTokens',
         'recipients' => 'setRecipients',
         'senders' => 'setSenders',
         'status' => 'setStatus',
@@ -149,6 +161,9 @@ class ListWalletTransactionsRI implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $getters = [
         'direction' => 'getDirection',
         'fee' => 'getFee',
+        'fungible_tokens' => 'getFungibleTokens',
+        'internal_transactions' => 'getInternalTransactions',
+        'non_fungible_tokens' => 'getNonFungibleTokens',
         'recipients' => 'getRecipients',
         'senders' => 'getSenders',
         'status' => 'getStatus',
@@ -216,6 +231,9 @@ class ListWalletTransactionsRI implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $this->container['direction'] = $data['direction'] ?? null;
         $this->container['fee'] = $data['fee'] ?? null;
+        $this->container['fungible_tokens'] = $data['fungible_tokens'] ?? null;
+        $this->container['internal_transactions'] = $data['internal_transactions'] ?? null;
+        $this->container['non_fungible_tokens'] = $data['non_fungible_tokens'] ?? null;
         $this->container['recipients'] = $data['recipients'] ?? null;
         $this->container['senders'] = $data['senders'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
@@ -316,6 +334,78 @@ class ListWalletTransactionsRI implements ModelInterface, ArrayAccess, \JsonSeri
     public function setFee($fee)
     {
         $this->container['fee'] = $fee;
+
+        return $this;
+    }
+
+    /**
+     * Gets fungible_tokens
+     *
+     * @return \CryptoAPIs\Model\ListWalletTransactionsRIFungibleTokens[]|null
+     */
+    public function getFungibleTokens()
+    {
+        return $this->container['fungible_tokens'];
+    }
+
+    /**
+     * Sets fungible_tokens
+     *
+     * @param \CryptoAPIs\Model\ListWalletTransactionsRIFungibleTokens[]|null $fungible_tokens Represents fungible tokens'es detailed information
+     *
+     * @return self
+     */
+    public function setFungibleTokens($fungible_tokens)
+    {
+        $this->container['fungible_tokens'] = $fungible_tokens;
+
+        return $this;
+    }
+
+    /**
+     * Gets internal_transactions
+     *
+     * @return \CryptoAPIs\Model\ListWalletTransactionsRIInternalTransactions[]|null
+     */
+    public function getInternalTransactions()
+    {
+        return $this->container['internal_transactions'];
+    }
+
+    /**
+     * Sets internal_transactions
+     *
+     * @param \CryptoAPIs\Model\ListWalletTransactionsRIInternalTransactions[]|null $internal_transactions internal_transactions
+     *
+     * @return self
+     */
+    public function setInternalTransactions($internal_transactions)
+    {
+        $this->container['internal_transactions'] = $internal_transactions;
+
+        return $this;
+    }
+
+    /**
+     * Gets non_fungible_tokens
+     *
+     * @return \CryptoAPIs\Model\ListWalletTransactionsRINonFungibleTokens[]|null
+     */
+    public function getNonFungibleTokens()
+    {
+        return $this->container['non_fungible_tokens'];
+    }
+
+    /**
+     * Sets non_fungible_tokens
+     *
+     * @param \CryptoAPIs\Model\ListWalletTransactionsRINonFungibleTokens[]|null $non_fungible_tokens Represents non-fungible tokens'es detailed information.
+     *
+     * @return self
+     */
+    public function setNonFungibleTokens($non_fungible_tokens)
+    {
+        $this->container['non_fungible_tokens'] = $non_fungible_tokens;
 
         return $this;
     }

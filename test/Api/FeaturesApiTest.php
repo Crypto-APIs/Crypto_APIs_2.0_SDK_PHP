@@ -85,18 +85,6 @@ class FeaturesApiTest extends TestCase
     }
 
     /**
-     * Test case for generateAddress
-     *
-     * Generate Address.
-     *
-     */
-    public function testGenerateAddress()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for getEIP1559FeeRecommendations
      *
      * Get EIP 1559 Fee Recommendations.

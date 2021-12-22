@@ -231,7 +231,7 @@ class GetTransactionDetailsByTransactionIDRIFee implements ModelInterface, Array
     /**
      * Sets amount
      *
-     * @param string $amount Defines the amount of the transaction fee.
+     * @param string $amount When isConfirmed is True - Defines the amount of the transaction fee  When isConfirmed is False - For ETH-based blockchains this attribute represents the max fee value.
      *
      * @return self
      */
@@ -255,7 +255,7 @@ class GetTransactionDetailsByTransactionIDRIFee implements ModelInterface, Array
     /**
      * Sets unit
      *
-     * @param string $unit Defines the unit of the fee amount, e.g. BTC, ETH, XRP.
+     * @param string $unit Defines the fee unit.
      *
      * @return self
      */

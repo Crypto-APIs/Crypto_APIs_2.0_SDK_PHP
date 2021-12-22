@@ -62,7 +62,10 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
     protected static $openAPITypes = [
         'bits' => 'string',
         'chainwork' => 'string',
+        'difficulty' => 'string',
         'merkle_root' => 'string',
+        'nonce' => 'string',
+        'size' => 'int',
         'stripped_size' => 'int',
         'version' => 'int',
         'version_hex' => 'string',
@@ -74,13 +77,10 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         'sha3_uncles' => 'string',
         'total_difficulty' => 'string',
         'uncles' => 'string[]',
-        'difficulty' => 'string',
         'ds_block' => 'int',
         'ds_difficulty' => 'string',
         'ds_leader' => 'string',
-        'micro_blocks' => 'string[]',
-        'nonce' => 'string',
-        'size' => 'int'
+        'micro_blocks' => 'string[]'
     ];
 
     /**
@@ -93,7 +93,10 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
     protected static $openAPIFormats = [
         'bits' => null,
         'chainwork' => null,
+        'difficulty' => null,
         'merkle_root' => null,
+        'nonce' => null,
+        'size' => null,
         'stripped_size' => null,
         'version' => null,
         'version_hex' => null,
@@ -105,13 +108,10 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         'sha3_uncles' => null,
         'total_difficulty' => null,
         'uncles' => null,
-        'difficulty' => null,
         'ds_block' => null,
         'ds_difficulty' => null,
         'ds_leader' => null,
-        'micro_blocks' => null,
-        'nonce' => null,
-        'size' => null
+        'micro_blocks' => null
     ];
 
     /**
@@ -143,7 +143,10 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
     protected static $attributeMap = [
         'bits' => 'bits',
         'chainwork' => 'chainwork',
+        'difficulty' => 'difficulty',
         'merkle_root' => 'merkleRoot',
+        'nonce' => 'nonce',
+        'size' => 'size',
         'stripped_size' => 'strippedSize',
         'version' => 'version',
         'version_hex' => 'versionHex',
@@ -155,13 +158,10 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         'sha3_uncles' => 'sha3Uncles',
         'total_difficulty' => 'totalDifficulty',
         'uncles' => 'uncles',
-        'difficulty' => 'difficulty',
         'ds_block' => 'dsBlock',
         'ds_difficulty' => 'dsDifficulty',
         'ds_leader' => 'dsLeader',
-        'micro_blocks' => 'microBlocks',
-        'nonce' => 'nonce',
-        'size' => 'size'
+        'micro_blocks' => 'microBlocks'
     ];
 
     /**
@@ -172,7 +172,10 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
     protected static $setters = [
         'bits' => 'setBits',
         'chainwork' => 'setChainwork',
+        'difficulty' => 'setDifficulty',
         'merkle_root' => 'setMerkleRoot',
+        'nonce' => 'setNonce',
+        'size' => 'setSize',
         'stripped_size' => 'setStrippedSize',
         'version' => 'setVersion',
         'version_hex' => 'setVersionHex',
@@ -184,13 +187,10 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         'sha3_uncles' => 'setSha3Uncles',
         'total_difficulty' => 'setTotalDifficulty',
         'uncles' => 'setUncles',
-        'difficulty' => 'setDifficulty',
         'ds_block' => 'setDsBlock',
         'ds_difficulty' => 'setDsDifficulty',
         'ds_leader' => 'setDsLeader',
-        'micro_blocks' => 'setMicroBlocks',
-        'nonce' => 'setNonce',
-        'size' => 'setSize'
+        'micro_blocks' => 'setMicroBlocks'
     ];
 
     /**
@@ -201,7 +201,10 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
     protected static $getters = [
         'bits' => 'getBits',
         'chainwork' => 'getChainwork',
+        'difficulty' => 'getDifficulty',
         'merkle_root' => 'getMerkleRoot',
+        'nonce' => 'getNonce',
+        'size' => 'getSize',
         'stripped_size' => 'getStrippedSize',
         'version' => 'getVersion',
         'version_hex' => 'getVersionHex',
@@ -213,13 +216,10 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         'sha3_uncles' => 'getSha3Uncles',
         'total_difficulty' => 'getTotalDifficulty',
         'uncles' => 'getUncles',
-        'difficulty' => 'getDifficulty',
         'ds_block' => 'getDsBlock',
         'ds_difficulty' => 'getDsDifficulty',
         'ds_leader' => 'getDsLeader',
-        'micro_blocks' => 'getMicroBlocks',
-        'nonce' => 'getNonce',
-        'size' => 'getSize'
+        'micro_blocks' => 'getMicroBlocks'
     ];
 
     /**
@@ -281,7 +281,10 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
     {
         $this->container['bits'] = $data['bits'] ?? null;
         $this->container['chainwork'] = $data['chainwork'] ?? null;
+        $this->container['difficulty'] = $data['difficulty'] ?? null;
         $this->container['merkle_root'] = $data['merkle_root'] ?? null;
+        $this->container['nonce'] = $data['nonce'] ?? null;
+        $this->container['size'] = $data['size'] ?? null;
         $this->container['stripped_size'] = $data['stripped_size'] ?? null;
         $this->container['version'] = $data['version'] ?? null;
         $this->container['version_hex'] = $data['version_hex'] ?? null;
@@ -293,13 +296,10 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         $this->container['sha3_uncles'] = $data['sha3_uncles'] ?? null;
         $this->container['total_difficulty'] = $data['total_difficulty'] ?? null;
         $this->container['uncles'] = $data['uncles'] ?? null;
-        $this->container['difficulty'] = $data['difficulty'] ?? null;
         $this->container['ds_block'] = $data['ds_block'] ?? null;
         $this->container['ds_difficulty'] = $data['ds_difficulty'] ?? null;
         $this->container['ds_leader'] = $data['ds_leader'] ?? null;
         $this->container['micro_blocks'] = $data['micro_blocks'] ?? null;
-        $this->container['nonce'] = $data['nonce'] ?? null;
-        $this->container['size'] = $data['size'] ?? null;
     }
 
     /**
@@ -317,8 +317,17 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         if ($this->container['chainwork'] === null) {
             $invalidProperties[] = "'chainwork' can't be null";
         }
+        if ($this->container['difficulty'] === null) {
+            $invalidProperties[] = "'difficulty' can't be null";
+        }
         if ($this->container['merkle_root'] === null) {
             $invalidProperties[] = "'merkle_root' can't be null";
+        }
+        if ($this->container['nonce'] === null) {
+            $invalidProperties[] = "'nonce' can't be null";
+        }
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
         }
         if ($this->container['stripped_size'] === null) {
             $invalidProperties[] = "'stripped_size' can't be null";
@@ -353,9 +362,6 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         if ($this->container['uncles'] === null) {
             $invalidProperties[] = "'uncles' can't be null";
         }
-        if ($this->container['difficulty'] === null) {
-            $invalidProperties[] = "'difficulty' can't be null";
-        }
         if ($this->container['ds_block'] === null) {
             $invalidProperties[] = "'ds_block' can't be null";
         }
@@ -367,12 +373,6 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
         }
         if ($this->container['micro_blocks'] === null) {
             $invalidProperties[] = "'micro_blocks' can't be null";
-        }
-        if ($this->container['nonce'] === null) {
-            $invalidProperties[] = "'nonce' can't be null";
-        }
-        if ($this->container['size'] === null) {
-            $invalidProperties[] = "'size' can't be null";
         }
         return $invalidProperties;
     }
@@ -438,6 +438,30 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
+     * Gets difficulty
+     *
+     * @return string
+     */
+    public function getDifficulty()
+    {
+        return $this->container['difficulty'];
+    }
+
+    /**
+     * Sets difficulty
+     *
+     * @param string $difficulty Represents a mathematical value of how hard it is to find a valid hash for this block.
+     *
+     * @return self
+     */
+    public function setDifficulty($difficulty)
+    {
+        $this->container['difficulty'] = $difficulty;
+
+        return $this;
+    }
+
+    /**
      * Gets merkle_root
      *
      * @return string
@@ -457,6 +481,54 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
     public function setMerkleRoot($merkle_root)
     {
         $this->container['merkle_root'] = $merkle_root;
+
+        return $this;
+    }
+
+    /**
+     * Gets nonce
+     *
+     * @return string
+     */
+    public function getNonce()
+    {
+        return $this->container['nonce'];
+    }
+
+    /**
+     * Sets nonce
+     *
+     * @param string $nonce Represents a random value that can be adjusted to satisfy the proof of work
+     *
+     * @return self
+     */
+    public function setNonce($nonce)
+    {
+        $this->container['nonce'] = $nonce;
+
+        return $this;
+    }
+
+    /**
+     * Gets size
+     *
+     * @return int
+     */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+     * Sets size
+     *
+     * @param int $size Represents the total size of the block in Bytes.
+     *
+     * @return self
+     */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
 
         return $this;
     }
@@ -726,30 +798,6 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
-     * Gets difficulty
-     *
-     * @return string
-     */
-    public function getDifficulty()
-    {
-        return $this->container['difficulty'];
-    }
-
-    /**
-     * Sets difficulty
-     *
-     * @param string $difficulty Represents a mathematical value of how hard it is to find a valid hash for this block.
-     *
-     * @return self
-     */
-    public function setDifficulty($difficulty)
-    {
-        $this->container['difficulty'] = $difficulty;
-
-        return $this;
-    }
-
-    /**
      * Gets ds_block
      *
      * @return int
@@ -841,54 +889,6 @@ class ListLatestMinedBlocksRIBS implements ModelInterface, ArrayAccess, \JsonSer
     public function setMicroBlocks($micro_blocks)
     {
         $this->container['micro_blocks'] = $micro_blocks;
-
-        return $this;
-    }
-
-    /**
-     * Gets nonce
-     *
-     * @return string
-     */
-    public function getNonce()
-    {
-        return $this->container['nonce'];
-    }
-
-    /**
-     * Sets nonce
-     *
-     * @param string $nonce Represents a random value that can be adjusted to satisfy the proof of work
-     *
-     * @return self
-     */
-    public function setNonce($nonce)
-    {
-        $this->container['nonce'] = $nonce;
-
-        return $this;
-    }
-
-    /**
-     * Gets size
-     *
-     * @return int
-     */
-    public function getSize()
-    {
-        return $this->container['size'];
-    }
-
-    /**
-     * Sets size
-     *
-     * @param int $size Represents the total size of the block in Bytes.
-     *
-     * @return self
-     */
-    public function setSize($size)
-    {
-        $this->container['size'] = $size;
 
         return $this;
     }

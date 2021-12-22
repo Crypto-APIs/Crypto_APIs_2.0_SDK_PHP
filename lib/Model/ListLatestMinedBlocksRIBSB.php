@@ -63,7 +63,10 @@ class ListLatestMinedBlocksRIBSB implements ModelInterface, ArrayAccess, \JsonSe
     protected static $openAPITypes = [
         'bits' => 'string',
         'chainwork' => 'string',
+        'difficulty' => 'string',
         'merkle_root' => 'string',
+        'nonce' => 'int',
+        'size' => 'int',
         'stripped_size' => 'int',
         'version' => 'int',
         'version_hex' => 'string',
@@ -80,7 +83,10 @@ class ListLatestMinedBlocksRIBSB implements ModelInterface, ArrayAccess, \JsonSe
     protected static $openAPIFormats = [
         'bits' => null,
         'chainwork' => null,
+        'difficulty' => null,
         'merkle_root' => null,
+        'nonce' => null,
+        'size' => null,
         'stripped_size' => null,
         'version' => null,
         'version_hex' => null,
@@ -116,7 +122,10 @@ class ListLatestMinedBlocksRIBSB implements ModelInterface, ArrayAccess, \JsonSe
     protected static $attributeMap = [
         'bits' => 'bits',
         'chainwork' => 'chainwork',
+        'difficulty' => 'difficulty',
         'merkle_root' => 'merkleRoot',
+        'nonce' => 'nonce',
+        'size' => 'size',
         'stripped_size' => 'strippedSize',
         'version' => 'version',
         'version_hex' => 'versionHex',
@@ -131,7 +140,10 @@ class ListLatestMinedBlocksRIBSB implements ModelInterface, ArrayAccess, \JsonSe
     protected static $setters = [
         'bits' => 'setBits',
         'chainwork' => 'setChainwork',
+        'difficulty' => 'setDifficulty',
         'merkle_root' => 'setMerkleRoot',
+        'nonce' => 'setNonce',
+        'size' => 'setSize',
         'stripped_size' => 'setStrippedSize',
         'version' => 'setVersion',
         'version_hex' => 'setVersionHex',
@@ -146,7 +158,10 @@ class ListLatestMinedBlocksRIBSB implements ModelInterface, ArrayAccess, \JsonSe
     protected static $getters = [
         'bits' => 'getBits',
         'chainwork' => 'getChainwork',
+        'difficulty' => 'getDifficulty',
         'merkle_root' => 'getMerkleRoot',
+        'nonce' => 'getNonce',
+        'size' => 'getSize',
         'stripped_size' => 'getStrippedSize',
         'version' => 'getVersion',
         'version_hex' => 'getVersionHex',
@@ -212,7 +227,10 @@ class ListLatestMinedBlocksRIBSB implements ModelInterface, ArrayAccess, \JsonSe
     {
         $this->container['bits'] = $data['bits'] ?? null;
         $this->container['chainwork'] = $data['chainwork'] ?? null;
+        $this->container['difficulty'] = $data['difficulty'] ?? null;
         $this->container['merkle_root'] = $data['merkle_root'] ?? null;
+        $this->container['nonce'] = $data['nonce'] ?? null;
+        $this->container['size'] = $data['size'] ?? null;
         $this->container['stripped_size'] = $data['stripped_size'] ?? null;
         $this->container['version'] = $data['version'] ?? null;
         $this->container['version_hex'] = $data['version_hex'] ?? null;
@@ -313,6 +331,30 @@ class ListLatestMinedBlocksRIBSB implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
+     * Gets difficulty
+     *
+     * @return string|null
+     */
+    public function getDifficulty()
+    {
+        return $this->container['difficulty'];
+    }
+
+    /**
+     * Sets difficulty
+     *
+     * @param string|null $difficulty Represents a mathematical value of how hard it is to find a valid hash for this block.
+     *
+     * @return self
+     */
+    public function setDifficulty($difficulty)
+    {
+        $this->container['difficulty'] = $difficulty;
+
+        return $this;
+    }
+
+    /**
      * Gets merkle_root
      *
      * @return string
@@ -332,6 +374,54 @@ class ListLatestMinedBlocksRIBSB implements ModelInterface, ArrayAccess, \JsonSe
     public function setMerkleRoot($merkle_root)
     {
         $this->container['merkle_root'] = $merkle_root;
+
+        return $this;
+    }
+
+    /**
+     * Gets nonce
+     *
+     * @return int|null
+     */
+    public function getNonce()
+    {
+        return $this->container['nonce'];
+    }
+
+    /**
+     * Sets nonce
+     *
+     * @param int|null $nonce Represents a random value that can be adjusted to satisfy the proof of work
+     *
+     * @return self
+     */
+    public function setNonce($nonce)
+    {
+        $this->container['nonce'] = $nonce;
+
+        return $this;
+    }
+
+    /**
+     * Gets size
+     *
+     * @return int|null
+     */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+     * Sets size
+     *
+     * @param int|null $size Represents the block size
+     *
+     * @return self
+     */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
 
         return $this;
     }

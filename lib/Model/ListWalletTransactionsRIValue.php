@@ -63,8 +63,7 @@ class ListWalletTransactionsRIValue implements ModelInterface, ArrayAccess, \Jso
         'amount' => 'string',
         'converted_amount' => 'string',
         'exchange_rate_unit' => 'string',
-        'symbol' => 'string',
-        'token_identifier' => 'string'
+        'symbol' => 'string'
     ];
 
     /**
@@ -78,8 +77,7 @@ class ListWalletTransactionsRIValue implements ModelInterface, ArrayAccess, \Jso
         'amount' => null,
         'converted_amount' => null,
         'exchange_rate_unit' => null,
-        'symbol' => null,
-        'token_identifier' => null
+        'symbol' => null
     ];
 
     /**
@@ -112,8 +110,7 @@ class ListWalletTransactionsRIValue implements ModelInterface, ArrayAccess, \Jso
         'amount' => 'amount',
         'converted_amount' => 'convertedAmount',
         'exchange_rate_unit' => 'exchangeRateUnit',
-        'symbol' => 'symbol',
-        'token_identifier' => 'tokenIdentifier'
+        'symbol' => 'symbol'
     ];
 
     /**
@@ -125,8 +122,7 @@ class ListWalletTransactionsRIValue implements ModelInterface, ArrayAccess, \Jso
         'amount' => 'setAmount',
         'converted_amount' => 'setConvertedAmount',
         'exchange_rate_unit' => 'setExchangeRateUnit',
-        'symbol' => 'setSymbol',
-        'token_identifier' => 'setTokenIdentifier'
+        'symbol' => 'setSymbol'
     ];
 
     /**
@@ -138,8 +134,7 @@ class ListWalletTransactionsRIValue implements ModelInterface, ArrayAccess, \Jso
         'amount' => 'getAmount',
         'converted_amount' => 'getConvertedAmount',
         'exchange_rate_unit' => 'getExchangeRateUnit',
-        'symbol' => 'getSymbol',
-        'token_identifier' => 'getTokenIdentifier'
+        'symbol' => 'getSymbol'
     ];
 
     /**
@@ -203,7 +198,6 @@ class ListWalletTransactionsRIValue implements ModelInterface, ArrayAccess, \Jso
         $this->container['converted_amount'] = $data['converted_amount'] ?? null;
         $this->container['exchange_rate_unit'] = $data['exchange_rate_unit'] ?? null;
         $this->container['symbol'] = $data['symbol'] ?? null;
-        $this->container['token_identifier'] = $data['token_identifier'] ?? null;
     }
 
     /**
@@ -334,30 +328,6 @@ class ListWalletTransactionsRIValue implements ModelInterface, ArrayAccess, \Jso
     public function setSymbol($symbol)
     {
         $this->container['symbol'] = $symbol;
-
-        return $this;
-    }
-
-    /**
-     * Gets token_identifier
-     *
-     * @return string|null
-     */
-    public function getTokenIdentifier()
-    {
-        return $this->container['token_identifier'];
-    }
-
-    /**
-     * Sets token_identifier
-     *
-     * @param string|null $token_identifier Defines the token's identifier of the transaction's amount.
-     *
-     * @return self
-     */
-    public function setTokenIdentifier($token_identifier)
-    {
-        $this->container['token_identifier'] = $token_identifier;
 
         return $this;
     }

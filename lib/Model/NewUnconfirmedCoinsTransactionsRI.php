@@ -62,12 +62,10 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
     protected static $openAPITypes = [
         'callback_secret_key' => 'string',
         'callback_url' => 'string',
-        'confirmations_count' => 'int',
         'created_timestamp' => 'int',
         'event_type' => 'string',
         'is_active' => 'bool',
-        'reference_id' => 'string',
-        'transaction_id' => 'string'
+        'reference_id' => 'string'
     ];
 
     /**
@@ -80,12 +78,10 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
     protected static $openAPIFormats = [
         'callback_secret_key' => null,
         'callback_url' => null,
-        'confirmations_count' => null,
         'created_timestamp' => null,
         'event_type' => null,
         'is_active' => null,
-        'reference_id' => null,
-        'transaction_id' => null
+        'reference_id' => null
     ];
 
     /**
@@ -117,12 +113,10 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
     protected static $attributeMap = [
         'callback_secret_key' => 'callbackSecretKey',
         'callback_url' => 'callbackUrl',
-        'confirmations_count' => 'confirmationsCount',
         'created_timestamp' => 'createdTimestamp',
         'event_type' => 'eventType',
         'is_active' => 'isActive',
-        'reference_id' => 'referenceId',
-        'transaction_id' => 'transactionId'
+        'reference_id' => 'referenceId'
     ];
 
     /**
@@ -133,12 +127,10 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
     protected static $setters = [
         'callback_secret_key' => 'setCallbackSecretKey',
         'callback_url' => 'setCallbackUrl',
-        'confirmations_count' => 'setConfirmationsCount',
         'created_timestamp' => 'setCreatedTimestamp',
         'event_type' => 'setEventType',
         'is_active' => 'setIsActive',
-        'reference_id' => 'setReferenceId',
-        'transaction_id' => 'setTransactionId'
+        'reference_id' => 'setReferenceId'
     ];
 
     /**
@@ -149,12 +141,10 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
     protected static $getters = [
         'callback_secret_key' => 'getCallbackSecretKey',
         'callback_url' => 'getCallbackUrl',
-        'confirmations_count' => 'getConfirmationsCount',
         'created_timestamp' => 'getCreatedTimestamp',
         'event_type' => 'getEventType',
         'is_active' => 'getIsActive',
-        'reference_id' => 'getReferenceId',
-        'transaction_id' => 'getTransactionId'
+        'reference_id' => 'getReferenceId'
     ];
 
     /**
@@ -216,12 +206,10 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
     {
         $this->container['callback_secret_key'] = $data['callback_secret_key'] ?? null;
         $this->container['callback_url'] = $data['callback_url'] ?? null;
-        $this->container['confirmations_count'] = $data['confirmations_count'] ?? null;
         $this->container['created_timestamp'] = $data['created_timestamp'] ?? null;
         $this->container['event_type'] = $data['event_type'] ?? null;
         $this->container['is_active'] = $data['is_active'] ?? null;
         $this->container['reference_id'] = $data['reference_id'] ?? null;
-        $this->container['transaction_id'] = $data['transaction_id'] ?? null;
     }
 
     /**
@@ -239,9 +227,6 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
         if ($this->container['callback_url'] === null) {
             $invalidProperties[] = "'callback_url' can't be null";
         }
-        if ($this->container['confirmations_count'] === null) {
-            $invalidProperties[] = "'confirmations_count' can't be null";
-        }
         if ($this->container['created_timestamp'] === null) {
             $invalidProperties[] = "'created_timestamp' can't be null";
         }
@@ -253,9 +238,6 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
         }
         if ($this->container['reference_id'] === null) {
             $invalidProperties[] = "'reference_id' can't be null";
-        }
-        if ($this->container['transaction_id'] === null) {
-            $invalidProperties[] = "'transaction_id' can't be null";
         }
         return $invalidProperties;
     }
@@ -316,30 +298,6 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
     public function setCallbackUrl($callback_url)
     {
         $this->container['callback_url'] = $callback_url;
-
-        return $this;
-    }
-
-    /**
-     * Gets confirmations_count
-     *
-     * @return int
-     */
-    public function getConfirmationsCount()
-    {
-        return $this->container['confirmations_count'];
-    }
-
-    /**
-     * Sets confirmations_count
-     *
-     * @param int $confirmations_count Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block.
-     *
-     * @return self
-     */
-    public function setConfirmationsCount($confirmations_count)
-    {
-        $this->container['confirmations_count'] = $confirmations_count;
 
         return $this;
     }
@@ -436,30 +394,6 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
     public function setReferenceId($reference_id)
     {
         $this->container['reference_id'] = $reference_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets transaction_id
-     *
-     * @return string
-     */
-    public function getTransactionId()
-    {
-        return $this->container['transaction_id'];
-    }
-
-    /**
-     * Sets transaction_id
-     *
-     * @param string $transaction_id Represents the unique identification string that defines the transaction.
-     *
-     * @return self
-     */
-    public function setTransactionId($transaction_id)
-    {
-        $this->container['transaction_id'] = $transaction_id;
 
         return $this;
     }

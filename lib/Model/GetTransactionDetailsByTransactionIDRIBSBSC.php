@@ -222,6 +222,9 @@ class GetTransactionDetailsByTransactionIDRIBSBSC implements ModelInterface, Arr
     {
         $invalidProperties = [];
 
+        if ($this->container['contract'] === null) {
+            $invalidProperties[] = "'contract' can't be null";
+        }
         if ($this->container['gas_limit'] === null) {
             $invalidProperties[] = "'gas_limit' can't be null";
         }
@@ -255,7 +258,7 @@ class GetTransactionDetailsByTransactionIDRIBSBSC implements ModelInterface, Arr
     /**
      * Gets contract
      *
-     * @return string|null
+     * @return string
      */
     public function getContract()
     {
@@ -265,7 +268,7 @@ class GetTransactionDetailsByTransactionIDRIBSBSC implements ModelInterface, Arr
     /**
      * Sets contract
      *
-     * @param string|null $contract Represents the specific transaction contract
+     * @param string $contract Represents the specific transaction contract
      *
      * @return self
      */

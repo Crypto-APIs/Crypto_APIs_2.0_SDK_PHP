@@ -99,6 +99,15 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRITest extends TestCase
     }
 
     /**
+     * Test attribute "confirmations_count"
+     */
+    public function testPropertyConfirmationsCount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "created_timestamp"
      */
     public function testPropertyCreatedTimestamp()

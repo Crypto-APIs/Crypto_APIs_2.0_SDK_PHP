@@ -4,9 +4,76 @@ All URIs are relative to https://rest.cryptoapis.io/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**activateBlockchainEventSubscription()**](ManageSubscriptionsApi.md#activateBlockchainEventSubscription) | **POST** /blockchain-events/subscriptions/{referenceId}/activate | Activate Blockchain Event Subscription
 [**deleteBlockchainEventSubscription()**](ManageSubscriptionsApi.md#deleteBlockchainEventSubscription) | **DELETE** /blockchain-events/{blockchain}/{network}/subscriptions/{referenceId} | Delete Blockchain Event Subscription
 [**listBlockchainEventsSubscriptions()**](ManageSubscriptionsApi.md#listBlockchainEventsSubscriptions) | **GET** /blockchain-events/{blockchain}/{network}/subscriptions | List Blockchain Events Subscriptions
 
+
+## `activateBlockchainEventSubscription()`
+
+```php
+activateBlockchainEventSubscription($reference_id, $context, $activate_blockchain_event_subscription_rb): \CryptoAPIs\Model\ActivateBlockchainEventSubscriptionR
+```
+
+Activate Blockchain Event Subscription
+
+Through this endpoint customers can reactivate an event subscription (callback) which has been deactivated by the system. Deactivations could happen due to various reasons, most often \"maximum retry attempts reached\".
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new CryptoAPIs\Api\ManageSubscriptionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$reference_id = bc243c86-0902-4386-b30d-e6b30fa1f2aa; // string | Represents a unique ID used to reference the specific callback subscription.
+$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$activate_blockchain_event_subscription_rb = new \CryptoAPIs\Model\ActivateBlockchainEventSubscriptionRB(); // \CryptoAPIs\Model\ActivateBlockchainEventSubscriptionRB
+
+try {
+    $result = $apiInstance->activateBlockchainEventSubscription($reference_id, $context, $activate_blockchain_event_subscription_rb);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ManageSubscriptionsApi->activateBlockchainEventSubscription: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reference_id** | **string**| Represents a unique ID used to reference the specific callback subscription. |
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
+ **activate_blockchain_event_subscription_rb** | [**\CryptoAPIs\Model\ActivateBlockchainEventSubscriptionRB**](../Model/ActivateBlockchainEventSubscriptionRB.md)|  | [optional]
+
+### Return type
+
+[**\CryptoAPIs\Model\ActivateBlockchainEventSubscriptionR**](../Model/ActivateBlockchainEventSubscriptionR.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
 ## `deleteBlockchainEventSubscription()`
 

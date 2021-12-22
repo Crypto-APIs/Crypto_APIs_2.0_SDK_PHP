@@ -36,6 +36,7 @@ use \CryptoAPIs\ObjectSerializer;
  * InsufficientCredits Class Doc Comment
  *
  * @category Class
+ * @description insufficient_credits
  * @package  CryptoAPIs
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -60,10 +61,9 @@ class InsufficientCredits implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'api_version' => 'string',
-        'request_id' => 'string',
-        'context' => 'string',
-        'error' => '\CryptoAPIs\Model\InsufficientCreditsError'
+        'code' => 'string',
+        'message' => 'string',
+        'details' => '\CryptoAPIs\Model\BannedIpAddressDetails[]'
     ];
 
     /**
@@ -74,10 +74,9 @@ class InsufficientCredits implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'api_version' => null,
-        'request_id' => null,
-        'context' => null,
-        'error' => null
+        'code' => null,
+        'message' => null,
+        'details' => null
     ];
 
     /**
@@ -107,10 +106,9 @@ class InsufficientCredits implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'api_version' => 'apiVersion',
-        'request_id' => 'requestId',
-        'context' => 'context',
-        'error' => 'error'
+        'code' => 'code',
+        'message' => 'message',
+        'details' => 'details'
     ];
 
     /**
@@ -119,10 +117,9 @@ class InsufficientCredits implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'api_version' => 'setApiVersion',
-        'request_id' => 'setRequestId',
-        'context' => 'setContext',
-        'error' => 'setError'
+        'code' => 'setCode',
+        'message' => 'setMessage',
+        'details' => 'setDetails'
     ];
 
     /**
@@ -131,10 +128,9 @@ class InsufficientCredits implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'api_version' => 'getApiVersion',
-        'request_id' => 'getRequestId',
-        'context' => 'getContext',
-        'error' => 'getError'
+        'code' => 'getCode',
+        'message' => 'getMessage',
+        'details' => 'getDetails'
     ];
 
     /**
@@ -194,10 +190,9 @@ class InsufficientCredits implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(array $data = null)
     {
-        $this->container['api_version'] = $data['api_version'] ?? null;
-        $this->container['request_id'] = $data['request_id'] ?? null;
-        $this->container['context'] = $data['context'] ?? null;
-        $this->container['error'] = $data['error'] ?? null;
+        $this->container['code'] = $data['code'] ?? null;
+        $this->container['message'] = $data['message'] ?? null;
+        $this->container['details'] = $data['details'] ?? null;
     }
 
     /**
@@ -209,14 +204,11 @@ class InsufficientCredits implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['api_version'] === null) {
-            $invalidProperties[] = "'api_version' can't be null";
+        if ($this->container['code'] === null) {
+            $invalidProperties[] = "'code' can't be null";
         }
-        if ($this->container['request_id'] === null) {
-            $invalidProperties[] = "'request_id' can't be null";
-        }
-        if ($this->container['error'] === null) {
-            $invalidProperties[] = "'error' can't be null";
+        if ($this->container['message'] === null) {
+            $invalidProperties[] = "'message' can't be null";
         }
         return $invalidProperties;
     }
@@ -234,97 +226,73 @@ class InsufficientCredits implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets api_version
+     * Gets code
      *
      * @return string
      */
-    public function getApiVersion()
+    public function getCode()
     {
-        return $this->container['api_version'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets api_version
+     * Sets code
      *
-     * @param string $api_version Specifies the version of the API that incorporates this endpoint.
+     * @param string $code Specifies an error code, e.g. error 404.
      *
      * @return self
      */
-    public function setApiVersion($api_version)
+    public function setCode($code)
     {
-        $this->container['api_version'] = $api_version;
+        $this->container['code'] = $code;
 
         return $this;
     }
 
     /**
-     * Gets request_id
+     * Gets message
      *
      * @return string
      */
-    public function getRequestId()
+    public function getMessage()
     {
-        return $this->container['request_id'];
+        return $this->container['message'];
     }
 
     /**
-     * Sets request_id
+     * Sets message
      *
-     * @param string $request_id Defines the ID of the request. The `requestId` is generated by Crypto APIs and it's unique for every request.
+     * @param string $message Specifies the message of the error, i.e. why the error was returned, e.g. error 404 stands for “not found”.
      *
      * @return self
      */
-    public function setRequestId($request_id)
+    public function setMessage($message)
     {
-        $this->container['request_id'] = $request_id;
+        $this->container['message'] = $message;
 
         return $this;
     }
 
     /**
-     * Gets context
+     * Gets details
      *
-     * @return string|null
+     * @return \CryptoAPIs\Model\BannedIpAddressDetails[]|null
      */
-    public function getContext()
+    public function getDetails()
     {
-        return $this->container['context'];
+        return $this->container['details'];
     }
 
     /**
-     * Sets context
+     * Sets details
      *
-     * @param string|null $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+     * @param \CryptoAPIs\Model\BannedIpAddressDetails[]|null $details details
      *
      * @return self
      */
-    public function setContext($context)
+    public function setDetails($details)
     {
-        $this->container['context'] = $context;
-
-        return $this;
-    }
-
-    /**
-     * Gets error
-     *
-     * @return \CryptoAPIs\Model\InsufficientCreditsError
-     */
-    public function getError()
-    {
-        return $this->container['error'];
-    }
-
-    /**
-     * Sets error
-     *
-     * @param \CryptoAPIs\Model\InsufficientCreditsError $error error
-     *
-     * @return self
-     */
-    public function setError($error)
-    {
-        $this->container['error'] = $error;
+        $this->container['details'] = $details;
 
         return $this;
     }

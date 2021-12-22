@@ -63,6 +63,7 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPITypes = [
         'bits' => 'string',
         'chainwork' => 'string',
+        'difficulty' => 'string',
         'merkle_root' => 'string',
         'nonce' => 'string',
         'size' => 'int',
@@ -79,6 +80,7 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPIFormats = [
         'bits' => null,
         'chainwork' => null,
+        'difficulty' => null,
         'merkle_root' => null,
         'nonce' => null,
         'size' => null,
@@ -114,6 +116,7 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $attributeMap = [
         'bits' => 'bits',
         'chainwork' => 'chainwork',
+        'difficulty' => 'difficulty',
         'merkle_root' => 'merkleRoot',
         'nonce' => 'nonce',
         'size' => 'size',
@@ -128,6 +131,7 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $setters = [
         'bits' => 'setBits',
         'chainwork' => 'setChainwork',
+        'difficulty' => 'setDifficulty',
         'merkle_root' => 'setMerkleRoot',
         'nonce' => 'setNonce',
         'size' => 'setSize',
@@ -142,6 +146,7 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $getters = [
         'bits' => 'getBits',
         'chainwork' => 'getChainwork',
+        'difficulty' => 'getDifficulty',
         'merkle_root' => 'getMerkleRoot',
         'nonce' => 'getNonce',
         'size' => 'getSize',
@@ -207,6 +212,7 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     {
         $this->container['bits'] = $data['bits'] ?? null;
         $this->container['chainwork'] = $data['chainwork'] ?? null;
+        $this->container['difficulty'] = $data['difficulty'] ?? null;
         $this->container['merkle_root'] = $data['merkle_root'] ?? null;
         $this->container['nonce'] = $data['nonce'] ?? null;
         $this->container['size'] = $data['size'] ?? null;
@@ -227,6 +233,9 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
         }
         if ($this->container['chainwork'] === null) {
             $invalidProperties[] = "'chainwork' can't be null";
+        }
+        if ($this->container['difficulty'] === null) {
+            $invalidProperties[] = "'difficulty' can't be null";
         }
         if ($this->container['merkle_root'] === null) {
             $invalidProperties[] = "'merkle_root' can't be null";
@@ -299,6 +308,30 @@ class ListLatestMinedBlocksRIBSZ2 implements ModelInterface, ArrayAccess, \JsonS
     public function setChainwork($chainwork)
     {
         $this->container['chainwork'] = $chainwork;
+
+        return $this;
+    }
+
+    /**
+     * Gets difficulty
+     *
+     * @return string
+     */
+    public function getDifficulty()
+    {
+        return $this->container['difficulty'];
+    }
+
+    /**
+     * Sets difficulty
+     *
+     * @param string $difficulty Represents a mathematical value of how hard it is to find a valid hash for this block.
+     *
+     * @return self
+     */
+    public function setDifficulty($difficulty)
+    {
+        $this->container['difficulty'] = $difficulty;
 
         return $this;
     }

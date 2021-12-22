@@ -88,4 +88,13 @@ class ListAllUnconfirmedTransactionsRIBSECFeeTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "unit"
+     */
+    public function testPropertyUnit()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

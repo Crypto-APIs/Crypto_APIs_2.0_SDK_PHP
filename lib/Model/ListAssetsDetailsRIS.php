@@ -406,7 +406,7 @@ class ListAssetsDetailsRIS implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets asset_type
      *
-     * @param string $asset_type Subtype of the crypto assets. Could be COIN or TOKEN
+     * @param string $asset_type Represent a subtype of the crypto assets. Could be COIN or TOKEN.
      *
      * @return self
      */

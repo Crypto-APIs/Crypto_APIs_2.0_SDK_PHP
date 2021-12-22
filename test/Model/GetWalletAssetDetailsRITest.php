@@ -99,9 +99,27 @@ class GetWalletAssetDetailsRITest extends TestCase
     }
 
     /**
+     * Test attribute "fungible_tokens"
+     */
+    public function testPropertyFungibleTokens()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "non_fungible_tokens"
+     */
+    public function testPropertyNonFungibleTokens()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -99,9 +99,36 @@ class ListLatestMinedBlocksRIBSDTest extends TestCase
     }
 
     /**
+     * Test attribute "difficulty"
+     */
+    public function testPropertyDifficulty()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "merkle_root"
      */
     public function testPropertyMerkleRoot()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "nonce"
+     */
+    public function testPropertyNonce()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "size"
+     */
+    public function testPropertySize()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

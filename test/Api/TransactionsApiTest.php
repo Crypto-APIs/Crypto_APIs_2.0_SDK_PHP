@@ -109,12 +109,12 @@ class TransactionsApiTest extends TestCase
     }
 
     /**
-     * Test case for createTokensTransactionRequestFromAddress
+     * Test case for createFungibleTokensTransactionRequestFromAddress
      *
-     * Create Tokens Transaction Request from Address.
+     * Create Fungible Tokens Transaction Request from Address.
      *
      */
-    public function testCreateTokensTransactionRequestFromAddress()
+    public function testCreateFungibleTokensTransactionRequestFromAddress()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

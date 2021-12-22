@@ -66,7 +66,7 @@ class ListAllUnconfirmedTransactionsRIBSL implements ModelInterface, ArrayAccess
         'v_size' => 'int',
         'version' => 'int',
         'vin' => '\CryptoAPIs\Model\ListAllUnconfirmedTransactionsRIBSLVin[]',
-        'vout' => '\CryptoAPIs\Model\ListAllUnconfirmedTransactionsRIBSLVout[]'
+        'vout' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSLVout[]'
     ];
 
     /**
@@ -378,7 +378,7 @@ class ListAllUnconfirmedTransactionsRIBSL implements ModelInterface, ArrayAccess
     /**
      * Gets vout
      *
-     * @return \CryptoAPIs\Model\ListAllUnconfirmedTransactionsRIBSLVout[]
+     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSLVout[]
      */
     public function getVout()
     {
@@ -388,7 +388,7 @@ class ListAllUnconfirmedTransactionsRIBSL implements ModelInterface, ArrayAccess
     /**
      * Sets vout
      *
-     * @param \CryptoAPIs\Model\ListAllUnconfirmedTransactionsRIBSLVout[] $vout Represents the transaction outputs.
+     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSLVout[] $vout Represents the transaction outputs.
      *
      * @return self
      */

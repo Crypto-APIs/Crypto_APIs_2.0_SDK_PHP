@@ -73,6 +73,30 @@ class AssetsApiTest extends TestCase
     }
 
     /**
+     * Test case for getAssetDetailsByAssetID
+     *
+     * Get Asset Details By Asset ID.
+     *
+     */
+    public function testGetAssetDetailsByAssetID()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for getAssetDetailsByAssetSymbol
+     *
+     * Get Asset Details By Asset Symbol.
+     *
+     */
+    public function testGetAssetDetailsByAssetSymbol()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for listAssetsDetails
      *
      * List Assets Details.

@@ -61,7 +61,8 @@ class ListAllUnconfirmedTransactionsRIBSECFee implements ModelInterface, ArrayAc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amount' => 'string'
+        'amount' => 'string',
+        'unit' => 'string'
     ];
 
     /**
@@ -72,7 +73,8 @@ class ListAllUnconfirmedTransactionsRIBSECFee implements ModelInterface, ArrayAc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'amount' => null
+        'amount' => null,
+        'unit' => null
     ];
 
     /**
@@ -102,7 +104,8 @@ class ListAllUnconfirmedTransactionsRIBSECFee implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $attributeMap = [
-        'amount' => 'amount'
+        'amount' => 'amount',
+        'unit' => 'unit'
     ];
 
     /**
@@ -111,7 +114,8 @@ class ListAllUnconfirmedTransactionsRIBSECFee implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $setters = [
-        'amount' => 'setAmount'
+        'amount' => 'setAmount',
+        'unit' => 'setUnit'
     ];
 
     /**
@@ -120,7 +124,8 @@ class ListAllUnconfirmedTransactionsRIBSECFee implements ModelInterface, ArrayAc
      * @var string[]
      */
     protected static $getters = [
-        'amount' => 'getAmount'
+        'amount' => 'getAmount',
+        'unit' => 'getUnit'
     ];
 
     /**
@@ -181,6 +186,7 @@ class ListAllUnconfirmedTransactionsRIBSECFee implements ModelInterface, ArrayAc
     public function __construct(array $data = null)
     {
         $this->container['amount'] = $data['amount'] ?? null;
+        $this->container['unit'] = $data['unit'] ?? null;
     }
 
     /**
@@ -194,6 +200,9 @@ class ListAllUnconfirmedTransactionsRIBSECFee implements ModelInterface, ArrayAc
 
         if ($this->container['amount'] === null) {
             $invalidProperties[] = "'amount' can't be null";
+        }
+        if ($this->container['unit'] === null) {
+            $invalidProperties[] = "'unit' can't be null";
         }
         return $invalidProperties;
     }
@@ -230,6 +239,30 @@ class ListAllUnconfirmedTransactionsRIBSECFee implements ModelInterface, ArrayAc
     public function setAmount($amount)
     {
         $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets unit
+     *
+     * @return string
+     */
+    public function getUnit()
+    {
+        return $this->container['unit'];
+    }
+
+    /**
+     * Sets unit
+     *
+     * @param string $unit Represents the fee unit.
+     *
+     * @return self
+     */
+    public function setUnit($unit)
+    {
+        $this->container['unit'] = $unit;
 
         return $this;
     }

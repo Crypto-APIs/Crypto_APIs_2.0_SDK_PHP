@@ -61,6 +61,7 @@ class ListLatestMinedBlocksRIBSZ implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
+        'difficulty' => 'string',
         'ds_block' => 'int',
         'ds_difficulty' => 'string',
         'ds_leader' => 'string',
@@ -77,6 +78,7 @@ class ListLatestMinedBlocksRIBSZ implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'difficulty' => null,
         'ds_block' => null,
         'ds_difficulty' => null,
         'ds_leader' => null,
@@ -112,6 +114,7 @@ class ListLatestMinedBlocksRIBSZ implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
+        'difficulty' => 'difficulty',
         'ds_block' => 'dsBlock',
         'ds_difficulty' => 'dsDifficulty',
         'ds_leader' => 'dsLeader',
@@ -126,6 +129,7 @@ class ListLatestMinedBlocksRIBSZ implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
+        'difficulty' => 'setDifficulty',
         'ds_block' => 'setDsBlock',
         'ds_difficulty' => 'setDsDifficulty',
         'ds_leader' => 'setDsLeader',
@@ -140,6 +144,7 @@ class ListLatestMinedBlocksRIBSZ implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
+        'difficulty' => 'getDifficulty',
         'ds_block' => 'getDsBlock',
         'ds_difficulty' => 'getDsDifficulty',
         'ds_leader' => 'getDsLeader',
@@ -205,6 +210,7 @@ class ListLatestMinedBlocksRIBSZ implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
+        $this->container['difficulty'] = $data['difficulty'] ?? null;
         $this->container['ds_block'] = $data['ds_block'] ?? null;
         $this->container['ds_difficulty'] = $data['ds_difficulty'] ?? null;
         $this->container['ds_leader'] = $data['ds_leader'] ?? null;
@@ -222,6 +228,9 @@ class ListLatestMinedBlocksRIBSZ implements ModelInterface, ArrayAccess, \JsonSe
     {
         $invalidProperties = [];
 
+        if ($this->container['difficulty'] === null) {
+            $invalidProperties[] = "'difficulty' can't be null";
+        }
         if ($this->container['ds_block'] === null) {
             $invalidProperties[] = "'ds_block' can't be null";
         }
@@ -254,6 +263,30 @@ class ListLatestMinedBlocksRIBSZ implements ModelInterface, ArrayAccess, \JsonSe
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets difficulty
+     *
+     * @return string
+     */
+    public function getDifficulty()
+    {
+        return $this->container['difficulty'];
+    }
+
+    /**
+     * Sets difficulty
+     *
+     * @param string $difficulty Represents a mathematical value of how hard it is to find a valid hash for this block.
+     *
+     * @return self
+     */
+    public function setDifficulty($difficulty)
+    {
+        $this->container['difficulty'] = $difficulty;
+
+        return $this;
+    }
 
     /**
      * Gets ds_block

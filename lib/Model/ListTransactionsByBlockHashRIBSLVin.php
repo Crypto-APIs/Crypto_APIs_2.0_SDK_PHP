@@ -62,7 +62,7 @@ class ListTransactionsByBlockHashRIBSLVin implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'addresses' => 'string[]',
         'coinbase' => 'string',
-        'script_sig' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSLScriptSig',
+        'script_sig' => '\CryptoAPIs\Model\ListTransactionsByBlockHashRIBSLScriptSig',
         'sequence' => 'string',
         'txid' => 'string',
         'txinwitness' => 'string[]',
@@ -320,7 +320,7 @@ class ListTransactionsByBlockHashRIBSLVin implements ModelInterface, ArrayAccess
     /**
      * Gets script_sig
      *
-     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSLScriptSig
+     * @return \CryptoAPIs\Model\ListTransactionsByBlockHashRIBSLScriptSig
      */
     public function getScriptSig()
     {
@@ -330,7 +330,7 @@ class ListTransactionsByBlockHashRIBSLVin implements ModelInterface, ArrayAccess
     /**
      * Sets script_sig
      *
-     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSLScriptSig $script_sig script_sig
+     * @param \CryptoAPIs\Model\ListTransactionsByBlockHashRIBSLScriptSig $script_sig script_sig
      *
      * @return self
      */

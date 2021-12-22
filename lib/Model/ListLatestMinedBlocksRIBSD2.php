@@ -63,7 +63,10 @@ class ListLatestMinedBlocksRIBSD2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPITypes = [
         'bits' => 'string',
         'chainwork' => 'string',
+        'difficulty' => 'string',
         'merkle_root' => 'string',
+        'nonce' => 'int',
+        'size' => 'int',
         'stripped_size' => 'int',
         'version' => 'int',
         'weight' => 'int'
@@ -79,7 +82,10 @@ class ListLatestMinedBlocksRIBSD2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPIFormats = [
         'bits' => null,
         'chainwork' => null,
+        'difficulty' => null,
         'merkle_root' => null,
+        'nonce' => null,
+        'size' => null,
         'stripped_size' => null,
         'version' => null,
         'weight' => null
@@ -114,7 +120,10 @@ class ListLatestMinedBlocksRIBSD2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $attributeMap = [
         'bits' => 'bits',
         'chainwork' => 'chainwork',
+        'difficulty' => 'difficulty',
         'merkle_root' => 'merkleRoot',
+        'nonce' => 'nonce',
+        'size' => 'size',
         'stripped_size' => 'strippedSize',
         'version' => 'version',
         'weight' => 'weight'
@@ -128,7 +137,10 @@ class ListLatestMinedBlocksRIBSD2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $setters = [
         'bits' => 'setBits',
         'chainwork' => 'setChainwork',
+        'difficulty' => 'setDifficulty',
         'merkle_root' => 'setMerkleRoot',
+        'nonce' => 'setNonce',
+        'size' => 'setSize',
         'stripped_size' => 'setStrippedSize',
         'version' => 'setVersion',
         'weight' => 'setWeight'
@@ -142,7 +154,10 @@ class ListLatestMinedBlocksRIBSD2 implements ModelInterface, ArrayAccess, \JsonS
     protected static $getters = [
         'bits' => 'getBits',
         'chainwork' => 'getChainwork',
+        'difficulty' => 'getDifficulty',
         'merkle_root' => 'getMerkleRoot',
+        'nonce' => 'getNonce',
+        'size' => 'getSize',
         'stripped_size' => 'getStrippedSize',
         'version' => 'getVersion',
         'weight' => 'getWeight'
@@ -207,7 +222,10 @@ class ListLatestMinedBlocksRIBSD2 implements ModelInterface, ArrayAccess, \JsonS
     {
         $this->container['bits'] = $data['bits'] ?? null;
         $this->container['chainwork'] = $data['chainwork'] ?? null;
+        $this->container['difficulty'] = $data['difficulty'] ?? null;
         $this->container['merkle_root'] = $data['merkle_root'] ?? null;
+        $this->container['nonce'] = $data['nonce'] ?? null;
+        $this->container['size'] = $data['size'] ?? null;
         $this->container['stripped_size'] = $data['stripped_size'] ?? null;
         $this->container['version'] = $data['version'] ?? null;
         $this->container['weight'] = $data['weight'] ?? null;
@@ -228,8 +246,17 @@ class ListLatestMinedBlocksRIBSD2 implements ModelInterface, ArrayAccess, \JsonS
         if ($this->container['chainwork'] === null) {
             $invalidProperties[] = "'chainwork' can't be null";
         }
+        if ($this->container['difficulty'] === null) {
+            $invalidProperties[] = "'difficulty' can't be null";
+        }
         if ($this->container['merkle_root'] === null) {
             $invalidProperties[] = "'merkle_root' can't be null";
+        }
+        if ($this->container['nonce'] === null) {
+            $invalidProperties[] = "'nonce' can't be null";
+        }
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
         }
         if ($this->container['stripped_size'] === null) {
             $invalidProperties[] = "'stripped_size' can't be null";
@@ -304,6 +331,30 @@ class ListLatestMinedBlocksRIBSD2 implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
+     * Gets difficulty
+     *
+     * @return string
+     */
+    public function getDifficulty()
+    {
+        return $this->container['difficulty'];
+    }
+
+    /**
+     * Sets difficulty
+     *
+     * @param string $difficulty Represents a mathematical value of how hard it is to find a valid hash for this block.
+     *
+     * @return self
+     */
+    public function setDifficulty($difficulty)
+    {
+        $this->container['difficulty'] = $difficulty;
+
+        return $this;
+    }
+
+    /**
      * Gets merkle_root
      *
      * @return string
@@ -323,6 +374,54 @@ class ListLatestMinedBlocksRIBSD2 implements ModelInterface, ArrayAccess, \JsonS
     public function setMerkleRoot($merkle_root)
     {
         $this->container['merkle_root'] = $merkle_root;
+
+        return $this;
+    }
+
+    /**
+     * Gets nonce
+     *
+     * @return int
+     */
+    public function getNonce()
+    {
+        return $this->container['nonce'];
+    }
+
+    /**
+     * Sets nonce
+     *
+     * @param int $nonce Represents a random value that can be adjusted to satisfy the proof of work
+     *
+     * @return self
+     */
+    public function setNonce($nonce)
+    {
+        $this->container['nonce'] = $nonce;
+
+        return $this;
+    }
+
+    /**
+     * Gets size
+     *
+     * @return int
+     */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+     * Sets size
+     *
+     * @param int $size Represents the total size of the block in Bytes.
+     *
+     * @return self
+     */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
 
         return $this;
     }

@@ -99,6 +99,15 @@ class ListLatestMinedBlocksRIBSZ2Test extends TestCase
     }
 
     /**
+     * Test attribute "difficulty"
+     */
+    public function testPropertyDifficulty()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "merkle_root"
      */
     public function testPropertyMerkleRoot()

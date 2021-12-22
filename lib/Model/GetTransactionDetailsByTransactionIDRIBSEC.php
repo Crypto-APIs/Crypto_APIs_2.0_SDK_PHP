@@ -66,7 +66,7 @@ class GetTransactionDetailsByTransactionIDRIBSEC implements ModelInterface, Arra
         'gas_price' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSECGasPrice',
         'gas_used' => 'string',
         'input_data' => 'string',
-        'nonce' => 'string'
+        'nonce' => 'int'
     ];
 
     /**
@@ -378,7 +378,7 @@ class GetTransactionDetailsByTransactionIDRIBSEC implements ModelInterface, Arra
     /**
      * Gets nonce
      *
-     * @return string
+     * @return int
      */
     public function getNonce()
     {
@@ -388,7 +388,7 @@ class GetTransactionDetailsByTransactionIDRIBSEC implements ModelInterface, Arra
     /**
      * Sets nonce
      *
-     * @param string $nonce Represents the sequential running number for an address, starting from 0 for the first transaction. E.g., if the nonce of a transaction is 10, it would be the 11th transaction sent from the sender's address.
+     * @param int $nonce Represents the sequential running number for an address, starting from 0 for the first transaction. E.g., if the nonce of a transaction is 10, it would be the 11th transaction sent from the sender's address.
      *
      * @return self
      */

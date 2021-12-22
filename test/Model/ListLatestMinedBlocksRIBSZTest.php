@@ -81,6 +81,15 @@ class ListLatestMinedBlocksRIBSZTest extends TestCase
     }
 
     /**
+     * Test attribute "difficulty"
+     */
+    public function testPropertyDifficulty()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "ds_block"
      */
     public function testPropertyDsBlock()

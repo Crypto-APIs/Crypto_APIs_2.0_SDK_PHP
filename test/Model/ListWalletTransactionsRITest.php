@@ -99,6 +99,33 @@ class ListWalletTransactionsRITest extends TestCase
     }
 
     /**
+     * Test attribute "fungible_tokens"
+     */
+    public function testPropertyFungibleTokens()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "internal_transactions"
+     */
+    public function testPropertyInternalTransactions()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "non_fungible_tokens"
+     */
+    public function testPropertyNonFungibleTokens()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "recipients"
      */
     public function testPropertyRecipients()

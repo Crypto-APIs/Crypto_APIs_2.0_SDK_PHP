@@ -97,6 +97,18 @@ class InformativeApiTest extends TestCase
     }
 
     /**
+     * Test case for getWalletTransactionDetailsByTransactionID
+     *
+     * Get Wallet Transaction Details By Transaction ID.
+     *
+     */
+    public function testGetWalletTransactionDetailsByTransactionID()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for listDepositAddresses
      *
      * List Deposit Addresses.

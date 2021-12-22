@@ -63,7 +63,10 @@ class ListLatestMinedBlocksRIBSBC implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPITypes = [
         'bits' => 'string',
         'chainwork' => 'string',
+        'difficulty' => 'string',
         'merkle_root' => 'string',
+        'nonce' => 'int',
+        'size' => 'int',
         'version' => 'int',
         'version_hex' => 'string'
     ];
@@ -78,7 +81,10 @@ class ListLatestMinedBlocksRIBSBC implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPIFormats = [
         'bits' => null,
         'chainwork' => null,
+        'difficulty' => null,
         'merkle_root' => null,
+        'nonce' => null,
+        'size' => null,
         'version' => null,
         'version_hex' => null
     ];
@@ -112,7 +118,10 @@ class ListLatestMinedBlocksRIBSBC implements ModelInterface, ArrayAccess, \JsonS
     protected static $attributeMap = [
         'bits' => 'bits',
         'chainwork' => 'chainwork',
+        'difficulty' => 'difficulty',
         'merkle_root' => 'merkleRoot',
+        'nonce' => 'nonce',
+        'size' => 'size',
         'version' => 'version',
         'version_hex' => 'versionHex'
     ];
@@ -125,7 +134,10 @@ class ListLatestMinedBlocksRIBSBC implements ModelInterface, ArrayAccess, \JsonS
     protected static $setters = [
         'bits' => 'setBits',
         'chainwork' => 'setChainwork',
+        'difficulty' => 'setDifficulty',
         'merkle_root' => 'setMerkleRoot',
+        'nonce' => 'setNonce',
+        'size' => 'setSize',
         'version' => 'setVersion',
         'version_hex' => 'setVersionHex'
     ];
@@ -138,7 +150,10 @@ class ListLatestMinedBlocksRIBSBC implements ModelInterface, ArrayAccess, \JsonS
     protected static $getters = [
         'bits' => 'getBits',
         'chainwork' => 'getChainwork',
+        'difficulty' => 'getDifficulty',
         'merkle_root' => 'getMerkleRoot',
+        'nonce' => 'getNonce',
+        'size' => 'getSize',
         'version' => 'getVersion',
         'version_hex' => 'getVersionHex'
     ];
@@ -202,7 +217,10 @@ class ListLatestMinedBlocksRIBSBC implements ModelInterface, ArrayAccess, \JsonS
     {
         $this->container['bits'] = $data['bits'] ?? null;
         $this->container['chainwork'] = $data['chainwork'] ?? null;
+        $this->container['difficulty'] = $data['difficulty'] ?? null;
         $this->container['merkle_root'] = $data['merkle_root'] ?? null;
+        $this->container['nonce'] = $data['nonce'] ?? null;
+        $this->container['size'] = $data['size'] ?? null;
         $this->container['version'] = $data['version'] ?? null;
         $this->container['version_hex'] = $data['version_hex'] ?? null;
     }
@@ -222,8 +240,17 @@ class ListLatestMinedBlocksRIBSBC implements ModelInterface, ArrayAccess, \JsonS
         if ($this->container['chainwork'] === null) {
             $invalidProperties[] = "'chainwork' can't be null";
         }
+        if ($this->container['difficulty'] === null) {
+            $invalidProperties[] = "'difficulty' can't be null";
+        }
         if ($this->container['merkle_root'] === null) {
             $invalidProperties[] = "'merkle_root' can't be null";
+        }
+        if ($this->container['nonce'] === null) {
+            $invalidProperties[] = "'nonce' can't be null";
+        }
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
         }
         if ($this->container['version'] === null) {
             $invalidProperties[] = "'version' can't be null";
@@ -295,6 +322,30 @@ class ListLatestMinedBlocksRIBSBC implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
+     * Gets difficulty
+     *
+     * @return string
+     */
+    public function getDifficulty()
+    {
+        return $this->container['difficulty'];
+    }
+
+    /**
+     * Sets difficulty
+     *
+     * @param string $difficulty Represents a mathematical value of how hard it is to find a valid hash for this block.
+     *
+     * @return self
+     */
+    public function setDifficulty($difficulty)
+    {
+        $this->container['difficulty'] = $difficulty;
+
+        return $this;
+    }
+
+    /**
      * Gets merkle_root
      *
      * @return string
@@ -314,6 +365,54 @@ class ListLatestMinedBlocksRIBSBC implements ModelInterface, ArrayAccess, \JsonS
     public function setMerkleRoot($merkle_root)
     {
         $this->container['merkle_root'] = $merkle_root;
+
+        return $this;
+    }
+
+    /**
+     * Gets nonce
+     *
+     * @return int
+     */
+    public function getNonce()
+    {
+        return $this->container['nonce'];
+    }
+
+    /**
+     * Sets nonce
+     *
+     * @param int $nonce Represents a random value that can be adjusted to satisfy the proof of work
+     *
+     * @return self
+     */
+    public function setNonce($nonce)
+    {
+        $this->container['nonce'] = $nonce;
+
+        return $this;
+    }
+
+    /**
+     * Gets size
+     *
+     * @return int
+     */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+     * Sets size
+     *
+     * @param int $size Represents a random value that can be adjusted to satisfy the proof of work
+     *
+     * @return self
+     */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
 
         return $this;
     }

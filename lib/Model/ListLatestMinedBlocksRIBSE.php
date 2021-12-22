@@ -66,7 +66,10 @@ class ListLatestMinedBlocksRIBSE implements ModelInterface, ArrayAccess, \JsonSe
         'gas_limit' => 'string',
         'gas_used' => 'string',
         'mined_in_seconds' => 'int',
+        'nonce' => 'string',
         'sha3_uncles' => 'string',
+        'size' => 'int',
+        'total_difficulty' => 'string',
         'uncles' => 'string[]'
     ];
 
@@ -83,7 +86,10 @@ class ListLatestMinedBlocksRIBSE implements ModelInterface, ArrayAccess, \JsonSe
         'gas_limit' => null,
         'gas_used' => null,
         'mined_in_seconds' => null,
+        'nonce' => null,
         'sha3_uncles' => null,
+        'size' => null,
+        'total_difficulty' => null,
         'uncles' => null
     ];
 
@@ -119,7 +125,10 @@ class ListLatestMinedBlocksRIBSE implements ModelInterface, ArrayAccess, \JsonSe
         'gas_limit' => 'gasLimit',
         'gas_used' => 'gasUsed',
         'mined_in_seconds' => 'minedInSeconds',
+        'nonce' => 'nonce',
         'sha3_uncles' => 'sha3Uncles',
+        'size' => 'size',
+        'total_difficulty' => 'totalDifficulty',
         'uncles' => 'uncles'
     ];
 
@@ -134,7 +143,10 @@ class ListLatestMinedBlocksRIBSE implements ModelInterface, ArrayAccess, \JsonSe
         'gas_limit' => 'setGasLimit',
         'gas_used' => 'setGasUsed',
         'mined_in_seconds' => 'setMinedInSeconds',
+        'nonce' => 'setNonce',
         'sha3_uncles' => 'setSha3Uncles',
+        'size' => 'setSize',
+        'total_difficulty' => 'setTotalDifficulty',
         'uncles' => 'setUncles'
     ];
 
@@ -149,7 +161,10 @@ class ListLatestMinedBlocksRIBSE implements ModelInterface, ArrayAccess, \JsonSe
         'gas_limit' => 'getGasLimit',
         'gas_used' => 'getGasUsed',
         'mined_in_seconds' => 'getMinedInSeconds',
+        'nonce' => 'getNonce',
         'sha3_uncles' => 'getSha3Uncles',
+        'size' => 'getSize',
+        'total_difficulty' => 'getTotalDifficulty',
         'uncles' => 'getUncles'
     ];
 
@@ -215,7 +230,10 @@ class ListLatestMinedBlocksRIBSE implements ModelInterface, ArrayAccess, \JsonSe
         $this->container['gas_limit'] = $data['gas_limit'] ?? null;
         $this->container['gas_used'] = $data['gas_used'] ?? null;
         $this->container['mined_in_seconds'] = $data['mined_in_seconds'] ?? null;
+        $this->container['nonce'] = $data['nonce'] ?? null;
         $this->container['sha3_uncles'] = $data['sha3_uncles'] ?? null;
+        $this->container['size'] = $data['size'] ?? null;
+        $this->container['total_difficulty'] = $data['total_difficulty'] ?? null;
         $this->container['uncles'] = $data['uncles'] ?? null;
     }
 
@@ -243,8 +261,17 @@ class ListLatestMinedBlocksRIBSE implements ModelInterface, ArrayAccess, \JsonSe
         if ($this->container['mined_in_seconds'] === null) {
             $invalidProperties[] = "'mined_in_seconds' can't be null";
         }
+        if ($this->container['nonce'] === null) {
+            $invalidProperties[] = "'nonce' can't be null";
+        }
         if ($this->container['sha3_uncles'] === null) {
             $invalidProperties[] = "'sha3_uncles' can't be null";
+        }
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
+        }
+        if ($this->container['total_difficulty'] === null) {
+            $invalidProperties[] = "'total_difficulty' can't be null";
         }
         if ($this->container['uncles'] === null) {
             $invalidProperties[] = "'uncles' can't be null";
@@ -385,6 +412,30 @@ class ListLatestMinedBlocksRIBSE implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
+     * Gets nonce
+     *
+     * @return string
+     */
+    public function getNonce()
+    {
+        return $this->container['nonce'];
+    }
+
+    /**
+     * Sets nonce
+     *
+     * @param string $nonce Represents a random value that can be adjusted to satisfy the proof of work
+     *
+     * @return self
+     */
+    public function setNonce($nonce)
+    {
+        $this->container['nonce'] = $nonce;
+
+        return $this;
+    }
+
+    /**
      * Gets sha3_uncles
      *
      * @return string
@@ -404,6 +455,54 @@ class ListLatestMinedBlocksRIBSE implements ModelInterface, ArrayAccess, \JsonSe
     public function setSha3Uncles($sha3_uncles)
     {
         $this->container['sha3_uncles'] = $sha3_uncles;
+
+        return $this;
+    }
+
+    /**
+     * Gets size
+     *
+     * @return int
+     */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+     * Sets size
+     *
+     * @param int $size Represents the total size of the block in Bytes.
+     *
+     * @return self
+     */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
+
+        return $this;
+    }
+
+    /**
+     * Gets total_difficulty
+     *
+     * @return string
+     */
+    public function getTotalDifficulty()
+    {
+        return $this->container['total_difficulty'];
+    }
+
+    /**
+     * Sets total_difficulty
+     *
+     * @param string $total_difficulty Defines the total difficulty of the chain until this block, i.e. how difficult it is for a specific miner to mine a new block.
+     *
+     * @return self
+     */
+    public function setTotalDifficulty($total_difficulty)
+    {
+        $this->container['total_difficulty'] = $total_difficulty;
 
         return $this;
     }

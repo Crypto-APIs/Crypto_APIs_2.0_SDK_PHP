@@ -99,15 +99,6 @@ class GetTransactionDetailsByTransactionIDRIBSZTest extends TestCase
     }
 
     /**
-     * Test attribute "fee"
-     */
-    public function testPropertyFee()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "join_split_pub_key"
      */
     public function testPropertyJoinSplitPubKey()

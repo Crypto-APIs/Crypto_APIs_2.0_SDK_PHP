@@ -65,6 +65,7 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         'recipient_address' => 'string',
         'sender_address' => 'string',
         'token_decimals' => 'int',
+        'token_id' => 'string',
         'token_name' => 'string',
         'token_symbol' => 'string',
         'token_type' => 'string',
@@ -86,6 +87,7 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         'recipient_address' => null,
         'sender_address' => null,
         'token_decimals' => null,
+        'token_id' => null,
         'token_name' => null,
         'token_symbol' => null,
         'token_type' => null,
@@ -126,6 +128,7 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         'recipient_address' => 'recipientAddress',
         'sender_address' => 'senderAddress',
         'token_decimals' => 'tokenDecimals',
+        'token_id' => 'tokenId',
         'token_name' => 'tokenName',
         'token_symbol' => 'tokenSymbol',
         'token_type' => 'tokenType',
@@ -145,6 +148,7 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         'recipient_address' => 'setRecipientAddress',
         'sender_address' => 'setSenderAddress',
         'token_decimals' => 'setTokenDecimals',
+        'token_id' => 'setTokenId',
         'token_name' => 'setTokenName',
         'token_symbol' => 'setTokenSymbol',
         'token_type' => 'setTokenType',
@@ -164,6 +168,7 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         'recipient_address' => 'getRecipientAddress',
         'sender_address' => 'getSenderAddress',
         'token_decimals' => 'getTokenDecimals',
+        'token_id' => 'getTokenId',
         'token_name' => 'getTokenName',
         'token_symbol' => 'getTokenSymbol',
         'token_type' => 'getTokenType',
@@ -234,6 +239,7 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         $this->container['recipient_address'] = $data['recipient_address'] ?? null;
         $this->container['sender_address'] = $data['sender_address'] ?? null;
         $this->container['token_decimals'] = $data['token_decimals'] ?? null;
+        $this->container['token_id'] = $data['token_id'] ?? null;
         $this->container['token_name'] = $data['token_name'] ?? null;
         $this->container['token_symbol'] = $data['token_symbol'] ?? null;
         $this->container['token_type'] = $data['token_type'] ?? null;
@@ -274,9 +280,6 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         }
         if ($this->container['token_type'] === null) {
             $invalidProperties[] = "'token_type' can't be null";
-        }
-        if ($this->container['tokens_amount'] === null) {
-            $invalidProperties[] = "'tokens_amount' can't be null";
         }
         if ($this->container['transaction_hash'] === null) {
             $invalidProperties[] = "'transaction_hash' can't be null";
@@ -420,6 +423,30 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
     }
 
     /**
+     * Gets token_id
+     *
+     * @return string|null
+     */
+    public function getTokenId()
+    {
+        return $this->container['token_id'];
+    }
+
+    /**
+     * Sets token_id
+     *
+     * @param string|null $token_id Represents the unique token identifier.
+     *
+     * @return self
+     */
+    public function setTokenId($token_id)
+    {
+        $this->container['token_id'] = $token_id;
+
+        return $this;
+    }
+
+    /**
      * Gets token_name
      *
      * @return string
@@ -494,7 +521,7 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
     /**
      * Gets tokens_amount
      *
-     * @return string
+     * @return string|null
      */
     public function getTokensAmount()
     {
@@ -504,7 +531,7 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
     /**
      * Sets tokens_amount
      *
-     * @param string $tokens_amount Defines the token amount of the transfer.
+     * @param string|null $tokens_amount Defines the token amount of the transfer.
      *
      * @return self
      */

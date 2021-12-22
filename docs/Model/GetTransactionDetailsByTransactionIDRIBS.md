@@ -19,7 +19,6 @@ Name | Type | Description | Notes
 **transaction_status** | **string** | Represents the status of this transaction. |
 **binding_sig** | **string** | It is used to enforce balance of Spend and Output transfers, in order to prevent their replay across transactions. |
 **expiry_height** | **int** | Represents a block height after which the transaction will expire. |
-**fee** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZFee**](GetTransactionDetailsByTransactionIDRIBSZFee.md) |  |
 **join_split_pub_key** | **string** | Represents an encoding of a JoinSplitSig public validating key. |
 **join_split_sig** | **string** | Is used to sign transactions that contain at least one JoinSplit description. |
 **overwintered** | **bool** | \&quot;Overwinter\&quot; is the network upgrade for the Zcash blockchain. |

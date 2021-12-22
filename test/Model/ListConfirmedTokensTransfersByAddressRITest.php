@@ -126,6 +126,15 @@ class ListConfirmedTokensTransfersByAddressRITest extends TestCase
     }
 
     /**
+     * Test attribute "token_id"
+     */
+    public function testPropertyTokenId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "token_name"
      */
     public function testPropertyTokenName()

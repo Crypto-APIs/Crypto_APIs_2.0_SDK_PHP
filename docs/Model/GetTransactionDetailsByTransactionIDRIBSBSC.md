@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**contract** | **string** | Represents the specific transaction contract | [optional]
+**contract** | **string** | Represents the specific transaction contract |
 **gas_limit** | **string** | Represents the amount of gas used by this specific transaction alone. |
 **gas_price** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSBSCGasPrice**](GetTransactionDetailsByTransactionIDRIBSBSCGasPrice.md) |  |
 **gas_used** | **string** | Defines the unit of the gas price amount, e.g. BTC, ETH, XRP. |

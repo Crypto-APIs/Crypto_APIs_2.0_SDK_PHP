@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * WalletAsAServiceAddressBalanceNotEnoughTest Class Doc Comment
  *
  * @category    Class
- * @description WalletAsAServiceAddressBalanceNotEnough
+ * @description wallet_as_a_service_address_balance_not_enough
  * @package     CryptoAPIs
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -81,36 +81,27 @@ class WalletAsAServiceAddressBalanceNotEnoughTest extends TestCase
     }
 
     /**
-     * Test attribute "api_version"
+     * Test attribute "code"
      */
-    public function testPropertyApiVersion()
+    public function testPropertyCode()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "request_id"
+     * Test attribute "message"
      */
-    public function testPropertyRequestId()
+    public function testPropertyMessage()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "context"
+     * Test attribute "details"
      */
-    public function testPropertyContext()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "error"
-     */
-    public function testPropertyError()
+    public function testPropertyDetails()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

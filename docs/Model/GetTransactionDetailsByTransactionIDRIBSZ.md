@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **binding_sig** | **string** | It is used to enforce balance of Spend and Output transfers, in order to prevent their replay across transactions. |
 **expiry_height** | **int** | Represents a block height after which the transaction will expire. |
-**fee** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZFee**](GetTransactionDetailsByTransactionIDRIBSZFee.md) |  |
 **join_split_pub_key** | **string** | Represents an encoding of a JoinSplitSig public validating key. |
 **join_split_sig** | **string** | Is used to sign transactions that contain at least one JoinSplit description. |
 **locktime** | **int** | Represents the locktime on the transaction on the specific blockchain, i.e. the blockheight at which the transaction is valid. |

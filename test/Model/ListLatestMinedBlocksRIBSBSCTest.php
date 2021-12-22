@@ -81,6 +81,15 @@ class ListLatestMinedBlocksRIBSBSCTest extends TestCase
     }
 
     /**
+     * Test attribute "difficulty"
+     */
+    public function testPropertyDifficulty()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "extra_data"
      */
     public function testPropertyExtraData()
@@ -117,9 +126,27 @@ class ListLatestMinedBlocksRIBSBSCTest extends TestCase
     }
 
     /**
+     * Test attribute "nonce"
+     */
+    public function testPropertyNonce()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "sha3_uncles"
      */
     public function testPropertySha3Uncles()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "size"
+     */
+    public function testPropertySize()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
