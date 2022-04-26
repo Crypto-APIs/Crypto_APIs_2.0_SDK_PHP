@@ -63,7 +63,7 @@ class InlineResponse40083 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\ValidateAddressE400'
+        'error' => '\CryptoAPIs\Model\GetAddressDetailsFromCallbackE400'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40083 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\ValidateAddressE400
+     * @return \CryptoAPIs\Model\GetAddressDetailsFromCallbackE400
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40083 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\ValidateAddressE400 $error error
+     * @param \CryptoAPIs\Model\GetAddressDetailsFromCallbackE400 $error error
      *
      * @return self
      */

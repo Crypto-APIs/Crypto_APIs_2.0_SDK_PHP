@@ -60,6 +60,7 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
+        'address' => 'string',
         'callback_secret_key' => 'string',
         'callback_url' => 'string',
         'created_timestamp' => 'int',
@@ -76,6 +77,7 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'address' => null,
         'callback_secret_key' => null,
         'callback_url' => null,
         'created_timestamp' => null,
@@ -111,6 +113,7 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $attributeMap = [
+        'address' => 'address',
         'callback_secret_key' => 'callbackSecretKey',
         'callback_url' => 'callbackUrl',
         'created_timestamp' => 'createdTimestamp',
@@ -125,6 +128,7 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $setters = [
+        'address' => 'setAddress',
         'callback_secret_key' => 'setCallbackSecretKey',
         'callback_url' => 'setCallbackUrl',
         'created_timestamp' => 'setCreatedTimestamp',
@@ -139,6 +143,7 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $getters = [
+        'address' => 'getAddress',
         'callback_secret_key' => 'getCallbackSecretKey',
         'callback_url' => 'getCallbackUrl',
         'created_timestamp' => 'getCreatedTimestamp',
@@ -204,6 +209,7 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
      */
     public function __construct(array $data = null)
     {
+        $this->container['address'] = $data['address'] ?? null;
         $this->container['callback_secret_key'] = $data['callback_secret_key'] ?? null;
         $this->container['callback_url'] = $data['callback_url'] ?? null;
         $this->container['created_timestamp'] = $data['created_timestamp'] ?? null;
@@ -221,6 +227,9 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
     {
         $invalidProperties = [];
 
+        if ($this->container['address'] === null) {
+            $invalidProperties[] = "'address' can't be null";
+        }
         if ($this->container['callback_secret_key'] === null) {
             $invalidProperties[] = "'callback_secret_key' can't be null";
         }
@@ -253,6 +262,30 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets address
+     *
+     * @return string
+     */
+    public function getAddress()
+    {
+        return $this->container['address'];
+    }
+
+    /**
+     * Sets address
+     *
+     * @param string $address Represents the address of the transaction, per which the result is returned.
+     *
+     * @return self
+     */
+    public function setAddress($address)
+    {
+        $this->container['address'] = $address;
+
+        return $this;
+    }
 
     /**
      * Gets callback_secret_key
@@ -291,7 +324,7 @@ class NewUnconfirmedCoinsTransactionsRI implements ModelInterface, ArrayAccess, 
     /**
      * Sets callback_url
      *
-     * @param string $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+     * @param string $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. `We support ONLY httpS type of protocol`.
      *
      * @return self
      */

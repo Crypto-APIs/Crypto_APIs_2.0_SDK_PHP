@@ -63,7 +63,7 @@ class InlineResponse40343 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\SyncHDWalletXPubYPubZPubE403'
+        'error' => '\CryptoAPIs\Model\GetLatestMinedZilliqaBlockE403'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40343 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\SyncHDWalletXPubYPubZPubE403
+     * @return \CryptoAPIs\Model\GetLatestMinedZilliqaBlockE403
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40343 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\SyncHDWalletXPubYPubZPubE403 $error error
+     * @param \CryptoAPIs\Model\GetLatestMinedZilliqaBlockE403 $error error
      *
      * @return self
      */

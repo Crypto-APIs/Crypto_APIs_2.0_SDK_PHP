@@ -63,7 +63,7 @@ class InlineResponse40366 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\ListBlockchainEventsSubscriptionsE403'
+        'error' => '\CryptoAPIs\Model\ListUnconfirmedTokensTransfersByAddressE403'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40366 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\ListBlockchainEventsSubscriptionsE403
+     * @return \CryptoAPIs\Model\ListUnconfirmedTokensTransfersByAddressE403
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40366 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\ListBlockchainEventsSubscriptionsE403 $error error
+     * @param \CryptoAPIs\Model\ListUnconfirmedTokensTransfersByAddressE403 $error error
      *
      * @return self
      */

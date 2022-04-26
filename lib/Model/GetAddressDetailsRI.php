@@ -363,7 +363,7 @@ class GetAddressDetailsRI implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets incoming_transactions_count
      *
-     * @param int $incoming_transactions_count Defines the count of the incoming transactions.
+     * @param int $incoming_transactions_count Defines the received transaction count to the address.
      *
      * @return self
      */
@@ -387,7 +387,7 @@ class GetAddressDetailsRI implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets outgoing_transactions_count
      *
-     * @param int $outgoing_transactions_count Defines the count of the outgoing transactions.
+     * @param int $outgoing_transactions_count Defines the sent transaction count from the address.
      *
      * @return self
      */

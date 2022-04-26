@@ -63,7 +63,7 @@ class InlineResponse40128 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\ListUnconfirmedOmniTransactionsByPropertyIDE401'
+        'error' => '\CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHeightE401'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40128 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\ListUnconfirmedOmniTransactionsByPropertyIDE401
+     * @return \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHeightE401
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40128 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\ListUnconfirmedOmniTransactionsByPropertyIDE401 $error error
+     * @param \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHeightE401 $error error
      *
      * @return self
      */

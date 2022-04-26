@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**getXRPRippleBlockDetailsByBlockHeight()**](XRPRippleApi.md#getXRPRippleBlockDetailsByBlockHeight) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight} | Get XRP (Ripple) Block Details By Block Height
 [**getXRPRippleTransactionDetailsByTransactionID()**](XRPRippleApi.md#getXRPRippleTransactionDetailsByTransactionID) | **GET** /blockchain-data/xrp-specific/{network}/transactions/{transactionHash} | Get XRP (Ripple) Transaction Details By Transaction ID
 [**listXRPRippleTransactionsByAddress()**](XRPRippleApi.md#listXRPRippleTransactionsByAddress) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address}/transactions | List XRP (Ripple) Transactions by Address
+[**listXRPRippleTransactionsByAddressAndTimeRange()**](XRPRippleApi.md#listXRPRippleTransactionsByAddressAndTimeRange) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address}/transactions-by-time-range | List XRP (Ripple) Transactions By Address And Time Range
 [**listXRPRippleTransactionsByBlockHash()**](XRPRippleApi.md#listXRPRippleTransactionsByBlockHash) | **GET** /blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash}/transactions | List XRP (Ripple) Transactions By Block Hash
 [**listXRPRippleTransactionsByBlockHeight()**](XRPRippleApi.md#listXRPRippleTransactionsByBlockHeight) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight}/transactions | List XRP (Ripple) Transactions By Block Height
 
@@ -44,7 +45,7 @@ $apiInstance = new CryptoAPIs\Api\XRPRippleApi(
     $config
 );
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->getLatestMinedXRPRippleBlock($network, $context);
@@ -109,7 +110,7 @@ $apiInstance = new CryptoAPIs\Api\XRPRippleApi(
 );
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\",  are test networks.
 $address = rA9bXGJcXvZKaWofrRphdJsBWzhyCfH3z; // string | Represents the public address, which is a compressed and shortened form of a public key.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->getXRPRippleAddressDetails($network, $address, $context);
@@ -175,7 +176,7 @@ $apiInstance = new CryptoAPIs\Api\XRPRippleApi(
 );
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $block_hash = 1ab0614d2a438da8b23086cbceef7d443edbd295d9c7619fc8a19c7618bc22c9; // string | Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->getXRPRippleBlockDetailsByBlockHash($network, $block_hash, $context);
@@ -241,7 +242,7 @@ $apiInstance = new CryptoAPIs\Api\XRPRippleApi(
 );
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\",  are test networks.
 $block_height = 15886156; // string | Represents the number of blocks in the blockchain preceding this specific block. Block numbers have no gaps. A blockchain usually starts with block 0 called the \"Genesis block\".
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->getXRPRippleBlockDetailsByBlockHeight($network, $block_height, $context);
@@ -307,7 +308,7 @@ $apiInstance = new CryptoAPIs\Api\XRPRippleApi(
 );
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $transaction_hash = 36a1737481edec87bacc3101dfb752ae2c76f9171e7edebe587e330c1ea77c8d; // string | Represents the same as `transactionId` for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols `hash` is different from `transactionId` for SegWit transactions.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->getXRPRippleTransactionDetailsByTransactionID($network, $transaction_hash, $context);
@@ -373,9 +374,9 @@ $apiInstance = new CryptoAPIs\Api\XRPRippleApi(
 );
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $address = rA9bXGJcXvZKaWofrRphdJsBWzhyCfH3z; // string | Represents the public address, which is a compressed and shortened form of a public key.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $limit = 50; // int | Defines how many items should be returned in the response per page basis.
-$offset = 10; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
+$offset = 0; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
 $transaction_type = payment; // string
 
 try {
@@ -400,6 +401,82 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\CryptoAPIs\Model\ListXRPRippleTransactionsByAddressR**](../Model/ListXRPRippleTransactionsByAddressR.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listXRPRippleTransactionsByAddressAndTimeRange()`
+
+```php
+listXRPRippleTransactionsByAddressAndTimeRange($network, $address, $from_timestamp, $to_timestamp, $context, $limit, $offset, $transaction_type): \CryptoAPIs\Model\ListXRPRippleTransactionsByAddressAndTimeRangeR
+```
+
+List XRP (Ripple) Transactions By Address And Time Range
+
+Тhis endpoint lists XRP transactions by the attribute `address` and the query parameters `fromTimestamp` and `toTimestamp`  which gives customers the opportunity to filter the results by a specified time period.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new CryptoAPIs\Api\XRPRippleApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+$address = rA9bXGJcXvZKaWofrRphdJsBWzhyCfH3z; // string | Represents the public address, which is a compressed and shortened form of a public key.
+$from_timestamp = 1616347862; // int | Defines the specific time/date from which the results will start being listed.
+$to_timestamp = 1616347870; // int | Defines the specific time/date to which the results will be listed.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$limit = 50; // int | Defines how many items should be returned in the response per page basis.
+$offset = 0; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
+$transaction_type = payment; // string | Defines the transaction type.
+
+try {
+    $result = $apiInstance->listXRPRippleTransactionsByAddressAndTimeRange($network, $address, $from_timestamp, $to_timestamp, $context, $limit, $offset, $transaction_type);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling XRPRippleApi->listXRPRippleTransactionsByAddressAndTimeRange: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |
+ **address** | **string**| Represents the public address, which is a compressed and shortened form of a public key. |
+ **from_timestamp** | **int**| Defines the specific time/date from which the results will start being listed. |
+ **to_timestamp** | **int**| Defines the specific time/date to which the results will be listed. |
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
+ **limit** | **int**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
+ **offset** | **int**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
+ **transaction_type** | **string**| Defines the transaction type. | [optional]
+
+### Return type
+
+[**\CryptoAPIs\Model\ListXRPRippleTransactionsByAddressAndTimeRangeR**](../Model/ListXRPRippleTransactionsByAddressAndTimeRangeR.md)
 
 ### Authorization
 
@@ -445,9 +522,9 @@ $apiInstance = new CryptoAPIs\Api\XRPRippleApi(
 );
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $block_hash = 14754656235f865a74eba27791fd41a47bdfe07fe811ff6d78f53db32e129e39; // string | Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $limit = 50; // int | Defines how many items should be returned in the response per page basis.
-$offset = 10; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
+$offset = 0; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
 
 try {
     $result = $apiInstance->listXRPRippleTransactionsByBlockHash($network, $block_hash, $context, $limit, $offset);
@@ -515,9 +592,9 @@ $apiInstance = new CryptoAPIs\Api\XRPRippleApi(
 );
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $block_height = 15971358; // int
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $limit = 50; // int | Defines how many items should be returned in the response per page basis.
-$offset = 10; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
+$offset = 0; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
 
 try {
     $result = $apiInstance->listXRPRippleTransactionsByBlockHeight($network, $block_height, $context, $limit, $offset);

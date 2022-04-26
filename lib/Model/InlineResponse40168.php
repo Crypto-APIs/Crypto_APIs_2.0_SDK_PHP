@@ -63,7 +63,7 @@ class InlineResponse40168 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\DeleteBlockchainEventSubscriptionE401'
+        'error' => '\CryptoAPIs\Model\EstimateTransactionSmartFeeE401'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40168 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\DeleteBlockchainEventSubscriptionE401
+     * @return \CryptoAPIs\Model\EstimateTransactionSmartFeeE401
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40168 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\DeleteBlockchainEventSubscriptionE401 $error error
+     * @param \CryptoAPIs\Model\EstimateTransactionSmartFeeE401 $error error
      *
      * @return self
      */

@@ -73,6 +73,18 @@ class UnifiedEndpointsApiTest extends TestCase
     }
 
     /**
+     * Test case for estimateTransactionSmartFee
+     *
+     * Estimate Transaction Smart Fee.
+     *
+     */
+    public function testEstimateTransactionSmartFee()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for getAddressDetails
      *
      * Get Address Details.
@@ -133,6 +145,30 @@ class UnifiedEndpointsApiTest extends TestCase
     }
 
     /**
+     * Test case for getNextAvailableNonce
+     *
+     * Get Next Available Nonce.
+     *
+     */
+    public function testGetNextAvailableNonce()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for getRawTransactionData
+     *
+     * Get Raw Transaction Data.
+     *
+     */
+    public function testGetRawTransactionData()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for getTransactionDetailsByTransactionID
      *
      * Get Transaction Details By Transaction ID.
@@ -157,12 +193,48 @@ class UnifiedEndpointsApiTest extends TestCase
     }
 
     /**
+     * Test case for listConfirmedTokensTransfersByAddressAndTimeRange
+     *
+     * List Confirmed Tokens Transfers By Address And Time Range.
+     *
+     */
+    public function testListConfirmedTokensTransfersByAddressAndTimeRange()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for listConfirmedTransactionsByAddress
      *
      * List Confirmed Transactions By Address.
      *
      */
     public function testListConfirmedTransactionsByAddress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for listConfirmedTransactionsByAddressAndTimeRange
+     *
+     * List Confirmed Transactions By Address And Time Range.
+     *
+     */
+    public function testListConfirmedTransactionsByAddressAndTimeRange()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for listInternalTransactionsByAddressAndTimeRange
+     *
+     * List Internal Transactions By Address And Time Range.
+     *
+     */
+    public function testListInternalTransactionsByAddressAndTimeRange()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -211,6 +283,18 @@ class UnifiedEndpointsApiTest extends TestCase
      *
      */
     public function testListUnconfirmedTransactionsByAddress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for listUnspentTransactionOutputsByAddress
+     *
+     * List Unspent Transaction Outputs By Address.
+     *
+     */
+    public function testListUnspentTransactionOutputsByAddress()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

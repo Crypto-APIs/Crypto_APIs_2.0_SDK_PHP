@@ -125,7 +125,7 @@ class ZilliqaApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetLatestMinedZilliqaBlockR|\CryptoAPIs\Model\InlineResponse40040|\CryptoAPIs\Model\InlineResponse40140|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40340|\CryptoAPIs\Model\InlineResponse4042|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\GetLatestMinedZilliqaBlockR|\CryptoAPIs\Model\InlineResponse40043|\CryptoAPIs\Model\InlineResponse40143|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40343|\CryptoAPIs\Model\InlineResponse4042|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getLatestMinedZilliqaBlock($network, $context = null)
     {
@@ -143,7 +143,7 @@ class ZilliqaApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetLatestMinedZilliqaBlockR|\CryptoAPIs\Model\InlineResponse40040|\CryptoAPIs\Model\InlineResponse40140|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40340|\CryptoAPIs\Model\InlineResponse4042|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetLatestMinedZilliqaBlockR|\CryptoAPIs\Model\InlineResponse40043|\CryptoAPIs\Model\InlineResponse40143|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40343|\CryptoAPIs\Model\InlineResponse4042|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLatestMinedZilliqaBlockWithHttpInfo($network, $context = null)
     {
@@ -191,26 +191,26 @@ class ZilliqaApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40040' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40043' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40040', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40043', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40140' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40143' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40140', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40143', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -227,14 +227,14 @@ class ZilliqaApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40340' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40343' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40340', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40343', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -338,7 +338,7 @@ class ZilliqaApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40040',
+                        '\CryptoAPIs\Model\InlineResponse40043',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -346,7 +346,7 @@ class ZilliqaApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40140',
+                        '\CryptoAPIs\Model\InlineResponse40143',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -362,7 +362,7 @@ class ZilliqaApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40340',
+                        '\CryptoAPIs\Model\InlineResponse40343',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1095,7 +1095,7 @@ class ZilliqaApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetZilliqaBlockDetailsByBlockHashR|\CryptoAPIs\Model\InlineResponse40033|\CryptoAPIs\Model\InlineResponse40133|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40333|\CryptoAPIs\Model\InlineResponse4042|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\GetZilliqaBlockDetailsByBlockHashR|\CryptoAPIs\Model\InlineResponse40034|\CryptoAPIs\Model\InlineResponse40134|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40334|\CryptoAPIs\Model\InlineResponse4042|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getZilliqaBlockDetailsByBlockHash($network, $block_hash, $context = null)
     {
@@ -1114,7 +1114,7 @@ class ZilliqaApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetZilliqaBlockDetailsByBlockHashR|\CryptoAPIs\Model\InlineResponse40033|\CryptoAPIs\Model\InlineResponse40133|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40333|\CryptoAPIs\Model\InlineResponse4042|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetZilliqaBlockDetailsByBlockHashR|\CryptoAPIs\Model\InlineResponse40034|\CryptoAPIs\Model\InlineResponse40134|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40334|\CryptoAPIs\Model\InlineResponse4042|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getZilliqaBlockDetailsByBlockHashWithHttpInfo($network, $block_hash, $context = null)
     {
@@ -1162,26 +1162,26 @@ class ZilliqaApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40033' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40034' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40033', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40034', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40133' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40134' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40133', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40134', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1198,14 +1198,14 @@ class ZilliqaApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40333' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40334' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40333', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40334', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1309,7 +1309,7 @@ class ZilliqaApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40033',
+                        '\CryptoAPIs\Model\InlineResponse40034',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1317,7 +1317,7 @@ class ZilliqaApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40133',
+                        '\CryptoAPIs\Model\InlineResponse40134',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1333,7 +1333,7 @@ class ZilliqaApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40333',
+                        '\CryptoAPIs\Model\InlineResponse40334',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1599,7 +1599,7 @@ class ZilliqaApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetZilliqaBlockDetailsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40029|\CryptoAPIs\Model\InlineResponse40129|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40329|\CryptoAPIs\Model\InlineResponse4042|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\GetZilliqaBlockDetailsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40030|\CryptoAPIs\Model\InlineResponse40130|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40330|\CryptoAPIs\Model\InlineResponse4042|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getZilliqaBlockDetailsByBlockHeight($network, $block_height, $context = null)
     {
@@ -1618,7 +1618,7 @@ class ZilliqaApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetZilliqaBlockDetailsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40029|\CryptoAPIs\Model\InlineResponse40129|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40329|\CryptoAPIs\Model\InlineResponse4042|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetZilliqaBlockDetailsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40030|\CryptoAPIs\Model\InlineResponse40130|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40330|\CryptoAPIs\Model\InlineResponse4042|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getZilliqaBlockDetailsByBlockHeightWithHttpInfo($network, $block_height, $context = null)
     {
@@ -1666,26 +1666,26 @@ class ZilliqaApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40029' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40030' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40029', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40030', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40129' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40130' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40129', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40130', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1702,14 +1702,14 @@ class ZilliqaApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40329' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40330' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40329', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40330', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1813,7 +1813,7 @@ class ZilliqaApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40029',
+                        '\CryptoAPIs\Model\InlineResponse40030',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1821,7 +1821,7 @@ class ZilliqaApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40129',
+                        '\CryptoAPIs\Model\InlineResponse40130',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1837,7 +1837,7 @@ class ZilliqaApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40329',
+                        '\CryptoAPIs\Model\InlineResponse40330',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3125,7 +3125,7 @@ class ZilliqaApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHashR|\CryptoAPIs\Model\InlineResponse40021|\CryptoAPIs\Model\InlineResponse40121|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40321|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHashR|\CryptoAPIs\Model\InlineResponse40022|\CryptoAPIs\Model\InlineResponse40122|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40322|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listZilliqaTransactionsByBlockHash($network, $block_hash, $context = null, $limit = 50, $offset = 0)
     {
@@ -3146,7 +3146,7 @@ class ZilliqaApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHashR|\CryptoAPIs\Model\InlineResponse40021|\CryptoAPIs\Model\InlineResponse40121|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40321|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHashR|\CryptoAPIs\Model\InlineResponse40022|\CryptoAPIs\Model\InlineResponse40122|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40322|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listZilliqaTransactionsByBlockHashWithHttpInfo($network, $block_hash, $context = null, $limit = 50, $offset = 0)
     {
@@ -3194,26 +3194,26 @@ class ZilliqaApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40021' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40022' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40021', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40022', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40121' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40122' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40121', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40122', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3230,14 +3230,14 @@ class ZilliqaApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40321' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40322' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40321', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40322', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3329,7 +3329,7 @@ class ZilliqaApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40021',
+                        '\CryptoAPIs\Model\InlineResponse40022',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3337,7 +3337,7 @@ class ZilliqaApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40121',
+                        '\CryptoAPIs\Model\InlineResponse40122',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3353,7 +3353,7 @@ class ZilliqaApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40321',
+                        '\CryptoAPIs\Model\InlineResponse40322',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3641,7 +3641,7 @@ class ZilliqaApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40022|\CryptoAPIs\Model\InlineResponse40122|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40322|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40023|\CryptoAPIs\Model\InlineResponse40123|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40323|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listZilliqaTransactionsByBlockHeight($network, $block_height, $context = null, $limit = 50, $offset = 0)
     {
@@ -3662,7 +3662,7 @@ class ZilliqaApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40022|\CryptoAPIs\Model\InlineResponse40122|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40322|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40023|\CryptoAPIs\Model\InlineResponse40123|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40323|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listZilliqaTransactionsByBlockHeightWithHttpInfo($network, $block_height, $context = null, $limit = 50, $offset = 0)
     {
@@ -3710,26 +3710,26 @@ class ZilliqaApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40022' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40023' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40022', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40023', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40122' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40123' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40122', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40123', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3746,14 +3746,14 @@ class ZilliqaApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40322' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40323' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40322', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40323', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3845,7 +3845,7 @@ class ZilliqaApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40022',
+                        '\CryptoAPIs\Model\InlineResponse40023',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3853,7 +3853,7 @@ class ZilliqaApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40122',
+                        '\CryptoAPIs\Model\InlineResponse40123',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3869,7 +3869,7 @@ class ZilliqaApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40322',
+                        '\CryptoAPIs\Model\InlineResponse40323',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

@@ -63,7 +63,7 @@ class InlineResponse40173 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\NewConfirmedInternalTransactionsE401'
+        'error' => '\CryptoAPIs\Model\NewConfirmedCoinsTransactionsE401'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40173 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\NewConfirmedInternalTransactionsE401
+     * @return \CryptoAPIs\Model\NewConfirmedCoinsTransactionsE401
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40173 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\NewConfirmedInternalTransactionsE401 $error error
+     * @param \CryptoAPIs\Model\NewConfirmedCoinsTransactionsE401 $error error
      *
      * @return self
      */

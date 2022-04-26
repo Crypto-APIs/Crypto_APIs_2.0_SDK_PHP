@@ -83,7 +83,7 @@ class GetAddressDetailsFromCallbackRI implements ModelInterface, ArrayAccess, \J
         'confirmed_balance' => null,
         'total_received' => null,
         'total_spent' => null,
-        'sequence' => null
+        'sequence' => 'int64'
     ];
 
     /**

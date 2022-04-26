@@ -63,7 +63,7 @@ class InlineResponse40371 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\GetBlockDetailsByBlockHashFromCallbackE403'
+        'error' => '\CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsE403'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40371 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\GetBlockDetailsByBlockHashFromCallbackE403
+     * @return \CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsE403
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40371 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\GetBlockDetailsByBlockHashFromCallbackE403 $error error
+     * @param \CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsE403 $error error
      *
      * @return self
      */

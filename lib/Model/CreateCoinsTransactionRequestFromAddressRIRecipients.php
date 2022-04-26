@@ -61,7 +61,9 @@ class CreateCoinsTransactionRequestFromAddressRIRecipients implements ModelInter
       */
     protected static $openAPITypes = [
         'address' => 'string',
-        'amount' => 'string'
+        'address_tag' => 'int',
+        'amount' => 'string',
+        'classic_address' => 'string'
     ];
 
     /**
@@ -73,7 +75,9 @@ class CreateCoinsTransactionRequestFromAddressRIRecipients implements ModelInter
       */
     protected static $openAPIFormats = [
         'address' => null,
-        'amount' => null
+        'address_tag' => null,
+        'amount' => null,
+        'classic_address' => null
     ];
 
     /**
@@ -104,7 +108,9 @@ class CreateCoinsTransactionRequestFromAddressRIRecipients implements ModelInter
      */
     protected static $attributeMap = [
         'address' => 'address',
-        'amount' => 'amount'
+        'address_tag' => 'addressTag',
+        'amount' => 'amount',
+        'classic_address' => 'classicAddress'
     ];
 
     /**
@@ -114,7 +120,9 @@ class CreateCoinsTransactionRequestFromAddressRIRecipients implements ModelInter
      */
     protected static $setters = [
         'address' => 'setAddress',
-        'amount' => 'setAmount'
+        'address_tag' => 'setAddressTag',
+        'amount' => 'setAmount',
+        'classic_address' => 'setClassicAddress'
     ];
 
     /**
@@ -124,7 +132,9 @@ class CreateCoinsTransactionRequestFromAddressRIRecipients implements ModelInter
      */
     protected static $getters = [
         'address' => 'getAddress',
-        'amount' => 'getAmount'
+        'address_tag' => 'getAddressTag',
+        'amount' => 'getAmount',
+        'classic_address' => 'getClassicAddress'
     ];
 
     /**
@@ -185,7 +195,9 @@ class CreateCoinsTransactionRequestFromAddressRIRecipients implements ModelInter
     public function __construct(array $data = null)
     {
         $this->container['address'] = $data['address'] ?? null;
+        $this->container['address_tag'] = $data['address_tag'] ?? null;
         $this->container['amount'] = $data['amount'] ?? null;
+        $this->container['classic_address'] = $data['classic_address'] ?? null;
     }
 
     /**
@@ -243,6 +255,30 @@ class CreateCoinsTransactionRequestFromAddressRIRecipients implements ModelInter
     }
 
     /**
+     * Gets address_tag
+     *
+     * @return int|null
+     */
+    public function getAddressTag()
+    {
+        return $this->container['address_tag'];
+    }
+
+    /**
+     * Sets address_tag
+     *
+     * @param int|null $address_tag Defines a specific Tag that is an additional XRP address feature. It helps identify a transaction recipient beyond a wallet address. The tag that was encoded into the x-Address along with the Source Classic Address.
+     *
+     * @return self
+     */
+    public function setAddressTag($address_tag)
+    {
+        $this->container['address_tag'] = $address_tag;
+
+        return $this;
+    }
+
+    /**
      * Gets amount
      *
      * @return string
@@ -262,6 +298,30 @@ class CreateCoinsTransactionRequestFromAddressRIRecipients implements ModelInter
     public function setAmount($amount)
     {
         $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets classic_address
+     *
+     * @return string|null
+     */
+    public function getClassicAddress()
+    {
+        return $this->container['classic_address'];
+    }
+
+    /**
+     * Sets classic_address
+     *
+     * @param string|null $classic_address Represents the public address, which is a compressed and shortened form of a public key. The classic address is shown when the source address is an x-Address.
+     *
+     * @return self
+     */
+    public function setClassicAddress($classic_address)
+    {
+        $this->container['classic_address'] = $classic_address;
 
         return $this;
     }

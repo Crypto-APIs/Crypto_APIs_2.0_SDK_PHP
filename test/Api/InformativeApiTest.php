@@ -109,6 +109,30 @@ class InformativeApiTest extends TestCase
     }
 
     /**
+     * Test case for listAllAssetsByWalletID
+     *
+     * List All Assets By Wallet ID.
+     *
+     */
+    public function testListAllAssetsByWalletID()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for listAllAssetsFromAllWallets
+     *
+     * List All Assets From All Wallets.
+     *
+     */
+    public function testListAllAssetsFromAllWallets()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for listDepositAddresses
      *
      * List Deposit Addresses.

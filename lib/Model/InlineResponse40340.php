@@ -63,7 +63,7 @@ class InlineResponse40340 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\GetLatestMinedZilliqaBlockE403'
+        'error' => '\CryptoAPIs\Model\GetLastMinedBlockE403'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40340 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\GetLatestMinedZilliqaBlockE403
+     * @return \CryptoAPIs\Model\GetLastMinedBlockE403
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40340 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\GetLatestMinedZilliqaBlockE403 $error error
+     * @param \CryptoAPIs\Model\GetLastMinedBlockE403 $error error
      *
      * @return self
      */

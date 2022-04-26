@@ -66,6 +66,7 @@ class NewConfirmedInternalTransactionsRI implements ModelInterface, ArrayAccess,
         'created_timestamp' => 'int',
         'event_type' => 'string',
         'is_active' => 'bool',
+        'receive_callback_on' => 'int',
         'reference_id' => 'string'
     ];
 
@@ -83,6 +84,7 @@ class NewConfirmedInternalTransactionsRI implements ModelInterface, ArrayAccess,
         'created_timestamp' => null,
         'event_type' => null,
         'is_active' => null,
+        'receive_callback_on' => null,
         'reference_id' => null
     ];
 
@@ -119,6 +121,7 @@ class NewConfirmedInternalTransactionsRI implements ModelInterface, ArrayAccess,
         'created_timestamp' => 'createdTimestamp',
         'event_type' => 'eventType',
         'is_active' => 'isActive',
+        'receive_callback_on' => 'receiveCallbackOn',
         'reference_id' => 'referenceId'
     ];
 
@@ -134,6 +137,7 @@ class NewConfirmedInternalTransactionsRI implements ModelInterface, ArrayAccess,
         'created_timestamp' => 'setCreatedTimestamp',
         'event_type' => 'setEventType',
         'is_active' => 'setIsActive',
+        'receive_callback_on' => 'setReceiveCallbackOn',
         'reference_id' => 'setReferenceId'
     ];
 
@@ -149,6 +153,7 @@ class NewConfirmedInternalTransactionsRI implements ModelInterface, ArrayAccess,
         'created_timestamp' => 'getCreatedTimestamp',
         'event_type' => 'getEventType',
         'is_active' => 'getIsActive',
+        'receive_callback_on' => 'getReceiveCallbackOn',
         'reference_id' => 'getReferenceId'
     ];
 
@@ -215,6 +220,7 @@ class NewConfirmedInternalTransactionsRI implements ModelInterface, ArrayAccess,
         $this->container['created_timestamp'] = $data['created_timestamp'] ?? null;
         $this->container['event_type'] = $data['event_type'] ?? null;
         $this->container['is_active'] = $data['is_active'] ?? null;
+        $this->container['receive_callback_on'] = $data['receive_callback_on'] ?? null;
         $this->container['reference_id'] = $data['reference_id'] ?? null;
     }
 
@@ -244,6 +250,9 @@ class NewConfirmedInternalTransactionsRI implements ModelInterface, ArrayAccess,
         }
         if ($this->container['is_active'] === null) {
             $invalidProperties[] = "'is_active' can't be null";
+        }
+        if ($this->container['receive_callback_on'] === null) {
+            $invalidProperties[] = "'receive_callback_on' can't be null";
         }
         if ($this->container['reference_id'] === null) {
             $invalidProperties[] = "'reference_id' can't be null";
@@ -324,7 +333,7 @@ class NewConfirmedInternalTransactionsRI implements ModelInterface, ArrayAccess,
     /**
      * Sets callback_url
      *
-     * @param string $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+     * @param string $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. `We support ONLY httpS type of protocol`.
      *
      * @return self
      */
@@ -403,6 +412,30 @@ class NewConfirmedInternalTransactionsRI implements ModelInterface, ArrayAccess,
     public function setIsActive($is_active)
     {
         $this->container['is_active'] = $is_active;
+
+        return $this;
+    }
+
+    /**
+     * Gets receive_callback_on
+     *
+     * @return int
+     */
+    public function getReceiveCallbackOn()
+    {
+        return $this->container['receive_callback_on'];
+    }
+
+    /**
+     * Sets receive_callback_on
+     *
+     * @param int $receive_callback_on Represents the exact confirmation, on which the user wants to receive callback.
+     *
+     * @return self
+     */
+    public function setReceiveCallbackOn($receive_callback_on)
+    {
+        $this->container['receive_callback_on'] = $receive_callback_on;
 
         return $this;
     }

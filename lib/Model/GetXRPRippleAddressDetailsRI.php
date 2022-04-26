@@ -78,7 +78,7 @@ class GetXRPRippleAddressDetailsRI implements ModelInterface, ArrayAccess, \Json
         'balance' => null,
         'incoming_transactions_count' => null,
         'outgoing_transactions_count' => null,
-        'sequence' => null,
+        'sequence' => 'int64',
         'transactions_count' => null
     ];
 

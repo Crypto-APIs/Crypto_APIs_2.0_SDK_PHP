@@ -36,10 +36,10 @@ $apiInstance = new CryptoAPIs\Api\MetadataApi(
     new GuzzleHttp\Client(),
     $config
 );
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $asset_type = crypto; // string | Defines the type of the supported asset. This could be either \"crypto\" or \"fiat\".
 $limit = 50; // int | Defines how many items should be returned in the response per page basis.
-$offset = 10; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
+$offset = 0; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
 
 try {
     $result = $apiInstance->listSupportedAssets($context, $asset_type, $limit, $offset);

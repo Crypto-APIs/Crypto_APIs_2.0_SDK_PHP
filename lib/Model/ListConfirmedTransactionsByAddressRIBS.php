@@ -93,7 +93,7 @@ class ListConfirmedTransactionsByAddressRIBS implements ModelInterface, ArrayAcc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'locktime' => null,
+        'locktime' => 'int64',
         'size' => null,
         'v_size' => null,
         'version' => null,

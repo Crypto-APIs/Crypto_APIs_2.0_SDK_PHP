@@ -63,7 +63,7 @@ class InlineResponse40381 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\GetFeeAddressDetailsE403'
+        'error' => '\CryptoAPIs\Model\ActivateBlockchainEventSubscriptionE403'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40381 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\GetFeeAddressDetailsE403
+     * @return \CryptoAPIs\Model\ActivateBlockchainEventSubscriptionE403
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40381 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\GetFeeAddressDetailsE403 $error error
+     * @param \CryptoAPIs\Model\ActivateBlockchainEventSubscriptionE403 $error error
      *
      * @return self
      */

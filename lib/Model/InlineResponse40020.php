@@ -63,7 +63,7 @@ class InlineResponse40020 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressE400'
+        'error' => '\CryptoAPIs\Model\GetUnconfirmedOmniTransactionByTransactionIDTxidE400'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40020 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressE400
+     * @return \CryptoAPIs\Model\GetUnconfirmedOmniTransactionByTransactionIDTxidE400
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40020 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressE400 $error error
+     * @param \CryptoAPIs\Model\GetUnconfirmedOmniTransactionByTransactionIDTxidE400 $error error
      *
      * @return self
      */

@@ -63,7 +63,7 @@ class InlineResponse40017 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\ListTransactionsByBlockHashE400'
+        'error' => '\CryptoAPIs\Model\ListAllUnconfirmedTransactionsE400'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40017 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\ListTransactionsByBlockHashE400
+     * @return \CryptoAPIs\Model\ListAllUnconfirmedTransactionsE400
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40017 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\ListTransactionsByBlockHashE400 $error error
+     * @param \CryptoAPIs\Model\ListAllUnconfirmedTransactionsE400 $error error
      *
      * @return self
      */

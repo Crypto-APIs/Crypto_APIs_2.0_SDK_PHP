@@ -63,7 +63,7 @@ class InlineResponse40322 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\ListZilliqaTransactionsByBlockHeightE403'
+        'error' => '\CryptoAPIs\Model\ListZilliqaTransactionsByBlockHashE403'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40322 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHeightE403
+     * @return \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHashE403
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40322 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHeightE403 $error error
+     * @param \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHashE403 $error error
      *
      * @return self
      */

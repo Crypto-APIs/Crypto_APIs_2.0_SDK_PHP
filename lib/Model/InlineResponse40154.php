@@ -63,7 +63,7 @@ class InlineResponse40154 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\ListTokensTransfersByTransactionHashE401'
+        'error' => '\CryptoAPIs\Model\GetInternalTransactionByTransactionHashAndOperationIdE401'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40154 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\ListTokensTransfersByTransactionHashE401
+     * @return \CryptoAPIs\Model\GetInternalTransactionByTransactionHashAndOperationIdE401
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40154 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\ListTokensTransfersByTransactionHashE401 $error error
+     * @param \CryptoAPIs\Model\GetInternalTransactionByTransactionHashAndOperationIdE401 $error error
      *
      * @return self
      */

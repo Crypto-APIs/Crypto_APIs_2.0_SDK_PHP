@@ -63,7 +63,7 @@ class InlineResponse40341 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\GetTransactionRequestDetailsE403'
+        'error' => '\CryptoAPIs\Model\ListOmniTransactionsByBlockHeightE403'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40341 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\GetTransactionRequestDetailsE403
+     * @return \CryptoAPIs\Model\ListOmniTransactionsByBlockHeightE403
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40341 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\GetTransactionRequestDetailsE403 $error error
+     * @param \CryptoAPIs\Model\ListOmniTransactionsByBlockHeightE403 $error error
      *
      * @return self
      */

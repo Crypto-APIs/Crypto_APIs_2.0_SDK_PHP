@@ -60,10 +60,8 @@ class MinedTransactionRI implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'address' => 'string',
         'callback_secret_key' => 'string',
         'callback_url' => 'string',
-        'confirmations_count' => 'int',
         'created_timestamp' => 'int',
         'event_type' => 'string',
         'is_active' => 'bool',
@@ -79,10 +77,8 @@ class MinedTransactionRI implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'address' => null,
         'callback_secret_key' => null,
         'callback_url' => null,
-        'confirmations_count' => null,
         'created_timestamp' => null,
         'event_type' => null,
         'is_active' => null,
@@ -117,10 +113,8 @@ class MinedTransactionRI implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'address' => 'address',
         'callback_secret_key' => 'callbackSecretKey',
         'callback_url' => 'callbackUrl',
-        'confirmations_count' => 'confirmationsCount',
         'created_timestamp' => 'createdTimestamp',
         'event_type' => 'eventType',
         'is_active' => 'isActive',
@@ -134,10 +128,8 @@ class MinedTransactionRI implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'address' => 'setAddress',
         'callback_secret_key' => 'setCallbackSecretKey',
         'callback_url' => 'setCallbackUrl',
-        'confirmations_count' => 'setConfirmationsCount',
         'created_timestamp' => 'setCreatedTimestamp',
         'event_type' => 'setEventType',
         'is_active' => 'setIsActive',
@@ -151,10 +143,8 @@ class MinedTransactionRI implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'address' => 'getAddress',
         'callback_secret_key' => 'getCallbackSecretKey',
         'callback_url' => 'getCallbackUrl',
-        'confirmations_count' => 'getConfirmationsCount',
         'created_timestamp' => 'getCreatedTimestamp',
         'event_type' => 'getEventType',
         'is_active' => 'getIsActive',
@@ -219,10 +209,8 @@ class MinedTransactionRI implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(array $data = null)
     {
-        $this->container['address'] = $data['address'] ?? null;
         $this->container['callback_secret_key'] = $data['callback_secret_key'] ?? null;
         $this->container['callback_url'] = $data['callback_url'] ?? null;
-        $this->container['confirmations_count'] = $data['confirmations_count'] ?? null;
         $this->container['created_timestamp'] = $data['created_timestamp'] ?? null;
         $this->container['event_type'] = $data['event_type'] ?? null;
         $this->container['is_active'] = $data['is_active'] ?? null;
@@ -239,17 +227,11 @@ class MinedTransactionRI implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if ($this->container['address'] === null) {
-            $invalidProperties[] = "'address' can't be null";
-        }
         if ($this->container['callback_secret_key'] === null) {
             $invalidProperties[] = "'callback_secret_key' can't be null";
         }
         if ($this->container['callback_url'] === null) {
             $invalidProperties[] = "'callback_url' can't be null";
-        }
-        if ($this->container['confirmations_count'] === null) {
-            $invalidProperties[] = "'confirmations_count' can't be null";
         }
         if ($this->container['created_timestamp'] === null) {
             $invalidProperties[] = "'created_timestamp' can't be null";
@@ -280,30 +262,6 @@ class MinedTransactionRI implements ModelInterface, ArrayAccess, \JsonSerializab
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets address
-     *
-     * @return string
-     */
-    public function getAddress()
-    {
-        return $this->container['address'];
-    }
-
-    /**
-     * Sets address
-     *
-     * @param string $address Represents the address of the transaction.
-     *
-     * @return self
-     */
-    public function setAddress($address)
-    {
-        $this->container['address'] = $address;
-
-        return $this;
-    }
 
     /**
      * Gets callback_secret_key
@@ -342,37 +300,13 @@ class MinedTransactionRI implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets callback_url
      *
-     * @param string $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+     * @param string $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. `We support ONLY httpS type of protocol`.
      *
      * @return self
      */
     public function setCallbackUrl($callback_url)
     {
         $this->container['callback_url'] = $callback_url;
-
-        return $this;
-    }
-
-    /**
-     * Gets confirmations_count
-     *
-     * @return int
-     */
-    public function getConfirmationsCount()
-    {
-        return $this->container['confirmations_count'];
-    }
-
-    /**
-     * Sets confirmations_count
-     *
-     * @param int $confirmations_count Represents the number of confirmations, i.e. the amount of blocks that have been built on top of this block.
-     *
-     * @return self
-     */
-    public function setConfirmationsCount($confirmations_count)
-    {
-        $this->container['confirmations_count'] = $confirmations_count;
 
         return $this;
     }

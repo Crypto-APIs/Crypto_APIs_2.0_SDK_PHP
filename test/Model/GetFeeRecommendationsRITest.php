@@ -115,4 +115,13 @@ class GetFeeRecommendationsRITest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "fee_cushion_multiplier"
+     */
+    public function testPropertyFeeCushionMultiplier()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

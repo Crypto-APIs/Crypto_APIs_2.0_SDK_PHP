@@ -61,10 +61,12 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
       */
     protected static $openAPITypes = [
         'address' => 'string',
+        'callback_secret_key' => 'string',
         'callback_url' => 'string',
         'confirmations_count' => 'int',
         'created_timestamp' => 'int',
         'event_type' => 'string',
+        'is_active' => 'bool',
         'reference_id' => 'string'
     ];
 
@@ -77,10 +79,12 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
       */
     protected static $openAPIFormats = [
         'address' => null,
+        'callback_secret_key' => null,
         'callback_url' => null,
         'confirmations_count' => null,
         'created_timestamp' => null,
         'event_type' => null,
+        'is_active' => null,
         'reference_id' => null
     ];
 
@@ -112,10 +116,12 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
      */
     protected static $attributeMap = [
         'address' => 'address',
+        'callback_secret_key' => 'callbackSecretKey',
         'callback_url' => 'callbackUrl',
         'confirmations_count' => 'confirmationsCount',
         'created_timestamp' => 'createdTimestamp',
         'event_type' => 'eventType',
+        'is_active' => 'isActive',
         'reference_id' => 'referenceId'
     ];
 
@@ -126,10 +132,12 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
      */
     protected static $setters = [
         'address' => 'setAddress',
+        'callback_secret_key' => 'setCallbackSecretKey',
         'callback_url' => 'setCallbackUrl',
         'confirmations_count' => 'setConfirmationsCount',
         'created_timestamp' => 'setCreatedTimestamp',
         'event_type' => 'setEventType',
+        'is_active' => 'setIsActive',
         'reference_id' => 'setReferenceId'
     ];
 
@@ -140,10 +148,12 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
      */
     protected static $getters = [
         'address' => 'getAddress',
+        'callback_secret_key' => 'getCallbackSecretKey',
         'callback_url' => 'getCallbackUrl',
         'confirmations_count' => 'getConfirmationsCount',
         'created_timestamp' => 'getCreatedTimestamp',
         'event_type' => 'getEventType',
+        'is_active' => 'getIsActive',
         'reference_id' => 'getReferenceId'
     ];
 
@@ -205,10 +215,12 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
     public function __construct(array $data = null)
     {
         $this->container['address'] = $data['address'] ?? null;
+        $this->container['callback_secret_key'] = $data['callback_secret_key'] ?? null;
         $this->container['callback_url'] = $data['callback_url'] ?? null;
         $this->container['confirmations_count'] = $data['confirmations_count'] ?? null;
         $this->container['created_timestamp'] = $data['created_timestamp'] ?? null;
         $this->container['event_type'] = $data['event_type'] ?? null;
+        $this->container['is_active'] = $data['is_active'] ?? null;
         $this->container['reference_id'] = $data['reference_id'] ?? null;
     }
 
@@ -232,6 +244,9 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
         }
         if ($this->container['event_type'] === null) {
             $invalidProperties[] = "'event_type' can't be null";
+        }
+        if ($this->container['is_active'] === null) {
+            $invalidProperties[] = "'is_active' can't be null";
         }
         if ($this->container['reference_id'] === null) {
             $invalidProperties[] = "'reference_id' can't be null";
@@ -276,6 +291,30 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
     }
 
     /**
+     * Gets callback_secret_key
+     *
+     * @return string|null
+     */
+    public function getCallbackSecretKey()
+    {
+        return $this->container['callback_secret_key'];
+    }
+
+    /**
+     * Sets callback_secret_key
+     *
+     * @param string|null $callback_secret_key Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).
+     *
+     * @return self
+     */
+    public function setCallbackSecretKey($callback_secret_key)
+    {
+        $this->container['callback_secret_key'] = $callback_secret_key;
+
+        return $this;
+    }
+
+    /**
      * Gets callback_url
      *
      * @return string
@@ -288,7 +327,7 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
     /**
      * Sets callback_url
      *
-     * @param string $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+     * @param string $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. `We support ONLY httpS type of protocol`.
      *
      * @return self
      */
@@ -367,6 +406,30 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRI implements ModelInterf
     public function setEventType($event_type)
     {
         $this->container['event_type'] = $event_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_active
+     *
+     * @return bool
+     */
+    public function getIsActive()
+    {
+        return $this->container['is_active'];
+    }
+
+    /**
+     * Sets is_active
+     *
+     * @param bool $is_active Defines whether the subscription is active or not. Set as boolean.
+     *
+     * @return self
+     */
+    public function setIsActive($is_active)
+    {
+        $this->container['is_active'] = $is_active;
 
         return $this;
     }

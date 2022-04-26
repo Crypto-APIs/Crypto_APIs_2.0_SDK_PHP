@@ -81,7 +81,7 @@ class GetTransactionDetailsByTransactionIDFromCallbackRIBSD2Vin implements Model
         'addresses' => null,
         'coinbase' => null,
         'script_sig' => null,
-        'sequence' => null,
+        'sequence' => 'int64',
         'txid' => null,
         'txinwitness' => null,
         'value' => null,

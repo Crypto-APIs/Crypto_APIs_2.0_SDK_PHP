@@ -90,7 +90,7 @@ class ListTransactionsByBlockHashRIBSZ implements ModelInterface, ArrayAccess, \
         'expiry_height' => null,
         'join_split_pub_key' => null,
         'join_split_sig' => null,
-        'locktime' => null,
+        'locktime' => 'int64',
         'overwintered' => null,
         'size' => null,
         'v_join_split' => null,

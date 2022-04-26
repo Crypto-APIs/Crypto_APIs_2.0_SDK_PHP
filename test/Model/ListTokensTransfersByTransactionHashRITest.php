@@ -178,4 +178,13 @@ class ListTokensTransfersByTransactionHashRITest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "transaction_fee"
+     */
+    public function testPropertyTransactionFee()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

@@ -63,7 +63,7 @@ class InlineResponse40137 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\GetLastMinedBlockE401'
+        'error' => '\CryptoAPIs\Model\CreateFungibleTokensTransactionRequestFromAddressE401'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40137 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\GetLastMinedBlockE401
+     * @return \CryptoAPIs\Model\CreateFungibleTokensTransactionRequestFromAddressE401
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40137 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\GetLastMinedBlockE401 $error error
+     * @param \CryptoAPIs\Model\CreateFungibleTokensTransactionRequestFromAddressE401 $error error
      *
      * @return self
      */

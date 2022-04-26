@@ -47,7 +47,7 @@ $apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
 );
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $mined_transaction_rb = new \CryptoAPIs\Model\MinedTransactionRB(); // \CryptoAPIs\Model\MinedTransactionRB
 
 try {
@@ -115,7 +115,7 @@ $apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
 );
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $new_block_rb = new \CryptoAPIs\Model\NewBlockRB(); // \CryptoAPIs\Model\NewBlockRB
 
 try {
@@ -183,7 +183,7 @@ $apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
 );
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $new_confirmed_coins_transactions_rb = new \CryptoAPIs\Model\NewConfirmedCoinsTransactionsRB(); // \CryptoAPIs\Model\NewConfirmedCoinsTransactionsRB
 
 try {
@@ -251,7 +251,7 @@ $apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
 );
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $new_confirmed_coins_transactions_and_each_confirmation_rb = new \CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationRB(); // \CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationRB
 
 try {
@@ -319,7 +319,7 @@ $apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
 );
 $blockchain = ethereum-classic; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = mordor; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $new_confirmed_internal_transactions_rb = new \CryptoAPIs\Model\NewConfirmedInternalTransactionsRB(); // \CryptoAPIs\Model\NewConfirmedInternalTransactionsRB
 
 try {
@@ -387,7 +387,7 @@ $apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
 );
 $blockchain = ethereum-classic; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = mordor; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $new_confirmed_internal_transactions_and_each_confirmation_rb = new \CryptoAPIs\Model\NewConfirmedInternalTransactionsAndEachConfirmationRB(); // \CryptoAPIs\Model\NewConfirmedInternalTransactionsAndEachConfirmationRB
 
 try {
@@ -455,7 +455,7 @@ $apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
 );
 $blockchain = ethereum; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = ropsten; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $new_confirmed_tokens_transactions_rb = new \CryptoAPIs\Model\NewConfirmedTokensTransactionsRB(); // \CryptoAPIs\Model\NewConfirmedTokensTransactionsRB
 
 try {
@@ -523,7 +523,7 @@ $apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
 );
 $blockchain = ethereum; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = ropsten; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $new_confirmed_tokens_transactions_and_each_confirmation_rb = new \CryptoAPIs\Model\NewConfirmedTokensTransactionsAndEachConfirmationRB(); // \CryptoAPIs\Model\NewConfirmedTokensTransactionsAndEachConfirmationRB
 
 try {
@@ -591,7 +591,7 @@ $apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
 );
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $new_unconfirmed_coins_transactions_rb = new \CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsRB(); // \CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsRB
 
 try {
@@ -659,7 +659,7 @@ $apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
 );
 $blockchain = ethereum; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = ropsten; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $new_unconfirmed_tokens_transactions_rb = new \CryptoAPIs\Model\NewUnconfirmedTokensTransactionsRB(); // \CryptoAPIs\Model\NewUnconfirmedTokensTransactionsRB
 
 try {

@@ -63,7 +63,7 @@ class InlineResponse40021 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\ListZilliqaTransactionsByBlockHashE400'
+        'error' => '\CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressE400'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40021 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHashE400
+     * @return \CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressE400
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40021 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\ListZilliqaTransactionsByBlockHashE400 $error error
+     * @param \CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressE400 $error error
      *
      * @return self
      */

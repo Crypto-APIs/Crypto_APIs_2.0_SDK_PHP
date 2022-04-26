@@ -81,6 +81,15 @@ class CreateCoinsTransactionRequestFromAddressRITest extends TestCase
     }
 
     /**
+     * Test attribute "address_tag"
+     */
+    public function testPropertyAddressTag()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "callback_secret_key"
      */
     public function testPropertyCallbackSecretKey()
@@ -93,6 +102,15 @@ class CreateCoinsTransactionRequestFromAddressRITest extends TestCase
      * Test attribute "callback_url"
      */
     public function testPropertyCallbackUrl()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "classic_address"
+     */
+    public function testPropertyClassicAddress()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

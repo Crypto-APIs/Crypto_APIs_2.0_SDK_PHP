@@ -97,6 +97,18 @@ class ManageSubscriptionsApiTest extends TestCase
     }
 
     /**
+     * Test case for getBlockchainEventSubscriptionDetailsByReferenceID
+     *
+     * Get Blockchain Event Subscription Details By Reference ID.
+     *
+     */
+    public function testGetBlockchainEventSubscriptionDetailsByReferenceID()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for listBlockchainEventsSubscriptions
      *
      * List Blockchain Events Subscriptions.

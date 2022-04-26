@@ -81,15 +81,6 @@ class MinedTransactionRITest extends TestCase
     }
 
     /**
-     * Test attribute "address"
-     */
-    public function testPropertyAddress()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "callback_secret_key"
      */
     public function testPropertyCallbackSecretKey()
@@ -102,15 +93,6 @@ class MinedTransactionRITest extends TestCase
      * Test attribute "callback_url"
      */
     public function testPropertyCallbackUrl()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "confirmations_count"
-     */
-    public function testPropertyConfirmationsCount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

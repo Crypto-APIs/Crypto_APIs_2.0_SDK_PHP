@@ -81,18 +81,18 @@ class ListConfirmedTokensTransfersByAddressRDataTest extends TestCase
     }
 
     /**
-     * Test attribute "offset"
+     * Test attribute "limit"
      */
-    public function testPropertyOffset()
+    public function testPropertyLimit()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "limit"
+     * Test attribute "offset"
      */
-    public function testPropertyLimit()
+    public function testPropertyOffset()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

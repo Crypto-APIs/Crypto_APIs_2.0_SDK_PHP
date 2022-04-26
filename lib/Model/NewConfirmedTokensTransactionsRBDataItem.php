@@ -63,7 +63,8 @@ class NewConfirmedTokensTransactionsRBDataItem implements ModelInterface, ArrayA
         'address' => 'string',
         'allow_duplicates' => 'bool',
         'callback_secret_key' => 'string',
-        'callback_url' => 'string'
+        'callback_url' => 'string',
+        'receive_callback_on' => 'int'
     ];
 
     /**
@@ -77,7 +78,8 @@ class NewConfirmedTokensTransactionsRBDataItem implements ModelInterface, ArrayA
         'address' => null,
         'allow_duplicates' => null,
         'callback_secret_key' => null,
-        'callback_url' => null
+        'callback_url' => null,
+        'receive_callback_on' => null
     ];
 
     /**
@@ -110,7 +112,8 @@ class NewConfirmedTokensTransactionsRBDataItem implements ModelInterface, ArrayA
         'address' => 'address',
         'allow_duplicates' => 'allowDuplicates',
         'callback_secret_key' => 'callbackSecretKey',
-        'callback_url' => 'callbackUrl'
+        'callback_url' => 'callbackUrl',
+        'receive_callback_on' => 'receiveCallbackOn'
     ];
 
     /**
@@ -122,7 +125,8 @@ class NewConfirmedTokensTransactionsRBDataItem implements ModelInterface, ArrayA
         'address' => 'setAddress',
         'allow_duplicates' => 'setAllowDuplicates',
         'callback_secret_key' => 'setCallbackSecretKey',
-        'callback_url' => 'setCallbackUrl'
+        'callback_url' => 'setCallbackUrl',
+        'receive_callback_on' => 'setReceiveCallbackOn'
     ];
 
     /**
@@ -134,7 +138,8 @@ class NewConfirmedTokensTransactionsRBDataItem implements ModelInterface, ArrayA
         'address' => 'getAddress',
         'allow_duplicates' => 'getAllowDuplicates',
         'callback_secret_key' => 'getCallbackSecretKey',
-        'callback_url' => 'getCallbackUrl'
+        'callback_url' => 'getCallbackUrl',
+        'receive_callback_on' => 'getReceiveCallbackOn'
     ];
 
     /**
@@ -198,6 +203,7 @@ class NewConfirmedTokensTransactionsRBDataItem implements ModelInterface, ArrayA
         $this->container['allow_duplicates'] = $data['allow_duplicates'] ?? false;
         $this->container['callback_secret_key'] = $data['callback_secret_key'] ?? null;
         $this->container['callback_url'] = $data['callback_url'] ?? null;
+        $this->container['receive_callback_on'] = $data['receive_callback_on'] ?? null;
     }
 
     /**
@@ -315,13 +321,37 @@ class NewConfirmedTokensTransactionsRBDataItem implements ModelInterface, ArrayA
     /**
      * Sets callback_url
      *
-     * @param string $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+     * @param string $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. `We support ONLY httpS type of protocol`.
      *
      * @return self
      */
     public function setCallbackUrl($callback_url)
     {
         $this->container['callback_url'] = $callback_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets receive_callback_on
+     *
+     * @return int|null
+     */
+    public function getReceiveCallbackOn()
+    {
+        return $this->container['receive_callback_on'];
+    }
+
+    /**
+     * Sets receive_callback_on
+     *
+     * @param int|null $receive_callback_on Represents the exact confirmation, on which the user wants to receive callback.
+     *
+     * @return self
+     */
+    public function setReceiveCallbackOn($receive_callback_on)
+    {
+        $this->container['receive_callback_on'] = $receive_callback_on;
 
         return $this;
     }

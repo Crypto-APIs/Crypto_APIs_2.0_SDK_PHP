@@ -72,7 +72,7 @@ class GetTransactionDetailsByTransactionIDFromCallbackRIBSZ2GasPrice implements 
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'amount' => null,
+        'amount' => 'int64',
         'unit' => null
     ];
 

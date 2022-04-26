@@ -127,7 +127,7 @@ class ExchangeRatesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetExchangeRateByAssetSymbolsR|\CryptoAPIs\Model\InlineResponse40087|\CryptoAPIs\Model\InlineResponse40187|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40387|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4224|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\GetExchangeRateByAssetSymbolsR|\CryptoAPIs\Model\InlineResponse400106|\CryptoAPIs\Model\InlineResponse401106|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403106|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4226|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getExchangeRateByAssetSymbols($from_asset_symbol, $to_asset_symbol, $context = null, $calculation_timestamp = null)
     {
@@ -147,7 +147,7 @@ class ExchangeRatesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetExchangeRateByAssetSymbolsR|\CryptoAPIs\Model\InlineResponse40087|\CryptoAPIs\Model\InlineResponse40187|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40387|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4224|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetExchangeRateByAssetSymbolsR|\CryptoAPIs\Model\InlineResponse400106|\CryptoAPIs\Model\InlineResponse401106|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403106|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4226|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getExchangeRateByAssetSymbolsWithHttpInfo($from_asset_symbol, $to_asset_symbol, $context = null, $calculation_timestamp = null)
     {
@@ -195,26 +195,26 @@ class ExchangeRatesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40087' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400106' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40087', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400106', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40187' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401106' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40187', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401106', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -231,14 +231,14 @@ class ExchangeRatesApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40387' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403106' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40387', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403106', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -267,14 +267,14 @@ class ExchangeRatesApi
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\CryptoAPIs\Model\InlineResponse4224' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse4226' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4224', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4226', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -330,7 +330,7 @@ class ExchangeRatesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40087',
+                        '\CryptoAPIs\Model\InlineResponse400106',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -338,7 +338,7 @@ class ExchangeRatesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40187',
+                        '\CryptoAPIs\Model\InlineResponse401106',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -354,7 +354,7 @@ class ExchangeRatesApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40387',
+                        '\CryptoAPIs\Model\InlineResponse403106',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -378,7 +378,7 @@ class ExchangeRatesApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse4224',
+                        '\CryptoAPIs\Model\InlineResponse4226',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -627,7 +627,7 @@ class ExchangeRatesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetExchangeRateByAssetsIDsR|\CryptoAPIs\Model\InlineResponse40088|\CryptoAPIs\Model\InlineResponse40188|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40388|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4225|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\GetExchangeRateByAssetsIDsR|\CryptoAPIs\Model\InlineResponse400107|\CryptoAPIs\Model\InlineResponse401107|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403107|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4227|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getExchangeRateByAssetsIDs($from_asset_id, $to_asset_id, $context = null, $calculation_timestamp = null)
     {
@@ -647,7 +647,7 @@ class ExchangeRatesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetExchangeRateByAssetsIDsR|\CryptoAPIs\Model\InlineResponse40088|\CryptoAPIs\Model\InlineResponse40188|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40388|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4225|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetExchangeRateByAssetsIDsR|\CryptoAPIs\Model\InlineResponse400107|\CryptoAPIs\Model\InlineResponse401107|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403107|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4227|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getExchangeRateByAssetsIDsWithHttpInfo($from_asset_id, $to_asset_id, $context = null, $calculation_timestamp = null)
     {
@@ -695,26 +695,26 @@ class ExchangeRatesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40088' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400107' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40088', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400107', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40188' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401107' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40188', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401107', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -731,14 +731,14 @@ class ExchangeRatesApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40388' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403107' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40388', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403107', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -767,14 +767,14 @@ class ExchangeRatesApi
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\CryptoAPIs\Model\InlineResponse4225' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse4227' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4225', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4227', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -830,7 +830,7 @@ class ExchangeRatesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40088',
+                        '\CryptoAPIs\Model\InlineResponse400107',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -838,7 +838,7 @@ class ExchangeRatesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40188',
+                        '\CryptoAPIs\Model\InlineResponse401107',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -854,7 +854,7 @@ class ExchangeRatesApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40388',
+                        '\CryptoAPIs\Model\InlineResponse403107',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -878,7 +878,7 @@ class ExchangeRatesApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse4225',
+                        '\CryptoAPIs\Model\InlineResponse4227',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

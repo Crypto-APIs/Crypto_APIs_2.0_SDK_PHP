@@ -66,6 +66,7 @@ class GetTransactionRequestDetailsRI implements ModelInterface, ArrayAccess, \Js
         'network' => 'string',
         'recipients' => '\CryptoAPIs\Model\GetTransactionRequestDetailsRIRecipients[]',
         'total_transaction_amount' => 'string',
+        'transaction_id' => 'string',
         'transaction_request_status' => 'string',
         'transaction_type' => 'string',
         'unit' => 'string',
@@ -86,6 +87,7 @@ class GetTransactionRequestDetailsRI implements ModelInterface, ArrayAccess, \Js
         'network' => null,
         'recipients' => null,
         'total_transaction_amount' => null,
+        'transaction_id' => null,
         'transaction_request_status' => null,
         'transaction_type' => null,
         'unit' => null,
@@ -125,6 +127,7 @@ class GetTransactionRequestDetailsRI implements ModelInterface, ArrayAccess, \Js
         'network' => 'network',
         'recipients' => 'recipients',
         'total_transaction_amount' => 'totalTransactionAmount',
+        'transaction_id' => 'transactionId',
         'transaction_request_status' => 'transactionRequestStatus',
         'transaction_type' => 'transactionType',
         'unit' => 'unit',
@@ -143,6 +146,7 @@ class GetTransactionRequestDetailsRI implements ModelInterface, ArrayAccess, \Js
         'network' => 'setNetwork',
         'recipients' => 'setRecipients',
         'total_transaction_amount' => 'setTotalTransactionAmount',
+        'transaction_id' => 'setTransactionId',
         'transaction_request_status' => 'setTransactionRequestStatus',
         'transaction_type' => 'setTransactionType',
         'unit' => 'setUnit',
@@ -161,6 +165,7 @@ class GetTransactionRequestDetailsRI implements ModelInterface, ArrayAccess, \Js
         'network' => 'getNetwork',
         'recipients' => 'getRecipients',
         'total_transaction_amount' => 'getTotalTransactionAmount',
+        'transaction_id' => 'getTransactionId',
         'transaction_request_status' => 'getTransactionRequestStatus',
         'transaction_type' => 'getTransactionType',
         'unit' => 'getUnit',
@@ -215,6 +220,7 @@ class GetTransactionRequestDetailsRI implements ModelInterface, ArrayAccess, \Js
     const BLOCKCHAIN_DASH = 'dash';
     const BLOCKCHAIN_ETHEREUM = 'ethereum';
     const BLOCKCHAIN_ETHEREUM_CLASSIC = 'ethereum-classic';
+    const BLOCKCHAIN_XRP = 'xrp';
     const BLOCKCHAIN_ZCASH = 'zcash';
     const FEE_PRIORITY_SLOW = 'slow';
     const FEE_PRIORITY_STANDARD = 'standard';
@@ -251,6 +257,7 @@ class GetTransactionRequestDetailsRI implements ModelInterface, ArrayAccess, \Js
             self::BLOCKCHAIN_DASH,
             self::BLOCKCHAIN_ETHEREUM,
             self::BLOCKCHAIN_ETHEREUM_CLASSIC,
+            self::BLOCKCHAIN_XRP,
             self::BLOCKCHAIN_ZCASH,
         ];
     }
@@ -339,6 +346,7 @@ class GetTransactionRequestDetailsRI implements ModelInterface, ArrayAccess, \Js
         $this->container['network'] = $data['network'] ?? null;
         $this->container['recipients'] = $data['recipients'] ?? null;
         $this->container['total_transaction_amount'] = $data['total_transaction_amount'] ?? null;
+        $this->container['transaction_id'] = $data['transaction_id'] ?? null;
         $this->container['transaction_request_status'] = $data['transaction_request_status'] ?? null;
         $this->container['transaction_type'] = $data['transaction_type'] ?? null;
         $this->container['unit'] = $data['unit'] ?? null;
@@ -614,6 +622,30 @@ class GetTransactionRequestDetailsRI implements ModelInterface, ArrayAccess, \Js
     public function setTotalTransactionAmount($total_transaction_amount)
     {
         $this->container['total_transaction_amount'] = $total_transaction_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets transaction_id
+     *
+     * @return string|null
+     */
+    public function getTransactionId()
+    {
+        return $this->container['transaction_id'];
+    }
+
+    /**
+     * Sets transaction_id
+     *
+     * @param string|null $transaction_id Represents the unique identifier of a transaction, i.e. it could be transactionId in UTXO-based protocols like Bitcoin, and transaction hash in Ethereum blockchain.
+     *
+     * @return self
+     */
+    public function setTransactionId($transaction_id)
+    {
+        $this->container['transaction_id'] = $transaction_id;
 
         return $this;
     }

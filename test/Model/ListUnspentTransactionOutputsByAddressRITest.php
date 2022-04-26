@@ -81,6 +81,24 @@ class ListUnspentTransactionOutputsByAddressRITest extends TestCase
     }
 
     /**
+     * Test attribute "address"
+     */
+    public function testPropertyAddress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "amount"
+     */
+    public function testPropertyAmount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "index"
      */
     public function testPropertyIndex()
@@ -90,54 +108,9 @@ class ListUnspentTransactionOutputsByAddressRITest extends TestCase
     }
 
     /**
-     * Test attribute "locktime"
+     * Test attribute "is_confirmed"
      */
-    public function testPropertyLocktime()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "mined_in_block_hash"
-     */
-    public function testPropertyMinedInBlockHash()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "mined_in_block_height"
-     */
-    public function testPropertyMinedInBlockHeight()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "recipients"
-     */
-    public function testPropertyRecipients()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "senders"
-     */
-    public function testPropertySenders()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "size"
-     */
-    public function testPropertySize()
+    public function testPropertyIsConfirmed()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -153,63 +126,9 @@ class ListUnspentTransactionOutputsByAddressRITest extends TestCase
     }
 
     /**
-     * Test attribute "transaction_hash"
-     */
-    public function testPropertyTransactionHash()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "transaction_id"
      */
     public function testPropertyTransactionId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "version"
-     */
-    public function testPropertyVersion()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "vin"
-     */
-    public function testPropertyVin()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "vout"
-     */
-    public function testPropertyVout()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "fee"
-     */
-    public function testPropertyFee()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "blockchain_specific"
-     */
-    public function testPropertyBlockchainSpecific()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

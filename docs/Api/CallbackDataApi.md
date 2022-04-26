@@ -42,7 +42,7 @@ $apiInstance = new CryptoAPIs\Api\CallbackDataApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $address = mzYijhgmzZrmuB7wBDazRKirnChKyow4M3; // string | Represents the public address, which is a compressed and shortened form of a public key.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->getAddressDetailsFromCallback($blockchain, $network, $address, $context);
@@ -110,7 +110,7 @@ $apiInstance = new CryptoAPIs\Api\CallbackDataApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $block_hash = 000000000000000bdea8ba7df4bfd9f398e428fde8ee47152bcf93834ee48e8a; // string | Represents the hash of the block, which is its unique identifier. It represents a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->getBlockDetailsByBlockHashFromCallback($blockchain, $network, $block_hash, $context);
@@ -178,7 +178,7 @@ $apiInstance = new CryptoAPIs\Api\CallbackDataApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $block_height = 'block_height_example'; // string | Numeric representation of the block height
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->getBlockDetailsByBlockHeightFromCallback($blockchain, $network, $block_height, $context);
@@ -246,7 +246,7 @@ $apiInstance = new CryptoAPIs\Api\CallbackDataApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $transaction_id = 8888f6c8168ff69aaf6438ab185c690e8c76c63e5f9c472c1c86f08406ea74f2; // string | String identifier of the transaction
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->getTransactionDetailsByTransactionIDFromCallback($blockchain, $network, $transaction_id, $context);

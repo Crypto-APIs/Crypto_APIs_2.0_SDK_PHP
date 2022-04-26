@@ -206,12 +206,6 @@ class GetHDWalletXPubYPubZPubDetailsRI implements ModelInterface, ArrayAccess, \
         if ($this->container['confirmed_balance'] === null) {
             $invalidProperties[] = "'confirmed_balance' can't be null";
         }
-        if ($this->container['total_received'] === null) {
-            $invalidProperties[] = "'total_received' can't be null";
-        }
-        if ($this->container['total_spent'] === null) {
-            $invalidProperties[] = "'total_spent' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -254,7 +248,7 @@ class GetHDWalletXPubYPubZPubDetailsRI implements ModelInterface, ArrayAccess, \
     /**
      * Gets total_received
      *
-     * @return string
+     * @return string|null
      */
     public function getTotalReceived()
     {
@@ -264,7 +258,7 @@ class GetHDWalletXPubYPubZPubDetailsRI implements ModelInterface, ArrayAccess, \
     /**
      * Sets total_received
      *
-     * @param string $total_received Defines the total currency received to the Wallet.
+     * @param string|null $total_received Defines the total currency received to the Wallet.
      *
      * @return self
      */
@@ -278,7 +272,7 @@ class GetHDWalletXPubYPubZPubDetailsRI implements ModelInterface, ArrayAccess, \
     /**
      * Gets total_spent
      *
-     * @return string
+     * @return string|null
      */
     public function getTotalSpent()
     {
@@ -288,7 +282,7 @@ class GetHDWalletXPubYPubZPubDetailsRI implements ModelInterface, ArrayAccess, \
     /**
      * Sets total_spent
      *
-     * @param string $total_spent Defines the total currency spent from the Wallet.
+     * @param string|null $total_spent Defines the total currency spent from the Wallet.
      *
      * @return self
      */

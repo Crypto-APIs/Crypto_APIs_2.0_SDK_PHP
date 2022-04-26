@@ -299,7 +299,7 @@ class CreateCoinsTransactionFromAddressForWholeAmountRBDataItem implements Model
     /**
      * Sets callback_url
      *
-     * @param string|null $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+     * @param string|null $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. `We support ONLY httpS type of protocol`.
      *
      * @return self
      */

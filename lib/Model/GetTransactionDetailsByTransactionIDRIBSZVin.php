@@ -79,7 +79,7 @@ class GetTransactionDetailsByTransactionIDRIBSZVin implements ModelInterface, Ar
     protected static $openAPIFormats = [
         'addresses' => null,
         'script_sig' => null,
-        'sequence' => null,
+        'sequence' => 'int64',
         'txid' => null,
         'txinwitness' => null,
         'value' => null,

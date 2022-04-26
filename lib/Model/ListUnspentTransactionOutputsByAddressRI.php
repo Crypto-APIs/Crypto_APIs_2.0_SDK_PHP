@@ -60,21 +60,12 @@ class ListUnspentTransactionOutputsByAddressRI implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
+        'address' => 'string',
+        'amount' => 'string',
         'index' => 'int',
-        'locktime' => 'int',
-        'mined_in_block_hash' => 'string',
-        'mined_in_block_height' => 'int',
-        'recipients' => '\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIRecipients[]',
-        'senders' => '\CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRISenders[]',
-        'size' => 'int',
+        'is_confirmed' => 'bool',
         'timestamp' => 'int',
-        'transaction_hash' => 'string',
-        'transaction_id' => 'string',
-        'version' => 'int',
-        'vin' => '\CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRIVin[]',
-        'vout' => '\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSBVout[]',
-        'fee' => '\CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRIFee',
-        'blockchain_specific' => '\CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRIBlockchainSpecific'
+        'transaction_id' => 'string'
     ];
 
     /**
@@ -85,21 +76,12 @@ class ListUnspentTransactionOutputsByAddressRI implements ModelInterface, ArrayA
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'address' => null,
+        'amount' => null,
         'index' => null,
-        'locktime' => null,
-        'mined_in_block_hash' => null,
-        'mined_in_block_height' => null,
-        'recipients' => null,
-        'senders' => null,
-        'size' => null,
+        'is_confirmed' => null,
         'timestamp' => null,
-        'transaction_hash' => null,
-        'transaction_id' => null,
-        'version' => null,
-        'vin' => null,
-        'vout' => null,
-        'fee' => null,
-        'blockchain_specific' => null
+        'transaction_id' => null
     ];
 
     /**
@@ -129,21 +111,12 @@ class ListUnspentTransactionOutputsByAddressRI implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
+        'address' => 'address',
+        'amount' => 'amount',
         'index' => 'index',
-        'locktime' => 'locktime',
-        'mined_in_block_hash' => 'minedInBlockHash',
-        'mined_in_block_height' => 'minedInBlockHeight',
-        'recipients' => 'recipients',
-        'senders' => 'senders',
-        'size' => 'size',
+        'is_confirmed' => 'isConfirmed',
         'timestamp' => 'timestamp',
-        'transaction_hash' => 'transactionHash',
-        'transaction_id' => 'transactionId',
-        'version' => 'version',
-        'vin' => 'vin',
-        'vout' => 'vout',
-        'fee' => 'fee',
-        'blockchain_specific' => 'blockchainSpecific'
+        'transaction_id' => 'transactionId'
     ];
 
     /**
@@ -152,21 +125,12 @@ class ListUnspentTransactionOutputsByAddressRI implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
+        'address' => 'setAddress',
+        'amount' => 'setAmount',
         'index' => 'setIndex',
-        'locktime' => 'setLocktime',
-        'mined_in_block_hash' => 'setMinedInBlockHash',
-        'mined_in_block_height' => 'setMinedInBlockHeight',
-        'recipients' => 'setRecipients',
-        'senders' => 'setSenders',
-        'size' => 'setSize',
+        'is_confirmed' => 'setIsConfirmed',
         'timestamp' => 'setTimestamp',
-        'transaction_hash' => 'setTransactionHash',
-        'transaction_id' => 'setTransactionId',
-        'version' => 'setVersion',
-        'vin' => 'setVin',
-        'vout' => 'setVout',
-        'fee' => 'setFee',
-        'blockchain_specific' => 'setBlockchainSpecific'
+        'transaction_id' => 'setTransactionId'
     ];
 
     /**
@@ -175,21 +139,12 @@ class ListUnspentTransactionOutputsByAddressRI implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
+        'address' => 'getAddress',
+        'amount' => 'getAmount',
         'index' => 'getIndex',
-        'locktime' => 'getLocktime',
-        'mined_in_block_hash' => 'getMinedInBlockHash',
-        'mined_in_block_height' => 'getMinedInBlockHeight',
-        'recipients' => 'getRecipients',
-        'senders' => 'getSenders',
-        'size' => 'getSize',
+        'is_confirmed' => 'getIsConfirmed',
         'timestamp' => 'getTimestamp',
-        'transaction_hash' => 'getTransactionHash',
-        'transaction_id' => 'getTransactionId',
-        'version' => 'getVersion',
-        'vin' => 'getVin',
-        'vout' => 'getVout',
-        'fee' => 'getFee',
-        'blockchain_specific' => 'getBlockchainSpecific'
+        'transaction_id' => 'getTransactionId'
     ];
 
     /**
@@ -249,21 +204,12 @@ class ListUnspentTransactionOutputsByAddressRI implements ModelInterface, ArrayA
      */
     public function __construct(array $data = null)
     {
+        $this->container['address'] = $data['address'] ?? null;
+        $this->container['amount'] = $data['amount'] ?? null;
         $this->container['index'] = $data['index'] ?? null;
-        $this->container['locktime'] = $data['locktime'] ?? null;
-        $this->container['mined_in_block_hash'] = $data['mined_in_block_hash'] ?? null;
-        $this->container['mined_in_block_height'] = $data['mined_in_block_height'] ?? null;
-        $this->container['recipients'] = $data['recipients'] ?? null;
-        $this->container['senders'] = $data['senders'] ?? null;
-        $this->container['size'] = $data['size'] ?? null;
+        $this->container['is_confirmed'] = $data['is_confirmed'] ?? null;
         $this->container['timestamp'] = $data['timestamp'] ?? null;
-        $this->container['transaction_hash'] = $data['transaction_hash'] ?? null;
         $this->container['transaction_id'] = $data['transaction_id'] ?? null;
-        $this->container['version'] = $data['version'] ?? null;
-        $this->container['vin'] = $data['vin'] ?? null;
-        $this->container['vout'] = $data['vout'] ?? null;
-        $this->container['fee'] = $data['fee'] ?? null;
-        $this->container['blockchain_specific'] = $data['blockchain_specific'] ?? null;
     }
 
     /**
@@ -275,50 +221,23 @@ class ListUnspentTransactionOutputsByAddressRI implements ModelInterface, ArrayA
     {
         $invalidProperties = [];
 
+        if ($this->container['address'] === null) {
+            $invalidProperties[] = "'address' can't be null";
+        }
+        if ($this->container['amount'] === null) {
+            $invalidProperties[] = "'amount' can't be null";
+        }
         if ($this->container['index'] === null) {
             $invalidProperties[] = "'index' can't be null";
         }
-        if ($this->container['locktime'] === null) {
-            $invalidProperties[] = "'locktime' can't be null";
-        }
-        if ($this->container['mined_in_block_hash'] === null) {
-            $invalidProperties[] = "'mined_in_block_hash' can't be null";
-        }
-        if ($this->container['mined_in_block_height'] === null) {
-            $invalidProperties[] = "'mined_in_block_height' can't be null";
-        }
-        if ($this->container['recipients'] === null) {
-            $invalidProperties[] = "'recipients' can't be null";
-        }
-        if ($this->container['senders'] === null) {
-            $invalidProperties[] = "'senders' can't be null";
-        }
-        if ($this->container['size'] === null) {
-            $invalidProperties[] = "'size' can't be null";
+        if ($this->container['is_confirmed'] === null) {
+            $invalidProperties[] = "'is_confirmed' can't be null";
         }
         if ($this->container['timestamp'] === null) {
             $invalidProperties[] = "'timestamp' can't be null";
         }
-        if ($this->container['transaction_hash'] === null) {
-            $invalidProperties[] = "'transaction_hash' can't be null";
-        }
         if ($this->container['transaction_id'] === null) {
             $invalidProperties[] = "'transaction_id' can't be null";
-        }
-        if ($this->container['version'] === null) {
-            $invalidProperties[] = "'version' can't be null";
-        }
-        if ($this->container['vin'] === null) {
-            $invalidProperties[] = "'vin' can't be null";
-        }
-        if ($this->container['vout'] === null) {
-            $invalidProperties[] = "'vout' can't be null";
-        }
-        if ($this->container['fee'] === null) {
-            $invalidProperties[] = "'fee' can't be null";
-        }
-        if ($this->container['blockchain_specific'] === null) {
-            $invalidProperties[] = "'blockchain_specific' can't be null";
         }
         return $invalidProperties;
     }
@@ -334,6 +253,54 @@ class ListUnspentTransactionOutputsByAddressRI implements ModelInterface, ArrayA
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets address
+     *
+     * @return string
+     */
+    public function getAddress()
+    {
+        return $this->container['address'];
+    }
+
+    /**
+     * Sets address
+     *
+     * @param string $address Represents the address that has unspend funds per which the result is returned.
+     *
+     * @return self
+     */
+    public function setAddress($address)
+    {
+        $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets amount
+     *
+     * @return string
+     */
+    public function getAmount()
+    {
+        return $this->container['amount'];
+    }
+
+    /**
+     * Sets amount
+     *
+     * @param string $amount Represents the sent/received amount.
+     *
+     * @return self
+     */
+    public function setAmount($amount)
+    {
+        $this->container['amount'] = $amount;
+
+        return $this;
+    }
 
     /**
      * Gets index
@@ -360,145 +327,25 @@ class ListUnspentTransactionOutputsByAddressRI implements ModelInterface, ArrayA
     }
 
     /**
-     * Gets locktime
+     * Gets is_confirmed
      *
-     * @return int
+     * @return bool
      */
-    public function getLocktime()
+    public function getIsConfirmed()
     {
-        return $this->container['locktime'];
+        return $this->container['is_confirmed'];
     }
 
     /**
-     * Sets locktime
+     * Sets is_confirmed
      *
-     * @param int $locktime Represents the time at which a particular transaction can be added to the blockchain
+     * @param bool $is_confirmed Represents the state of the transaction whether it is confirmed or not confirmed.
      *
      * @return self
      */
-    public function setLocktime($locktime)
+    public function setIsConfirmed($is_confirmed)
     {
-        $this->container['locktime'] = $locktime;
-
-        return $this;
-    }
-
-    /**
-     * Gets mined_in_block_hash
-     *
-     * @return string
-     */
-    public function getMinedInBlockHash()
-    {
-        return $this->container['mined_in_block_hash'];
-    }
-
-    /**
-     * Sets mined_in_block_hash
-     *
-     * @param string $mined_in_block_hash Represents the hash of the block where this transaction was mined/confirmed for first time. The hash is defined as a cryptographic digital fingerprint made by hashing the block header twice through the SHA256 algorithm.
-     *
-     * @return self
-     */
-    public function setMinedInBlockHash($mined_in_block_hash)
-    {
-        $this->container['mined_in_block_hash'] = $mined_in_block_hash;
-
-        return $this;
-    }
-
-    /**
-     * Gets mined_in_block_height
-     *
-     * @return int
-     */
-    public function getMinedInBlockHeight()
-    {
-        return $this->container['mined_in_block_height'];
-    }
-
-    /**
-     * Sets mined_in_block_height
-     *
-     * @param int $mined_in_block_height Represents the hight of the block where this transaction was mined/confirmed for first time. The height is defined as the number of blocks in the blockchain preceding this specific block.
-     *
-     * @return self
-     */
-    public function setMinedInBlockHeight($mined_in_block_height)
-    {
-        $this->container['mined_in_block_height'] = $mined_in_block_height;
-
-        return $this;
-    }
-
-    /**
-     * Gets recipients
-     *
-     * @return \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIRecipients[]
-     */
-    public function getRecipients()
-    {
-        return $this->container['recipients'];
-    }
-
-    /**
-     * Sets recipients
-     *
-     * @param \CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIRecipients[] $recipients Represents a list of recipient addresses with the respective amounts. In account-based protocols like Ethereum there is only one address in this list.
-     *
-     * @return self
-     */
-    public function setRecipients($recipients)
-    {
-        $this->container['recipients'] = $recipients;
-
-        return $this;
-    }
-
-    /**
-     * Gets senders
-     *
-     * @return \CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRISenders[]
-     */
-    public function getSenders()
-    {
-        return $this->container['senders'];
-    }
-
-    /**
-     * Sets senders
-     *
-     * @param \CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRISenders[] $senders Object Array representation of transaction senders
-     *
-     * @return self
-     */
-    public function setSenders($senders)
-    {
-        $this->container['senders'] = $senders;
-
-        return $this;
-    }
-
-    /**
-     * Gets size
-     *
-     * @return int
-     */
-    public function getSize()
-    {
-        return $this->container['size'];
-    }
-
-    /**
-     * Sets size
-     *
-     * @param int $size Represents the total size of this transaction
-     *
-     * @return self
-     */
-    public function setSize($size)
-    {
-        $this->container['size'] = $size;
+        $this->container['is_confirmed'] = $is_confirmed;
 
         return $this;
     }
@@ -528,30 +375,6 @@ class ListUnspentTransactionOutputsByAddressRI implements ModelInterface, ArrayA
     }
 
     /**
-     * Gets transaction_hash
-     *
-     * @return string
-     */
-    public function getTransactionHash()
-    {
-        return $this->container['transaction_hash'];
-    }
-
-    /**
-     * Sets transaction_hash
-     *
-     * @param string $transaction_hash Represents the same as `transactionId` for account-based protocols like Ethereum, while it could be different in UTXO-based protocols like Bitcoin. E.g., in UTXO-based protocols `hash` is different from `transactionId` for SegWit transactions.
-     *
-     * @return self
-     */
-    public function setTransactionHash($transaction_hash)
-    {
-        $this->container['transaction_hash'] = $transaction_hash;
-
-        return $this;
-    }
-
-    /**
      * Gets transaction_id
      *
      * @return string
@@ -571,126 +394,6 @@ class ListUnspentTransactionOutputsByAddressRI implements ModelInterface, ArrayA
     public function setTransactionId($transaction_id)
     {
         $this->container['transaction_id'] = $transaction_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets version
-     *
-     * @return int
-     */
-    public function getVersion()
-    {
-        return $this->container['version'];
-    }
-
-    /**
-     * Sets version
-     *
-     * @param int $version Represents the transaction version number.
-     *
-     * @return self
-     */
-    public function setVersion($version)
-    {
-        $this->container['version'] = $version;
-
-        return $this;
-    }
-
-    /**
-     * Gets vin
-     *
-     * @return \CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRIVin[]
-     */
-    public function getVin()
-    {
-        return $this->container['vin'];
-    }
-
-    /**
-     * Sets vin
-     *
-     * @param \CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRIVin[] $vin Represents the transaction inputs.
-     *
-     * @return self
-     */
-    public function setVin($vin)
-    {
-        $this->container['vin'] = $vin;
-
-        return $this;
-    }
-
-    /**
-     * Gets vout
-     *
-     * @return \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSBVout[]
-     */
-    public function getVout()
-    {
-        return $this->container['vout'];
-    }
-
-    /**
-     * Sets vout
-     *
-     * @param \CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSBVout[] $vout Represents the transaction outputs.
-     *
-     * @return self
-     */
-    public function setVout($vout)
-    {
-        $this->container['vout'] = $vout;
-
-        return $this;
-    }
-
-    /**
-     * Gets fee
-     *
-     * @return \CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRIFee
-     */
-    public function getFee()
-    {
-        return $this->container['fee'];
-    }
-
-    /**
-     * Sets fee
-     *
-     * @param \CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRIFee $fee fee
-     *
-     * @return self
-     */
-    public function setFee($fee)
-    {
-        $this->container['fee'] = $fee;
-
-        return $this;
-    }
-
-    /**
-     * Gets blockchain_specific
-     *
-     * @return \CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRIBlockchainSpecific
-     */
-    public function getBlockchainSpecific()
-    {
-        return $this->container['blockchain_specific'];
-    }
-
-    /**
-     * Sets blockchain_specific
-     *
-     * @param \CryptoAPIs\Model\ListUnspentTransactionOutputsByAddressRIBlockchainSpecific $blockchain_specific blockchain_specific
-     *
-     * @return self
-     */
-    public function setBlockchainSpecific($blockchain_specific)
-    {
-        $this->container['blockchain_specific'] = $blockchain_specific;
 
         return $this;
     }

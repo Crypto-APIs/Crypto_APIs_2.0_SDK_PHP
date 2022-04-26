@@ -145,6 +145,18 @@ class XRPRippleApiTest extends TestCase
     }
 
     /**
+     * Test case for listXRPRippleTransactionsByAddressAndTimeRange
+     *
+     * List XRP (Ripple) Transactions By Address And Time Range.
+     *
+     */
+    public function testListXRPRippleTransactionsByAddressAndTimeRange()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for listXRPRippleTransactionsByBlockHash
      *
      * List XRP (Ripple) Transactions By Block Hash.

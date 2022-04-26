@@ -128,7 +128,7 @@ class InternalApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetInternalTransactionByTransactionHashAndOperationIdR|\CryptoAPIs\Model\InlineResponse40050|\CryptoAPIs\Model\InlineResponse40150|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40350|\CryptoAPIs\Model\InlineResponse4043|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\GetInternalTransactionByTransactionHashAndOperationIdR|\CryptoAPIs\Model\InlineResponse40054|\CryptoAPIs\Model\InlineResponse40154|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40354|\CryptoAPIs\Model\InlineResponse4043|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getInternalTransactionByTransactionHashAndOperationId($blockchain, $network, $operation_id, $transaction_hash, $context = null)
     {
@@ -149,7 +149,7 @@ class InternalApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetInternalTransactionByTransactionHashAndOperationIdR|\CryptoAPIs\Model\InlineResponse40050|\CryptoAPIs\Model\InlineResponse40150|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40350|\CryptoAPIs\Model\InlineResponse4043|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetInternalTransactionByTransactionHashAndOperationIdR|\CryptoAPIs\Model\InlineResponse40054|\CryptoAPIs\Model\InlineResponse40154|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40354|\CryptoAPIs\Model\InlineResponse4043|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInternalTransactionByTransactionHashAndOperationIdWithHttpInfo($blockchain, $network, $operation_id, $transaction_hash, $context = null)
     {
@@ -197,26 +197,26 @@ class InternalApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40050' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40054' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40050', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40054', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40150' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40154' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40150', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40154', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -233,14 +233,14 @@ class InternalApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40350' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40354' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40350', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40354', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -344,7 +344,7 @@ class InternalApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40050',
+                        '\CryptoAPIs\Model\InlineResponse40054',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -352,7 +352,7 @@ class InternalApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40150',
+                        '\CryptoAPIs\Model\InlineResponse40154',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -368,7 +368,7 @@ class InternalApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40350',
+                        '\CryptoAPIs\Model\InlineResponse40354',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -671,7 +671,7 @@ class InternalApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListInternalTransactionDetailsByTransactionHashR|\CryptoAPIs\Model\InlineResponse40048|\CryptoAPIs\Model\InlineResponse40148|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40348|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\ListInternalTransactionDetailsByTransactionHashR|\CryptoAPIs\Model\InlineResponse40052|\CryptoAPIs\Model\InlineResponse40152|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40352|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listInternalTransactionDetailsByTransactionHash($blockchain, $network, $transaction_hash, $context = null, $limit = 50, $offset = 0)
     {
@@ -693,7 +693,7 @@ class InternalApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListInternalTransactionDetailsByTransactionHashR|\CryptoAPIs\Model\InlineResponse40048|\CryptoAPIs\Model\InlineResponse40148|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40348|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListInternalTransactionDetailsByTransactionHashR|\CryptoAPIs\Model\InlineResponse40052|\CryptoAPIs\Model\InlineResponse40152|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40352|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listInternalTransactionDetailsByTransactionHashWithHttpInfo($blockchain, $network, $transaction_hash, $context = null, $limit = 50, $offset = 0)
     {
@@ -741,26 +741,26 @@ class InternalApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40048' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40052' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40048', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40052', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40148' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40152' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40148', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40152', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -777,14 +777,14 @@ class InternalApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40348' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40352' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40348', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40352', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -876,7 +876,7 @@ class InternalApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40048',
+                        '\CryptoAPIs\Model\InlineResponse40052',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -884,7 +884,7 @@ class InternalApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40148',
+                        '\CryptoAPIs\Model\InlineResponse40152',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -900,7 +900,7 @@ class InternalApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40348',
+                        '\CryptoAPIs\Model\InlineResponse40352',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1206,7 +1206,7 @@ class InternalApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListInternalTransactionsByAddressR|\CryptoAPIs\Model\InlineResponse40051|\CryptoAPIs\Model\InlineResponse40151|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40351|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\ListInternalTransactionsByAddressR|\CryptoAPIs\Model\InlineResponse40056|\CryptoAPIs\Model\InlineResponse40156|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40356|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listInternalTransactionsByAddress($blockchain, $network, $address, $context = null, $limit = 50, $offset = 0)
     {
@@ -1228,7 +1228,7 @@ class InternalApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListInternalTransactionsByAddressR|\CryptoAPIs\Model\InlineResponse40051|\CryptoAPIs\Model\InlineResponse40151|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40351|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListInternalTransactionsByAddressR|\CryptoAPIs\Model\InlineResponse40056|\CryptoAPIs\Model\InlineResponse40156|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40356|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listInternalTransactionsByAddressWithHttpInfo($blockchain, $network, $address, $context = null, $limit = 50, $offset = 0)
     {
@@ -1276,26 +1276,26 @@ class InternalApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40051' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40056' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40051', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40056', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40151' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40156' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40151', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40156', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1312,14 +1312,14 @@ class InternalApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40351' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40356' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40351', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40356', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1411,7 +1411,7 @@ class InternalApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40051',
+                        '\CryptoAPIs\Model\InlineResponse40056',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1419,7 +1419,7 @@ class InternalApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40151',
+                        '\CryptoAPIs\Model\InlineResponse40156',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1435,7 +1435,7 @@ class InternalApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40351',
+                        '\CryptoAPIs\Model\InlineResponse40356',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

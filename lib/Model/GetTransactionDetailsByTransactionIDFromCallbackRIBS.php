@@ -101,7 +101,7 @@ class GetTransactionDetailsByTransactionIDFromCallbackRIBS implements ModelInter
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'locktime' => null,
+        'locktime' => 'int64',
         'size' => null,
         'v_size' => null,
         'version' => null,
@@ -125,10 +125,10 @@ class GetTransactionDetailsByTransactionIDFromCallbackRIBS implements ModelInter
         'value_balance' => null,
         'version_group_id' => null,
         'additional_data' => null,
-        'destination_tag' => null,
+        'destination_tag' => 'int64',
         'offer' => null,
         'receive' => null,
-        'sequence' => null,
+        'sequence' => 'int64',
         'status' => null,
         'type' => null,
         'value' => null

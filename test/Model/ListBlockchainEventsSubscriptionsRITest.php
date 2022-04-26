@@ -126,6 +126,15 @@ class ListBlockchainEventsSubscriptionsRITest extends TestCase
     }
 
     /**
+     * Test attribute "deactivation_reasons"
+     */
+    public function testPropertyDeactivationReasons()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "event_type"
      */
     public function testPropertyEventType()

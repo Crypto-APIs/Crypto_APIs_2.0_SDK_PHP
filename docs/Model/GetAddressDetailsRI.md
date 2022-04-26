@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **confirmed_balance** | [**\CryptoAPIs\Model\GetAddressDetailsRIConfirmedBalance**](GetAddressDetailsRIConfirmedBalance.md) |  |
 **total_received** | [**\CryptoAPIs\Model\GetAddressDetailsRITotalReceived**](GetAddressDetailsRITotalReceived.md) |  |
 **total_spent** | [**\CryptoAPIs\Model\GetAddressDetailsRITotalSpent**](GetAddressDetailsRITotalSpent.md) |  |
-**incoming_transactions_count** | **int** | Defines the count of the incoming transactions. |
-**outgoing_transactions_count** | **int** | Defines the count of the outgoing transactions. |
+**incoming_transactions_count** | **int** | Defines the received transaction count to the address. |
+**outgoing_transactions_count** | **int** | Defines the sent transaction count from the address. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

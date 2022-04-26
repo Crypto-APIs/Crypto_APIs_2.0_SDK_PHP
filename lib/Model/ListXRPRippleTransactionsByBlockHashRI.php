@@ -86,12 +86,12 @@ class ListXRPRippleTransactionsByBlockHashRI implements ModelInterface, ArrayAcc
       */
     protected static $openAPIFormats = [
         'additional_data' => null,
-        'destination_tag' => null,
+        'destination_tag' => 'int64',
         'index' => null,
         'mined_in_block_height' => null,
         'recipients' => null,
         'senders' => null,
-        'sequence' => null,
+        'sequence' => 'int64',
         'status' => null,
         'timestamp' => null,
         'transaction_hash' => null,

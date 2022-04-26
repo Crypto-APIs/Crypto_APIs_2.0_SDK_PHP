@@ -81,7 +81,7 @@ class GetTransactionDetailsByTransactionIDRIBSBCVin implements ModelInterface, A
         'addresses' => null,
         'coinbase' => null,
         'script_sig' => null,
-        'sequence' => null,
+        'sequence' => 'int64',
         'txid' => null,
         'txinwitness' => null,
         'value' => null,

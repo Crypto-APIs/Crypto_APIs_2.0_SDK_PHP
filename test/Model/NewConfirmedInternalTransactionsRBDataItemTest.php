@@ -115,4 +115,13 @@ class NewConfirmedInternalTransactionsRBDataItemTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "receive_callback_on"
+     */
+    public function testPropertyReceiveCallbackOn()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

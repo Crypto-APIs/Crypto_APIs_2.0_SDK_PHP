@@ -85,6 +85,78 @@ class FeaturesApiTest extends TestCase
     }
 
     /**
+     * Test case for decodeRawTransactionHex
+     *
+     * Decode Raw Transaction Hex.
+     *
+     */
+    public function testDecodeRawTransactionHex()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for decodeXAddress
+     *
+     * Decode X-Address.
+     *
+     */
+    public function testDecodeXAddress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for deriveHDWalletXPubYPubZPubChangeOrReceivingAddresses
+     *
+     * Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses.
+     *
+     */
+    public function testDeriveHDWalletXPubYPubZPubChangeOrReceivingAddresses()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for encodeXAddress
+     *
+     * Encode X-Address.
+     *
+     */
+    public function testEncodeXAddress()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for estimateGasLimit
+     *
+     * Estimate Gas Limit.
+     *
+     */
+    public function testEstimateGasLimit()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for estimateTokenGasLimit
+     *
+     * Estimate Token Gas Limit.
+     *
+     */
+    public function testEstimateTokenGasLimit()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for getEIP1559FeeRecommendations
      *
      * Get EIP 1559 Fee Recommendations.

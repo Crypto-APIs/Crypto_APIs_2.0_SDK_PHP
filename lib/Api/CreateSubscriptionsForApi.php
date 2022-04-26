@@ -127,7 +127,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\MinedTransactionR|\CryptoAPIs\Model\InlineResponse40064|\CryptoAPIs\Model\InlineResponse40164|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40364|\CryptoAPIs\Model\InlineResponse40912|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\MinedTransactionR|\CryptoAPIs\Model\InlineResponse40077|\CryptoAPIs\Model\InlineResponse40177|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40377|\CryptoAPIs\Model\InlineResponse40912|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function minedTransaction($blockchain, $network, $context = null, $mined_transaction_rb = null)
     {
@@ -147,7 +147,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\MinedTransactionR|\CryptoAPIs\Model\InlineResponse40064|\CryptoAPIs\Model\InlineResponse40164|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40364|\CryptoAPIs\Model\InlineResponse40912|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\MinedTransactionR|\CryptoAPIs\Model\InlineResponse40077|\CryptoAPIs\Model\InlineResponse40177|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40377|\CryptoAPIs\Model\InlineResponse40912|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function minedTransactionWithHttpInfo($blockchain, $network, $context = null, $mined_transaction_rb = null)
     {
@@ -195,26 +195,26 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40064' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40077' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40064', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40077', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40164' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40177' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40164', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40177', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -231,14 +231,14 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40364' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40377' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40364', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40377', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -330,7 +330,7 @@ class CreateSubscriptionsForApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40064',
+                        '\CryptoAPIs\Model\InlineResponse40077',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -338,7 +338,7 @@ class CreateSubscriptionsForApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40164',
+                        '\CryptoAPIs\Model\InlineResponse40177',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -354,7 +354,7 @@ class CreateSubscriptionsForApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40364',
+                        '\CryptoAPIs\Model\InlineResponse40377',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -622,7 +622,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\NewBlockR|\CryptoAPIs\Model\InlineResponse40065|\CryptoAPIs\Model\InlineResponse40165|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40365|\CryptoAPIs\Model\InlineResponse40913|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\NewBlockR|\CryptoAPIs\Model\InlineResponse40078|\CryptoAPIs\Model\InlineResponse40178|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40378|\CryptoAPIs\Model\InlineResponse40913|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function newBlock($blockchain, $network, $context = null, $new_block_rb = null)
     {
@@ -642,7 +642,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\NewBlockR|\CryptoAPIs\Model\InlineResponse40065|\CryptoAPIs\Model\InlineResponse40165|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40365|\CryptoAPIs\Model\InlineResponse40913|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\NewBlockR|\CryptoAPIs\Model\InlineResponse40078|\CryptoAPIs\Model\InlineResponse40178|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40378|\CryptoAPIs\Model\InlineResponse40913|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function newBlockWithHttpInfo($blockchain, $network, $context = null, $new_block_rb = null)
     {
@@ -690,26 +690,26 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40065' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40078' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40065', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40078', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40165' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40178' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40165', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40178', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -726,14 +726,14 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40365' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40378' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40365', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40378', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -825,7 +825,7 @@ class CreateSubscriptionsForApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40065',
+                        '\CryptoAPIs\Model\InlineResponse40078',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -833,7 +833,7 @@ class CreateSubscriptionsForApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40165',
+                        '\CryptoAPIs\Model\InlineResponse40178',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -849,7 +849,7 @@ class CreateSubscriptionsForApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40365',
+                        '\CryptoAPIs\Model\InlineResponse40378',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1117,7 +1117,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\NewConfirmedCoinsTransactionsR|\CryptoAPIs\Model\InlineResponse40060|\CryptoAPIs\Model\InlineResponse40160|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40360|\CryptoAPIs\Model\InlineResponse4098|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\NewConfirmedCoinsTransactionsR|\CryptoAPIs\Model\InlineResponse40073|\CryptoAPIs\Model\InlineResponse40173|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40373|\CryptoAPIs\Model\InlineResponse4098|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function newConfirmedCoinsTransactions($blockchain, $network, $context = null, $new_confirmed_coins_transactions_rb = null)
     {
@@ -1137,7 +1137,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\NewConfirmedCoinsTransactionsR|\CryptoAPIs\Model\InlineResponse40060|\CryptoAPIs\Model\InlineResponse40160|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40360|\CryptoAPIs\Model\InlineResponse4098|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\NewConfirmedCoinsTransactionsR|\CryptoAPIs\Model\InlineResponse40073|\CryptoAPIs\Model\InlineResponse40173|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40373|\CryptoAPIs\Model\InlineResponse4098|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function newConfirmedCoinsTransactionsWithHttpInfo($blockchain, $network, $context = null, $new_confirmed_coins_transactions_rb = null)
     {
@@ -1185,26 +1185,26 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40060' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40073' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40060', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40073', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40160' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40173' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40160', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40173', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1221,14 +1221,14 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40360' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40373' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40360', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40373', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1320,7 +1320,7 @@ class CreateSubscriptionsForApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40060',
+                        '\CryptoAPIs\Model\InlineResponse40073',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1328,7 +1328,7 @@ class CreateSubscriptionsForApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40160',
+                        '\CryptoAPIs\Model\InlineResponse40173',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1344,7 +1344,7 @@ class CreateSubscriptionsForApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40360',
+                        '\CryptoAPIs\Model\InlineResponse40373',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1612,7 +1612,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationR|\CryptoAPIs\Model\InlineResponse40063|\CryptoAPIs\Model\InlineResponse40163|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40363|\CryptoAPIs\Model\InlineResponse40911|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationR|\CryptoAPIs\Model\InlineResponse40076|\CryptoAPIs\Model\InlineResponse40176|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40376|\CryptoAPIs\Model\InlineResponse40911|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function newConfirmedCoinsTransactionsAndEachConfirmation($blockchain, $network, $context = null, $new_confirmed_coins_transactions_and_each_confirmation_rb = null)
     {
@@ -1632,7 +1632,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationR|\CryptoAPIs\Model\InlineResponse40063|\CryptoAPIs\Model\InlineResponse40163|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40363|\CryptoAPIs\Model\InlineResponse40911|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationR|\CryptoAPIs\Model\InlineResponse40076|\CryptoAPIs\Model\InlineResponse40176|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40376|\CryptoAPIs\Model\InlineResponse40911|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function newConfirmedCoinsTransactionsAndEachConfirmationWithHttpInfo($blockchain, $network, $context = null, $new_confirmed_coins_transactions_and_each_confirmation_rb = null)
     {
@@ -1680,26 +1680,26 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40063' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40076' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40063', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40076', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40163' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40176' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40163', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40176', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1716,14 +1716,14 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40363' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40376' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40363', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40376', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1815,7 +1815,7 @@ class CreateSubscriptionsForApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40063',
+                        '\CryptoAPIs\Model\InlineResponse40076',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1823,7 +1823,7 @@ class CreateSubscriptionsForApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40163',
+                        '\CryptoAPIs\Model\InlineResponse40176',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1839,7 +1839,7 @@ class CreateSubscriptionsForApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40363',
+                        '\CryptoAPIs\Model\InlineResponse40376',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2107,7 +2107,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\NewConfirmedInternalTransactionsR|\CryptoAPIs\Model\InlineResponse40073|\CryptoAPIs\Model\InlineResponse40173|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40373|\CryptoAPIs\Model\InlineResponse40914|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\NewConfirmedInternalTransactionsR|\CryptoAPIs\Model\InlineResponse40087|\CryptoAPIs\Model\InlineResponse40187|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40387|\CryptoAPIs\Model\InlineResponse40914|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function newConfirmedInternalTransactions($blockchain, $network, $context = null, $new_confirmed_internal_transactions_rb = null)
     {
@@ -2127,7 +2127,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\NewConfirmedInternalTransactionsR|\CryptoAPIs\Model\InlineResponse40073|\CryptoAPIs\Model\InlineResponse40173|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40373|\CryptoAPIs\Model\InlineResponse40914|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\NewConfirmedInternalTransactionsR|\CryptoAPIs\Model\InlineResponse40087|\CryptoAPIs\Model\InlineResponse40187|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40387|\CryptoAPIs\Model\InlineResponse40914|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function newConfirmedInternalTransactionsWithHttpInfo($blockchain, $network, $context = null, $new_confirmed_internal_transactions_rb = null)
     {
@@ -2175,26 +2175,26 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40073' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40087' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40073', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40087', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40173' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40187' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40173', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40187', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2211,14 +2211,14 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40373' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40387' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40373', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40387', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2310,7 +2310,7 @@ class CreateSubscriptionsForApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40073',
+                        '\CryptoAPIs\Model\InlineResponse40087',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2318,7 +2318,7 @@ class CreateSubscriptionsForApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40173',
+                        '\CryptoAPIs\Model\InlineResponse40187',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2334,7 +2334,7 @@ class CreateSubscriptionsForApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40373',
+                        '\CryptoAPIs\Model\InlineResponse40387',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2602,7 +2602,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\NewConfirmedInternalTransactionsAndEachConfirmationR|\CryptoAPIs\Model\InlineResponse40074|\CryptoAPIs\Model\InlineResponse40174|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40374|\CryptoAPIs\Model\InlineResponse40915|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\NewConfirmedInternalTransactionsAndEachConfirmationR|\CryptoAPIs\Model\InlineResponse40088|\CryptoAPIs\Model\InlineResponse40188|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40388|\CryptoAPIs\Model\InlineResponse40915|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function newConfirmedInternalTransactionsAndEachConfirmation($blockchain, $network, $context = null, $new_confirmed_internal_transactions_and_each_confirmation_rb = null)
     {
@@ -2622,7 +2622,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\NewConfirmedInternalTransactionsAndEachConfirmationR|\CryptoAPIs\Model\InlineResponse40074|\CryptoAPIs\Model\InlineResponse40174|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40374|\CryptoAPIs\Model\InlineResponse40915|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\NewConfirmedInternalTransactionsAndEachConfirmationR|\CryptoAPIs\Model\InlineResponse40088|\CryptoAPIs\Model\InlineResponse40188|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40388|\CryptoAPIs\Model\InlineResponse40915|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function newConfirmedInternalTransactionsAndEachConfirmationWithHttpInfo($blockchain, $network, $context = null, $new_confirmed_internal_transactions_and_each_confirmation_rb = null)
     {
@@ -2670,26 +2670,26 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40074' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40088' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40074', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40088', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40174' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40188' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40174', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40188', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2706,14 +2706,14 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40374' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40388' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40374', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40388', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2805,7 +2805,7 @@ class CreateSubscriptionsForApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40074',
+                        '\CryptoAPIs\Model\InlineResponse40088',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2813,7 +2813,7 @@ class CreateSubscriptionsForApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40174',
+                        '\CryptoAPIs\Model\InlineResponse40188',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2829,7 +2829,7 @@ class CreateSubscriptionsForApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40374',
+                        '\CryptoAPIs\Model\InlineResponse40388',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3097,7 +3097,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\NewConfirmedTokensTransactionsR|\CryptoAPIs\Model\InlineResponse40061|\CryptoAPIs\Model\InlineResponse40161|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40361|\CryptoAPIs\Model\InlineResponse4099|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\NewConfirmedTokensTransactionsR|\CryptoAPIs\Model\InlineResponse40074|\CryptoAPIs\Model\InlineResponse40174|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40374|\CryptoAPIs\Model\InlineResponse4099|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function newConfirmedTokensTransactions($blockchain, $network, $context = null, $new_confirmed_tokens_transactions_rb = null)
     {
@@ -3117,7 +3117,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\NewConfirmedTokensTransactionsR|\CryptoAPIs\Model\InlineResponse40061|\CryptoAPIs\Model\InlineResponse40161|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40361|\CryptoAPIs\Model\InlineResponse4099|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\NewConfirmedTokensTransactionsR|\CryptoAPIs\Model\InlineResponse40074|\CryptoAPIs\Model\InlineResponse40174|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40374|\CryptoAPIs\Model\InlineResponse4099|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function newConfirmedTokensTransactionsWithHttpInfo($blockchain, $network, $context = null, $new_confirmed_tokens_transactions_rb = null)
     {
@@ -3165,26 +3165,26 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40061' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40074' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40061', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40074', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40161' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40174' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40161', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40174', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3201,14 +3201,14 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40361' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40374' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40361', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40374', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3300,7 +3300,7 @@ class CreateSubscriptionsForApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40061',
+                        '\CryptoAPIs\Model\InlineResponse40074',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3308,7 +3308,7 @@ class CreateSubscriptionsForApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40161',
+                        '\CryptoAPIs\Model\InlineResponse40174',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3324,7 +3324,7 @@ class CreateSubscriptionsForApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40361',
+                        '\CryptoAPIs\Model\InlineResponse40374',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3592,7 +3592,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\NewConfirmedTokensTransactionsAndEachConfirmationR|\CryptoAPIs\Model\InlineResponse40062|\CryptoAPIs\Model\InlineResponse40162|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40362|\CryptoAPIs\Model\InlineResponse40910|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\NewConfirmedTokensTransactionsAndEachConfirmationR|\CryptoAPIs\Model\InlineResponse40075|\CryptoAPIs\Model\InlineResponse40175|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40375|\CryptoAPIs\Model\InlineResponse40910|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function newConfirmedTokensTransactionsAndEachConfirmation($blockchain, $network, $context = null, $new_confirmed_tokens_transactions_and_each_confirmation_rb = null)
     {
@@ -3612,7 +3612,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\NewConfirmedTokensTransactionsAndEachConfirmationR|\CryptoAPIs\Model\InlineResponse40062|\CryptoAPIs\Model\InlineResponse40162|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40362|\CryptoAPIs\Model\InlineResponse40910|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\NewConfirmedTokensTransactionsAndEachConfirmationR|\CryptoAPIs\Model\InlineResponse40075|\CryptoAPIs\Model\InlineResponse40175|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40375|\CryptoAPIs\Model\InlineResponse40910|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function newConfirmedTokensTransactionsAndEachConfirmationWithHttpInfo($blockchain, $network, $context = null, $new_confirmed_tokens_transactions_and_each_confirmation_rb = null)
     {
@@ -3660,26 +3660,26 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40062' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40075' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40062', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40075', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40162' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40175' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40162', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40175', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3696,14 +3696,14 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40362' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40375' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40362', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40375', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3795,7 +3795,7 @@ class CreateSubscriptionsForApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40062',
+                        '\CryptoAPIs\Model\InlineResponse40075',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3803,7 +3803,7 @@ class CreateSubscriptionsForApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40162',
+                        '\CryptoAPIs\Model\InlineResponse40175',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3819,7 +3819,7 @@ class CreateSubscriptionsForApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40362',
+                        '\CryptoAPIs\Model\InlineResponse40375',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4087,7 +4087,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsR|\CryptoAPIs\Model\InlineResponse40058|\CryptoAPIs\Model\InlineResponse40158|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40358|\CryptoAPIs\Model\InlineResponse4096|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsR|\CryptoAPIs\Model\InlineResponse40071|\CryptoAPIs\Model\InlineResponse40171|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40371|\CryptoAPIs\Model\InlineResponse4096|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function newUnconfirmedCoinsTransactions($blockchain, $network, $context = null, $new_unconfirmed_coins_transactions_rb = null)
     {
@@ -4107,7 +4107,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsR|\CryptoAPIs\Model\InlineResponse40058|\CryptoAPIs\Model\InlineResponse40158|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40358|\CryptoAPIs\Model\InlineResponse4096|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\NewUnconfirmedCoinsTransactionsR|\CryptoAPIs\Model\InlineResponse40071|\CryptoAPIs\Model\InlineResponse40171|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40371|\CryptoAPIs\Model\InlineResponse4096|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function newUnconfirmedCoinsTransactionsWithHttpInfo($blockchain, $network, $context = null, $new_unconfirmed_coins_transactions_rb = null)
     {
@@ -4155,26 +4155,26 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40058' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40071' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40058', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40071', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40158' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40171' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40158', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40171', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4191,14 +4191,14 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40358' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40371' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40358', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40371', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4290,7 +4290,7 @@ class CreateSubscriptionsForApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40058',
+                        '\CryptoAPIs\Model\InlineResponse40071',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4298,7 +4298,7 @@ class CreateSubscriptionsForApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40158',
+                        '\CryptoAPIs\Model\InlineResponse40171',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4314,7 +4314,7 @@ class CreateSubscriptionsForApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40358',
+                        '\CryptoAPIs\Model\InlineResponse40371',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4582,7 +4582,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\NewUnconfirmedTokensTransactionsR|\CryptoAPIs\Model\InlineResponse40059|\CryptoAPIs\Model\InlineResponse40159|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40359|\CryptoAPIs\Model\InlineResponse4097|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\NewUnconfirmedTokensTransactionsR|\CryptoAPIs\Model\InlineResponse40072|\CryptoAPIs\Model\InlineResponse40172|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40372|\CryptoAPIs\Model\InlineResponse4097|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function newUnconfirmedTokensTransactions($blockchain, $network, $context = null, $new_unconfirmed_tokens_transactions_rb = null)
     {
@@ -4602,7 +4602,7 @@ class CreateSubscriptionsForApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\NewUnconfirmedTokensTransactionsR|\CryptoAPIs\Model\InlineResponse40059|\CryptoAPIs\Model\InlineResponse40159|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40359|\CryptoAPIs\Model\InlineResponse4097|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\NewUnconfirmedTokensTransactionsR|\CryptoAPIs\Model\InlineResponse40072|\CryptoAPIs\Model\InlineResponse40172|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40372|\CryptoAPIs\Model\InlineResponse4097|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function newUnconfirmedTokensTransactionsWithHttpInfo($blockchain, $network, $context = null, $new_unconfirmed_tokens_transactions_rb = null)
     {
@@ -4650,26 +4650,26 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40059' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40072' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40059', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40072', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40159' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40172' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40159', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40172', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4686,14 +4686,14 @@ class CreateSubscriptionsForApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40359' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40372' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40359', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40372', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4785,7 +4785,7 @@ class CreateSubscriptionsForApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40059',
+                        '\CryptoAPIs\Model\InlineResponse40072',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4793,7 +4793,7 @@ class CreateSubscriptionsForApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40159',
+                        '\CryptoAPIs\Model\InlineResponse40172',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4809,7 +4809,7 @@ class CreateSubscriptionsForApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40359',
+                        '\CryptoAPIs\Model\InlineResponse40372',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

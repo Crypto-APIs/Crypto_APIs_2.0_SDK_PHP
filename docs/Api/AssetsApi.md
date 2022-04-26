@@ -39,7 +39,7 @@ $apiInstance = new CryptoAPIs\Api\AssetsApi(
     $config
 );
 $asset_id = 5b1ea92e584bf50020130612; // string | Defines the unique ID of the specific asset.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->getAssetDetailsByAssetID($asset_id, $context);
@@ -103,7 +103,7 @@ $apiInstance = new CryptoAPIs\Api\AssetsApi(
     $config
 );
 $asset_symbol = BTC; // string | Specifies the asset's unique symbol in the Crypto APIs listings.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->getAssetDetailsByAssetSymbol($asset_symbol, $context);
@@ -166,11 +166,11 @@ $apiInstance = new CryptoAPIs\Api\AssetsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $asset_type = crypto; // string | Defines the type of the supported asset. This could be either \"crypto\" or \"fiat\".
 $crypto_type = coin; // string | Subtype of the crypto assets. Could be COIN or TOKEN
 $limit = 50; // int | Defines how many items should be returned in the response per page basis.
-$offset = 10; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
+$offset = 0; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
 $waas_enabled = true; // bool | Show only if WaaS is/not enabled
 
 try {

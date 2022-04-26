@@ -90,6 +90,15 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRITest extends TestCase
     }
 
     /**
+     * Test attribute "callback_secret_key"
+     */
+    public function testPropertyCallbackSecretKey()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "callback_url"
      */
     public function testPropertyCallbackUrl()
@@ -120,6 +129,15 @@ class NewConfirmedTokensTransactionsAndEachConfirmationRITest extends TestCase
      * Test attribute "event_type"
      */
     public function testPropertyEventType()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "is_active"
+     */
+    public function testPropertyIsActive()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

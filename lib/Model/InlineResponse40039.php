@@ -63,7 +63,7 @@ class InlineResponse40039 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\GetLatestMinedXRPRippleBlockE400'
+        'error' => '\CryptoAPIs\Model\ListAllAssetsByWalletIDE400'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40039 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\GetLatestMinedXRPRippleBlockE400
+     * @return \CryptoAPIs\Model\ListAllAssetsByWalletIDE400
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40039 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\GetLatestMinedXRPRippleBlockE400 $error error
+     * @param \CryptoAPIs\Model\ListAllAssetsByWalletIDE400 $error error
      *
      * @return self
      */

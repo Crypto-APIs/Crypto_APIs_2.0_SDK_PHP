@@ -127,7 +127,7 @@ class OmniLayerApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetOmniTransactionDetailsByTransactionIDTxidR|\CryptoAPIs\Model\InlineResponse40032|\CryptoAPIs\Model\InlineResponse40132|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40332|\CryptoAPIs\Model\InlineResponse404|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\GetOmniTransactionDetailsByTransactionIDTxidR|\CryptoAPIs\Model\InlineResponse40033|\CryptoAPIs\Model\InlineResponse40133|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40333|\CryptoAPIs\Model\InlineResponse404|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getOmniTransactionDetailsByTransactionIDTxid($network, $blockchain, $transaction_id, $context = null)
     {
@@ -147,7 +147,7 @@ class OmniLayerApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetOmniTransactionDetailsByTransactionIDTxidR|\CryptoAPIs\Model\InlineResponse40032|\CryptoAPIs\Model\InlineResponse40132|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40332|\CryptoAPIs\Model\InlineResponse404|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetOmniTransactionDetailsByTransactionIDTxidR|\CryptoAPIs\Model\InlineResponse40033|\CryptoAPIs\Model\InlineResponse40133|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40333|\CryptoAPIs\Model\InlineResponse404|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOmniTransactionDetailsByTransactionIDTxidWithHttpInfo($network, $blockchain, $transaction_id, $context = null)
     {
@@ -195,26 +195,26 @@ class OmniLayerApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40032' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40033' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40032', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40033', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40132' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40133' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40132', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40133', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -231,14 +231,14 @@ class OmniLayerApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40332' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40333' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40332', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40333', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -342,7 +342,7 @@ class OmniLayerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40032',
+                        '\CryptoAPIs\Model\InlineResponse40033',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -350,7 +350,7 @@ class OmniLayerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40132',
+                        '\CryptoAPIs\Model\InlineResponse40133',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -366,7 +366,7 @@ class OmniLayerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40332',
+                        '\CryptoAPIs\Model\InlineResponse40333',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -650,7 +650,7 @@ class OmniLayerApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetUnconfirmedOmniTransactionByTransactionIDTxidR|\CryptoAPIs\Model\InlineResponse40019|\CryptoAPIs\Model\InlineResponse40119|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40319|\CryptoAPIs\Model\InlineResponse404|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\GetUnconfirmedOmniTransactionByTransactionIDTxidR|\CryptoAPIs\Model\InlineResponse40020|\CryptoAPIs\Model\InlineResponse40120|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40320|\CryptoAPIs\Model\InlineResponse404|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getUnconfirmedOmniTransactionByTransactionIDTxid($network, $blockchain, $transaction_id, $context = null)
     {
@@ -670,7 +670,7 @@ class OmniLayerApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetUnconfirmedOmniTransactionByTransactionIDTxidR|\CryptoAPIs\Model\InlineResponse40019|\CryptoAPIs\Model\InlineResponse40119|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40319|\CryptoAPIs\Model\InlineResponse404|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetUnconfirmedOmniTransactionByTransactionIDTxidR|\CryptoAPIs\Model\InlineResponse40020|\CryptoAPIs\Model\InlineResponse40120|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40320|\CryptoAPIs\Model\InlineResponse404|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUnconfirmedOmniTransactionByTransactionIDTxidWithHttpInfo($network, $blockchain, $transaction_id, $context = null)
     {
@@ -718,26 +718,26 @@ class OmniLayerApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40019' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40020' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40019', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40020', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40119' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40120' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40119', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40120', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -754,14 +754,14 @@ class OmniLayerApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40319' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40320' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40319', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40320', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -865,7 +865,7 @@ class OmniLayerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40019',
+                        '\CryptoAPIs\Model\InlineResponse40020',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -873,7 +873,7 @@ class OmniLayerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40119',
+                        '\CryptoAPIs\Model\InlineResponse40120',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -889,7 +889,7 @@ class OmniLayerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40319',
+                        '\CryptoAPIs\Model\InlineResponse40320',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2213,7 +2213,7 @@ class OmniLayerApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListOmniTransactionsByBlockHashR|\CryptoAPIs\Model\InlineResponse40044|\CryptoAPIs\Model\InlineResponse40144|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40344|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\ListOmniTransactionsByBlockHashR|\CryptoAPIs\Model\InlineResponse40047|\CryptoAPIs\Model\InlineResponse40147|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40347|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listOmniTransactionsByBlockHash($network, $blockchain, $block_hash, $context = null, $limit = 50, $offset = 0)
     {
@@ -2235,7 +2235,7 @@ class OmniLayerApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListOmniTransactionsByBlockHashR|\CryptoAPIs\Model\InlineResponse40044|\CryptoAPIs\Model\InlineResponse40144|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40344|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListOmniTransactionsByBlockHashR|\CryptoAPIs\Model\InlineResponse40047|\CryptoAPIs\Model\InlineResponse40147|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40347|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listOmniTransactionsByBlockHashWithHttpInfo($network, $blockchain, $block_hash, $context = null, $limit = 50, $offset = 0)
     {
@@ -2283,26 +2283,26 @@ class OmniLayerApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40044' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40047' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40044', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40047', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40144' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40147' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40144', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40147', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2319,14 +2319,14 @@ class OmniLayerApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40344' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40347' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40344', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40347', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2418,7 +2418,7 @@ class OmniLayerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40044',
+                        '\CryptoAPIs\Model\InlineResponse40047',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2426,7 +2426,7 @@ class OmniLayerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40144',
+                        '\CryptoAPIs\Model\InlineResponse40147',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2442,7 +2442,7 @@ class OmniLayerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40344',
+                        '\CryptoAPIs\Model\InlineResponse40347',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2748,7 +2748,7 @@ class OmniLayerApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListOmniTransactionsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40038|\CryptoAPIs\Model\InlineResponse40138|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40338|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\ListOmniTransactionsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40041|\CryptoAPIs\Model\InlineResponse40141|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40341|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listOmniTransactionsByBlockHeight($network, $blockchain, $block_height, $context = null, $limit = 50, $offset = 0)
     {
@@ -2770,7 +2770,7 @@ class OmniLayerApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListOmniTransactionsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40038|\CryptoAPIs\Model\InlineResponse40138|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40338|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListOmniTransactionsByBlockHeightR|\CryptoAPIs\Model\InlineResponse40041|\CryptoAPIs\Model\InlineResponse40141|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40341|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listOmniTransactionsByBlockHeightWithHttpInfo($network, $blockchain, $block_height, $context = null, $limit = 50, $offset = 0)
     {
@@ -2818,26 +2818,26 @@ class OmniLayerApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40038' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40041' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40038', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40041', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40138' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40141' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40138', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40141', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2854,14 +2854,14 @@ class OmniLayerApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40338' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40341' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40338', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40341', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2953,7 +2953,7 @@ class OmniLayerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40038',
+                        '\CryptoAPIs\Model\InlineResponse40041',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2961,7 +2961,7 @@ class OmniLayerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40138',
+                        '\CryptoAPIs\Model\InlineResponse40141',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2977,7 +2977,7 @@ class OmniLayerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40338',
+                        '\CryptoAPIs\Model\InlineResponse40341',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3818,7 +3818,7 @@ class OmniLayerApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListUnconfirmedOmniTransactionsByPropertyIDR|\CryptoAPIs\Model\InlineResponse40028|\CryptoAPIs\Model\InlineResponse40128|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40328|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\ListUnconfirmedOmniTransactionsByPropertyIDR|\CryptoAPIs\Model\InlineResponse40029|\CryptoAPIs\Model\InlineResponse40129|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40329|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listUnconfirmedOmniTransactionsByPropertyID($network, $blockchain, $property_id, $context = null, $limit = 50, $offset = 0)
     {
@@ -3840,7 +3840,7 @@ class OmniLayerApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListUnconfirmedOmniTransactionsByPropertyIDR|\CryptoAPIs\Model\InlineResponse40028|\CryptoAPIs\Model\InlineResponse40128|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40328|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListUnconfirmedOmniTransactionsByPropertyIDR|\CryptoAPIs\Model\InlineResponse40029|\CryptoAPIs\Model\InlineResponse40129|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40329|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listUnconfirmedOmniTransactionsByPropertyIDWithHttpInfo($network, $blockchain, $property_id, $context = null, $limit = 50, $offset = 0)
     {
@@ -3888,26 +3888,26 @@ class OmniLayerApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40028' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40029' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40028', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40029', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40128' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40129' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40128', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40129', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3924,14 +3924,14 @@ class OmniLayerApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40328' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40329' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40328', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40329', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4023,7 +4023,7 @@ class OmniLayerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40028',
+                        '\CryptoAPIs\Model\InlineResponse40029',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4031,7 +4031,7 @@ class OmniLayerApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40128',
+                        '\CryptoAPIs\Model\InlineResponse40129',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4047,7 +4047,7 @@ class OmniLayerApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40328',
+                        '\CryptoAPIs\Model\InlineResponse40329',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

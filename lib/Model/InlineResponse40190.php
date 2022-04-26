@@ -63,7 +63,7 @@ class InlineResponse40190 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\GetAssetDetailsByAssetIDE401'
+        'error' => '\CryptoAPIs\Model\CreateAutomaticCoinsForwardingE401'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40190 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\GetAssetDetailsByAssetIDE401
+     * @return \CryptoAPIs\Model\CreateAutomaticCoinsForwardingE401
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40190 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\GetAssetDetailsByAssetIDE401 $error error
+     * @param \CryptoAPIs\Model\CreateAutomaticCoinsForwardingE401 $error error
      *
      * @return self
      */

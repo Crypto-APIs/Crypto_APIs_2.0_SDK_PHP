@@ -73,6 +73,18 @@ class HDWalletsApiTest extends TestCase
     }
 
     /**
+     * Test case for getHDWalletXPubYPubZPubAssets
+     *
+     * Get HD Wallet (xPub, yPub, zPub) Assets.
+     *
+     */
+    public function testGetHDWalletXPubYPubZPubAssets()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for getHDWalletXPubYPubZPubDetails
      *
      * Get HD Wallet (xPub, yPub, zPub) Details.
@@ -91,6 +103,18 @@ class HDWalletsApiTest extends TestCase
      *
      */
     public function testListHDWalletXPubYPubZPubTransactions()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for listHDWalletXPubYPubZPubUTXOs
+     *
+     * List HD Wallet (xPub, yPub, zPub) UTXOs.
+     *
+     */
+    public function testListHDWalletXPubYPubZPubUTXOs()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

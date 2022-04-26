@@ -60,8 +60,10 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
       * @var string[]
       */
     protected static $openAPITypes = [
+        'address_tag' => 'int',
         'callback_secret_key' => 'string',
         'callback_url' => 'string',
+        'classic_address' => 'string',
         'fee_priority' => 'string',
         'note' => 'string',
         'recipients' => '\CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressRIRecipients[]',
@@ -78,8 +80,10 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'address_tag' => null,
         'callback_secret_key' => null,
         'callback_url' => null,
+        'classic_address' => null,
         'fee_priority' => null,
         'note' => null,
         'recipients' => null,
@@ -115,8 +119,10 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
      * @var string[]
      */
     protected static $attributeMap = [
+        'address_tag' => 'addressTag',
         'callback_secret_key' => 'callbackSecretKey',
         'callback_url' => 'callbackUrl',
+        'classic_address' => 'classicAddress',
         'fee_priority' => 'feePriority',
         'note' => 'note',
         'recipients' => 'recipients',
@@ -131,8 +137,10 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
      * @var string[]
      */
     protected static $setters = [
+        'address_tag' => 'setAddressTag',
         'callback_secret_key' => 'setCallbackSecretKey',
         'callback_url' => 'setCallbackUrl',
+        'classic_address' => 'setClassicAddress',
         'fee_priority' => 'setFeePriority',
         'note' => 'setNote',
         'recipients' => 'setRecipients',
@@ -147,8 +155,10 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
      * @var string[]
      */
     protected static $getters = [
+        'address_tag' => 'getAddressTag',
         'callback_secret_key' => 'getCallbackSecretKey',
         'callback_url' => 'getCallbackUrl',
+        'classic_address' => 'getClassicAddress',
         'fee_priority' => 'getFeePriority',
         'note' => 'getNote',
         'recipients' => 'getRecipients',
@@ -262,8 +272,10 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
      */
     public function __construct(array $data = null)
     {
+        $this->container['address_tag'] = $data['address_tag'] ?? null;
         $this->container['callback_secret_key'] = $data['callback_secret_key'] ?? null;
         $this->container['callback_url'] = $data['callback_url'] ?? null;
+        $this->container['classic_address'] = $data['classic_address'] ?? null;
         $this->container['fee_priority'] = $data['fee_priority'] ?? null;
         $this->container['note'] = $data['note'] ?? null;
         $this->container['recipients'] = $data['recipients'] ?? null;
@@ -330,6 +342,30 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
 
 
     /**
+     * Gets address_tag
+     *
+     * @return int|null
+     */
+    public function getAddressTag()
+    {
+        return $this->container['address_tag'];
+    }
+
+    /**
+     * Sets address_tag
+     *
+     * @param int|null $address_tag Defines a specific Tag that is an additional XRP address feature. It helps identify a transaction recipient beyond a wallet address. The tag that was encoded into the x-Address along with the Source Classic Address.
+     *
+     * @return self
+     */
+    public function setAddressTag($address_tag)
+    {
+        $this->container['address_tag'] = $address_tag;
+
+        return $this;
+    }
+
+    /**
      * Gets callback_secret_key
      *
      * @return string|null
@@ -366,13 +402,37 @@ class CreateCoinsTransactionRequestFromAddressRI implements ModelInterface, Arra
     /**
      * Sets callback_url
      *
-     * @param string|null $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+     * @param string|null $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. `We support ONLY httpS type of protocol`.
      *
      * @return self
      */
     public function setCallbackUrl($callback_url)
     {
         $this->container['callback_url'] = $callback_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets classic_address
+     *
+     * @return string|null
+     */
+    public function getClassicAddress()
+    {
+        return $this->container['classic_address'];
+    }
+
+    /**
+     * Sets classic_address
+     *
+     * @param string|null $classic_address Represents the public address, which is a compressed and shortened form of a public key. The classic address is shown when the source address is an x-Address.
+     *
+     * @return self
+     */
+    public function setClassicAddress($classic_address)
+    {
+        $this->container['classic_address'] = $classic_address;
 
         return $this;
     }

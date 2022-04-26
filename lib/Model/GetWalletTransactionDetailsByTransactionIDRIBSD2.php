@@ -76,7 +76,7 @@ class GetWalletTransactionDetailsByTransactionIDRIBSD2 implements ModelInterface
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'locktime' => null,
+        'locktime' => 'int64',
         'size' => null,
         'version' => null,
         'vin' => null,

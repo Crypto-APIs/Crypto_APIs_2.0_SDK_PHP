@@ -63,7 +63,7 @@ class InlineResponse40016 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\ListAllUnconfirmedTransactionsE400'
+        'error' => '\CryptoAPIs\Model\ListXRPRippleTransactionsByAddressAndTimeRangeE400'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40016 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\ListAllUnconfirmedTransactionsE400
+     * @return \CryptoAPIs\Model\ListXRPRippleTransactionsByAddressAndTimeRangeE400
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40016 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\ListAllUnconfirmedTransactionsE400 $error error
+     * @param \CryptoAPIs\Model\ListXRPRippleTransactionsByAddressAndTimeRangeE400 $error error
      *
      * @return self
      */

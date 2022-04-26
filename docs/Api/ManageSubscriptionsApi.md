@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**activateBlockchainEventSubscription()**](ManageSubscriptionsApi.md#activateBlockchainEventSubscription) | **POST** /blockchain-events/subscriptions/{referenceId}/activate | Activate Blockchain Event Subscription
 [**deleteBlockchainEventSubscription()**](ManageSubscriptionsApi.md#deleteBlockchainEventSubscription) | **DELETE** /blockchain-events/{blockchain}/{network}/subscriptions/{referenceId} | Delete Blockchain Event Subscription
+[**getBlockchainEventSubscriptionDetailsByReferenceID()**](ManageSubscriptionsApi.md#getBlockchainEventSubscriptionDetailsByReferenceID) | **GET** /blockchain-events/subscriptions/{referenceId} | Get Blockchain Event Subscription Details By Reference ID
 [**listBlockchainEventsSubscriptions()**](ManageSubscriptionsApi.md#listBlockchainEventsSubscriptions) | **GET** /blockchain-events/{blockchain}/{network}/subscriptions | List Blockchain Events Subscriptions
 
 
@@ -39,7 +40,7 @@ $apiInstance = new CryptoAPIs\Api\ManageSubscriptionsApi(
     $config
 );
 $reference_id = bc243c86-0902-4386-b30d-e6b30fa1f2aa; // string | Represents a unique ID used to reference the specific callback subscription.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $activate_blockchain_event_subscription_rb = new \CryptoAPIs\Model\ActivateBlockchainEventSubscriptionRB(); // \CryptoAPIs\Model\ActivateBlockchainEventSubscriptionRB
 
 try {
@@ -107,7 +108,7 @@ $apiInstance = new CryptoAPIs\Api\ManageSubscriptionsApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $reference_id = d3fd6a0e-f2b6-4bb5-9fd3-7944bcec9e9f; // string | Represents a unique ID used to reference the specific callback subscription.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->deleteBlockchainEventSubscription($blockchain, $network, $reference_id, $context);
@@ -129,6 +130,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\CryptoAPIs\Model\DeleteBlockchainEventSubscriptionR**](../Model/DeleteBlockchainEventSubscriptionR.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getBlockchainEventSubscriptionDetailsByReferenceID()`
+
+```php
+getBlockchainEventSubscriptionDetailsByReferenceID($reference_id, $context): \CryptoAPIs\Model\GetBlockchainEventSubscriptionDetailsByReferenceIDR
+```
+
+Get Blockchain Event Subscription Details By Reference ID
+
+Through this endpoint the customer can get detailed information for a callback subscription by providing its reference ID.    Currently Crypto APIs 2.0 offers certain Blockchain event endpoints which allow the user to subscribe for one/a few/all and receive callback notifications when the specific event occurs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new CryptoAPIs\Api\ManageSubscriptionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$reference_id = bc243c86-0902-4386-b30d-e6b30fa1f2aa; // string | Represents a unique ID used to reference the specific callback subscription.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+
+try {
+    $result = $apiInstance->getBlockchainEventSubscriptionDetailsByReferenceID($reference_id, $context);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ManageSubscriptionsApi->getBlockchainEventSubscriptionDetailsByReferenceID: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reference_id** | **string**| Represents a unique ID used to reference the specific callback subscription. |
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
+
+### Return type
+
+[**\CryptoAPIs\Model\GetBlockchainEventSubscriptionDetailsByReferenceIDR**](../Model/GetBlockchainEventSubscriptionDetailsByReferenceIDR.md)
 
 ### Authorization
 
@@ -174,9 +239,9 @@ $apiInstance = new CryptoAPIs\Api\ManageSubscriptionsApi(
 );
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $limit = 50; // int | Defines how many items should be returned in the response per page basis.
-$offset = 10; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
+$offset = 0; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
 
 try {
     $result = $apiInstance->listBlockchainEventsSubscriptions($blockchain, $network, $context, $limit, $offset);

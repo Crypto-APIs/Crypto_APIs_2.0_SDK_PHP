@@ -63,7 +63,7 @@ class InlineResponse40180 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\AddTokensToExistingFromAddressE401'
+        'error' => '\CryptoAPIs\Model\GetBlockchainEventSubscriptionDetailsByReferenceIDE401'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40180 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\AddTokensToExistingFromAddressE401
+     * @return \CryptoAPIs\Model\GetBlockchainEventSubscriptionDetailsByReferenceIDE401
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40180 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\AddTokensToExistingFromAddressE401 $error error
+     * @param \CryptoAPIs\Model\GetBlockchainEventSubscriptionDetailsByReferenceIDE401 $error error
      *
      * @return self
      */

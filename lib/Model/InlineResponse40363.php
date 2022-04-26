@@ -63,7 +63,7 @@ class InlineResponse40363 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationE403'
+        'error' => '\CryptoAPIs\Model\ListInternalTransactionsByAddressAndTimeRangeE403'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40363 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationE403
+     * @return \CryptoAPIs\Model\ListInternalTransactionsByAddressAndTimeRangeE403
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40363 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\NewConfirmedCoinsTransactionsAndEachConfirmationE403 $error error
+     * @param \CryptoAPIs\Model\ListInternalTransactionsByAddressAndTimeRangeE403 $error error
      *
      * @return self
      */

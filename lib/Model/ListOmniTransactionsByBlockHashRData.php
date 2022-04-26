@@ -60,8 +60,8 @@ class ListOmniTransactionsByBlockHashRData implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'offset' => 'int',
         'limit' => 'int',
+        'offset' => 'int',
         'total' => 'int',
         'items' => '\CryptoAPIs\Model\ListOmniTransactionsByBlockHashRI[]'
     ];
@@ -74,8 +74,8 @@ class ListOmniTransactionsByBlockHashRData implements ModelInterface, ArrayAcces
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'offset' => null,
         'limit' => null,
+        'offset' => null,
         'total' => null,
         'items' => null
     ];
@@ -107,8 +107,8 @@ class ListOmniTransactionsByBlockHashRData implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'offset' => 'offset',
         'limit' => 'limit',
+        'offset' => 'offset',
         'total' => 'total',
         'items' => 'items'
     ];
@@ -119,8 +119,8 @@ class ListOmniTransactionsByBlockHashRData implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'offset' => 'setOffset',
         'limit' => 'setLimit',
+        'offset' => 'setOffset',
         'total' => 'setTotal',
         'items' => 'setItems'
     ];
@@ -131,8 +131,8 @@ class ListOmniTransactionsByBlockHashRData implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'offset' => 'getOffset',
         'limit' => 'getLimit',
+        'offset' => 'getOffset',
         'total' => 'getTotal',
         'items' => 'getItems'
     ];
@@ -194,8 +194,8 @@ class ListOmniTransactionsByBlockHashRData implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
-        $this->container['offset'] = $data['offset'] ?? null;
         $this->container['limit'] = $data['limit'] ?? null;
+        $this->container['offset'] = $data['offset'] ?? null;
         $this->container['total'] = $data['total'] ?? null;
         $this->container['items'] = $data['items'] ?? null;
     }
@@ -209,11 +209,11 @@ class ListOmniTransactionsByBlockHashRData implements ModelInterface, ArrayAcces
     {
         $invalidProperties = [];
 
-        if ($this->container['offset'] === null) {
-            $invalidProperties[] = "'offset' can't be null";
-        }
         if ($this->container['limit'] === null) {
             $invalidProperties[] = "'limit' can't be null";
+        }
+        if ($this->container['offset'] === null) {
+            $invalidProperties[] = "'offset' can't be null";
         }
         if ($this->container['total'] === null) {
             $invalidProperties[] = "'total' can't be null";
@@ -237,30 +237,6 @@ class ListOmniTransactionsByBlockHashRData implements ModelInterface, ArrayAcces
 
 
     /**
-     * Gets offset
-     *
-     * @return int
-     */
-    public function getOffset()
-    {
-        return $this->container['offset'];
-    }
-
-    /**
-     * Sets offset
-     *
-     * @param int $offset The starting index of the response items, i.e. where the response should start listing the returned items.
-     *
-     * @return self
-     */
-    public function setOffset($offset)
-    {
-        $this->container['offset'] = $offset;
-
-        return $this;
-    }
-
-    /**
      * Gets limit
      *
      * @return int
@@ -280,6 +256,30 @@ class ListOmniTransactionsByBlockHashRData implements ModelInterface, ArrayAcces
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets offset
+     *
+     * @return int
+     */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+     * Sets offset
+     *
+     * @param int $offset The starting index of the response items, i.e. where the response should start listing the returned items.
+     *
+     * @return self
+     */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
 
         return $this;
     }

@@ -43,7 +43,7 @@ $address = 0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5; // string | Defines the s
 $blockchain = ethereum; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = ropsten; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $wallet_id = 609e221675d04500068718dc; // string | Represents the sender's specific and unique Wallet ID of the sender.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $create_coins_transaction_from_address_for_whole_amount_rb = new \CryptoAPIs\Model\CreateCoinsTransactionFromAddressForWholeAmountRB(); // \CryptoAPIs\Model\CreateCoinsTransactionFromAddressForWholeAmountRB
 
 try {
@@ -111,11 +111,11 @@ $apiInstance = new CryptoAPIs\Api\TransactionsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$address = 0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5; // string | Defines the specific source address for the transaction.
+$address = 0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5; // string | Defines the specific source address for the transaction. For XRP we also support the X-address format.
 $blockchain = ethereum; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = ropsten; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $wallet_id = 609e221675d04500068718dc; // string | Represents the sender's specific and unique Wallet ID of the sender.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $create_coins_transaction_request_from_address_rb = new \CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressRB(); // \CryptoAPIs\Model\CreateCoinsTransactionRequestFromAddressRB
 
 try {
@@ -130,7 +130,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address** | **string**| Defines the specific source address for the transaction. |
+ **address** | **string**| Defines the specific source address for the transaction. For XRP we also support the X-address format. |
  **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
  **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |
  **wallet_id** | **string**| Represents the sender&#39;s specific and unique Wallet ID of the sender. |
@@ -186,7 +186,7 @@ $apiInstance = new CryptoAPIs\Api\TransactionsApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $wallet_id = 609e221675d04500068718dc; // string | Represents the sender's specific and unique Wallet ID of the sender.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $create_coins_transaction_request_from_wallet_rb = new \CryptoAPIs\Model\CreateCoinsTransactionRequestFromWalletRB(); // \CryptoAPIs\Model\CreateCoinsTransactionRequestFromWalletRB
 
 try {
@@ -257,7 +257,7 @@ $blockchain = ethereum; // string | Represents the specific blockchain protocol 
 $network = mainnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $sender_address = 0x6f61e3c2fbb8c8be698bd0907ba6c04b62800fe5; // string | Defines the specific source address for the transaction.
 $wallet_id = 609e221675d04500068718dc; // string | Defines the unique ID of the Wallet.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $create_fungible_tokens_transaction_request_from_address_rb = new \CryptoAPIs\Model\CreateFungibleTokensTransactionRequestFromAddressRB(); // \CryptoAPIs\Model\CreateFungibleTokensTransactionRequestFromAddressRB
 
 try {

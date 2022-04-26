@@ -332,7 +332,7 @@ class CreateCoinsTransactionRequestFromAddressRBDataItem implements ModelInterfa
     /**
      * Sets callback_url
      *
-     * @param string|null $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+     * @param string|null $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. `We support ONLY httpS type of protocol`.
      *
      * @return self
      */
@@ -414,7 +414,7 @@ class CreateCoinsTransactionRequestFromAddressRBDataItem implements ModelInterfa
     /**
      * Sets recipient_address
      *
-     * @param string $recipient_address Defines the specific recipient address for the transaction.
+     * @param string $recipient_address Defines the specific recipient address for the transaction. For XRP we also support the X-address format.
      *
      * @return self
      */

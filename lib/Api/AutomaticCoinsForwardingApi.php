@@ -127,7 +127,7 @@ class AutomaticCoinsForwardingApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\CreateAutomaticCoinsForwardingR|\CryptoAPIs\Model\InlineResponse40076|\CryptoAPIs\Model\InlineResponse40176|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40376|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse40916|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\CreateAutomaticCoinsForwardingR|\CryptoAPIs\Model\InlineResponse40090|\CryptoAPIs\Model\InlineResponse40190|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40390|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse40916|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function createAutomaticCoinsForwarding($blockchain, $network, $context = null, $create_automatic_coins_forwarding_rb = null)
     {
@@ -147,7 +147,7 @@ class AutomaticCoinsForwardingApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\CreateAutomaticCoinsForwardingR|\CryptoAPIs\Model\InlineResponse40076|\CryptoAPIs\Model\InlineResponse40176|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40376|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse40916|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\CreateAutomaticCoinsForwardingR|\CryptoAPIs\Model\InlineResponse40090|\CryptoAPIs\Model\InlineResponse40190|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40390|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse40916|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAutomaticCoinsForwardingWithHttpInfo($blockchain, $network, $context = null, $create_automatic_coins_forwarding_rb = null)
     {
@@ -195,26 +195,26 @@ class AutomaticCoinsForwardingApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40076' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40090' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40076', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40090', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40176' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40190' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40176', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40190', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -231,14 +231,14 @@ class AutomaticCoinsForwardingApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40376' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40390' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40376', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40390', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -342,7 +342,7 @@ class AutomaticCoinsForwardingApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40076',
+                        '\CryptoAPIs\Model\InlineResponse40090',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -350,7 +350,7 @@ class AutomaticCoinsForwardingApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40176',
+                        '\CryptoAPIs\Model\InlineResponse40190',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -366,7 +366,7 @@ class AutomaticCoinsForwardingApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40376',
+                        '\CryptoAPIs\Model\InlineResponse40390',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -642,7 +642,7 @@ class AutomaticCoinsForwardingApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\DeleteAutomaticCoinsForwardingR|\CryptoAPIs\Model\InlineResponse40077|\CryptoAPIs\Model\InlineResponse40177|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40377|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\DeleteAutomaticCoinsForwardingR|\CryptoAPIs\Model\InlineResponse40091|\CryptoAPIs\Model\InlineResponse40191|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40391|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function deleteAutomaticCoinsForwarding($blockchain, $network, $reference_id, $context = null)
     {
@@ -662,7 +662,7 @@ class AutomaticCoinsForwardingApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\DeleteAutomaticCoinsForwardingR|\CryptoAPIs\Model\InlineResponse40077|\CryptoAPIs\Model\InlineResponse40177|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40377|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\DeleteAutomaticCoinsForwardingR|\CryptoAPIs\Model\InlineResponse40091|\CryptoAPIs\Model\InlineResponse40191|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40391|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAutomaticCoinsForwardingWithHttpInfo($blockchain, $network, $reference_id, $context = null)
     {
@@ -710,26 +710,26 @@ class AutomaticCoinsForwardingApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40077' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40091' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40077', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40091', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40177' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40191' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40177', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40191', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -746,14 +746,14 @@ class AutomaticCoinsForwardingApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40377' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40391' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40377', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40391', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -857,7 +857,7 @@ class AutomaticCoinsForwardingApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40077',
+                        '\CryptoAPIs\Model\InlineResponse40091',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -865,7 +865,7 @@ class AutomaticCoinsForwardingApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40177',
+                        '\CryptoAPIs\Model\InlineResponse40191',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -881,7 +881,7 @@ class AutomaticCoinsForwardingApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40377',
+                        '\CryptoAPIs\Model\InlineResponse40391',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1166,7 +1166,7 @@ class AutomaticCoinsForwardingApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListCoinsForwardingAutomationsR|\CryptoAPIs\Model\InlineResponse40075|\CryptoAPIs\Model\InlineResponse40175|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40375|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\ListCoinsForwardingAutomationsR|\CryptoAPIs\Model\InlineResponse40089|\CryptoAPIs\Model\InlineResponse40189|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40389|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listCoinsForwardingAutomations($blockchain, $network, $context = null, $limit = 50, $offset = 0)
     {
@@ -1187,7 +1187,7 @@ class AutomaticCoinsForwardingApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListCoinsForwardingAutomationsR|\CryptoAPIs\Model\InlineResponse40075|\CryptoAPIs\Model\InlineResponse40175|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40375|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListCoinsForwardingAutomationsR|\CryptoAPIs\Model\InlineResponse40089|\CryptoAPIs\Model\InlineResponse40189|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40389|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCoinsForwardingAutomationsWithHttpInfo($blockchain, $network, $context = null, $limit = 50, $offset = 0)
     {
@@ -1235,26 +1235,26 @@ class AutomaticCoinsForwardingApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40075' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40089' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40075', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40089', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40175' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40189' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40175', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40189', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1271,14 +1271,14 @@ class AutomaticCoinsForwardingApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40375' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40389' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40375', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40389', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1382,7 +1382,7 @@ class AutomaticCoinsForwardingApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40075',
+                        '\CryptoAPIs\Model\InlineResponse40089',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1390,7 +1390,7 @@ class AutomaticCoinsForwardingApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40175',
+                        '\CryptoAPIs\Model\InlineResponse40189',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1406,7 +1406,7 @@ class AutomaticCoinsForwardingApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40375',
+                        '\CryptoAPIs\Model\InlineResponse40389',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

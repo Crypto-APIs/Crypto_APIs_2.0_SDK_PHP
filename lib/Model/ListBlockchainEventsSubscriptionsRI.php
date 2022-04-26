@@ -65,6 +65,7 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
         'callback_url' => 'string',
         'confirmations_count' => 'int',
         'created_timestamp' => 'int',
+        'deactivation_reasons' => '\CryptoAPIs\Model\ListBlockchainEventsSubscriptionsRIDeactivationReasons[]',
         'event_type' => 'string',
         'is_active' => 'bool',
         'reference_id' => 'string',
@@ -84,6 +85,7 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
         'callback_url' => null,
         'confirmations_count' => null,
         'created_timestamp' => null,
+        'deactivation_reasons' => null,
         'event_type' => null,
         'is_active' => null,
         'reference_id' => null,
@@ -122,6 +124,7 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
         'callback_url' => 'callbackUrl',
         'confirmations_count' => 'confirmationsCount',
         'created_timestamp' => 'createdTimestamp',
+        'deactivation_reasons' => 'deactivationReasons',
         'event_type' => 'eventType',
         'is_active' => 'isActive',
         'reference_id' => 'referenceId',
@@ -139,6 +142,7 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
         'callback_url' => 'setCallbackUrl',
         'confirmations_count' => 'setConfirmationsCount',
         'created_timestamp' => 'setCreatedTimestamp',
+        'deactivation_reasons' => 'setDeactivationReasons',
         'event_type' => 'setEventType',
         'is_active' => 'setIsActive',
         'reference_id' => 'setReferenceId',
@@ -156,6 +160,7 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
         'callback_url' => 'getCallbackUrl',
         'confirmations_count' => 'getConfirmationsCount',
         'created_timestamp' => 'getCreatedTimestamp',
+        'deactivation_reasons' => 'getDeactivationReasons',
         'event_type' => 'getEventType',
         'is_active' => 'getIsActive',
         'reference_id' => 'getReferenceId',
@@ -224,6 +229,7 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
         $this->container['callback_url'] = $data['callback_url'] ?? null;
         $this->container['confirmations_count'] = $data['confirmations_count'] ?? null;
         $this->container['created_timestamp'] = $data['created_timestamp'] ?? null;
+        $this->container['deactivation_reasons'] = $data['deactivation_reasons'] ?? null;
         $this->container['event_type'] = $data['event_type'] ?? null;
         $this->container['is_active'] = $data['is_active'] ?? null;
         $this->container['reference_id'] = $data['reference_id'] ?? null;
@@ -242,9 +248,6 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
         if ($this->container['address'] === null) {
             $invalidProperties[] = "'address' can't be null";
         }
-        if ($this->container['callback_secret_key'] === null) {
-            $invalidProperties[] = "'callback_secret_key' can't be null";
-        }
         if ($this->container['callback_url'] === null) {
             $invalidProperties[] = "'callback_url' can't be null";
         }
@@ -262,9 +265,6 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
         }
         if ($this->container['reference_id'] === null) {
             $invalidProperties[] = "'reference_id' can't be null";
-        }
-        if ($this->container['transaction_id'] === null) {
-            $invalidProperties[] = "'transaction_id' can't be null";
         }
         return $invalidProperties;
     }
@@ -308,7 +308,7 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
     /**
      * Gets callback_secret_key
      *
-     * @return string
+     * @return string|null
      */
     public function getCallbackSecretKey()
     {
@@ -318,7 +318,7 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
     /**
      * Sets callback_secret_key
      *
-     * @param string $callback_secret_key Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).
+     * @param string|null $callback_secret_key Represents the Secret Key value provided by the customer. This field is used for security purposes during the callback notification, in order to prove the sender of the callback as Crypto APIs. For more information please see our [Documentation](https://developers.cryptoapis.io/technical-documentation/general-information/callbacks#callback-security).
      *
      * @return self
      */
@@ -342,7 +342,7 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
     /**
      * Sets callback_url
      *
-     * @param string $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs.
+     * @param string $callback_url Represents the URL that is set by the customer where the callback will be received at. The callback notification will be received only if and when the event occurs. `We support ONLY httpS type of protocol`.
      *
      * @return self
      */
@@ -397,6 +397,30 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
     public function setCreatedTimestamp($created_timestamp)
     {
         $this->container['created_timestamp'] = $created_timestamp;
+
+        return $this;
+    }
+
+    /**
+     * Gets deactivation_reasons
+     *
+     * @return \CryptoAPIs\Model\ListBlockchainEventsSubscriptionsRIDeactivationReasons[]|null
+     */
+    public function getDeactivationReasons()
+    {
+        return $this->container['deactivation_reasons'];
+    }
+
+    /**
+     * Sets deactivation_reasons
+     *
+     * @param \CryptoAPIs\Model\ListBlockchainEventsSubscriptionsRIDeactivationReasons[]|null $deactivation_reasons Represents the deactivation reason details, available when a blockchain event subscription has status isActive - false.
+     *
+     * @return self
+     */
+    public function setDeactivationReasons($deactivation_reasons)
+    {
+        $this->container['deactivation_reasons'] = $deactivation_reasons;
 
         return $this;
     }
@@ -476,7 +500,7 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
     /**
      * Gets transaction_id
      *
-     * @return string
+     * @return string|null
      */
     public function getTransactionId()
     {
@@ -486,7 +510,7 @@ class ListBlockchainEventsSubscriptionsRI implements ModelInterface, ArrayAccess
     /**
      * Sets transaction_id
      *
-     * @param string $transaction_id Represents the unique identification string that defines the transaction.
+     * @param string|null $transaction_id Represents the unique identification string that defines the transaction.
      *
      * @return self
      */

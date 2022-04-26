@@ -90,9 +90,27 @@ class CreateCoinsTransactionRequestFromAddressRIRecipientsTest extends TestCase
     }
 
     /**
+     * Test attribute "address_tag"
+     */
+    public function testPropertyAddressTag()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "amount"
      */
     public function testPropertyAmount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "classic_address"
+     */
+    public function testPropertyClassicAddress()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

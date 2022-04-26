@@ -125,7 +125,7 @@ class AssetsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetAssetDetailsByAssetIDR|\CryptoAPIs\Model\InlineResponse40090|\CryptoAPIs\Model\InlineResponse40190|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40390|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\GetAssetDetailsByAssetIDR|\CryptoAPIs\Model\InlineResponse400109|\CryptoAPIs\Model\InlineResponse401109|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403109|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getAssetDetailsByAssetID($asset_id, $context = null)
     {
@@ -143,7 +143,7 @@ class AssetsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetAssetDetailsByAssetIDR|\CryptoAPIs\Model\InlineResponse40090|\CryptoAPIs\Model\InlineResponse40190|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40390|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetAssetDetailsByAssetIDR|\CryptoAPIs\Model\InlineResponse400109|\CryptoAPIs\Model\InlineResponse401109|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403109|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssetDetailsByAssetIDWithHttpInfo($asset_id, $context = null)
     {
@@ -191,26 +191,26 @@ class AssetsApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40090' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400109' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40090', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400109', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40190' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401109' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40190', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401109', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -227,14 +227,14 @@ class AssetsApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40390' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403109' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40390', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403109', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -326,7 +326,7 @@ class AssetsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40090',
+                        '\CryptoAPIs\Model\InlineResponse400109',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -334,7 +334,7 @@ class AssetsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40190',
+                        '\CryptoAPIs\Model\InlineResponse401109',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -350,7 +350,7 @@ class AssetsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40390',
+                        '\CryptoAPIs\Model\InlineResponse403109',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -590,7 +590,7 @@ class AssetsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetAssetDetailsByAssetSymbolR|\CryptoAPIs\Model\InlineResponse40091|\CryptoAPIs\Model\InlineResponse40191|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40391|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\GetAssetDetailsByAssetSymbolR|\CryptoAPIs\Model\InlineResponse400110|\CryptoAPIs\Model\InlineResponse401110|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403110|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getAssetDetailsByAssetSymbol($asset_symbol, $context = null)
     {
@@ -608,7 +608,7 @@ class AssetsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetAssetDetailsByAssetSymbolR|\CryptoAPIs\Model\InlineResponse40091|\CryptoAPIs\Model\InlineResponse40191|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40391|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetAssetDetailsByAssetSymbolR|\CryptoAPIs\Model\InlineResponse400110|\CryptoAPIs\Model\InlineResponse401110|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403110|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAssetDetailsByAssetSymbolWithHttpInfo($asset_symbol, $context = null)
     {
@@ -656,26 +656,26 @@ class AssetsApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40091' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400110' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40091', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400110', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40191' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401110' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40191', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401110', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -692,14 +692,14 @@ class AssetsApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40391' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403110' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40391', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403110', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -791,7 +791,7 @@ class AssetsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40091',
+                        '\CryptoAPIs\Model\InlineResponse400110',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -799,7 +799,7 @@ class AssetsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40191',
+                        '\CryptoAPIs\Model\InlineResponse401110',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -815,7 +815,7 @@ class AssetsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40391',
+                        '\CryptoAPIs\Model\InlineResponse403110',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1059,7 +1059,7 @@ class AssetsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListAssetsDetailsR|\CryptoAPIs\Model\InlineResponse40089|\CryptoAPIs\Model\InlineResponse40189|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40389|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\ListAssetsDetailsR|\CryptoAPIs\Model\InlineResponse400108|\CryptoAPIs\Model\InlineResponse401108|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403108|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listAssetsDetails($context = null, $asset_type = null, $crypto_type = null, $limit = 50, $offset = 0, $waas_enabled = null)
     {
@@ -1081,7 +1081,7 @@ class AssetsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListAssetsDetailsR|\CryptoAPIs\Model\InlineResponse40089|\CryptoAPIs\Model\InlineResponse40189|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40389|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListAssetsDetailsR|\CryptoAPIs\Model\InlineResponse400108|\CryptoAPIs\Model\InlineResponse401108|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403108|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listAssetsDetailsWithHttpInfo($context = null, $asset_type = null, $crypto_type = null, $limit = 50, $offset = 0, $waas_enabled = null)
     {
@@ -1129,26 +1129,26 @@ class AssetsApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40089' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400108' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40089', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400108', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40189' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401108' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40189', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401108', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1165,14 +1165,14 @@ class AssetsApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40389' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403108' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40389', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403108', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1264,7 +1264,7 @@ class AssetsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40089',
+                        '\CryptoAPIs\Model\InlineResponse400108',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1272,7 +1272,7 @@ class AssetsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40189',
+                        '\CryptoAPIs\Model\InlineResponse401108',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1288,7 +1288,7 @@ class AssetsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40389',
+                        '\CryptoAPIs\Model\InlineResponse403108',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

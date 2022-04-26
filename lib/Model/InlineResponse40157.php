@@ -63,7 +63,7 @@ class InlineResponse40157 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\GetTokenDetailsByContractAddressE401'
+        'error' => '\CryptoAPIs\Model\GetFeeRecommendationsE401'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40157 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\GetTokenDetailsByContractAddressE401
+     * @return \CryptoAPIs\Model\GetFeeRecommendationsE401
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40157 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\GetTokenDetailsByContractAddressE401 $error error
+     * @param \CryptoAPIs\Model\GetFeeRecommendationsE401 $error error
      *
      * @return self
      */

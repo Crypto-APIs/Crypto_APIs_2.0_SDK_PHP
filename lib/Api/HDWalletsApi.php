@@ -116,9 +116,9 @@ class HDWalletsApi
     }
 
     /**
-     * Operation getHDWalletXPubYPubZPubDetails
+     * Operation getHDWalletXPubYPubZPubAssets
      *
-     * Get HD Wallet (xPub, yPub, zPub) Details
+     * Get HD Wallet (xPub, yPub, zPub) Assets
      *
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $extended_public_key Defines the account extended publicly known key which is used to derive all child public keys. (required)
@@ -128,18 +128,18 @@ class HDWalletsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetHDWalletXPubYPubZPubDetailsR|\CryptoAPIs\Model\InlineResponse40047|\CryptoAPIs\Model\InlineResponse40147|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40347|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4222|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\GetHDWalletXPubYPubZPubAssetsR|\CryptoAPIs\Model\InlineResponse40050|\CryptoAPIs\Model\InlineResponse40150|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40350|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4222|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
-    public function getHDWalletXPubYPubZPubDetails($blockchain, $extended_public_key, $network, $context = null, $derivation = null)
+    public function getHDWalletXPubYPubZPubAssets($blockchain, $extended_public_key, $network, $context = null, $derivation = null)
     {
-        list($response) = $this->getHDWalletXPubYPubZPubDetailsWithHttpInfo($blockchain, $extended_public_key, $network, $context, $derivation);
+        list($response) = $this->getHDWalletXPubYPubZPubAssetsWithHttpInfo($blockchain, $extended_public_key, $network, $context, $derivation);
         return $response;
     }
 
     /**
-     * Operation getHDWalletXPubYPubZPubDetailsWithHttpInfo
+     * Operation getHDWalletXPubYPubZPubAssetsWithHttpInfo
      *
-     * Get HD Wallet (xPub, yPub, zPub) Details
+     * Get HD Wallet (xPub, yPub, zPub) Assets
      *
      * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
      * @param  string $extended_public_key Defines the account extended publicly known key which is used to derive all child public keys. (required)
@@ -149,11 +149,11 @@ class HDWalletsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetHDWalletXPubYPubZPubDetailsR|\CryptoAPIs\Model\InlineResponse40047|\CryptoAPIs\Model\InlineResponse40147|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40347|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4222|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetHDWalletXPubYPubZPubAssetsR|\CryptoAPIs\Model\InlineResponse40050|\CryptoAPIs\Model\InlineResponse40150|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40350|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4222|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getHDWalletXPubYPubZPubDetailsWithHttpInfo($blockchain, $extended_public_key, $network, $context = null, $derivation = null)
+    public function getHDWalletXPubYPubZPubAssetsWithHttpInfo($blockchain, $extended_public_key, $network, $context = null, $derivation = null)
     {
-        $request = $this->getHDWalletXPubYPubZPubDetailsRequest($blockchain, $extended_public_key, $network, $context, $derivation);
+        $request = $this->getHDWalletXPubYPubZPubAssetsRequest($blockchain, $extended_public_key, $network, $context, $derivation);
 
         try {
             $options = $this->createHttpClientOption();
@@ -185,38 +185,38 @@ class HDWalletsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\CryptoAPIs\Model\GetHDWalletXPubYPubZPubDetailsR' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\GetHDWalletXPubYPubZPubAssetsR' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\GetHDWalletXPubYPubZPubDetailsR', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\GetHDWalletXPubYPubZPubAssetsR', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40047' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40050' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40047', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40050', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40147' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40150' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40147', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40150', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -233,14 +233,14 @@ class HDWalletsApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40347' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40350' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40347', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40350', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -306,6 +306,525 @@ class HDWalletsApi
                     ];
             }
 
+            $returnType = '\CryptoAPIs\Model\GetHDWalletXPubYPubZPubAssetsR';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\GetHDWalletXPubYPubZPubAssetsR',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40050',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40150',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse402',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40350',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 409:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse409',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 415:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse415',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse4222',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 429:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse429',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getHDWalletXPubYPubZPubAssetsAsync
+     *
+     * Get HD Wallet (xPub, yPub, zPub) Assets
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $extended_public_key Defines the account extended publicly known key which is used to derive all child public keys. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  string $derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getHDWalletXPubYPubZPubAssetsAsync($blockchain, $extended_public_key, $network, $context = null, $derivation = null)
+    {
+        return $this->getHDWalletXPubYPubZPubAssetsAsyncWithHttpInfo($blockchain, $extended_public_key, $network, $context, $derivation)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getHDWalletXPubYPubZPubAssetsAsyncWithHttpInfo
+     *
+     * Get HD Wallet (xPub, yPub, zPub) Assets
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $extended_public_key Defines the account extended publicly known key which is used to derive all child public keys. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  string $derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getHDWalletXPubYPubZPubAssetsAsyncWithHttpInfo($blockchain, $extended_public_key, $network, $context = null, $derivation = null)
+    {
+        $returnType = '\CryptoAPIs\Model\GetHDWalletXPubYPubZPubAssetsR';
+        $request = $this->getHDWalletXPubYPubZPubAssetsRequest($blockchain, $extended_public_key, $network, $context, $derivation);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getHDWalletXPubYPubZPubAssets'
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $extended_public_key Defines the account extended publicly known key which is used to derive all child public keys. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  string $derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getHDWalletXPubYPubZPubAssetsRequest($blockchain, $extended_public_key, $network, $context = null, $derivation = null)
+    {
+        // verify the required parameter 'blockchain' is set
+        if ($blockchain === null || (is_array($blockchain) && count($blockchain) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $blockchain when calling getHDWalletXPubYPubZPubAssets'
+            );
+        }
+        // verify the required parameter 'extended_public_key' is set
+        if ($extended_public_key === null || (is_array($extended_public_key) && count($extended_public_key) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $extended_public_key when calling getHDWalletXPubYPubZPubAssets'
+            );
+        }
+        // verify the required parameter 'network' is set
+        if ($network === null || (is_array($network) && count($network) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $network when calling getHDWalletXPubYPubZPubAssets'
+            );
+        }
+
+        $resourcePath = '/blockchain-data/{blockchain}/{network}/hd/{extendedPublicKey}/assets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($context !== null) {
+            if('form' === 'form' && is_array($context)) {
+                foreach($context as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['context'] = $context;
+            }
+        }
+        // query params
+        if ($derivation !== null) {
+            if('form' === 'form' && is_array($derivation)) {
+                foreach($derivation as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['derivation'] = $derivation;
+            }
+        }
+
+
+        // path params
+        if ($blockchain !== null) {
+            $resourcePath = str_replace(
+                '{' . 'blockchain' . '}',
+                ObjectSerializer::toPathValue($blockchain),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($extended_public_key !== null) {
+            $resourcePath = str_replace(
+                '{' . 'extendedPublicKey' . '}',
+                ObjectSerializer::toPathValue($extended_public_key),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($network !== null) {
+            $resourcePath = str_replace(
+                '{' . 'network' . '}',
+                ObjectSerializer::toPathValue($network),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('x-api-key');
+        if ($apiKey !== null) {
+            $headers['x-api-key'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getHDWalletXPubYPubZPubDetails
+     *
+     * Get HD Wallet (xPub, yPub, zPub) Details
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $extended_public_key Defines the account extended publicly known key which is used to derive all child public keys. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  string $derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)
+     *
+     * @throws \CryptoAPIs\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CryptoAPIs\Model\GetHDWalletXPubYPubZPubDetailsR|\CryptoAPIs\Model\InlineResponse40051|\CryptoAPIs\Model\InlineResponse40151|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40351|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4223|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     */
+    public function getHDWalletXPubYPubZPubDetails($blockchain, $extended_public_key, $network, $context = null, $derivation = null)
+    {
+        list($response) = $this->getHDWalletXPubYPubZPubDetailsWithHttpInfo($blockchain, $extended_public_key, $network, $context, $derivation);
+        return $response;
+    }
+
+    /**
+     * Operation getHDWalletXPubYPubZPubDetailsWithHttpInfo
+     *
+     * Get HD Wallet (xPub, yPub, zPub) Details
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $extended_public_key Defines the account extended publicly known key which is used to derive all child public keys. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  string $derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)
+     *
+     * @throws \CryptoAPIs\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CryptoAPIs\Model\GetHDWalletXPubYPubZPubDetailsR|\CryptoAPIs\Model\InlineResponse40051|\CryptoAPIs\Model\InlineResponse40151|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40351|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4223|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getHDWalletXPubYPubZPubDetailsWithHttpInfo($blockchain, $extended_public_key, $network, $context = null, $derivation = null)
+    {
+        $request = $this->getHDWalletXPubYPubZPubDetailsRequest($blockchain, $extended_public_key, $network, $context, $derivation);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\CryptoAPIs\Model\GetHDWalletXPubYPubZPubDetailsR' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\GetHDWalletXPubYPubZPubDetailsR', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\CryptoAPIs\Model\InlineResponse40051' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40051', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\CryptoAPIs\Model\InlineResponse40151' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40151', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\CryptoAPIs\Model\InlineResponse402' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse402', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 403:
+                    if ('\CryptoAPIs\Model\InlineResponse40351' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40351', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 409:
+                    if ('\CryptoAPIs\Model\InlineResponse409' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse409', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 415:
+                    if ('\CryptoAPIs\Model\InlineResponse415' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse415', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\CryptoAPIs\Model\InlineResponse4223' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4223', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 429:
+                    if ('\CryptoAPIs\Model\InlineResponse429' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse429', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\CryptoAPIs\Model\InlineResponse500' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse500', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
             $returnType = '\CryptoAPIs\Model\GetHDWalletXPubYPubZPubDetailsR';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
@@ -332,7 +851,7 @@ class HDWalletsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40047',
+                        '\CryptoAPIs\Model\InlineResponse40051',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -340,7 +859,7 @@ class HDWalletsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40147',
+                        '\CryptoAPIs\Model\InlineResponse40151',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -356,7 +875,7 @@ class HDWalletsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40347',
+                        '\CryptoAPIs\Model\InlineResponse40351',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -380,7 +899,7 @@ class HDWalletsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse4222',
+                        '\CryptoAPIs\Model\InlineResponse4223',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -649,7 +1168,7 @@ class HDWalletsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListHDWalletXPubYPubZPubTransactionsR|\CryptoAPIs\Model\InlineResponse40049|\CryptoAPIs\Model\InlineResponse40149|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40349|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4223|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\ListHDWalletXPubYPubZPubTransactionsR|\CryptoAPIs\Model\InlineResponse40053|\CryptoAPIs\Model\InlineResponse40153|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40353|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4224|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listHDWalletXPubYPubZPubTransactions($blockchain, $extended_public_key, $network, $context = null, $derivation = null, $limit = 50, $offset = 0)
     {
@@ -672,7 +1191,7 @@ class HDWalletsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListHDWalletXPubYPubZPubTransactionsR|\CryptoAPIs\Model\InlineResponse40049|\CryptoAPIs\Model\InlineResponse40149|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40349|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4223|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListHDWalletXPubYPubZPubTransactionsR|\CryptoAPIs\Model\InlineResponse40053|\CryptoAPIs\Model\InlineResponse40153|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40353|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4224|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listHDWalletXPubYPubZPubTransactionsWithHttpInfo($blockchain, $extended_public_key, $network, $context = null, $derivation = null, $limit = 50, $offset = 0)
     {
@@ -720,26 +1239,26 @@ class HDWalletsApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40049' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40053' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40049', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40053', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40149' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40153' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40149', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40153', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -756,14 +1275,14 @@ class HDWalletsApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40349' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40353' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40349', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40353', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -792,14 +1311,14 @@ class HDWalletsApi
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\CryptoAPIs\Model\InlineResponse4223' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse4224' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4223', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4224', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -855,7 +1374,7 @@ class HDWalletsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40049',
+                        '\CryptoAPIs\Model\InlineResponse40053',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -863,7 +1382,7 @@ class HDWalletsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40149',
+                        '\CryptoAPIs\Model\InlineResponse40153',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -879,7 +1398,7 @@ class HDWalletsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40349',
+                        '\CryptoAPIs\Model\InlineResponse40353',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -903,7 +1422,7 @@ class HDWalletsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse4223',
+                        '\CryptoAPIs\Model\InlineResponse4224',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1186,6 +1705,557 @@ class HDWalletsApi
     }
 
     /**
+     * Operation listHDWalletXPubYPubZPubUTXOs
+     *
+     * List HD Wallet (xPub, yPub, zPub) UTXOs
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $extended_public_key Defines the account extended publicly known key which is used to derive all child public keys. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  string $derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)
+     * @param  int $limit Defines how many items should be returned in the response per page basis. (optional, default to 50)
+     * @param  int $offset The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)
+     *
+     * @throws \CryptoAPIs\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CryptoAPIs\Model\ListHDWalletXPubYPubZPubUTXOsR|\CryptoAPIs\Model\InlineResponse40055|\CryptoAPIs\Model\InlineResponse40155|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40355|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4225|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     */
+    public function listHDWalletXPubYPubZPubUTXOs($blockchain, $extended_public_key, $network, $context = null, $derivation = null, $limit = 50, $offset = 0)
+    {
+        list($response) = $this->listHDWalletXPubYPubZPubUTXOsWithHttpInfo($blockchain, $extended_public_key, $network, $context, $derivation, $limit, $offset);
+        return $response;
+    }
+
+    /**
+     * Operation listHDWalletXPubYPubZPubUTXOsWithHttpInfo
+     *
+     * List HD Wallet (xPub, yPub, zPub) UTXOs
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $extended_public_key Defines the account extended publicly known key which is used to derive all child public keys. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  string $derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)
+     * @param  int $limit Defines how many items should be returned in the response per page basis. (optional, default to 50)
+     * @param  int $offset The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)
+     *
+     * @throws \CryptoAPIs\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CryptoAPIs\Model\ListHDWalletXPubYPubZPubUTXOsR|\CryptoAPIs\Model\InlineResponse40055|\CryptoAPIs\Model\InlineResponse40155|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40355|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4225|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function listHDWalletXPubYPubZPubUTXOsWithHttpInfo($blockchain, $extended_public_key, $network, $context = null, $derivation = null, $limit = 50, $offset = 0)
+    {
+        $request = $this->listHDWalletXPubYPubZPubUTXOsRequest($blockchain, $extended_public_key, $network, $context, $derivation, $limit, $offset);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\CryptoAPIs\Model\ListHDWalletXPubYPubZPubUTXOsR' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\ListHDWalletXPubYPubZPubUTXOsR', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\CryptoAPIs\Model\InlineResponse40055' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40055', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\CryptoAPIs\Model\InlineResponse40155' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40155', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\CryptoAPIs\Model\InlineResponse402' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse402', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 403:
+                    if ('\CryptoAPIs\Model\InlineResponse40355' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40355', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 409:
+                    if ('\CryptoAPIs\Model\InlineResponse409' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse409', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 415:
+                    if ('\CryptoAPIs\Model\InlineResponse415' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse415', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\CryptoAPIs\Model\InlineResponse4225' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4225', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 429:
+                    if ('\CryptoAPIs\Model\InlineResponse429' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse429', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\CryptoAPIs\Model\InlineResponse500' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse500', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\CryptoAPIs\Model\ListHDWalletXPubYPubZPubUTXOsR';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\ListHDWalletXPubYPubZPubUTXOsR',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40055',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40155',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse402',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40355',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 409:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse409',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 415:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse415',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse4225',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 429:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse429',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation listHDWalletXPubYPubZPubUTXOsAsync
+     *
+     * List HD Wallet (xPub, yPub, zPub) UTXOs
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $extended_public_key Defines the account extended publicly known key which is used to derive all child public keys. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  string $derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)
+     * @param  int $limit Defines how many items should be returned in the response per page basis. (optional, default to 50)
+     * @param  int $offset The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listHDWalletXPubYPubZPubUTXOsAsync($blockchain, $extended_public_key, $network, $context = null, $derivation = null, $limit = 50, $offset = 0)
+    {
+        return $this->listHDWalletXPubYPubZPubUTXOsAsyncWithHttpInfo($blockchain, $extended_public_key, $network, $context, $derivation, $limit, $offset)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation listHDWalletXPubYPubZPubUTXOsAsyncWithHttpInfo
+     *
+     * List HD Wallet (xPub, yPub, zPub) UTXOs
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $extended_public_key Defines the account extended publicly known key which is used to derive all child public keys. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  string $derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)
+     * @param  int $limit Defines how many items should be returned in the response per page basis. (optional, default to 50)
+     * @param  int $offset The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listHDWalletXPubYPubZPubUTXOsAsyncWithHttpInfo($blockchain, $extended_public_key, $network, $context = null, $derivation = null, $limit = 50, $offset = 0)
+    {
+        $returnType = '\CryptoAPIs\Model\ListHDWalletXPubYPubZPubUTXOsR';
+        $request = $this->listHDWalletXPubYPubZPubUTXOsRequest($blockchain, $extended_public_key, $network, $context, $derivation, $limit, $offset);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'listHDWalletXPubYPubZPubUTXOs'
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $extended_public_key Defines the account extended publicly known key which is used to derive all child public keys. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  string $derivation The way how the HD walled derives, for example when the type is ACCOUNT, it derives change and receive addresses while when the type is BIP32 it derives directly. (optional)
+     * @param  int $limit Defines how many items should be returned in the response per page basis. (optional, default to 50)
+     * @param  int $offset The starting index of the response items, i.e. where the response should start listing the returned items. (optional, default to 0)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function listHDWalletXPubYPubZPubUTXOsRequest($blockchain, $extended_public_key, $network, $context = null, $derivation = null, $limit = 50, $offset = 0)
+    {
+        // verify the required parameter 'blockchain' is set
+        if ($blockchain === null || (is_array($blockchain) && count($blockchain) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $blockchain when calling listHDWalletXPubYPubZPubUTXOs'
+            );
+        }
+        // verify the required parameter 'extended_public_key' is set
+        if ($extended_public_key === null || (is_array($extended_public_key) && count($extended_public_key) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $extended_public_key when calling listHDWalletXPubYPubZPubUTXOs'
+            );
+        }
+        // verify the required parameter 'network' is set
+        if ($network === null || (is_array($network) && count($network) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $network when calling listHDWalletXPubYPubZPubUTXOs'
+            );
+        }
+
+        $resourcePath = '/blockchain-data/{blockchain}/{network}/hd/{extendedPublicKey}/utxos';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($context !== null) {
+            if('form' === 'form' && is_array($context)) {
+                foreach($context as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['context'] = $context;
+            }
+        }
+        // query params
+        if ($derivation !== null) {
+            if('form' === 'form' && is_array($derivation)) {
+                foreach($derivation as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['derivation'] = $derivation;
+            }
+        }
+        // query params
+        if ($limit !== null) {
+            if('form' === 'form' && is_array($limit)) {
+                foreach($limit as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['limit'] = $limit;
+            }
+        }
+        // query params
+        if ($offset !== null) {
+            if('form' === 'form' && is_array($offset)) {
+                foreach($offset as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['offset'] = $offset;
+            }
+        }
+
+
+        // path params
+        if ($blockchain !== null) {
+            $resourcePath = str_replace(
+                '{' . 'blockchain' . '}',
+                ObjectSerializer::toPathValue($blockchain),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($extended_public_key !== null) {
+            $resourcePath = str_replace(
+                '{' . 'extendedPublicKey' . '}',
+                ObjectSerializer::toPathValue($extended_public_key),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($network !== null) {
+            $resourcePath = str_replace(
+                '{' . 'network' . '}',
+                ObjectSerializer::toPathValue($network),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('x-api-key');
+        if ($apiKey !== null) {
+            $headers['x-api-key'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation syncHDWalletXPubYPubZPub
      *
      * Sync HD Wallet (xPub, yPub, zPub)
@@ -1197,7 +2267,7 @@ class HDWalletsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\SyncHDWalletXPubYPubZPubR|\CryptoAPIs\Model\InlineResponse40043|\CryptoAPIs\Model\InlineResponse40143|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40343|\CryptoAPIs\Model\InlineResponse4095|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4221|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\SyncHDWalletXPubYPubZPubR|\CryptoAPIs\Model\InlineResponse40046|\CryptoAPIs\Model\InlineResponse40146|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40346|\CryptoAPIs\Model\InlineResponse4095|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4221|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function syncHDWalletXPubYPubZPub($blockchain, $network, $context = null, $sync_hd_wallet_x_pub_y_pub_z_pub_rb = null)
     {
@@ -1217,7 +2287,7 @@ class HDWalletsApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\SyncHDWalletXPubYPubZPubR|\CryptoAPIs\Model\InlineResponse40043|\CryptoAPIs\Model\InlineResponse40143|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40343|\CryptoAPIs\Model\InlineResponse4095|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4221|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\SyncHDWalletXPubYPubZPubR|\CryptoAPIs\Model\InlineResponse40046|\CryptoAPIs\Model\InlineResponse40146|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40346|\CryptoAPIs\Model\InlineResponse4095|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse4221|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function syncHDWalletXPubYPubZPubWithHttpInfo($blockchain, $network, $context = null, $sync_hd_wallet_x_pub_y_pub_z_pub_rb = null)
     {
@@ -1265,26 +2335,26 @@ class HDWalletsApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40043' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40046' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40043', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40046', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40143' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40146' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40143', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40146', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1301,14 +2371,14 @@ class HDWalletsApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40343' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40346' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40343', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40346', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1400,7 +2470,7 @@ class HDWalletsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40043',
+                        '\CryptoAPIs\Model\InlineResponse40046',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1408,7 +2478,7 @@ class HDWalletsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40143',
+                        '\CryptoAPIs\Model\InlineResponse40146',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1424,7 +2494,7 @@ class HDWalletsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40343',
+                        '\CryptoAPIs\Model\InlineResponse40346',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

@@ -127,7 +127,7 @@ class MetadataApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ListSupportedAssetsR|\CryptoAPIs\Model\InlineResponse40086|\CryptoAPIs\Model\InlineResponse40186|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40386|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\ListSupportedAssetsR|\CryptoAPIs\Model\InlineResponse400105|\CryptoAPIs\Model\InlineResponse401105|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403105|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function listSupportedAssets($context = null, $asset_type = null, $limit = 50, $offset = 0)
     {
@@ -147,7 +147,7 @@ class MetadataApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ListSupportedAssetsR|\CryptoAPIs\Model\InlineResponse40086|\CryptoAPIs\Model\InlineResponse40186|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40386|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ListSupportedAssetsR|\CryptoAPIs\Model\InlineResponse400105|\CryptoAPIs\Model\InlineResponse401105|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403105|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSupportedAssetsWithHttpInfo($context = null, $asset_type = null, $limit = 50, $offset = 0)
     {
@@ -195,26 +195,26 @@ class MetadataApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40086' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400105' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40086', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400105', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40186' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401105' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40186', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401105', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -231,14 +231,14 @@ class MetadataApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40386' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403105' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40386', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403105', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -330,7 +330,7 @@ class MetadataApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40086',
+                        '\CryptoAPIs\Model\InlineResponse400105',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -338,7 +338,7 @@ class MetadataApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40186',
+                        '\CryptoAPIs\Model\InlineResponse401105',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -354,7 +354,7 @@ class MetadataApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40386',
+                        '\CryptoAPIs\Model\InlineResponse403105',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

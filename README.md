@@ -56,7 +56,7 @@ $apiInstance = new CryptoAPIs\Api\AssetsApi(
     $config
 );
 $asset_id = 5b1ea92e584bf50020130612; // string | Defines the unique ID of the specific asset.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->getAssetDetailsByAssetID($asset_id, $context);
@@ -101,15 +101,25 @@ Class | Method | HTTP request | Description
 *ExchangeRatesApi* | [**getExchangeRateByAssetSymbols**](docs/Api/ExchangeRatesApi.md#getexchangeratebyassetsymbols) | **GET** /market-data/exchange-rates/by-symbols/{fromAssetSymbol}/{toAssetSymbol} | Get Exchange Rate By Asset Symbols
 *ExchangeRatesApi* | [**getExchangeRateByAssetsIDs**](docs/Api/ExchangeRatesApi.md#getexchangeratebyassetsids) | **GET** /market-data/exchange-rates/by-asset-ids/{fromAssetId}/{toAssetId} | Get Exchange Rate By Assets IDs
 *FeaturesApi* | [**broadcastLocallySignedTransaction**](docs/Api/FeaturesApi.md#broadcastlocallysignedtransaction) | **POST** /blockchain-tools/{blockchain}/{network}/transactions/broadcast | Broadcast Locally Signed Transaction
+*FeaturesApi* | [**decodeRawTransactionHex**](docs/Api/FeaturesApi.md#decoderawtransactionhex) | **POST** /blockchain-tools/{blockchain}/{network}/decode-raw-transaction | Decode Raw Transaction Hex
+*FeaturesApi* | [**decodeXAddress**](docs/Api/FeaturesApi.md#decodexaddress) | **GET** /blockchain-tools/{blockchain}/{network}/decode-x-address/{xAddress} | Decode X-Address
+*FeaturesApi* | [**deriveHDWalletXPubYPubZPubChangeOrReceivingAddresses**](docs/Api/FeaturesApi.md#derivehdwalletxpubypubzpubchangeorreceivingaddresses) | **GET** /blockchain-tools/{blockchain}/{network}/hd/{extendedPublicKey}/addresses/derive-address | Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses
+*FeaturesApi* | [**encodeXAddress**](docs/Api/FeaturesApi.md#encodexaddress) | **GET** /blockchain-tools/{blockchain}/{network}/encode-x-address/{classicAddress}/{addressTag} | Encode X-Address
+*FeaturesApi* | [**estimateGasLimit**](docs/Api/FeaturesApi.md#estimategaslimit) | **POST** /blockchain-tools/{blockchain}/{network}/gas-limit | Estimate Gas Limit
+*FeaturesApi* | [**estimateTokenGasLimit**](docs/Api/FeaturesApi.md#estimatetokengaslimit) | **POST** /blockchain-tools/{blockchain}/{network}/gas-limit/contract | Estimate Token Gas Limit
 *FeaturesApi* | [**getEIP1559FeeRecommendations**](docs/Api/FeaturesApi.md#geteip1559feerecommendations) | **GET** /blockchain-tools/{blockchain}/{network}/fees/eip1559 | Get EIP 1559 Fee Recommendations
 *FeaturesApi* | [**validateAddress**](docs/Api/FeaturesApi.md#validateaddress) | **POST** /blockchain-tools/{blockchain}/{network}/addresses/validate | Validate Address
 *GeneratingApi* | [**generateDepositAddress**](docs/Api/GeneratingApi.md#generatedepositaddress) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | Generate Deposit Address
+*HDWalletsApi* | [**getHDWalletXPubYPubZPubAssets**](docs/Api/HDWalletsApi.md#gethdwalletxpubypubzpubassets) | **GET** /blockchain-data/{blockchain}/{network}/hd/{extendedPublicKey}/assets | Get HD Wallet (xPub, yPub, zPub) Assets
 *HDWalletsApi* | [**getHDWalletXPubYPubZPubDetails**](docs/Api/HDWalletsApi.md#gethdwalletxpubypubzpubdetails) | **GET** /blockchain-data/{blockchain}/{network}/hd/{extendedPublicKey}/details | Get HD Wallet (xPub, yPub, zPub) Details
 *HDWalletsApi* | [**listHDWalletXPubYPubZPubTransactions**](docs/Api/HDWalletsApi.md#listhdwalletxpubypubzpubtransactions) | **GET** /blockchain-data/{blockchain}/{network}/hd/{extendedPublicKey}/transactions | List HD Wallet (xPub, yPub, zPub) Transactions
+*HDWalletsApi* | [**listHDWalletXPubYPubZPubUTXOs**](docs/Api/HDWalletsApi.md#listhdwalletxpubypubzpubutxos) | **GET** /blockchain-data/{blockchain}/{network}/hd/{extendedPublicKey}/utxos | List HD Wallet (xPub, yPub, zPub) UTXOs
 *HDWalletsApi* | [**syncHDWalletXPubYPubZPub**](docs/Api/HDWalletsApi.md#synchdwalletxpubypubzpub) | **POST** /blockchain-data/{blockchain}/{network}/hd/sync | Sync HD Wallet (xPub, yPub, zPub)
 *InformativeApi* | [**getTransactionRequestDetails**](docs/Api/InformativeApi.md#gettransactionrequestdetails) | **GET** /wallet-as-a-service/transactionRequests/{transactionRequestId} | Get Transaction Request Details
 *InformativeApi* | [**getWalletAssetDetails**](docs/Api/InformativeApi.md#getwalletassetdetails) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network} | Get Wallet Asset Details
 *InformativeApi* | [**getWalletTransactionDetailsByTransactionID**](docs/Api/InformativeApi.md#getwallettransactiondetailsbytransactionid) | **GET** /wallet-as-a-service/wallets/{blockchain}/{network}/transactions/{transactionId} | Get Wallet Transaction Details By Transaction ID
+*InformativeApi* | [**listAllAssetsByWalletID**](docs/Api/InformativeApi.md#listallassetsbywalletid) | **GET** /wallet-as-a-service/wallets/{walletId}/assets | List All Assets By Wallet ID
+*InformativeApi* | [**listAllAssetsFromAllWallets**](docs/Api/InformativeApi.md#listallassetsfromallwallets) | **GET** /wallet-as-a-service/wallets/all-assets | List All Assets From All Wallets
 *InformativeApi* | [**listDepositAddresses**](docs/Api/InformativeApi.md#listdepositaddresses) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses | List Deposit Addresses
 *InformativeApi* | [**listSupportedTokens**](docs/Api/InformativeApi.md#listsupportedtokens) | **GET** /wallet-as-a-service/info/{blockchain}/{network}/supported-tokens | List Supported Tokens
 *InformativeApi* | [**listWalletTransactions**](docs/Api/InformativeApi.md#listwallettransactions) | **GET** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/transactions | List Wallet Transactions
@@ -118,6 +128,7 @@ Class | Method | HTTP request | Description
 *InternalApi* | [**listInternalTransactionsByAddress**](docs/Api/InternalApi.md#listinternaltransactionsbyaddress) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/internal | List Internal Transactions By Address
 *ManageSubscriptionsApi* | [**activateBlockchainEventSubscription**](docs/Api/ManageSubscriptionsApi.md#activateblockchaineventsubscription) | **POST** /blockchain-events/subscriptions/{referenceId}/activate | Activate Blockchain Event Subscription
 *ManageSubscriptionsApi* | [**deleteBlockchainEventSubscription**](docs/Api/ManageSubscriptionsApi.md#deleteblockchaineventsubscription) | **DELETE** /blockchain-events/{blockchain}/{network}/subscriptions/{referenceId} | Delete Blockchain Event Subscription
+*ManageSubscriptionsApi* | [**getBlockchainEventSubscriptionDetailsByReferenceID**](docs/Api/ManageSubscriptionsApi.md#getblockchaineventsubscriptiondetailsbyreferenceid) | **GET** /blockchain-events/subscriptions/{referenceId} | Get Blockchain Event Subscription Details By Reference ID
 *ManageSubscriptionsApi* | [**listBlockchainEventsSubscriptions**](docs/Api/ManageSubscriptionsApi.md#listblockchaineventssubscriptions) | **GET** /blockchain-events/{blockchain}/{network}/subscriptions | List Blockchain Events Subscriptions
 *MetadataApi* | [**listSupportedAssets**](docs/Api/MetadataApi.md#listsupportedassets) | **GET** /market-data/assets/supported | List Supported Assets
 *OmniLayerApi* | [**getOmniTransactionDetailsByTransactionIDTxid**](docs/Api/OmniLayerApi.md#getomnitransactiondetailsbytransactionidtxid) | **GET** /blockchain-data/{blockchain}/{network}/omni/transactions/{transactionId} | Get Omni Transaction Details By Transaction ID (Txid)
@@ -132,29 +143,37 @@ Class | Method | HTTP request | Description
 *TokensApi* | [**listConfirmedTokensTransfersByAddress**](docs/Api/TokensApi.md#listconfirmedtokenstransfersbyaddress) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/tokens-transfers | List Confirmed Tokens Transfers By Address
 *TokensApi* | [**listTokensByAddress**](docs/Api/TokensApi.md#listtokensbyaddress) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/tokens | List Tokens By Address
 *TokensApi* | [**listTokensTransfersByTransactionHash**](docs/Api/TokensApi.md#listtokenstransfersbytransactionhash) | **GET** /blockchain-data/{blockchain}/{network}/transactions/{transactionHash}/tokens-transfers | List Tokens Transfers By Transaction Hash
+*TokensApi* | [**listUnconfirmedTokensTransfersByAddress**](docs/Api/TokensApi.md#listunconfirmedtokenstransfersbyaddress) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/tokens-transfers-unconfirmed | List Unconfirmed Tokens Transfers By Address
 *TransactionsApi* | [**createCoinsTransactionFromAddressForWholeAmount**](docs/Api/TransactionsApi.md#createcoinstransactionfromaddressforwholeamount) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/all-transaction-requests | Create Coins Transaction From Address For Whole Amount
 *TransactionsApi* | [**createCoinsTransactionRequestFromAddress**](docs/Api/TransactionsApi.md#createcoinstransactionrequestfromaddress) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/transaction-requests | Create Coins Transaction Request from Address
 *TransactionsApi* | [**createCoinsTransactionRequestFromWallet**](docs/Api/TransactionsApi.md#createcoinstransactionrequestfromwallet) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/transaction-requests | Create Coins Transaction Request from Wallet
 *TransactionsApi* | [**createFungibleTokensTransactionRequestFromAddress**](docs/Api/TransactionsApi.md#createfungibletokenstransactionrequestfromaddress) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{senderAddress}/token-transaction-requests | Create Fungible Tokens Transaction Request from Address
-*UTXOBasedApi* | [**listUnspentTransactionOutputsByAddress**](docs/Api/UTXOBasedApi.md#listunspenttransactionoutputsbyaddress) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/unspent | List Unspent Transaction Outputs By Address
+*UnifiedEndpointsApi* | [**estimateTransactionSmartFee**](docs/Api/UnifiedEndpointsApi.md#estimatetransactionsmartfee) | **GET** /blockchain-data/{blockchain}/{network}/estimate-transaction-smart-fee | Estimate Transaction Smart Fee
 *UnifiedEndpointsApi* | [**getAddressDetails**](docs/Api/UnifiedEndpointsApi.md#getaddressdetails) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address} | Get Address Details
 *UnifiedEndpointsApi* | [**getBlockDetailsByBlockHash**](docs/Api/UnifiedEndpointsApi.md#getblockdetailsbyblockhash) | **GET** /blockchain-data/{blockchain}/{network}/blocks/hash/{blockHash} | Get Block Details By Block Hash
 *UnifiedEndpointsApi* | [**getBlockDetailsByBlockHeight**](docs/Api/UnifiedEndpointsApi.md#getblockdetailsbyblockheight) | **GET** /blockchain-data/{blockchain}/{network}/blocks/height/{height} | Get Block Details By Block Height
 *UnifiedEndpointsApi* | [**getFeeRecommendations**](docs/Api/UnifiedEndpointsApi.md#getfeerecommendations) | **GET** /blockchain-data/{blockchain}/{network}/mempool/fees | Get Fee Recommendations
 *UnifiedEndpointsApi* | [**getLastMinedBlock**](docs/Api/UnifiedEndpointsApi.md#getlastminedblock) | **GET** /blockchain-data/{blockchain}/{network}/blocks/last | Get Last Mined Block
+*UnifiedEndpointsApi* | [**getNextAvailableNonce**](docs/Api/UnifiedEndpointsApi.md#getnextavailablenonce) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/next-available-nonce | Get Next Available Nonce
+*UnifiedEndpointsApi* | [**getRawTransactionData**](docs/Api/UnifiedEndpointsApi.md#getrawtransactiondata) | **GET** /blockchain-data/{blockchain}/{network}/transactions/{transactionId}/raw-data | Get Raw Transaction Data
 *UnifiedEndpointsApi* | [**getTransactionDetailsByTransactionID**](docs/Api/UnifiedEndpointsApi.md#gettransactiondetailsbytransactionid) | **GET** /blockchain-data/{blockchain}/{network}/transactions/{transactionId} | Get Transaction Details By Transaction ID
 *UnifiedEndpointsApi* | [**listAllUnconfirmedTransactions**](docs/Api/UnifiedEndpointsApi.md#listallunconfirmedtransactions) | **GET** /blockchain-data/{blockchain}/{network}/address-transactions-unconfirmed | List All Unconfirmed Transactions
+*UnifiedEndpointsApi* | [**listConfirmedTokensTransfersByAddressAndTimeRange**](docs/Api/UnifiedEndpointsApi.md#listconfirmedtokenstransfersbyaddressandtimerange) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/tokens-transfers-by-time-range | List Confirmed Tokens Transfers By Address And Time Range
 *UnifiedEndpointsApi* | [**listConfirmedTransactionsByAddress**](docs/Api/UnifiedEndpointsApi.md#listconfirmedtransactionsbyaddress) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/transactions | List Confirmed Transactions By Address
+*UnifiedEndpointsApi* | [**listConfirmedTransactionsByAddressAndTimeRange**](docs/Api/UnifiedEndpointsApi.md#listconfirmedtransactionsbyaddressandtimerange) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/transactions-by-time-range | List Confirmed Transactions By Address And Time Range
+*UnifiedEndpointsApi* | [**listInternalTransactionsByAddressAndTimeRange**](docs/Api/UnifiedEndpointsApi.md#listinternaltransactionsbyaddressandtimerange) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/internal-by-time-range | List Internal Transactions By Address And Time Range
 *UnifiedEndpointsApi* | [**listLatestMinedBlocks**](docs/Api/UnifiedEndpointsApi.md#listlatestminedblocks) | **GET** /blockchain-data/{blockchain}/{network}/blocks/last/{count} | List Latest Mined Blocks
 *UnifiedEndpointsApi* | [**listTransactionsByBlockHash**](docs/Api/UnifiedEndpointsApi.md#listtransactionsbyblockhash) | **GET** /blockchain-data/{blockchain}/{network}/blocks/hash/{blockHash}/transactions | List Transactions by Block Hash
 *UnifiedEndpointsApi* | [**listTransactionsByBlockHeight**](docs/Api/UnifiedEndpointsApi.md#listtransactionsbyblockheight) | **GET** /blockchain-data/{blockchain}/{network}/blocks/height/{height}/transactions | List Transactions by Block Height
 *UnifiedEndpointsApi* | [**listUnconfirmedTransactionsByAddress**](docs/Api/UnifiedEndpointsApi.md#listunconfirmedtransactionsbyaddress) | **GET** /blockchain-data/{blockchain}/{network}/address-transactions-unconfirmed/{address} | List Unconfirmed Transactions by Address
+*UnifiedEndpointsApi* | [**listUnspentTransactionOutputsByAddress**](docs/Api/UnifiedEndpointsApi.md#listunspenttransactionoutputsbyaddress) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/unspent-outputs | List Unspent Transaction Outputs By Address
 *XRPRippleApi* | [**getLatestMinedXRPRippleBlock**](docs/Api/XRPRippleApi.md#getlatestminedxrprippleblock) | **GET** /blockchain-data/xrp-specific/{network}/blocks/last | Get Latest Mined XRP (Ripple) Block
 *XRPRippleApi* | [**getXRPRippleAddressDetails**](docs/Api/XRPRippleApi.md#getxrprippleaddressdetails) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address} | Get XRP (Ripple) Address Details
 *XRPRippleApi* | [**getXRPRippleBlockDetailsByBlockHash**](docs/Api/XRPRippleApi.md#getxrprippleblockdetailsbyblockhash) | **GET** /blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash} | Get XRP (Ripple) Block Details By Block Hash
 *XRPRippleApi* | [**getXRPRippleBlockDetailsByBlockHeight**](docs/Api/XRPRippleApi.md#getxrprippleblockdetailsbyblockheight) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight} | Get XRP (Ripple) Block Details By Block Height
 *XRPRippleApi* | [**getXRPRippleTransactionDetailsByTransactionID**](docs/Api/XRPRippleApi.md#getxrprippletransactiondetailsbytransactionid) | **GET** /blockchain-data/xrp-specific/{network}/transactions/{transactionHash} | Get XRP (Ripple) Transaction Details By Transaction ID
 *XRPRippleApi* | [**listXRPRippleTransactionsByAddress**](docs/Api/XRPRippleApi.md#listxrprippletransactionsbyaddress) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address}/transactions | List XRP (Ripple) Transactions by Address
+*XRPRippleApi* | [**listXRPRippleTransactionsByAddressAndTimeRange**](docs/Api/XRPRippleApi.md#listxrprippletransactionsbyaddressandtimerange) | **GET** /blockchain-data/xrp-specific/{network}/addresses/{address}/transactions-by-time-range | List XRP (Ripple) Transactions By Address And Time Range
 *XRPRippleApi* | [**listXRPRippleTransactionsByBlockHash**](docs/Api/XRPRippleApi.md#listxrprippletransactionsbyblockhash) | **GET** /blockchain-data/xrp-specific/{network}/blocks/hash/{blockHash}/transactions | List XRP (Ripple) Transactions By Block Hash
 *XRPRippleApi* | [**listXRPRippleTransactionsByBlockHeight**](docs/Api/XRPRippleApi.md#listxrprippletransactionsbyblockheight) | **GET** /blockchain-data/xrp-specific/{network}/blocks/height/{blockHeight}/transactions | List XRP (Ripple) Transactions By Block Height
 *ZilliqaApi* | [**getLatestMinedZilliqaBlock**](docs/Api/ZilliqaApi.md#getlatestminedzilliqablock) | **GET** /blockchain-data/zilliqa-specific/{network}/blocks/last | Get Latest Mined Zilliqa Block
@@ -344,6 +363,54 @@ Class | Method | HTTP request | Description
 - [CreateFungibleTokensTransactionRequestFromAddressRIS](docs/Model/CreateFungibleTokensTransactionRequestFromAddressRIS.md)
 - [CreateFungibleTokensTransactionRequestFromAddressRISE](docs/Model/CreateFungibleTokensTransactionRequestFromAddressRISE.md)
 - [CreateFungibleTokensTransactionRequestFromAddressRISenders](docs/Model/CreateFungibleTokensTransactionRequestFromAddressRISenders.md)
+- [DecodeRawTransactionHexE400](docs/Model/DecodeRawTransactionHexE400.md)
+- [DecodeRawTransactionHexE401](docs/Model/DecodeRawTransactionHexE401.md)
+- [DecodeRawTransactionHexE403](docs/Model/DecodeRawTransactionHexE403.md)
+- [DecodeRawTransactionHexR](docs/Model/DecodeRawTransactionHexR.md)
+- [DecodeRawTransactionHexRB](docs/Model/DecodeRawTransactionHexRB.md)
+- [DecodeRawTransactionHexRBData](docs/Model/DecodeRawTransactionHexRBData.md)
+- [DecodeRawTransactionHexRBDataItem](docs/Model/DecodeRawTransactionHexRBDataItem.md)
+- [DecodeRawTransactionHexRData](docs/Model/DecodeRawTransactionHexRData.md)
+- [DecodeRawTransactionHexRI](docs/Model/DecodeRawTransactionHexRI.md)
+- [DecodeRawTransactionHexRIS](docs/Model/DecodeRawTransactionHexRIS.md)
+- [DecodeRawTransactionHexRISB](docs/Model/DecodeRawTransactionHexRISB.md)
+- [DecodeRawTransactionHexRISB2](docs/Model/DecodeRawTransactionHexRISB2.md)
+- [DecodeRawTransactionHexRISB22](docs/Model/DecodeRawTransactionHexRISB22.md)
+- [DecodeRawTransactionHexRISB2ScriptPubKey](docs/Model/DecodeRawTransactionHexRISB2ScriptPubKey.md)
+- [DecodeRawTransactionHexRISB2Vin](docs/Model/DecodeRawTransactionHexRISB2Vin.md)
+- [DecodeRawTransactionHexRISB2Vout](docs/Model/DecodeRawTransactionHexRISB2Vout.md)
+- [DecodeRawTransactionHexRISBScriptPubKey](docs/Model/DecodeRawTransactionHexRISBScriptPubKey.md)
+- [DecodeRawTransactionHexRISBScriptSig](docs/Model/DecodeRawTransactionHexRISBScriptSig.md)
+- [DecodeRawTransactionHexRISBVin](docs/Model/DecodeRawTransactionHexRISBVin.md)
+- [DecodeRawTransactionHexRISBVout](docs/Model/DecodeRawTransactionHexRISBVout.md)
+- [DecodeRawTransactionHexRISD](docs/Model/DecodeRawTransactionHexRISD.md)
+- [DecodeRawTransactionHexRISD2](docs/Model/DecodeRawTransactionHexRISD2.md)
+- [DecodeRawTransactionHexRISD2ScriptPubKey](docs/Model/DecodeRawTransactionHexRISD2ScriptPubKey.md)
+- [DecodeRawTransactionHexRISD2ScriptSig](docs/Model/DecodeRawTransactionHexRISD2ScriptSig.md)
+- [DecodeRawTransactionHexRISD2Vin](docs/Model/DecodeRawTransactionHexRISD2Vin.md)
+- [DecodeRawTransactionHexRISD2Vout](docs/Model/DecodeRawTransactionHexRISD2Vout.md)
+- [DecodeRawTransactionHexRISDScriptPubKey](docs/Model/DecodeRawTransactionHexRISDScriptPubKey.md)
+- [DecodeRawTransactionHexRISDScriptSig](docs/Model/DecodeRawTransactionHexRISDScriptSig.md)
+- [DecodeRawTransactionHexRISDVin](docs/Model/DecodeRawTransactionHexRISDVin.md)
+- [DecodeRawTransactionHexRISDVout](docs/Model/DecodeRawTransactionHexRISDVout.md)
+- [DecodeRawTransactionHexRISE](docs/Model/DecodeRawTransactionHexRISE.md)
+- [DecodeRawTransactionHexRISE2](docs/Model/DecodeRawTransactionHexRISE2.md)
+- [DecodeRawTransactionHexRISL](docs/Model/DecodeRawTransactionHexRISL.md)
+- [DecodeRawTransactionHexRISLScriptPubKey](docs/Model/DecodeRawTransactionHexRISLScriptPubKey.md)
+- [DecodeRawTransactionHexRISLScriptSig](docs/Model/DecodeRawTransactionHexRISLScriptSig.md)
+- [DecodeRawTransactionHexRISLVin](docs/Model/DecodeRawTransactionHexRISLVin.md)
+- [DecodeRawTransactionHexRISLVout](docs/Model/DecodeRawTransactionHexRISLVout.md)
+- [DecodeRawTransactionHexRISZ](docs/Model/DecodeRawTransactionHexRISZ.md)
+- [DecodeRawTransactionHexRISZScriptPubKey](docs/Model/DecodeRawTransactionHexRISZScriptPubKey.md)
+- [DecodeRawTransactionHexRISZScriptSig](docs/Model/DecodeRawTransactionHexRISZScriptSig.md)
+- [DecodeRawTransactionHexRISZVin](docs/Model/DecodeRawTransactionHexRISZVin.md)
+- [DecodeRawTransactionHexRISZVout](docs/Model/DecodeRawTransactionHexRISZVout.md)
+- [DecodeXAddressE400](docs/Model/DecodeXAddressE400.md)
+- [DecodeXAddressE401](docs/Model/DecodeXAddressE401.md)
+- [DecodeXAddressE403](docs/Model/DecodeXAddressE403.md)
+- [DecodeXAddressR](docs/Model/DecodeXAddressR.md)
+- [DecodeXAddressRData](docs/Model/DecodeXAddressRData.md)
+- [DecodeXAddressRI](docs/Model/DecodeXAddressRI.md)
 - [DeleteAutomaticCoinsForwardingE400](docs/Model/DeleteAutomaticCoinsForwardingE400.md)
 - [DeleteAutomaticCoinsForwardingE401](docs/Model/DeleteAutomaticCoinsForwardingE401.md)
 - [DeleteAutomaticCoinsForwardingE403](docs/Model/DeleteAutomaticCoinsForwardingE403.md)
@@ -365,8 +432,45 @@ Class | Method | HTTP request | Description
 - [DeleteBlockchainEventSubscriptionR](docs/Model/DeleteBlockchainEventSubscriptionR.md)
 - [DeleteBlockchainEventSubscriptionRData](docs/Model/DeleteBlockchainEventSubscriptionRData.md)
 - [DeleteBlockchainEventSubscriptionRI](docs/Model/DeleteBlockchainEventSubscriptionRI.md)
+- [DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesE400](docs/Model/DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesE400.md)
+- [DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesE401](docs/Model/DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesE401.md)
+- [DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesE403](docs/Model/DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesE403.md)
+- [DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR](docs/Model/DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesR.md)
+- [DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRData](docs/Model/DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRData.md)
+- [DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRI](docs/Model/DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRI.md)
+- [DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRIAddresses](docs/Model/DeriveHDWalletXPubYPubZPubChangeOrReceivingAddressesRIAddresses.md)
+- [EncodeXAddressE400](docs/Model/EncodeXAddressE400.md)
+- [EncodeXAddressE401](docs/Model/EncodeXAddressE401.md)
+- [EncodeXAddressE403](docs/Model/EncodeXAddressE403.md)
+- [EncodeXAddressR](docs/Model/EncodeXAddressR.md)
+- [EncodeXAddressRData](docs/Model/EncodeXAddressRData.md)
+- [EncodeXAddressRI](docs/Model/EncodeXAddressRI.md)
 - [EndpointNotAllowedForApiKey](docs/Model/EndpointNotAllowedForApiKey.md)
 - [EndpointNotAllowedForPlan](docs/Model/EndpointNotAllowedForPlan.md)
+- [EstimateGasLimitE400](docs/Model/EstimateGasLimitE400.md)
+- [EstimateGasLimitE401](docs/Model/EstimateGasLimitE401.md)
+- [EstimateGasLimitE403](docs/Model/EstimateGasLimitE403.md)
+- [EstimateGasLimitR](docs/Model/EstimateGasLimitR.md)
+- [EstimateGasLimitRB](docs/Model/EstimateGasLimitRB.md)
+- [EstimateGasLimitRBData](docs/Model/EstimateGasLimitRBData.md)
+- [EstimateGasLimitRBDataItem](docs/Model/EstimateGasLimitRBDataItem.md)
+- [EstimateGasLimitRData](docs/Model/EstimateGasLimitRData.md)
+- [EstimateGasLimitRI](docs/Model/EstimateGasLimitRI.md)
+- [EstimateTokenGasLimitE400](docs/Model/EstimateTokenGasLimitE400.md)
+- [EstimateTokenGasLimitE401](docs/Model/EstimateTokenGasLimitE401.md)
+- [EstimateTokenGasLimitE403](docs/Model/EstimateTokenGasLimitE403.md)
+- [EstimateTokenGasLimitR](docs/Model/EstimateTokenGasLimitR.md)
+- [EstimateTokenGasLimitRB](docs/Model/EstimateTokenGasLimitRB.md)
+- [EstimateTokenGasLimitRBData](docs/Model/EstimateTokenGasLimitRBData.md)
+- [EstimateTokenGasLimitRBDataItem](docs/Model/EstimateTokenGasLimitRBDataItem.md)
+- [EstimateTokenGasLimitRData](docs/Model/EstimateTokenGasLimitRData.md)
+- [EstimateTokenGasLimitRI](docs/Model/EstimateTokenGasLimitRI.md)
+- [EstimateTransactionSmartFeeE400](docs/Model/EstimateTransactionSmartFeeE400.md)
+- [EstimateTransactionSmartFeeE401](docs/Model/EstimateTransactionSmartFeeE401.md)
+- [EstimateTransactionSmartFeeE403](docs/Model/EstimateTransactionSmartFeeE403.md)
+- [EstimateTransactionSmartFeeR](docs/Model/EstimateTransactionSmartFeeR.md)
+- [EstimateTransactionSmartFeeRData](docs/Model/EstimateTransactionSmartFeeRData.md)
+- [EstimateTransactionSmartFeeRI](docs/Model/EstimateTransactionSmartFeeRI.md)
 - [FeatureMainnetsNotAllowedForPlan](docs/Model/FeatureMainnetsNotAllowedForPlan.md)
 - [GenerateDepositAddressE400](docs/Model/GenerateDepositAddressE400.md)
 - [GenerateDepositAddressE401](docs/Model/GenerateDepositAddressE401.md)
@@ -480,6 +584,12 @@ Class | Method | HTTP request | Description
 - [GetBlockDetailsByBlockHeightRIBSEC](docs/Model/GetBlockDetailsByBlockHeightRIBSEC.md)
 - [GetBlockDetailsByBlockHeightRIBSL](docs/Model/GetBlockDetailsByBlockHeightRIBSL.md)
 - [GetBlockDetailsByBlockHeightRIBSZ](docs/Model/GetBlockDetailsByBlockHeightRIBSZ.md)
+- [GetBlockchainEventSubscriptionDetailsByReferenceIDE400](docs/Model/GetBlockchainEventSubscriptionDetailsByReferenceIDE400.md)
+- [GetBlockchainEventSubscriptionDetailsByReferenceIDE401](docs/Model/GetBlockchainEventSubscriptionDetailsByReferenceIDE401.md)
+- [GetBlockchainEventSubscriptionDetailsByReferenceIDE403](docs/Model/GetBlockchainEventSubscriptionDetailsByReferenceIDE403.md)
+- [GetBlockchainEventSubscriptionDetailsByReferenceIDR](docs/Model/GetBlockchainEventSubscriptionDetailsByReferenceIDR.md)
+- [GetBlockchainEventSubscriptionDetailsByReferenceIDRData](docs/Model/GetBlockchainEventSubscriptionDetailsByReferenceIDRData.md)
+- [GetBlockchainEventSubscriptionDetailsByReferenceIDRI](docs/Model/GetBlockchainEventSubscriptionDetailsByReferenceIDRI.md)
 - [GetEIP1559FeeRecommendationsE400](docs/Model/GetEIP1559FeeRecommendationsE400.md)
 - [GetEIP1559FeeRecommendationsE401](docs/Model/GetEIP1559FeeRecommendationsE401.md)
 - [GetEIP1559FeeRecommendationsE403](docs/Model/GetEIP1559FeeRecommendationsE403.md)
@@ -516,6 +626,16 @@ Class | Method | HTTP request | Description
 - [GetFeeRecommendationsR](docs/Model/GetFeeRecommendationsR.md)
 - [GetFeeRecommendationsRData](docs/Model/GetFeeRecommendationsRData.md)
 - [GetFeeRecommendationsRI](docs/Model/GetFeeRecommendationsRI.md)
+- [GetHDWalletXPubYPubZPubAssetsE400](docs/Model/GetHDWalletXPubYPubZPubAssetsE400.md)
+- [GetHDWalletXPubYPubZPubAssetsE401](docs/Model/GetHDWalletXPubYPubZPubAssetsE401.md)
+- [GetHDWalletXPubYPubZPubAssetsE403](docs/Model/GetHDWalletXPubYPubZPubAssetsE403.md)
+- [GetHDWalletXPubYPubZPubAssetsE422](docs/Model/GetHDWalletXPubYPubZPubAssetsE422.md)
+- [GetHDWalletXPubYPubZPubAssetsR](docs/Model/GetHDWalletXPubYPubZPubAssetsR.md)
+- [GetHDWalletXPubYPubZPubAssetsRData](docs/Model/GetHDWalletXPubYPubZPubAssetsRData.md)
+- [GetHDWalletXPubYPubZPubAssetsRI](docs/Model/GetHDWalletXPubYPubZPubAssetsRI.md)
+- [GetHDWalletXPubYPubZPubAssetsRIConfirmedBalance](docs/Model/GetHDWalletXPubYPubZPubAssetsRIConfirmedBalance.md)
+- [GetHDWalletXPubYPubZPubAssetsRIFungibleTokens](docs/Model/GetHDWalletXPubYPubZPubAssetsRIFungibleTokens.md)
+- [GetHDWalletXPubYPubZPubAssetsRINonFungibleTokens](docs/Model/GetHDWalletXPubYPubZPubAssetsRINonFungibleTokens.md)
 - [GetHDWalletXPubYPubZPubDetailsE400](docs/Model/GetHDWalletXPubYPubZPubDetailsE400.md)
 - [GetHDWalletXPubYPubZPubDetailsE401](docs/Model/GetHDWalletXPubYPubZPubDetailsE401.md)
 - [GetHDWalletXPubYPubZPubDetailsE403](docs/Model/GetHDWalletXPubYPubZPubDetailsE403.md)
@@ -559,6 +679,12 @@ Class | Method | HTTP request | Description
 - [GetLatestMinedZilliqaBlockR](docs/Model/GetLatestMinedZilliqaBlockR.md)
 - [GetLatestMinedZilliqaBlockRData](docs/Model/GetLatestMinedZilliqaBlockRData.md)
 - [GetLatestMinedZilliqaBlockRI](docs/Model/GetLatestMinedZilliqaBlockRI.md)
+- [GetNextAvailableNonceE400](docs/Model/GetNextAvailableNonceE400.md)
+- [GetNextAvailableNonceE401](docs/Model/GetNextAvailableNonceE401.md)
+- [GetNextAvailableNonceE403](docs/Model/GetNextAvailableNonceE403.md)
+- [GetNextAvailableNonceR](docs/Model/GetNextAvailableNonceR.md)
+- [GetNextAvailableNonceRData](docs/Model/GetNextAvailableNonceRData.md)
+- [GetNextAvailableNonceRI](docs/Model/GetNextAvailableNonceRI.md)
 - [GetOmniTransactionDetailsByTransactionIDTxidE400](docs/Model/GetOmniTransactionDetailsByTransactionIDTxidE400.md)
 - [GetOmniTransactionDetailsByTransactionIDTxidE401](docs/Model/GetOmniTransactionDetailsByTransactionIDTxidE401.md)
 - [GetOmniTransactionDetailsByTransactionIDTxidE403](docs/Model/GetOmniTransactionDetailsByTransactionIDTxidE403.md)
@@ -566,6 +692,12 @@ Class | Method | HTTP request | Description
 - [GetOmniTransactionDetailsByTransactionIDTxidRData](docs/Model/GetOmniTransactionDetailsByTransactionIDTxidRData.md)
 - [GetOmniTransactionDetailsByTransactionIDTxidRI](docs/Model/GetOmniTransactionDetailsByTransactionIDTxidRI.md)
 - [GetOmniTransactionDetailsByTransactionIDTxidRISenders](docs/Model/GetOmniTransactionDetailsByTransactionIDTxidRISenders.md)
+- [GetRawTransactionDataE400](docs/Model/GetRawTransactionDataE400.md)
+- [GetRawTransactionDataE401](docs/Model/GetRawTransactionDataE401.md)
+- [GetRawTransactionDataE403](docs/Model/GetRawTransactionDataE403.md)
+- [GetRawTransactionDataR](docs/Model/GetRawTransactionDataR.md)
+- [GetRawTransactionDataRData](docs/Model/GetRawTransactionDataRData.md)
+- [GetRawTransactionDataRI](docs/Model/GetRawTransactionDataRI.md)
 - [GetTokenDetailsByContractAddressE400](docs/Model/GetTokenDetailsByContractAddressE400.md)
 - [GetTokenDetailsByContractAddressE401](docs/Model/GetTokenDetailsByContractAddressE401.md)
 - [GetTokenDetailsByContractAddressE403](docs/Model/GetTokenDetailsByContractAddressE403.md)
@@ -773,7 +905,18 @@ Class | Method | HTTP request | Description
 - [InlineResponse400](docs/Model/InlineResponse400.md)
 - [InlineResponse4001](docs/Model/InlineResponse4001.md)
 - [InlineResponse40010](docs/Model/InlineResponse40010.md)
+- [InlineResponse400100](docs/Model/InlineResponse400100.md)
+- [InlineResponse400101](docs/Model/InlineResponse400101.md)
+- [InlineResponse400102](docs/Model/InlineResponse400102.md)
+- [InlineResponse400103](docs/Model/InlineResponse400103.md)
+- [InlineResponse400104](docs/Model/InlineResponse400104.md)
+- [InlineResponse400105](docs/Model/InlineResponse400105.md)
+- [InlineResponse400106](docs/Model/InlineResponse400106.md)
+- [InlineResponse400107](docs/Model/InlineResponse400107.md)
+- [InlineResponse400108](docs/Model/InlineResponse400108.md)
+- [InlineResponse400109](docs/Model/InlineResponse400109.md)
 - [InlineResponse40011](docs/Model/InlineResponse40011.md)
+- [InlineResponse400110](docs/Model/InlineResponse400110.md)
 - [InlineResponse40012](docs/Model/InlineResponse40012.md)
 - [InlineResponse40013](docs/Model/InlineResponse40013.md)
 - [InlineResponse40014](docs/Model/InlineResponse40014.md)
@@ -862,10 +1005,29 @@ Class | Method | HTTP request | Description
 - [InlineResponse4009](docs/Model/InlineResponse4009.md)
 - [InlineResponse40090](docs/Model/InlineResponse40090.md)
 - [InlineResponse40091](docs/Model/InlineResponse40091.md)
+- [InlineResponse40092](docs/Model/InlineResponse40092.md)
+- [InlineResponse40093](docs/Model/InlineResponse40093.md)
+- [InlineResponse40094](docs/Model/InlineResponse40094.md)
+- [InlineResponse40095](docs/Model/InlineResponse40095.md)
+- [InlineResponse40096](docs/Model/InlineResponse40096.md)
+- [InlineResponse40097](docs/Model/InlineResponse40097.md)
+- [InlineResponse40098](docs/Model/InlineResponse40098.md)
+- [InlineResponse40099](docs/Model/InlineResponse40099.md)
 - [InlineResponse401](docs/Model/InlineResponse401.md)
 - [InlineResponse4011](docs/Model/InlineResponse4011.md)
 - [InlineResponse40110](docs/Model/InlineResponse40110.md)
+- [InlineResponse401100](docs/Model/InlineResponse401100.md)
+- [InlineResponse401101](docs/Model/InlineResponse401101.md)
+- [InlineResponse401102](docs/Model/InlineResponse401102.md)
+- [InlineResponse401103](docs/Model/InlineResponse401103.md)
+- [InlineResponse401104](docs/Model/InlineResponse401104.md)
+- [InlineResponse401105](docs/Model/InlineResponse401105.md)
+- [InlineResponse401106](docs/Model/InlineResponse401106.md)
+- [InlineResponse401107](docs/Model/InlineResponse401107.md)
+- [InlineResponse401108](docs/Model/InlineResponse401108.md)
+- [InlineResponse401109](docs/Model/InlineResponse401109.md)
 - [InlineResponse40111](docs/Model/InlineResponse40111.md)
+- [InlineResponse401110](docs/Model/InlineResponse401110.md)
 - [InlineResponse40112](docs/Model/InlineResponse40112.md)
 - [InlineResponse40113](docs/Model/InlineResponse40113.md)
 - [InlineResponse40114](docs/Model/InlineResponse40114.md)
@@ -954,11 +1116,30 @@ Class | Method | HTTP request | Description
 - [InlineResponse4019](docs/Model/InlineResponse4019.md)
 - [InlineResponse40190](docs/Model/InlineResponse40190.md)
 - [InlineResponse40191](docs/Model/InlineResponse40191.md)
+- [InlineResponse40192](docs/Model/InlineResponse40192.md)
+- [InlineResponse40193](docs/Model/InlineResponse40193.md)
+- [InlineResponse40194](docs/Model/InlineResponse40194.md)
+- [InlineResponse40195](docs/Model/InlineResponse40195.md)
+- [InlineResponse40196](docs/Model/InlineResponse40196.md)
+- [InlineResponse40197](docs/Model/InlineResponse40197.md)
+- [InlineResponse40198](docs/Model/InlineResponse40198.md)
+- [InlineResponse40199](docs/Model/InlineResponse40199.md)
 - [InlineResponse402](docs/Model/InlineResponse402.md)
 - [InlineResponse403](docs/Model/InlineResponse403.md)
 - [InlineResponse4031](docs/Model/InlineResponse4031.md)
 - [InlineResponse40310](docs/Model/InlineResponse40310.md)
+- [InlineResponse403100](docs/Model/InlineResponse403100.md)
+- [InlineResponse403101](docs/Model/InlineResponse403101.md)
+- [InlineResponse403102](docs/Model/InlineResponse403102.md)
+- [InlineResponse403103](docs/Model/InlineResponse403103.md)
+- [InlineResponse403104](docs/Model/InlineResponse403104.md)
+- [InlineResponse403105](docs/Model/InlineResponse403105.md)
+- [InlineResponse403106](docs/Model/InlineResponse403106.md)
+- [InlineResponse403107](docs/Model/InlineResponse403107.md)
+- [InlineResponse403108](docs/Model/InlineResponse403108.md)
+- [InlineResponse403109](docs/Model/InlineResponse403109.md)
 - [InlineResponse40311](docs/Model/InlineResponse40311.md)
+- [InlineResponse403110](docs/Model/InlineResponse403110.md)
 - [InlineResponse40312](docs/Model/InlineResponse40312.md)
 - [InlineResponse40313](docs/Model/InlineResponse40313.md)
 - [InlineResponse40314](docs/Model/InlineResponse40314.md)
@@ -1047,6 +1228,14 @@ Class | Method | HTTP request | Description
 - [InlineResponse4039](docs/Model/InlineResponse4039.md)
 - [InlineResponse40390](docs/Model/InlineResponse40390.md)
 - [InlineResponse40391](docs/Model/InlineResponse40391.md)
+- [InlineResponse40392](docs/Model/InlineResponse40392.md)
+- [InlineResponse40393](docs/Model/InlineResponse40393.md)
+- [InlineResponse40394](docs/Model/InlineResponse40394.md)
+- [InlineResponse40395](docs/Model/InlineResponse40395.md)
+- [InlineResponse40396](docs/Model/InlineResponse40396.md)
+- [InlineResponse40397](docs/Model/InlineResponse40397.md)
+- [InlineResponse40398](docs/Model/InlineResponse40398.md)
+- [InlineResponse40399](docs/Model/InlineResponse40399.md)
 - [InlineResponse404](docs/Model/InlineResponse404.md)
 - [InlineResponse4041](docs/Model/InlineResponse4041.md)
 - [InlineResponse4042](docs/Model/InlineResponse4042.md)
@@ -1077,8 +1266,11 @@ Class | Method | HTTP request | Description
 - [InlineResponse4223](docs/Model/InlineResponse4223.md)
 - [InlineResponse4224](docs/Model/InlineResponse4224.md)
 - [InlineResponse4225](docs/Model/InlineResponse4225.md)
+- [InlineResponse4226](docs/Model/InlineResponse4226.md)
+- [InlineResponse4227](docs/Model/InlineResponse4227.md)
 - [InlineResponse429](docs/Model/InlineResponse429.md)
 - [InlineResponse500](docs/Model/InlineResponse500.md)
+- [InlineResponse501](docs/Model/InlineResponse501.md)
 - [InsufficientCredits](docs/Model/InsufficientCredits.md)
 - [InvalidApiKey](docs/Model/InvalidApiKey.md)
 - [InvalidBlockchain](docs/Model/InvalidBlockchain.md)
@@ -1086,8 +1278,24 @@ Class | Method | HTTP request | Description
 - [InvalidNetwork](docs/Model/InvalidNetwork.md)
 - [InvalidPagination](docs/Model/InvalidPagination.md)
 - [InvalidRequestBodyStructure](docs/Model/InvalidRequestBodyStructure.md)
+- [InvalidTransactionHex](docs/Model/InvalidTransactionHex.md)
 - [InvalidXpub](docs/Model/InvalidXpub.md)
 - [LimitGreaterThanAllowed](docs/Model/LimitGreaterThanAllowed.md)
+- [ListAllAssetsByWalletIDE400](docs/Model/ListAllAssetsByWalletIDE400.md)
+- [ListAllAssetsByWalletIDE401](docs/Model/ListAllAssetsByWalletIDE401.md)
+- [ListAllAssetsByWalletIDE403](docs/Model/ListAllAssetsByWalletIDE403.md)
+- [ListAllAssetsByWalletIDR](docs/Model/ListAllAssetsByWalletIDR.md)
+- [ListAllAssetsByWalletIDRData](docs/Model/ListAllAssetsByWalletIDRData.md)
+- [ListAllAssetsByWalletIDRI](docs/Model/ListAllAssetsByWalletIDRI.md)
+- [ListAllAssetsFromAllWalletsE400](docs/Model/ListAllAssetsFromAllWalletsE400.md)
+- [ListAllAssetsFromAllWalletsE401](docs/Model/ListAllAssetsFromAllWalletsE401.md)
+- [ListAllAssetsFromAllWalletsE403](docs/Model/ListAllAssetsFromAllWalletsE403.md)
+- [ListAllAssetsFromAllWalletsR](docs/Model/ListAllAssetsFromAllWalletsR.md)
+- [ListAllAssetsFromAllWalletsRData](docs/Model/ListAllAssetsFromAllWalletsRData.md)
+- [ListAllAssetsFromAllWalletsRI](docs/Model/ListAllAssetsFromAllWalletsRI.md)
+- [ListAllAssetsFromAllWalletsRICoins](docs/Model/ListAllAssetsFromAllWalletsRICoins.md)
+- [ListAllAssetsFromAllWalletsRIFungibleTokens](docs/Model/ListAllAssetsFromAllWalletsRIFungibleTokens.md)
+- [ListAllAssetsFromAllWalletsRINonFungibleTokens](docs/Model/ListAllAssetsFromAllWalletsRINonFungibleTokens.md)
 - [ListAllUnconfirmedTransactionsE400](docs/Model/ListAllUnconfirmedTransactionsE400.md)
 - [ListAllUnconfirmedTransactionsE401](docs/Model/ListAllUnconfirmedTransactionsE401.md)
 - [ListAllUnconfirmedTransactionsE403](docs/Model/ListAllUnconfirmedTransactionsE403.md)
@@ -1131,18 +1339,41 @@ Class | Method | HTTP request | Description
 - [ListBlockchainEventsSubscriptionsR](docs/Model/ListBlockchainEventsSubscriptionsR.md)
 - [ListBlockchainEventsSubscriptionsRData](docs/Model/ListBlockchainEventsSubscriptionsRData.md)
 - [ListBlockchainEventsSubscriptionsRI](docs/Model/ListBlockchainEventsSubscriptionsRI.md)
+- [ListBlockchainEventsSubscriptionsRIDeactivationReasons](docs/Model/ListBlockchainEventsSubscriptionsRIDeactivationReasons.md)
 - [ListCoinsForwardingAutomationsE400](docs/Model/ListCoinsForwardingAutomationsE400.md)
 - [ListCoinsForwardingAutomationsE401](docs/Model/ListCoinsForwardingAutomationsE401.md)
 - [ListCoinsForwardingAutomationsE403](docs/Model/ListCoinsForwardingAutomationsE403.md)
 - [ListCoinsForwardingAutomationsR](docs/Model/ListCoinsForwardingAutomationsR.md)
 - [ListCoinsForwardingAutomationsRData](docs/Model/ListCoinsForwardingAutomationsRData.md)
 - [ListCoinsForwardingAutomationsRI](docs/Model/ListCoinsForwardingAutomationsRI.md)
+- [ListConfirmedTokensTransfersByAddressAndTimeRangeE400](docs/Model/ListConfirmedTokensTransfersByAddressAndTimeRangeE400.md)
+- [ListConfirmedTokensTransfersByAddressAndTimeRangeE401](docs/Model/ListConfirmedTokensTransfersByAddressAndTimeRangeE401.md)
+- [ListConfirmedTokensTransfersByAddressAndTimeRangeE403](docs/Model/ListConfirmedTokensTransfersByAddressAndTimeRangeE403.md)
+- [ListConfirmedTokensTransfersByAddressAndTimeRangeR](docs/Model/ListConfirmedTokensTransfersByAddressAndTimeRangeR.md)
+- [ListConfirmedTokensTransfersByAddressAndTimeRangeRData](docs/Model/ListConfirmedTokensTransfersByAddressAndTimeRangeRData.md)
+- [ListConfirmedTokensTransfersByAddressAndTimeRangeRI](docs/Model/ListConfirmedTokensTransfersByAddressAndTimeRangeRI.md)
 - [ListConfirmedTokensTransfersByAddressE400](docs/Model/ListConfirmedTokensTransfersByAddressE400.md)
 - [ListConfirmedTokensTransfersByAddressE401](docs/Model/ListConfirmedTokensTransfersByAddressE401.md)
 - [ListConfirmedTokensTransfersByAddressE403](docs/Model/ListConfirmedTokensTransfersByAddressE403.md)
 - [ListConfirmedTokensTransfersByAddressR](docs/Model/ListConfirmedTokensTransfersByAddressR.md)
 - [ListConfirmedTokensTransfersByAddressRData](docs/Model/ListConfirmedTokensTransfersByAddressRData.md)
 - [ListConfirmedTokensTransfersByAddressRI](docs/Model/ListConfirmedTokensTransfersByAddressRI.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeE400](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeE400.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeE401](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeE401.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeE403](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeE403.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeR](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeR.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeRData](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeRData.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeRI](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeRI.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeRIBS](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeRIBS.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeRIBSB](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeRIBSB.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeRIBSBC](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeRIBSBC.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeRIBSBSC](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeRIBSBSC.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeRIBSD](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeRIBSD.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeRIBSD2](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeRIBSD2.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeRIBSE](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeRIBSE.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeRIBSEC](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeRIBSEC.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeRIBSL](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeRIBSL.md)
+- [ListConfirmedTransactionsByAddressAndTimeRangeRIBSZ](docs/Model/ListConfirmedTransactionsByAddressAndTimeRangeRIBSZ.md)
 - [ListConfirmedTransactionsByAddressE400](docs/Model/ListConfirmedTransactionsByAddressE400.md)
 - [ListConfirmedTransactionsByAddressE401](docs/Model/ListConfirmedTransactionsByAddressE401.md)
 - [ListConfirmedTransactionsByAddressE403](docs/Model/ListConfirmedTransactionsByAddressE403.md)
@@ -1196,12 +1427,25 @@ Class | Method | HTTP request | Description
 - [ListHDWalletXPubYPubZPubTransactionsRIFee](docs/Model/ListHDWalletXPubYPubZPubTransactionsRIFee.md)
 - [ListHDWalletXPubYPubZPubTransactionsRIRecipients](docs/Model/ListHDWalletXPubYPubZPubTransactionsRIRecipients.md)
 - [ListHDWalletXPubYPubZPubTransactionsRISenders](docs/Model/ListHDWalletXPubYPubZPubTransactionsRISenders.md)
+- [ListHDWalletXPubYPubZPubUTXOsE400](docs/Model/ListHDWalletXPubYPubZPubUTXOsE400.md)
+- [ListHDWalletXPubYPubZPubUTXOsE401](docs/Model/ListHDWalletXPubYPubZPubUTXOsE401.md)
+- [ListHDWalletXPubYPubZPubUTXOsE403](docs/Model/ListHDWalletXPubYPubZPubUTXOsE403.md)
+- [ListHDWalletXPubYPubZPubUTXOsE422](docs/Model/ListHDWalletXPubYPubZPubUTXOsE422.md)
+- [ListHDWalletXPubYPubZPubUTXOsR](docs/Model/ListHDWalletXPubYPubZPubUTXOsR.md)
+- [ListHDWalletXPubYPubZPubUTXOsRData](docs/Model/ListHDWalletXPubYPubZPubUTXOsRData.md)
+- [ListHDWalletXPubYPubZPubUTXOsRI](docs/Model/ListHDWalletXPubYPubZPubUTXOsRI.md)
 - [ListInternalTransactionDetailsByTransactionHashE400](docs/Model/ListInternalTransactionDetailsByTransactionHashE400.md)
 - [ListInternalTransactionDetailsByTransactionHashE401](docs/Model/ListInternalTransactionDetailsByTransactionHashE401.md)
 - [ListInternalTransactionDetailsByTransactionHashE403](docs/Model/ListInternalTransactionDetailsByTransactionHashE403.md)
 - [ListInternalTransactionDetailsByTransactionHashR](docs/Model/ListInternalTransactionDetailsByTransactionHashR.md)
 - [ListInternalTransactionDetailsByTransactionHashRData](docs/Model/ListInternalTransactionDetailsByTransactionHashRData.md)
 - [ListInternalTransactionDetailsByTransactionHashRI](docs/Model/ListInternalTransactionDetailsByTransactionHashRI.md)
+- [ListInternalTransactionsByAddressAndTimeRangeE400](docs/Model/ListInternalTransactionsByAddressAndTimeRangeE400.md)
+- [ListInternalTransactionsByAddressAndTimeRangeE401](docs/Model/ListInternalTransactionsByAddressAndTimeRangeE401.md)
+- [ListInternalTransactionsByAddressAndTimeRangeE403](docs/Model/ListInternalTransactionsByAddressAndTimeRangeE403.md)
+- [ListInternalTransactionsByAddressAndTimeRangeR](docs/Model/ListInternalTransactionsByAddressAndTimeRangeR.md)
+- [ListInternalTransactionsByAddressAndTimeRangeRData](docs/Model/ListInternalTransactionsByAddressAndTimeRangeRData.md)
+- [ListInternalTransactionsByAddressAndTimeRangeRI](docs/Model/ListInternalTransactionsByAddressAndTimeRangeRI.md)
 - [ListInternalTransactionsByAddressE400](docs/Model/ListInternalTransactionsByAddressE400.md)
 - [ListInternalTransactionsByAddressE401](docs/Model/ListInternalTransactionsByAddressE401.md)
 - [ListInternalTransactionsByAddressE403](docs/Model/ListInternalTransactionsByAddressE403.md)
@@ -1291,6 +1535,7 @@ Class | Method | HTTP request | Description
 - [ListTokensTransfersByTransactionHashR](docs/Model/ListTokensTransfersByTransactionHashR.md)
 - [ListTokensTransfersByTransactionHashRData](docs/Model/ListTokensTransfersByTransactionHashRData.md)
 - [ListTokensTransfersByTransactionHashRI](docs/Model/ListTokensTransfersByTransactionHashRI.md)
+- [ListTokensTransfersByTransactionHashRITransactionFee](docs/Model/ListTokensTransfersByTransactionHashRITransactionFee.md)
 - [ListTransactionsByBlockHashE400](docs/Model/ListTransactionsByBlockHashE400.md)
 - [ListTransactionsByBlockHashE401](docs/Model/ListTransactionsByBlockHashE401.md)
 - [ListTransactionsByBlockHashE403](docs/Model/ListTransactionsByBlockHashE403.md)
@@ -1382,6 +1627,12 @@ Class | Method | HTTP request | Description
 - [ListUnconfirmedOmniTransactionsByPropertyIDR](docs/Model/ListUnconfirmedOmniTransactionsByPropertyIDR.md)
 - [ListUnconfirmedOmniTransactionsByPropertyIDRData](docs/Model/ListUnconfirmedOmniTransactionsByPropertyIDRData.md)
 - [ListUnconfirmedOmniTransactionsByPropertyIDRI](docs/Model/ListUnconfirmedOmniTransactionsByPropertyIDRI.md)
+- [ListUnconfirmedTokensTransfersByAddressE400](docs/Model/ListUnconfirmedTokensTransfersByAddressE400.md)
+- [ListUnconfirmedTokensTransfersByAddressE401](docs/Model/ListUnconfirmedTokensTransfersByAddressE401.md)
+- [ListUnconfirmedTokensTransfersByAddressE403](docs/Model/ListUnconfirmedTokensTransfersByAddressE403.md)
+- [ListUnconfirmedTokensTransfersByAddressR](docs/Model/ListUnconfirmedTokensTransfersByAddressR.md)
+- [ListUnconfirmedTokensTransfersByAddressRData](docs/Model/ListUnconfirmedTokensTransfersByAddressRData.md)
+- [ListUnconfirmedTokensTransfersByAddressRI](docs/Model/ListUnconfirmedTokensTransfersByAddressRI.md)
 - [ListUnconfirmedTransactionsByAddressE400](docs/Model/ListUnconfirmedTransactionsByAddressE400.md)
 - [ListUnconfirmedTransactionsByAddressE401](docs/Model/ListUnconfirmedTransactionsByAddressE401.md)
 - [ListUnconfirmedTransactionsByAddressE403](docs/Model/ListUnconfirmedTransactionsByAddressE403.md)
@@ -1422,12 +1673,6 @@ Class | Method | HTTP request | Description
 - [ListUnspentTransactionOutputsByAddressR](docs/Model/ListUnspentTransactionOutputsByAddressR.md)
 - [ListUnspentTransactionOutputsByAddressRData](docs/Model/ListUnspentTransactionOutputsByAddressRData.md)
 - [ListUnspentTransactionOutputsByAddressRI](docs/Model/ListUnspentTransactionOutputsByAddressRI.md)
-- [ListUnspentTransactionOutputsByAddressRIBlockchainSpecific](docs/Model/ListUnspentTransactionOutputsByAddressRIBlockchainSpecific.md)
-- [ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVJoinSplit](docs/Model/ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVJoinSplit.md)
-- [ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVShieldedSpend](docs/Model/ListUnspentTransactionOutputsByAddressRIBlockchainSpecificVShieldedSpend.md)
-- [ListUnspentTransactionOutputsByAddressRIFee](docs/Model/ListUnspentTransactionOutputsByAddressRIFee.md)
-- [ListUnspentTransactionOutputsByAddressRISenders](docs/Model/ListUnspentTransactionOutputsByAddressRISenders.md)
-- [ListUnspentTransactionOutputsByAddressRIVin](docs/Model/ListUnspentTransactionOutputsByAddressRIVin.md)
 - [ListWalletTransactionsE400](docs/Model/ListWalletTransactionsE400.md)
 - [ListWalletTransactionsE401](docs/Model/ListWalletTransactionsE401.md)
 - [ListWalletTransactionsE403](docs/Model/ListWalletTransactionsE403.md)
@@ -1441,6 +1686,12 @@ Class | Method | HTTP request | Description
 - [ListWalletTransactionsRIRecipients](docs/Model/ListWalletTransactionsRIRecipients.md)
 - [ListWalletTransactionsRISenders](docs/Model/ListWalletTransactionsRISenders.md)
 - [ListWalletTransactionsRIValue](docs/Model/ListWalletTransactionsRIValue.md)
+- [ListXRPRippleTransactionsByAddressAndTimeRangeE400](docs/Model/ListXRPRippleTransactionsByAddressAndTimeRangeE400.md)
+- [ListXRPRippleTransactionsByAddressAndTimeRangeE401](docs/Model/ListXRPRippleTransactionsByAddressAndTimeRangeE401.md)
+- [ListXRPRippleTransactionsByAddressAndTimeRangeE403](docs/Model/ListXRPRippleTransactionsByAddressAndTimeRangeE403.md)
+- [ListXRPRippleTransactionsByAddressAndTimeRangeR](docs/Model/ListXRPRippleTransactionsByAddressAndTimeRangeR.md)
+- [ListXRPRippleTransactionsByAddressAndTimeRangeRData](docs/Model/ListXRPRippleTransactionsByAddressAndTimeRangeRData.md)
+- [ListXRPRippleTransactionsByAddressAndTimeRangeRI](docs/Model/ListXRPRippleTransactionsByAddressAndTimeRangeRI.md)
 - [ListXRPRippleTransactionsByAddressE400](docs/Model/ListXRPRippleTransactionsByAddressE400.md)
 - [ListXRPRippleTransactionsByAddressE401](docs/Model/ListXRPRippleTransactionsByAddressE401.md)
 - [ListXRPRippleTransactionsByAddressE403](docs/Model/ListXRPRippleTransactionsByAddressE403.md)
@@ -1639,6 +1890,7 @@ Class | Method | HTTP request | Description
 - [TransactionRequestRejectionData](docs/Model/TransactionRequestRejectionData.md)
 - [TransactionRequestRejectionDataItem](docs/Model/TransactionRequestRejectionDataItem.md)
 - [UnexpectedServerError](docs/Model/UnexpectedServerError.md)
+- [Unimplemented](docs/Model/Unimplemented.md)
 - [UnsupportedMediaType](docs/Model/UnsupportedMediaType.md)
 - [UriNotFound](docs/Model/UriNotFound.md)
 - [ValidateAddressE400](docs/Model/ValidateAddressE400.md)
@@ -1685,5 +1937,5 @@ developers@cryptoapis.io
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: `2.0.0`
-    - Package version: `1.4.0`
+    - Package version: `1.5.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

@@ -40,7 +40,7 @@ $apiInstance = new CryptoAPIs\Api\AutomaticCoinsForwardingApi(
 );
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $create_automatic_coins_forwarding_rb = new \CryptoAPIs\Model\CreateAutomaticCoinsForwardingRB(); // \CryptoAPIs\Model\CreateAutomaticCoinsForwardingRB
 
 try {
@@ -109,7 +109,7 @@ $apiInstance = new CryptoAPIs\Api\AutomaticCoinsForwardingApi(
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $reference_id = 600955ea5e75d660e71d3c7d; // string | Represents a unique ID used to reference the specific callback subscription.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->deleteAutomaticCoinsForwarding($blockchain, $network, $reference_id, $context);
@@ -176,9 +176,9 @@ $apiInstance = new CryptoAPIs\Api\AutomaticCoinsForwardingApi(
 );
 $blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $limit = 50; // int | Defines how many items should be returned in the response per page basis.
-$offset = 10; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
+$offset = 0; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
 
 try {
     $result = $apiInstance->listCoinsForwardingAutomations($blockchain, $network, $context, $limit, $offset);

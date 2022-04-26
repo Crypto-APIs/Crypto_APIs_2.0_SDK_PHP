@@ -63,7 +63,7 @@ class InlineResponse40331 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHashE403'
+        'error' => '\CryptoAPIs\Model\GetBlockDetailsByBlockHashE403'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40331 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHashE403
+     * @return \CryptoAPIs\Model\GetBlockDetailsByBlockHashE403
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40331 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\GetXRPRippleBlockDetailsByBlockHashE403 $error error
+     * @param \CryptoAPIs\Model\GetBlockDetailsByBlockHashE403 $error error
      *
      * @return self
      */

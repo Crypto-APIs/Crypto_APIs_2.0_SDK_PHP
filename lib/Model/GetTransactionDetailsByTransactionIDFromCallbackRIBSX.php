@@ -80,10 +80,10 @@ class GetTransactionDetailsByTransactionIDFromCallbackRIBSX implements ModelInte
       */
     protected static $openAPIFormats = [
         'additional_data' => null,
-        'destination_tag' => null,
+        'destination_tag' => 'int64',
         'offer' => null,
         'receive' => null,
-        'sequence' => null,
+        'sequence' => 'int64',
         'status' => null,
         'type' => null,
         'value' => null

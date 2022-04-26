@@ -71,7 +71,8 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         'token_type' => 'string',
         'tokens_amount' => 'string',
         'transaction_hash' => 'string',
-        'transaction_timestamp' => 'int'
+        'transaction_timestamp' => 'int',
+        'transaction_fee' => '\CryptoAPIs\Model\ListTokensTransfersByTransactionHashRITransactionFee'
     ];
 
     /**
@@ -93,7 +94,8 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         'token_type' => null,
         'tokens_amount' => null,
         'transaction_hash' => null,
-        'transaction_timestamp' => null
+        'transaction_timestamp' => null,
+        'transaction_fee' => null
     ];
 
     /**
@@ -134,7 +136,8 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         'token_type' => 'tokenType',
         'tokens_amount' => 'tokensAmount',
         'transaction_hash' => 'transactionHash',
-        'transaction_timestamp' => 'transactionTimestamp'
+        'transaction_timestamp' => 'transactionTimestamp',
+        'transaction_fee' => 'transactionFee'
     ];
 
     /**
@@ -154,7 +157,8 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         'token_type' => 'setTokenType',
         'tokens_amount' => 'setTokensAmount',
         'transaction_hash' => 'setTransactionHash',
-        'transaction_timestamp' => 'setTransactionTimestamp'
+        'transaction_timestamp' => 'setTransactionTimestamp',
+        'transaction_fee' => 'setTransactionFee'
     ];
 
     /**
@@ -174,7 +178,8 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         'token_type' => 'getTokenType',
         'tokens_amount' => 'getTokensAmount',
         'transaction_hash' => 'getTransactionHash',
-        'transaction_timestamp' => 'getTransactionTimestamp'
+        'transaction_timestamp' => 'getTransactionTimestamp',
+        'transaction_fee' => 'getTransactionFee'
     ];
 
     /**
@@ -246,6 +251,7 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         $this->container['tokens_amount'] = $data['tokens_amount'] ?? null;
         $this->container['transaction_hash'] = $data['transaction_hash'] ?? null;
         $this->container['transaction_timestamp'] = $data['transaction_timestamp'] ?? null;
+        $this->container['transaction_fee'] = $data['transaction_fee'] ?? null;
     }
 
     /**
@@ -286,6 +292,9 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
         }
         if ($this->container['transaction_timestamp'] === null) {
             $invalidProperties[] = "'transaction_timestamp' can't be null";
+        }
+        if ($this->container['transaction_fee'] === null) {
+            $invalidProperties[] = "'transaction_fee' can't be null";
         }
         return $invalidProperties;
     }
@@ -586,6 +595,30 @@ class ListConfirmedTokensTransfersByAddressRI implements ModelInterface, ArrayAc
     public function setTransactionTimestamp($transaction_timestamp)
     {
         $this->container['transaction_timestamp'] = $transaction_timestamp;
+
+        return $this;
+    }
+
+    /**
+     * Gets transaction_fee
+     *
+     * @return \CryptoAPIs\Model\ListTokensTransfersByTransactionHashRITransactionFee
+     */
+    public function getTransactionFee()
+    {
+        return $this->container['transaction_fee'];
+    }
+
+    /**
+     * Sets transaction_fee
+     *
+     * @param \CryptoAPIs\Model\ListTokensTransfersByTransactionHashRITransactionFee $transaction_fee transaction_fee
+     *
+     * @return self
+     */
+    public function setTransactionFee($transaction_fee)
+    {
+        $this->container['transaction_fee'] = $transaction_fee;
 
         return $this;
     }

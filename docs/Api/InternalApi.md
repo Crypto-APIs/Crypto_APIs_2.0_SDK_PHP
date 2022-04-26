@@ -42,7 +42,7 @@ $blockchain = ethereum; // string | Represents the specific blockchain protocol 
 $network = mainnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $operation_id = call_4; // string | Represents the unique internal transaction ID in regards to the parent transaction (type trace address).
 $transaction_hash = 0x92bb77e16444e0417c8b50dfab68e89c7ad27d4140a766c3bbd4d0ac195f12fc; // string | String identifier of the parent transaction of the internal transaction represented in CryptoAPIs.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 
 try {
     $result = $apiInstance->getInternalTransactionByTransactionHashAndOperationId($blockchain, $network, $operation_id, $transaction_hash, $context);
@@ -111,7 +111,7 @@ $apiInstance = new CryptoAPIs\Api\InternalApi(
 $blockchain = ethereum; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = mainnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $transaction_hash = 0x5d4ea0471b70de09fa3d6a4bc32f703ec44483bffa4d6169fa0a36c6a1dc108a; // string | String identifier of the parent transaction of the internal transaction represented in CryptoAPIs.
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $limit = 50; // int | Defines how many items should be returned in the response per page basis.
 $offset = 0; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
 
@@ -183,7 +183,7 @@ $apiInstance = new CryptoAPIs\Api\InternalApi(
 $blockchain = ethereum; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
 $network = ropsten; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
 $address = 0xc8fe2ceac93ad50e496b497357ae5385192dd28d; // string | String identifier of the address document represented in CryptoAPIs
-$context = 'context_example'; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
 $limit = 50; // int | Defines how many items should be returned in the response per page basis.
 $offset = 0; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
 
