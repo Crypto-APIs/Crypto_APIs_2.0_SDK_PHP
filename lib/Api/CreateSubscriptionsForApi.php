@@ -2096,6 +2096,501 @@ class CreateSubscriptionsForApi
     }
 
     /**
+     * Operation newConfirmedCoinsTransactionsForSpecificAmount
+     *
+     * New Confirmed Coins Transactions For Specific Amount
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountRB $new_confirmed_coins_transactions_for_specific_amount_rb new_confirmed_coins_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \CryptoAPIs\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountR|\CryptoAPIs\Model\InlineResponse40089|\CryptoAPIs\Model\InlineResponse40189|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40389|\CryptoAPIs\Model\InlineResponse40916|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     */
+    public function newConfirmedCoinsTransactionsForSpecificAmount($blockchain, $network, $context = null, $new_confirmed_coins_transactions_for_specific_amount_rb = null)
+    {
+        list($response) = $this->newConfirmedCoinsTransactionsForSpecificAmountWithHttpInfo($blockchain, $network, $context, $new_confirmed_coins_transactions_for_specific_amount_rb);
+        return $response;
+    }
+
+    /**
+     * Operation newConfirmedCoinsTransactionsForSpecificAmountWithHttpInfo
+     *
+     * New Confirmed Coins Transactions For Specific Amount
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountRB $new_confirmed_coins_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \CryptoAPIs\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountR|\CryptoAPIs\Model\InlineResponse40089|\CryptoAPIs\Model\InlineResponse40189|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40389|\CryptoAPIs\Model\InlineResponse40916|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function newConfirmedCoinsTransactionsForSpecificAmountWithHttpInfo($blockchain, $network, $context = null, $new_confirmed_coins_transactions_for_specific_amount_rb = null)
+    {
+        $request = $this->newConfirmedCoinsTransactionsForSpecificAmountRequest($blockchain, $network, $context, $new_confirmed_coins_transactions_for_specific_amount_rb);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 201:
+                    if ('\CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountR' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountR', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\CryptoAPIs\Model\InlineResponse40089' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40089', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\CryptoAPIs\Model\InlineResponse40189' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40189', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\CryptoAPIs\Model\InlineResponse402' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse402', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 403:
+                    if ('\CryptoAPIs\Model\InlineResponse40389' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40389', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 409:
+                    if ('\CryptoAPIs\Model\InlineResponse40916' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40916', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 415:
+                    if ('\CryptoAPIs\Model\InlineResponse415' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse415', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\CryptoAPIs\Model\InlineResponse422' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse422', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 429:
+                    if ('\CryptoAPIs\Model\InlineResponse429' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse429', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\CryptoAPIs\Model\InlineResponse500' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse500', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountR';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountR',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40089',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40189',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse402',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40389',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 409:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40916',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 415:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse415',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse422',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 429:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse429',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation newConfirmedCoinsTransactionsForSpecificAmountAsync
+     *
+     * New Confirmed Coins Transactions For Specific Amount
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountRB $new_confirmed_coins_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function newConfirmedCoinsTransactionsForSpecificAmountAsync($blockchain, $network, $context = null, $new_confirmed_coins_transactions_for_specific_amount_rb = null)
+    {
+        return $this->newConfirmedCoinsTransactionsForSpecificAmountAsyncWithHttpInfo($blockchain, $network, $context, $new_confirmed_coins_transactions_for_specific_amount_rb)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation newConfirmedCoinsTransactionsForSpecificAmountAsyncWithHttpInfo
+     *
+     * New Confirmed Coins Transactions For Specific Amount
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountRB $new_confirmed_coins_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function newConfirmedCoinsTransactionsForSpecificAmountAsyncWithHttpInfo($blockchain, $network, $context = null, $new_confirmed_coins_transactions_for_specific_amount_rb = null)
+    {
+        $returnType = '\CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountR';
+        $request = $this->newConfirmedCoinsTransactionsForSpecificAmountRequest($blockchain, $network, $context, $new_confirmed_coins_transactions_for_specific_amount_rb);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'newConfirmedCoinsTransactionsForSpecificAmount'
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountRB $new_confirmed_coins_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function newConfirmedCoinsTransactionsForSpecificAmountRequest($blockchain, $network, $context = null, $new_confirmed_coins_transactions_for_specific_amount_rb = null)
+    {
+        // verify the required parameter 'blockchain' is set
+        if ($blockchain === null || (is_array($blockchain) && count($blockchain) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $blockchain when calling newConfirmedCoinsTransactionsForSpecificAmount'
+            );
+        }
+        // verify the required parameter 'network' is set
+        if ($network === null || (is_array($network) && count($network) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $network when calling newConfirmedCoinsTransactionsForSpecificAmount'
+            );
+        }
+
+        $resourcePath = '/blockchain-events/{blockchain}/{network}/subscriptions/coins-transactions-for-specific-amount';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($context !== null) {
+            if('form' === 'form' && is_array($context)) {
+                foreach($context as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['context'] = $context;
+            }
+        }
+
+
+        // path params
+        if ($blockchain !== null) {
+            $resourcePath = str_replace(
+                '{' . 'blockchain' . '}',
+                ObjectSerializer::toPathValue($blockchain),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($network !== null) {
+            $resourcePath = str_replace(
+                '{' . 'network' . '}',
+                ObjectSerializer::toPathValue($network),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($new_confirmed_coins_transactions_for_specific_amount_rb)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($new_confirmed_coins_transactions_for_specific_amount_rb));
+            } else {
+                $httpBody = $new_confirmed_coins_transactions_for_specific_amount_rb;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('x-api-key');
+        if ($apiKey !== null) {
+            $headers['x-api-key'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation newConfirmedInternalTransactions
      *
      * New confirmed internal transactions
@@ -3034,6 +3529,1016 @@ class CreateSubscriptionsForApi
                 $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($new_confirmed_internal_transactions_and_each_confirmation_rb));
             } else {
                 $httpBody = $new_confirmed_internal_transactions_and_each_confirmation_rb;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('x-api-key');
+        if ($apiKey !== null) {
+            $headers['x-api-key'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation newConfirmedInternalTransactionsForSpecificAmount
+     *
+     * New Confirmed Internal Transactions For Specific Amount
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountRB $new_confirmed_internal_transactions_for_specific_amount_rb new_confirmed_internal_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \CryptoAPIs\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountR|\CryptoAPIs\Model\InlineResponse40091|\CryptoAPIs\Model\InlineResponse40191|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40391|\CryptoAPIs\Model\InlineResponse40918|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     */
+    public function newConfirmedInternalTransactionsForSpecificAmount($blockchain, $network, $context = null, $new_confirmed_internal_transactions_for_specific_amount_rb = null)
+    {
+        list($response) = $this->newConfirmedInternalTransactionsForSpecificAmountWithHttpInfo($blockchain, $network, $context, $new_confirmed_internal_transactions_for_specific_amount_rb);
+        return $response;
+    }
+
+    /**
+     * Operation newConfirmedInternalTransactionsForSpecificAmountWithHttpInfo
+     *
+     * New Confirmed Internal Transactions For Specific Amount
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountRB $new_confirmed_internal_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \CryptoAPIs\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountR|\CryptoAPIs\Model\InlineResponse40091|\CryptoAPIs\Model\InlineResponse40191|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40391|\CryptoAPIs\Model\InlineResponse40918|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function newConfirmedInternalTransactionsForSpecificAmountWithHttpInfo($blockchain, $network, $context = null, $new_confirmed_internal_transactions_for_specific_amount_rb = null)
+    {
+        $request = $this->newConfirmedInternalTransactionsForSpecificAmountRequest($blockchain, $network, $context, $new_confirmed_internal_transactions_for_specific_amount_rb);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 201:
+                    if ('\CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountR' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountR', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\CryptoAPIs\Model\InlineResponse40091' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40091', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\CryptoAPIs\Model\InlineResponse40191' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40191', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\CryptoAPIs\Model\InlineResponse402' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse402', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 403:
+                    if ('\CryptoAPIs\Model\InlineResponse40391' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40391', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 409:
+                    if ('\CryptoAPIs\Model\InlineResponse40918' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40918', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 415:
+                    if ('\CryptoAPIs\Model\InlineResponse415' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse415', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\CryptoAPIs\Model\InlineResponse422' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse422', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 429:
+                    if ('\CryptoAPIs\Model\InlineResponse429' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse429', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\CryptoAPIs\Model\InlineResponse500' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse500', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountR';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountR',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40091',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40191',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse402',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40391',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 409:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40918',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 415:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse415',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse422',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 429:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse429',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation newConfirmedInternalTransactionsForSpecificAmountAsync
+     *
+     * New Confirmed Internal Transactions For Specific Amount
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountRB $new_confirmed_internal_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function newConfirmedInternalTransactionsForSpecificAmountAsync($blockchain, $network, $context = null, $new_confirmed_internal_transactions_for_specific_amount_rb = null)
+    {
+        return $this->newConfirmedInternalTransactionsForSpecificAmountAsyncWithHttpInfo($blockchain, $network, $context, $new_confirmed_internal_transactions_for_specific_amount_rb)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation newConfirmedInternalTransactionsForSpecificAmountAsyncWithHttpInfo
+     *
+     * New Confirmed Internal Transactions For Specific Amount
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountRB $new_confirmed_internal_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function newConfirmedInternalTransactionsForSpecificAmountAsyncWithHttpInfo($blockchain, $network, $context = null, $new_confirmed_internal_transactions_for_specific_amount_rb = null)
+    {
+        $returnType = '\CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountR';
+        $request = $this->newConfirmedInternalTransactionsForSpecificAmountRequest($blockchain, $network, $context, $new_confirmed_internal_transactions_for_specific_amount_rb);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'newConfirmedInternalTransactionsForSpecificAmount'
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountRB $new_confirmed_internal_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function newConfirmedInternalTransactionsForSpecificAmountRequest($blockchain, $network, $context = null, $new_confirmed_internal_transactions_for_specific_amount_rb = null)
+    {
+        // verify the required parameter 'blockchain' is set
+        if ($blockchain === null || (is_array($blockchain) && count($blockchain) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $blockchain when calling newConfirmedInternalTransactionsForSpecificAmount'
+            );
+        }
+        // verify the required parameter 'network' is set
+        if ($network === null || (is_array($network) && count($network) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $network when calling newConfirmedInternalTransactionsForSpecificAmount'
+            );
+        }
+
+        $resourcePath = '/blockchain-events/{blockchain}/{network}/subscriptions/internal-transactions-for-specific-amount';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($context !== null) {
+            if('form' === 'form' && is_array($context)) {
+                foreach($context as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['context'] = $context;
+            }
+        }
+
+
+        // path params
+        if ($blockchain !== null) {
+            $resourcePath = str_replace(
+                '{' . 'blockchain' . '}',
+                ObjectSerializer::toPathValue($blockchain),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($network !== null) {
+            $resourcePath = str_replace(
+                '{' . 'network' . '}',
+                ObjectSerializer::toPathValue($network),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($new_confirmed_internal_transactions_for_specific_amount_rb)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($new_confirmed_internal_transactions_for_specific_amount_rb));
+            } else {
+                $httpBody = $new_confirmed_internal_transactions_for_specific_amount_rb;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('x-api-key');
+        if ($apiKey !== null) {
+            $headers['x-api-key'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation newConfirmedTokenTransactionsForSpecificAmount
+     *
+     * New Confirmed Token Transactions For Specific Amount
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountRB $new_confirmed_token_transactions_for_specific_amount_rb new_confirmed_token_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \CryptoAPIs\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountR|\CryptoAPIs\Model\InlineResponse40090|\CryptoAPIs\Model\InlineResponse40190|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40390|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse40917|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     */
+    public function newConfirmedTokenTransactionsForSpecificAmount($blockchain, $network, $context = null, $new_confirmed_token_transactions_for_specific_amount_rb = null)
+    {
+        list($response) = $this->newConfirmedTokenTransactionsForSpecificAmountWithHttpInfo($blockchain, $network, $context, $new_confirmed_token_transactions_for_specific_amount_rb);
+        return $response;
+    }
+
+    /**
+     * Operation newConfirmedTokenTransactionsForSpecificAmountWithHttpInfo
+     *
+     * New Confirmed Token Transactions For Specific Amount
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountRB $new_confirmed_token_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \CryptoAPIs\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountR|\CryptoAPIs\Model\InlineResponse40090|\CryptoAPIs\Model\InlineResponse40190|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40390|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse40917|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function newConfirmedTokenTransactionsForSpecificAmountWithHttpInfo($blockchain, $network, $context = null, $new_confirmed_token_transactions_for_specific_amount_rb = null)
+    {
+        $request = $this->newConfirmedTokenTransactionsForSpecificAmountRequest($blockchain, $network, $context, $new_confirmed_token_transactions_for_specific_amount_rb);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 201:
+                    if ('\CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountR' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountR', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\CryptoAPIs\Model\InlineResponse40090' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40090', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\CryptoAPIs\Model\InlineResponse40190' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40190', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 402:
+                    if ('\CryptoAPIs\Model\InlineResponse402' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse402', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 403:
+                    if ('\CryptoAPIs\Model\InlineResponse40390' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40390', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\CryptoAPIs\Model\InlineResponse4041' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse4041', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 409:
+                    if ('\CryptoAPIs\Model\InlineResponse40917' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40917', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 415:
+                    if ('\CryptoAPIs\Model\InlineResponse415' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse415', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 422:
+                    if ('\CryptoAPIs\Model\InlineResponse422' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse422', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 429:
+                    if ('\CryptoAPIs\Model\InlineResponse429' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse429', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\CryptoAPIs\Model\InlineResponse500' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse500', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountR';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountR',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40090',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40190',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 402:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse402',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40390',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse4041',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 409:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse40917',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 415:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse415',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse422',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 429:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse429',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\CryptoAPIs\Model\InlineResponse500',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation newConfirmedTokenTransactionsForSpecificAmountAsync
+     *
+     * New Confirmed Token Transactions For Specific Amount
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountRB $new_confirmed_token_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function newConfirmedTokenTransactionsForSpecificAmountAsync($blockchain, $network, $context = null, $new_confirmed_token_transactions_for_specific_amount_rb = null)
+    {
+        return $this->newConfirmedTokenTransactionsForSpecificAmountAsyncWithHttpInfo($blockchain, $network, $context, $new_confirmed_token_transactions_for_specific_amount_rb)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation newConfirmedTokenTransactionsForSpecificAmountAsyncWithHttpInfo
+     *
+     * New Confirmed Token Transactions For Specific Amount
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountRB $new_confirmed_token_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function newConfirmedTokenTransactionsForSpecificAmountAsyncWithHttpInfo($blockchain, $network, $context = null, $new_confirmed_token_transactions_for_specific_amount_rb = null)
+    {
+        $returnType = '\CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountR';
+        $request = $this->newConfirmedTokenTransactionsForSpecificAmountRequest($blockchain, $network, $context, $new_confirmed_token_transactions_for_specific_amount_rb);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'newConfirmedTokenTransactionsForSpecificAmount'
+     *
+     * @param  string $blockchain Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. (required)
+     * @param  string $network Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. (required)
+     * @param  string $context In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. (optional)
+     * @param  \CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountRB $new_confirmed_token_transactions_for_specific_amount_rb (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function newConfirmedTokenTransactionsForSpecificAmountRequest($blockchain, $network, $context = null, $new_confirmed_token_transactions_for_specific_amount_rb = null)
+    {
+        // verify the required parameter 'blockchain' is set
+        if ($blockchain === null || (is_array($blockchain) && count($blockchain) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $blockchain when calling newConfirmedTokenTransactionsForSpecificAmount'
+            );
+        }
+        // verify the required parameter 'network' is set
+        if ($network === null || (is_array($network) && count($network) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $network when calling newConfirmedTokenTransactionsForSpecificAmount'
+            );
+        }
+
+        $resourcePath = '/blockchain-events/{blockchain}/{network}/subscriptions/tokens-transfers-for-specific-amount';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($context !== null) {
+            if('form' === 'form' && is_array($context)) {
+                foreach($context as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['context'] = $context;
+            }
+        }
+
+
+        // path params
+        if ($blockchain !== null) {
+            $resourcePath = str_replace(
+                '{' . 'blockchain' . '}',
+                ObjectSerializer::toPathValue($blockchain),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($network !== null) {
+            $resourcePath = str_replace(
+                '{' . 'network' . '}',
+                ObjectSerializer::toPathValue($network),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($new_confirmed_token_transactions_for_specific_amount_rb)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($new_confirmed_token_transactions_for_specific_amount_rb));
+            } else {
+                $httpBody = $new_confirmed_token_transactions_for_specific_amount_rb;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

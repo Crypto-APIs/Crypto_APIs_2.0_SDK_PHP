@@ -63,7 +63,7 @@ class InlineResponse400108 implements ModelInterface, ArrayAccess, \JsonSerializ
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\ListAssetsDetailsE400'
+        'error' => '\CryptoAPIs\Model\ListSupportedAssetsE400'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse400108 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\ListAssetsDetailsE400
+     * @return \CryptoAPIs\Model\ListSupportedAssetsE400
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse400108 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\ListAssetsDetailsE400 $error error
+     * @param \CryptoAPIs\Model\ListSupportedAssetsE400 $error error
      *
      * @return self
      */

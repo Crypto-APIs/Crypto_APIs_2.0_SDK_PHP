@@ -8,8 +8,11 @@ Method | HTTP request | Description
 [**newBlock()**](CreateSubscriptionsForApi.md#newBlock) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/block-mined | New Block
 [**newConfirmedCoinsTransactions()**](CreateSubscriptionsForApi.md#newConfirmedCoinsTransactions) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-confirmed | New confirmed coins transactions
 [**newConfirmedCoinsTransactionsAndEachConfirmation()**](CreateSubscriptionsForApi.md#newConfirmedCoinsTransactionsAndEachConfirmation) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-confirmed-each-confirmation | New confirmed coins transactions and each confirmation
+[**newConfirmedCoinsTransactionsForSpecificAmount()**](CreateSubscriptionsForApi.md#newConfirmedCoinsTransactionsForSpecificAmount) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/coins-transactions-for-specific-amount | New Confirmed Coins Transactions For Specific Amount
 [**newConfirmedInternalTransactions()**](CreateSubscriptionsForApi.md#newConfirmedInternalTransactions) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-internal-transactions-confirmed | New confirmed internal transactions
 [**newConfirmedInternalTransactionsAndEachConfirmation()**](CreateSubscriptionsForApi.md#newConfirmedInternalTransactionsAndEachConfirmation) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-internal-transactions-confirmed-each-confirmation | New confirmed internal transactions and each confirmation
+[**newConfirmedInternalTransactionsForSpecificAmount()**](CreateSubscriptionsForApi.md#newConfirmedInternalTransactionsForSpecificAmount) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/internal-transactions-for-specific-amount | New Confirmed Internal Transactions For Specific Amount
+[**newConfirmedTokenTransactionsForSpecificAmount()**](CreateSubscriptionsForApi.md#newConfirmedTokenTransactionsForSpecificAmount) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/tokens-transfers-for-specific-amount | New Confirmed Token Transactions For Specific Amount
 [**newConfirmedTokensTransactions()**](CreateSubscriptionsForApi.md#newConfirmedTokensTransactions) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-tokens-transactions-confirmed | New confirmed tokens transactions
 [**newConfirmedTokensTransactionsAndEachConfirmation()**](CreateSubscriptionsForApi.md#newConfirmedTokensTransactionsAndEachConfirmation) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-tokens-transactions-confirmed-each-confirmation | New confirmed tokens transactions and each confirmation
 [**newUnconfirmedCoinsTransactions()**](CreateSubscriptionsForApi.md#newUnconfirmedCoinsTransactions) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-unconfirmed | New unconfirmed coins transactions
@@ -288,6 +291,74 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `newConfirmedCoinsTransactionsForSpecificAmount()`
+
+```php
+newConfirmedCoinsTransactionsForSpecificAmount($blockchain, $network, $context, $new_confirmed_coins_transactions_for_specific_amount_rb): \CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountR
+```
+
+New Confirmed Coins Transactions For Specific Amount
+
+Through this endpoint customers can create callback subscriptions for a specific event and \"amountHigherThan\" value. In this case the event is when there are new incoming or outgoing confirmed coins transactions for the specified blockchain and the amount is equal or higher than the value specified.  By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs  filtered for the specified amount. The information is returned per specified address.    Being confirmed means that the transactions are verified by miners and added to the next block.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+$network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$new_confirmed_coins_transactions_for_specific_amount_rb = new \CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountRB(); // \CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountRB
+
+try {
+    $result = $apiInstance->newConfirmedCoinsTransactionsForSpecificAmount($blockchain, $network, $context, $new_confirmed_coins_transactions_for_specific_amount_rb);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CreateSubscriptionsForApi->newConfirmedCoinsTransactionsForSpecificAmount: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
+ **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
+ **new_confirmed_coins_transactions_for_specific_amount_rb** | [**\CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountRB**](../Model/NewConfirmedCoinsTransactionsForSpecificAmountRB.md)|  | [optional]
+
+### Return type
+
+[**\CryptoAPIs\Model\NewConfirmedCoinsTransactionsForSpecificAmountR**](../Model/NewConfirmedCoinsTransactionsForSpecificAmountR.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `newConfirmedInternalTransactions()`
 
 ```php
@@ -410,6 +481,142 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\CryptoAPIs\Model\NewConfirmedInternalTransactionsAndEachConfirmationR**](../Model/NewConfirmedInternalTransactionsAndEachConfirmationR.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `newConfirmedInternalTransactionsForSpecificAmount()`
+
+```php
+newConfirmedInternalTransactionsForSpecificAmount($blockchain, $network, $context, $new_confirmed_internal_transactions_for_specific_amount_rb): \CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountR
+```
+
+New Confirmed Internal Transactions For Specific Amount
+
+Through this endpoint customers can create callback subscriptions for a specific event and \"amountHigherThan\" value. In this case the event is when there are new confirmed internal transactions and the amount is equal or higher than a value, specified by the customer. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$blockchain = ethereum; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+$network = ropsten; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$new_confirmed_internal_transactions_for_specific_amount_rb = new \CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountRB(); // \CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountRB
+
+try {
+    $result = $apiInstance->newConfirmedInternalTransactionsForSpecificAmount($blockchain, $network, $context, $new_confirmed_internal_transactions_for_specific_amount_rb);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CreateSubscriptionsForApi->newConfirmedInternalTransactionsForSpecificAmount: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
+ **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
+ **new_confirmed_internal_transactions_for_specific_amount_rb** | [**\CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountRB**](../Model/NewConfirmedInternalTransactionsForSpecificAmountRB.md)|  | [optional]
+
+### Return type
+
+[**\CryptoAPIs\Model\NewConfirmedInternalTransactionsForSpecificAmountR**](../Model/NewConfirmedInternalTransactionsForSpecificAmountR.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `newConfirmedTokenTransactionsForSpecificAmount()`
+
+```php
+newConfirmedTokenTransactionsForSpecificAmount($blockchain, $network, $context, $new_confirmed_token_transactions_for_specific_amount_rb): \CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountR
+```
+
+New Confirmed Token Transactions For Specific Amount
+
+Through this endpoint customers can create callback subscriptions for a specific event and \"amountHigherThan\" value. In this case the event is when there are new incoming or outgoing confirmed token transactions for the specified blockchain and the amount is equal or higher than the value specified. By creating this subscription the user will be notified by Crypto APIs 2.0 when that event occurs, filtered for the specified amount.  Being confirmed means that the transactions are verified by miners and added to the next block. This endpoint refers to tokens transactions only, not coins.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new CryptoAPIs\Api\CreateSubscriptionsForApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$blockchain = ethereum; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+$network = ropsten; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$new_confirmed_token_transactions_for_specific_amount_rb = new \CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountRB(); // \CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountRB
+
+try {
+    $result = $apiInstance->newConfirmedTokenTransactionsForSpecificAmount($blockchain, $network, $context, $new_confirmed_token_transactions_for_specific_amount_rb);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CreateSubscriptionsForApi->newConfirmedTokenTransactionsForSpecificAmount: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
+ **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
+ **new_confirmed_token_transactions_for_specific_amount_rb** | [**\CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountRB**](../Model/NewConfirmedTokenTransactionsForSpecificAmountRB.md)|  | [optional]
+
+### Return type
+
+[**\CryptoAPIs\Model\NewConfirmedTokenTransactionsForSpecificAmountR**](../Model/NewConfirmedTokenTransactionsForSpecificAmountR.md)
 
 ### Authorization
 

@@ -17,7 +17,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 ```json
 {
   "require": {
-    "cryptoapis/sdk": "^1.4.0"
+    "cryptoapis/sdk": "^1.6.0"
   }
 }
 ```
@@ -85,15 +85,18 @@ Class | Method | HTTP request | Description
 *AutomaticTokensForwardingApi* | [**getFeeAddressDetails**](docs/Api/AutomaticTokensForwardingApi.md#getfeeaddressdetails) | **GET** /blockchain-automations/{blockchain}/{network}/tokens-forwarding/fee-addresses | Get Fee Address Details
 *AutomaticTokensForwardingApi* | [**listTokensForwardingAutomations**](docs/Api/AutomaticTokensForwardingApi.md#listtokensforwardingautomations) | **GET** /blockchain-automations/{blockchain}/{network}/tokens-forwarding/automations | List Tokens Forwarding Automations
 *CallbackDataApi* | [**getAddressDetailsFromCallback**](docs/Api/CallbackDataApi.md#getaddressdetailsfromcallback) | **GET** /blockchain-events/{blockchain}/{network}/addresses/{address} | Get Address Details From Callback
-*CallbackDataApi* | [**getBlockDetailsByBlockHashFromCallback**](docs/Api/CallbackDataApi.md#getblockdetailsbyblockhashfromcallback) | **GET** /blockcain-events/{blockchain}/{network}/blocks/hash/{blockHash} | Get Block Details By Block Hash From Callback
-*CallbackDataApi* | [**getBlockDetailsByBlockHeightFromCallback**](docs/Api/CallbackDataApi.md#getblockdetailsbyblockheightfromcallback) | **GET** /blockcain-events/{blockchain}/{network}/blocks/height/{blockHeight} | Get Block Details By Block Height From Callback
+*CallbackDataApi* | [**getBlockDetailsByBlockHashFromCallback**](docs/Api/CallbackDataApi.md#getblockdetailsbyblockhashfromcallback) | **GET** /blockchain-events/{blockchain}/{network}/blocks/hash/{blockHash} | Get Block Details By Block Hash From Callback
+*CallbackDataApi* | [**getBlockDetailsByBlockHeightFromCallback**](docs/Api/CallbackDataApi.md#getblockdetailsbyblockheightfromcallback) | **GET** /blockchain-events/{blockchain}/{network}/blocks/height/{blockHeight} | Get Block Details By Block Height From Callback
 *CallbackDataApi* | [**getTransactionDetailsByTransactionIDFromCallback**](docs/Api/CallbackDataApi.md#gettransactiondetailsbytransactionidfromcallback) | **GET** /blockchain-events/{blockchain}/{network}/transactions/{transactionId} | Get Transaction Details By Transaction ID From Callback
 *CreateSubscriptionsForApi* | [**minedTransaction**](docs/Api/CreateSubscriptionsForApi.md#minedtransaction) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/transaction-mined | Mined transaction
 *CreateSubscriptionsForApi* | [**newBlock**](docs/Api/CreateSubscriptionsForApi.md#newblock) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/block-mined | New Block
 *CreateSubscriptionsForApi* | [**newConfirmedCoinsTransactions**](docs/Api/CreateSubscriptionsForApi.md#newconfirmedcoinstransactions) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-confirmed | New confirmed coins transactions
 *CreateSubscriptionsForApi* | [**newConfirmedCoinsTransactionsAndEachConfirmation**](docs/Api/CreateSubscriptionsForApi.md#newconfirmedcoinstransactionsandeachconfirmation) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-confirmed-each-confirmation | New confirmed coins transactions and each confirmation
+*CreateSubscriptionsForApi* | [**newConfirmedCoinsTransactionsForSpecificAmount**](docs/Api/CreateSubscriptionsForApi.md#newconfirmedcoinstransactionsforspecificamount) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/coins-transactions-for-specific-amount | New Confirmed Coins Transactions For Specific Amount
 *CreateSubscriptionsForApi* | [**newConfirmedInternalTransactions**](docs/Api/CreateSubscriptionsForApi.md#newconfirmedinternaltransactions) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-internal-transactions-confirmed | New confirmed internal transactions
 *CreateSubscriptionsForApi* | [**newConfirmedInternalTransactionsAndEachConfirmation**](docs/Api/CreateSubscriptionsForApi.md#newconfirmedinternaltransactionsandeachconfirmation) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-internal-transactions-confirmed-each-confirmation | New confirmed internal transactions and each confirmation
+*CreateSubscriptionsForApi* | [**newConfirmedInternalTransactionsForSpecificAmount**](docs/Api/CreateSubscriptionsForApi.md#newconfirmedinternaltransactionsforspecificamount) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/internal-transactions-for-specific-amount | New Confirmed Internal Transactions For Specific Amount
+*CreateSubscriptionsForApi* | [**newConfirmedTokenTransactionsForSpecificAmount**](docs/Api/CreateSubscriptionsForApi.md#newconfirmedtokentransactionsforspecificamount) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/tokens-transfers-for-specific-amount | New Confirmed Token Transactions For Specific Amount
 *CreateSubscriptionsForApi* | [**newConfirmedTokensTransactions**](docs/Api/CreateSubscriptionsForApi.md#newconfirmedtokenstransactions) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-tokens-transactions-confirmed | New confirmed tokens transactions
 *CreateSubscriptionsForApi* | [**newConfirmedTokensTransactionsAndEachConfirmation**](docs/Api/CreateSubscriptionsForApi.md#newconfirmedtokenstransactionsandeachconfirmation) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-tokens-transactions-confirmed-each-confirmation | New confirmed tokens transactions and each confirmation
 *CreateSubscriptionsForApi* | [**newUnconfirmedCoinsTransactions**](docs/Api/CreateSubscriptionsForApi.md#newunconfirmedcoinstransactions) | **POST** /blockchain-events/{blockchain}/{network}/subscriptions/address-coins-transactions-unconfirmed | New unconfirmed coins transactions
@@ -287,6 +290,19 @@ Class | Method | HTTP request | Description
 - [CoinsForwardingSuccess](docs/Model/CoinsForwardingSuccess.md)
 - [CoinsForwardingSuccessData](docs/Model/CoinsForwardingSuccessData.md)
 - [CoinsForwardingSuccessDataItem](docs/Model/CoinsForwardingSuccessDataItem.md)
+- [ConfirmedCoinsTransactionForCertainAmountOrHigher](docs/Model/ConfirmedCoinsTransactionForCertainAmountOrHigher.md)
+- [ConfirmedCoinsTransactionForCertainAmountOrHigherData](docs/Model/ConfirmedCoinsTransactionForCertainAmountOrHigherData.md)
+- [ConfirmedCoinsTransactionForCertainAmountOrHigherDataItem](docs/Model/ConfirmedCoinsTransactionForCertainAmountOrHigherDataItem.md)
+- [ConfirmedInternalTransactionForCertainAmountOrHigher](docs/Model/ConfirmedInternalTransactionForCertainAmountOrHigher.md)
+- [ConfirmedInternalTransactionForCertainAmountOrHigherData](docs/Model/ConfirmedInternalTransactionForCertainAmountOrHigherData.md)
+- [ConfirmedInternalTransactionForCertainAmountOrHigherDataItem](docs/Model/ConfirmedInternalTransactionForCertainAmountOrHigherDataItem.md)
+- [ConfirmedTokensTransactionForCertainAmountOrHigher](docs/Model/ConfirmedTokensTransactionForCertainAmountOrHigher.md)
+- [ConfirmedTokensTransactionForCertainAmountOrHigherBep20](docs/Model/ConfirmedTokensTransactionForCertainAmountOrHigherBep20.md)
+- [ConfirmedTokensTransactionForCertainAmountOrHigherData](docs/Model/ConfirmedTokensTransactionForCertainAmountOrHigherData.md)
+- [ConfirmedTokensTransactionForCertainAmountOrHigherDataItem](docs/Model/ConfirmedTokensTransactionForCertainAmountOrHigherDataItem.md)
+- [ConfirmedTokensTransactionForCertainAmountOrHigherErc20](docs/Model/ConfirmedTokensTransactionForCertainAmountOrHigherErc20.md)
+- [ConfirmedTokensTransactionForCertainAmountOrHigherErc721](docs/Model/ConfirmedTokensTransactionForCertainAmountOrHigherErc721.md)
+- [ConfirmedTokensTransactionForCertainAmountOrHigherToken](docs/Model/ConfirmedTokensTransactionForCertainAmountOrHigherToken.md)
 - [CouldNotCalculateRateForPair](docs/Model/CouldNotCalculateRateForPair.md)
 - [CreateAutomaticCoinsForwardingE400](docs/Model/CreateAutomaticCoinsForwardingE400.md)
 - [CreateAutomaticCoinsForwardingE401](docs/Model/CreateAutomaticCoinsForwardingE401.md)
@@ -917,6 +933,9 @@ Class | Method | HTTP request | Description
 - [InlineResponse400109](docs/Model/InlineResponse400109.md)
 - [InlineResponse40011](docs/Model/InlineResponse40011.md)
 - [InlineResponse400110](docs/Model/InlineResponse400110.md)
+- [InlineResponse400111](docs/Model/InlineResponse400111.md)
+- [InlineResponse400112](docs/Model/InlineResponse400112.md)
+- [InlineResponse400113](docs/Model/InlineResponse400113.md)
 - [InlineResponse40012](docs/Model/InlineResponse40012.md)
 - [InlineResponse40013](docs/Model/InlineResponse40013.md)
 - [InlineResponse40014](docs/Model/InlineResponse40014.md)
@@ -1028,6 +1047,9 @@ Class | Method | HTTP request | Description
 - [InlineResponse401109](docs/Model/InlineResponse401109.md)
 - [InlineResponse40111](docs/Model/InlineResponse40111.md)
 - [InlineResponse401110](docs/Model/InlineResponse401110.md)
+- [InlineResponse401111](docs/Model/InlineResponse401111.md)
+- [InlineResponse401112](docs/Model/InlineResponse401112.md)
+- [InlineResponse401113](docs/Model/InlineResponse401113.md)
 - [InlineResponse40112](docs/Model/InlineResponse40112.md)
 - [InlineResponse40113](docs/Model/InlineResponse40113.md)
 - [InlineResponse40114](docs/Model/InlineResponse40114.md)
@@ -1140,6 +1162,9 @@ Class | Method | HTTP request | Description
 - [InlineResponse403109](docs/Model/InlineResponse403109.md)
 - [InlineResponse40311](docs/Model/InlineResponse40311.md)
 - [InlineResponse403110](docs/Model/InlineResponse403110.md)
+- [InlineResponse403111](docs/Model/InlineResponse403111.md)
+- [InlineResponse403112](docs/Model/InlineResponse403112.md)
+- [InlineResponse403113](docs/Model/InlineResponse403113.md)
 - [InlineResponse40312](docs/Model/InlineResponse40312.md)
 - [InlineResponse40313](docs/Model/InlineResponse40313.md)
 - [InlineResponse40314](docs/Model/InlineResponse40314.md)
@@ -1251,7 +1276,10 @@ Class | Method | HTTP request | Description
 - [InlineResponse40915](docs/Model/InlineResponse40915.md)
 - [InlineResponse40916](docs/Model/InlineResponse40916.md)
 - [InlineResponse40917](docs/Model/InlineResponse40917.md)
+- [InlineResponse40918](docs/Model/InlineResponse40918.md)
+- [InlineResponse40919](docs/Model/InlineResponse40919.md)
 - [InlineResponse4092](docs/Model/InlineResponse4092.md)
+- [InlineResponse40920](docs/Model/InlineResponse40920.md)
 - [InlineResponse4093](docs/Model/InlineResponse4093.md)
 - [InlineResponse4094](docs/Model/InlineResponse4094.md)
 - [InlineResponse4095](docs/Model/InlineResponse4095.md)
@@ -1781,6 +1809,16 @@ Class | Method | HTTP request | Description
 - [NewConfirmedCoinsTransactionsE401](docs/Model/NewConfirmedCoinsTransactionsE401.md)
 - [NewConfirmedCoinsTransactionsE403](docs/Model/NewConfirmedCoinsTransactionsE403.md)
 - [NewConfirmedCoinsTransactionsE409](docs/Model/NewConfirmedCoinsTransactionsE409.md)
+- [NewConfirmedCoinsTransactionsForSpecificAmountE400](docs/Model/NewConfirmedCoinsTransactionsForSpecificAmountE400.md)
+- [NewConfirmedCoinsTransactionsForSpecificAmountE401](docs/Model/NewConfirmedCoinsTransactionsForSpecificAmountE401.md)
+- [NewConfirmedCoinsTransactionsForSpecificAmountE403](docs/Model/NewConfirmedCoinsTransactionsForSpecificAmountE403.md)
+- [NewConfirmedCoinsTransactionsForSpecificAmountE409](docs/Model/NewConfirmedCoinsTransactionsForSpecificAmountE409.md)
+- [NewConfirmedCoinsTransactionsForSpecificAmountR](docs/Model/NewConfirmedCoinsTransactionsForSpecificAmountR.md)
+- [NewConfirmedCoinsTransactionsForSpecificAmountRB](docs/Model/NewConfirmedCoinsTransactionsForSpecificAmountRB.md)
+- [NewConfirmedCoinsTransactionsForSpecificAmountRBData](docs/Model/NewConfirmedCoinsTransactionsForSpecificAmountRBData.md)
+- [NewConfirmedCoinsTransactionsForSpecificAmountRBDataItem](docs/Model/NewConfirmedCoinsTransactionsForSpecificAmountRBDataItem.md)
+- [NewConfirmedCoinsTransactionsForSpecificAmountRData](docs/Model/NewConfirmedCoinsTransactionsForSpecificAmountRData.md)
+- [NewConfirmedCoinsTransactionsForSpecificAmountRI](docs/Model/NewConfirmedCoinsTransactionsForSpecificAmountRI.md)
 - [NewConfirmedCoinsTransactionsR](docs/Model/NewConfirmedCoinsTransactionsR.md)
 - [NewConfirmedCoinsTransactionsRB](docs/Model/NewConfirmedCoinsTransactionsRB.md)
 - [NewConfirmedCoinsTransactionsRBData](docs/Model/NewConfirmedCoinsTransactionsRBData.md)
@@ -1801,12 +1839,32 @@ Class | Method | HTTP request | Description
 - [NewConfirmedInternalTransactionsE401](docs/Model/NewConfirmedInternalTransactionsE401.md)
 - [NewConfirmedInternalTransactionsE403](docs/Model/NewConfirmedInternalTransactionsE403.md)
 - [NewConfirmedInternalTransactionsE409](docs/Model/NewConfirmedInternalTransactionsE409.md)
+- [NewConfirmedInternalTransactionsForSpecificAmountE400](docs/Model/NewConfirmedInternalTransactionsForSpecificAmountE400.md)
+- [NewConfirmedInternalTransactionsForSpecificAmountE401](docs/Model/NewConfirmedInternalTransactionsForSpecificAmountE401.md)
+- [NewConfirmedInternalTransactionsForSpecificAmountE403](docs/Model/NewConfirmedInternalTransactionsForSpecificAmountE403.md)
+- [NewConfirmedInternalTransactionsForSpecificAmountE409](docs/Model/NewConfirmedInternalTransactionsForSpecificAmountE409.md)
+- [NewConfirmedInternalTransactionsForSpecificAmountR](docs/Model/NewConfirmedInternalTransactionsForSpecificAmountR.md)
+- [NewConfirmedInternalTransactionsForSpecificAmountRB](docs/Model/NewConfirmedInternalTransactionsForSpecificAmountRB.md)
+- [NewConfirmedInternalTransactionsForSpecificAmountRBData](docs/Model/NewConfirmedInternalTransactionsForSpecificAmountRBData.md)
+- [NewConfirmedInternalTransactionsForSpecificAmountRBDataItem](docs/Model/NewConfirmedInternalTransactionsForSpecificAmountRBDataItem.md)
+- [NewConfirmedInternalTransactionsForSpecificAmountRData](docs/Model/NewConfirmedInternalTransactionsForSpecificAmountRData.md)
+- [NewConfirmedInternalTransactionsForSpecificAmountRI](docs/Model/NewConfirmedInternalTransactionsForSpecificAmountRI.md)
 - [NewConfirmedInternalTransactionsR](docs/Model/NewConfirmedInternalTransactionsR.md)
 - [NewConfirmedInternalTransactionsRB](docs/Model/NewConfirmedInternalTransactionsRB.md)
 - [NewConfirmedInternalTransactionsRBData](docs/Model/NewConfirmedInternalTransactionsRBData.md)
 - [NewConfirmedInternalTransactionsRBDataItem](docs/Model/NewConfirmedInternalTransactionsRBDataItem.md)
 - [NewConfirmedInternalTransactionsRData](docs/Model/NewConfirmedInternalTransactionsRData.md)
 - [NewConfirmedInternalTransactionsRI](docs/Model/NewConfirmedInternalTransactionsRI.md)
+- [NewConfirmedTokenTransactionsForSpecificAmountE400](docs/Model/NewConfirmedTokenTransactionsForSpecificAmountE400.md)
+- [NewConfirmedTokenTransactionsForSpecificAmountE401](docs/Model/NewConfirmedTokenTransactionsForSpecificAmountE401.md)
+- [NewConfirmedTokenTransactionsForSpecificAmountE403](docs/Model/NewConfirmedTokenTransactionsForSpecificAmountE403.md)
+- [NewConfirmedTokenTransactionsForSpecificAmountE409](docs/Model/NewConfirmedTokenTransactionsForSpecificAmountE409.md)
+- [NewConfirmedTokenTransactionsForSpecificAmountR](docs/Model/NewConfirmedTokenTransactionsForSpecificAmountR.md)
+- [NewConfirmedTokenTransactionsForSpecificAmountRB](docs/Model/NewConfirmedTokenTransactionsForSpecificAmountRB.md)
+- [NewConfirmedTokenTransactionsForSpecificAmountRBData](docs/Model/NewConfirmedTokenTransactionsForSpecificAmountRBData.md)
+- [NewConfirmedTokenTransactionsForSpecificAmountRBDataItem](docs/Model/NewConfirmedTokenTransactionsForSpecificAmountRBDataItem.md)
+- [NewConfirmedTokenTransactionsForSpecificAmountRData](docs/Model/NewConfirmedTokenTransactionsForSpecificAmountRData.md)
+- [NewConfirmedTokenTransactionsForSpecificAmountRI](docs/Model/NewConfirmedTokenTransactionsForSpecificAmountRI.md)
 - [NewConfirmedTokensTransactionsAndEachConfirmationE400](docs/Model/NewConfirmedTokensTransactionsAndEachConfirmationE400.md)
 - [NewConfirmedTokensTransactionsAndEachConfirmationE401](docs/Model/NewConfirmedTokensTransactionsAndEachConfirmationE401.md)
 - [NewConfirmedTokensTransactionsAndEachConfirmationE403](docs/Model/NewConfirmedTokensTransactionsAndEachConfirmationE403.md)
@@ -1937,5 +1995,5 @@ developers@cryptoapis.io
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: `2.0.0`
-    - Package version: `1.5.3`
+    - Package version: `1.6.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

@@ -63,7 +63,7 @@ class InlineResponse403107 implements ModelInterface, ArrayAccess, \JsonSerializ
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\GetExchangeRateByAssetsIDsE403'
+        'error' => '\CryptoAPIs\Model\EncodeXAddressE403'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse403107 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\GetExchangeRateByAssetsIDsE403
+     * @return \CryptoAPIs\Model\EncodeXAddressE403
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse403107 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\GetExchangeRateByAssetsIDsE403 $error error
+     * @param \CryptoAPIs\Model\EncodeXAddressE403 $error error
      *
      * @return self
      */

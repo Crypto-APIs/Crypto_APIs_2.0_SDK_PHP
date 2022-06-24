@@ -1053,7 +1053,7 @@ class CallbackDataApi
             );
         }
 
-        $resourcePath = '/blockcain-events/{blockchain}/{network}/blocks/hash/{blockHash}';
+        $resourcePath = '/blockchain-events/{blockchain}/{network}/blocks/hash/{blockHash}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1576,7 +1576,7 @@ class CallbackDataApi
             );
         }
 
-        $resourcePath = '/blockcain-events/{blockchain}/{network}/blocks/height/{blockHeight}';
+        $resourcePath = '/blockchain-events/{blockchain}/{network}/blocks/height/{blockHeight}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

@@ -121,6 +121,18 @@ class CreateSubscriptionsForApiTest extends TestCase
     }
 
     /**
+     * Test case for newConfirmedCoinsTransactionsForSpecificAmount
+     *
+     * New Confirmed Coins Transactions For Specific Amount.
+     *
+     */
+    public function testNewConfirmedCoinsTransactionsForSpecificAmount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for newConfirmedInternalTransactions
      *
      * New confirmed internal transactions.
@@ -139,6 +151,30 @@ class CreateSubscriptionsForApiTest extends TestCase
      *
      */
     public function testNewConfirmedInternalTransactionsAndEachConfirmation()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for newConfirmedInternalTransactionsForSpecificAmount
+     *
+     * New Confirmed Internal Transactions For Specific Amount.
+     *
+     */
+    public function testNewConfirmedInternalTransactionsForSpecificAmount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for newConfirmedTokenTransactionsForSpecificAmount
+     *
+     * New Confirmed Token Transactions For Specific Amount.
+     *
+     */
+    public function testNewConfirmedTokenTransactionsForSpecificAmount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -127,7 +127,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\BroadcastLocallySignedTransactionR|\CryptoAPIs\Model\InlineResponse40099|\CryptoAPIs\Model\InlineResponse40199|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40399|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse40917|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\BroadcastLocallySignedTransactionR|\CryptoAPIs\Model\InlineResponse400102|\CryptoAPIs\Model\InlineResponse401102|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403102|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse40920|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function broadcastLocallySignedTransaction($blockchain, $network, $context = null, $broadcast_locally_signed_transaction_rb = null)
     {
@@ -147,7 +147,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\BroadcastLocallySignedTransactionR|\CryptoAPIs\Model\InlineResponse40099|\CryptoAPIs\Model\InlineResponse40199|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40399|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse40917|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\BroadcastLocallySignedTransactionR|\CryptoAPIs\Model\InlineResponse400102|\CryptoAPIs\Model\InlineResponse401102|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403102|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse40920|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function broadcastLocallySignedTransactionWithHttpInfo($blockchain, $network, $context = null, $broadcast_locally_signed_transaction_rb = null)
     {
@@ -195,26 +195,26 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40099' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400102' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40099', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400102', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40199' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401102' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40199', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401102', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -231,14 +231,14 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40399' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403102' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40399', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403102', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -255,14 +255,14 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 409:
-                    if ('\CryptoAPIs\Model\InlineResponse40917' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse40920' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40917', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40920', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -342,7 +342,7 @@ class FeaturesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40099',
+                        '\CryptoAPIs\Model\InlineResponse400102',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -350,7 +350,7 @@ class FeaturesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40199',
+                        '\CryptoAPIs\Model\InlineResponse401102',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -366,7 +366,7 @@ class FeaturesApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40399',
+                        '\CryptoAPIs\Model\InlineResponse403102',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -382,7 +382,7 @@ class FeaturesApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40917',
+                        '\CryptoAPIs\Model\InlineResponse40920',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -642,7 +642,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\DecodeRawTransactionHexR|\CryptoAPIs\Model\InlineResponse400102|\CryptoAPIs\Model\InlineResponse401102|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403102|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\DecodeRawTransactionHexR|\CryptoAPIs\Model\InlineResponse400105|\CryptoAPIs\Model\InlineResponse401105|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403105|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function decodeRawTransactionHex($blockchain, $network, $context = null, $decode_raw_transaction_hex_rb = null)
     {
@@ -662,7 +662,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\DecodeRawTransactionHexR|\CryptoAPIs\Model\InlineResponse400102|\CryptoAPIs\Model\InlineResponse401102|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403102|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\DecodeRawTransactionHexR|\CryptoAPIs\Model\InlineResponse400105|\CryptoAPIs\Model\InlineResponse401105|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403105|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function decodeRawTransactionHexWithHttpInfo($blockchain, $network, $context = null, $decode_raw_transaction_hex_rb = null)
     {
@@ -710,26 +710,26 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse400102' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400105' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400102', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400105', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse401102' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401105' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401102', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401105', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -746,14 +746,14 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse403102' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403105' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403102', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403105', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -845,7 +845,7 @@ class FeaturesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse400102',
+                        '\CryptoAPIs\Model\InlineResponse400105',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -853,7 +853,7 @@ class FeaturesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse401102',
+                        '\CryptoAPIs\Model\InlineResponse401105',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -869,7 +869,7 @@ class FeaturesApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse403102',
+                        '\CryptoAPIs\Model\InlineResponse403105',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1137,7 +1137,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\DecodeXAddressR|\CryptoAPIs\Model\InlineResponse400103|\CryptoAPIs\Model\InlineResponse401103|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403103|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\DecodeXAddressR|\CryptoAPIs\Model\InlineResponse400106|\CryptoAPIs\Model\InlineResponse401106|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403106|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function decodeXAddress($blockchain, $network, $x_address, $context = null)
     {
@@ -1157,7 +1157,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\DecodeXAddressR|\CryptoAPIs\Model\InlineResponse400103|\CryptoAPIs\Model\InlineResponse401103|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403103|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\DecodeXAddressR|\CryptoAPIs\Model\InlineResponse400106|\CryptoAPIs\Model\InlineResponse401106|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403106|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function decodeXAddressWithHttpInfo($blockchain, $network, $x_address, $context = null)
     {
@@ -1205,26 +1205,26 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse400103' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400106' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400103', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400106', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse401103' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401106' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401103', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401106', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1241,14 +1241,14 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse403103' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403106' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403103', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403106', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1340,7 +1340,7 @@ class FeaturesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse400103',
+                        '\CryptoAPIs\Model\InlineResponse400106',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1348,7 +1348,7 @@ class FeaturesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse401103',
+                        '\CryptoAPIs\Model\InlineResponse401106',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1364,7 +1364,7 @@ class FeaturesApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse403103',
+                        '\CryptoAPIs\Model\InlineResponse403106',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2208,7 +2208,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\EncodeXAddressR|\CryptoAPIs\Model\InlineResponse400104|\CryptoAPIs\Model\InlineResponse401104|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403104|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\EncodeXAddressR|\CryptoAPIs\Model\InlineResponse400107|\CryptoAPIs\Model\InlineResponse401107|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403107|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function encodeXAddress($address_tag, $blockchain, $classic_address, $network, $context = null)
     {
@@ -2229,7 +2229,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\EncodeXAddressR|\CryptoAPIs\Model\InlineResponse400104|\CryptoAPIs\Model\InlineResponse401104|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403104|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\EncodeXAddressR|\CryptoAPIs\Model\InlineResponse400107|\CryptoAPIs\Model\InlineResponse401107|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403107|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function encodeXAddressWithHttpInfo($address_tag, $blockchain, $classic_address, $network, $context = null)
     {
@@ -2277,26 +2277,26 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse400104' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400107' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400104', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400107', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse401104' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401107' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401104', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401107', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2313,14 +2313,14 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse403104' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403107' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403104', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403107', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2412,7 +2412,7 @@ class FeaturesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse400104',
+                        '\CryptoAPIs\Model\InlineResponse400107',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2420,7 +2420,7 @@ class FeaturesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse401104',
+                        '\CryptoAPIs\Model\InlineResponse401107',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2436,7 +2436,7 @@ class FeaturesApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse403104',
+                        '\CryptoAPIs\Model\InlineResponse403107',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2729,7 +2729,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\EstimateGasLimitR|\CryptoAPIs\Model\InlineResponse400100|\CryptoAPIs\Model\InlineResponse401100|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403100|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\EstimateGasLimitR|\CryptoAPIs\Model\InlineResponse400103|\CryptoAPIs\Model\InlineResponse401103|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403103|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function estimateGasLimit($blockchain, $network, $context = null, $estimate_gas_limit_rb = null)
     {
@@ -2749,7 +2749,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\EstimateGasLimitR|\CryptoAPIs\Model\InlineResponse400100|\CryptoAPIs\Model\InlineResponse401100|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403100|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\EstimateGasLimitR|\CryptoAPIs\Model\InlineResponse400103|\CryptoAPIs\Model\InlineResponse401103|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403103|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function estimateGasLimitWithHttpInfo($blockchain, $network, $context = null, $estimate_gas_limit_rb = null)
     {
@@ -2797,26 +2797,26 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse400100' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400103' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400100', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400103', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse401100' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401103' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401100', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401103', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2833,14 +2833,14 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse403100' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403103' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403100', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403103', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2944,7 +2944,7 @@ class FeaturesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse400100',
+                        '\CryptoAPIs\Model\InlineResponse400103',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2952,7 +2952,7 @@ class FeaturesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse401100',
+                        '\CryptoAPIs\Model\InlineResponse401103',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2968,7 +2968,7 @@ class FeaturesApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse403100',
+                        '\CryptoAPIs\Model\InlineResponse403103',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3244,7 +3244,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\EstimateTokenGasLimitR|\CryptoAPIs\Model\InlineResponse400101|\CryptoAPIs\Model\InlineResponse401101|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403101|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\EstimateTokenGasLimitR|\CryptoAPIs\Model\InlineResponse400104|\CryptoAPIs\Model\InlineResponse401104|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403104|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function estimateTokenGasLimit($blockchain, $network, $context = null, $estimate_token_gas_limit_rb = null)
     {
@@ -3264,7 +3264,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\EstimateTokenGasLimitR|\CryptoAPIs\Model\InlineResponse400101|\CryptoAPIs\Model\InlineResponse401101|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403101|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\EstimateTokenGasLimitR|\CryptoAPIs\Model\InlineResponse400104|\CryptoAPIs\Model\InlineResponse401104|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403104|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function estimateTokenGasLimitWithHttpInfo($blockchain, $network, $context = null, $estimate_token_gas_limit_rb = null)
     {
@@ -3312,26 +3312,26 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse400101' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400104' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400101', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400104', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse401101' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401104' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401101', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401104', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3348,14 +3348,14 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse403101' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403104' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403101', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403104', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3447,7 +3447,7 @@ class FeaturesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse400101',
+                        '\CryptoAPIs\Model\InlineResponse400104',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3455,7 +3455,7 @@ class FeaturesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse401101',
+                        '\CryptoAPIs\Model\InlineResponse401104',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3471,7 +3471,7 @@ class FeaturesApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse403101',
+                        '\CryptoAPIs\Model\InlineResponse403104',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3738,7 +3738,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\GetEIP1559FeeRecommendationsR|\CryptoAPIs\Model\InlineResponse40098|\CryptoAPIs\Model\InlineResponse40198|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40398|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\GetEIP1559FeeRecommendationsR|\CryptoAPIs\Model\InlineResponse400101|\CryptoAPIs\Model\InlineResponse401101|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403101|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function getEIP1559FeeRecommendations($network, $blockchain, $context = null)
     {
@@ -3757,7 +3757,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\GetEIP1559FeeRecommendationsR|\CryptoAPIs\Model\InlineResponse40098|\CryptoAPIs\Model\InlineResponse40198|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40398|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\GetEIP1559FeeRecommendationsR|\CryptoAPIs\Model\InlineResponse400101|\CryptoAPIs\Model\InlineResponse401101|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403101|\CryptoAPIs\Model\InlineResponse4041|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEIP1559FeeRecommendationsWithHttpInfo($network, $blockchain, $context = null)
     {
@@ -3805,26 +3805,26 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40098' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400101' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40098', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400101', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40198' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401101' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40198', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401101', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3841,14 +3841,14 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40398' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403101' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40398', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403101', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3952,7 +3952,7 @@ class FeaturesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40098',
+                        '\CryptoAPIs\Model\InlineResponse400101',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3960,7 +3960,7 @@ class FeaturesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40198',
+                        '\CryptoAPIs\Model\InlineResponse401101',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3976,7 +3976,7 @@ class FeaturesApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40398',
+                        '\CryptoAPIs\Model\InlineResponse403101',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4243,7 +4243,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CryptoAPIs\Model\ValidateAddressR|\CryptoAPIs\Model\InlineResponse40097|\CryptoAPIs\Model\InlineResponse40197|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40397|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
+     * @return \CryptoAPIs\Model\ValidateAddressR|\CryptoAPIs\Model\InlineResponse400100|\CryptoAPIs\Model\InlineResponse401100|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403100|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500
      */
     public function validateAddress($blockchain, $network, $context = null, $validate_address_rb = null)
     {
@@ -4263,7 +4263,7 @@ class FeaturesApi
      *
      * @throws \CryptoAPIs\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CryptoAPIs\Model\ValidateAddressR|\CryptoAPIs\Model\InlineResponse40097|\CryptoAPIs\Model\InlineResponse40197|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse40397|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CryptoAPIs\Model\ValidateAddressR|\CryptoAPIs\Model\InlineResponse400100|\CryptoAPIs\Model\InlineResponse401100|\CryptoAPIs\Model\InlineResponse402|\CryptoAPIs\Model\InlineResponse403100|\CryptoAPIs\Model\InlineResponse409|\CryptoAPIs\Model\InlineResponse415|\CryptoAPIs\Model\InlineResponse422|\CryptoAPIs\Model\InlineResponse429|\CryptoAPIs\Model\InlineResponse500, HTTP status code, HTTP response headers (array of strings)
      */
     public function validateAddressWithHttpInfo($blockchain, $network, $context = null, $validate_address_rb = null)
     {
@@ -4311,26 +4311,26 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\CryptoAPIs\Model\InlineResponse40097' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse400100' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40097', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse400100', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\CryptoAPIs\Model\InlineResponse40197' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse401100' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40197', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse401100', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4347,14 +4347,14 @@ class FeaturesApi
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\CryptoAPIs\Model\InlineResponse40397' === '\SplFileObject') {
+                    if ('\CryptoAPIs\Model\InlineResponse403100' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse40397', []),
+                        ObjectSerializer::deserialize($content, '\CryptoAPIs\Model\InlineResponse403100', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4446,7 +4446,7 @@ class FeaturesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40097',
+                        '\CryptoAPIs\Model\InlineResponse400100',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4454,7 +4454,7 @@ class FeaturesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40197',
+                        '\CryptoAPIs\Model\InlineResponse401100',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4470,7 +4470,7 @@ class FeaturesApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CryptoAPIs\Model\InlineResponse40397',
+                        '\CryptoAPIs\Model\InlineResponse403100',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

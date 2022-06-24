@@ -63,7 +63,7 @@ class InlineResponse400102 implements ModelInterface, ArrayAccess, \JsonSerializ
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\DecodeRawTransactionHexE400'
+        'error' => '\CryptoAPIs\Model\BroadcastLocallySignedTransactionE400'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse400102 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\DecodeRawTransactionHexE400
+     * @return \CryptoAPIs\Model\BroadcastLocallySignedTransactionE400
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse400102 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\DecodeRawTransactionHexE400 $error error
+     * @param \CryptoAPIs\Model\BroadcastLocallySignedTransactionE400 $error error
      *
      * @return self
      */

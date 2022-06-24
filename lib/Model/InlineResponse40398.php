@@ -63,7 +63,7 @@ class InlineResponse40398 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\GetEIP1559FeeRecommendationsE403'
+        'error' => '\CryptoAPIs\Model\GetFeeAddressDetailsE403'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40398 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\GetEIP1559FeeRecommendationsE403
+     * @return \CryptoAPIs\Model\GetFeeAddressDetailsE403
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40398 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\GetEIP1559FeeRecommendationsE403 $error error
+     * @param \CryptoAPIs\Model\GetFeeAddressDetailsE403 $error error
      *
      * @return self
      */

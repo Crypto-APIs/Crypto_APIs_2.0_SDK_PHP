@@ -63,7 +63,7 @@ class InlineResponse403104 implements ModelInterface, ArrayAccess, \JsonSerializ
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\EncodeXAddressE403'
+        'error' => '\CryptoAPIs\Model\EstimateTokenGasLimitE403'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse403104 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\EncodeXAddressE403
+     * @return \CryptoAPIs\Model\EstimateTokenGasLimitE403
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse403104 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\EncodeXAddressE403 $error error
+     * @param \CryptoAPIs\Model\EstimateTokenGasLimitE403 $error error
      *
      * @return self
      */

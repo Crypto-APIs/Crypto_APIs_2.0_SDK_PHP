@@ -63,7 +63,7 @@ class InlineResponse400101 implements ModelInterface, ArrayAccess, \JsonSerializ
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\EstimateTokenGasLimitE400'
+        'error' => '\CryptoAPIs\Model\GetEIP1559FeeRecommendationsE400'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse400101 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\EstimateTokenGasLimitE400
+     * @return \CryptoAPIs\Model\GetEIP1559FeeRecommendationsE400
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse400101 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\EstimateTokenGasLimitE400 $error error
+     * @param \CryptoAPIs\Model\GetEIP1559FeeRecommendationsE400 $error error
      *
      * @return self
      */

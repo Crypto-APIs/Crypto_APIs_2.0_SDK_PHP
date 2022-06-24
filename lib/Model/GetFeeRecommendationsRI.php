@@ -64,7 +64,7 @@ class GetFeeRecommendationsRI implements ModelInterface, ArrayAccess, \JsonSeria
         'fast' => 'string',
         'slow' => 'string',
         'standard' => 'string',
-        'fee_cushion_multiplier' => 'string'
+        'fee_multiplier' => 'string'
     ];
 
     /**
@@ -79,7 +79,7 @@ class GetFeeRecommendationsRI implements ModelInterface, ArrayAccess, \JsonSeria
         'fast' => null,
         'slow' => null,
         'standard' => null,
-        'fee_cushion_multiplier' => null
+        'fee_multiplier' => null
     ];
 
     /**
@@ -113,7 +113,7 @@ class GetFeeRecommendationsRI implements ModelInterface, ArrayAccess, \JsonSeria
         'fast' => 'fast',
         'slow' => 'slow',
         'standard' => 'standard',
-        'fee_cushion_multiplier' => 'feeCushionMultiplier'
+        'fee_multiplier' => 'feeMultiplier'
     ];
 
     /**
@@ -126,7 +126,7 @@ class GetFeeRecommendationsRI implements ModelInterface, ArrayAccess, \JsonSeria
         'fast' => 'setFast',
         'slow' => 'setSlow',
         'standard' => 'setStandard',
-        'fee_cushion_multiplier' => 'setFeeCushionMultiplier'
+        'fee_multiplier' => 'setFeeMultiplier'
     ];
 
     /**
@@ -139,7 +139,7 @@ class GetFeeRecommendationsRI implements ModelInterface, ArrayAccess, \JsonSeria
         'fast' => 'getFast',
         'slow' => 'getSlow',
         'standard' => 'getStandard',
-        'fee_cushion_multiplier' => 'getFeeCushionMultiplier'
+        'fee_multiplier' => 'getFeeMultiplier'
     ];
 
     /**
@@ -203,7 +203,7 @@ class GetFeeRecommendationsRI implements ModelInterface, ArrayAccess, \JsonSeria
         $this->container['fast'] = $data['fast'] ?? null;
         $this->container['slow'] = $data['slow'] ?? null;
         $this->container['standard'] = $data['standard'] ?? null;
-        $this->container['fee_cushion_multiplier'] = $data['fee_cushion_multiplier'] ?? null;
+        $this->container['fee_multiplier'] = $data['fee_multiplier'] ?? null;
     }
 
     /**
@@ -226,9 +226,6 @@ class GetFeeRecommendationsRI implements ModelInterface, ArrayAccess, \JsonSeria
         }
         if ($this->container['standard'] === null) {
             $invalidProperties[] = "'standard' can't be null";
-        }
-        if ($this->container['fee_cushion_multiplier'] === null) {
-            $invalidProperties[] = "'fee_cushion_multiplier' can't be null";
         }
         return $invalidProperties;
     }
@@ -342,25 +339,25 @@ class GetFeeRecommendationsRI implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets fee_cushion_multiplier
+     * Gets fee_multiplier
      *
-     * @return string
+     * @return string|null
      */
-    public function getFeeCushionMultiplier()
+    public function getFeeMultiplier()
     {
-        return $this->container['fee_cushion_multiplier'];
+        return $this->container['fee_multiplier'];
     }
 
     /**
-     * Sets fee_cushion_multiplier
+     * Sets fee_multiplier
      *
-     * @param string $fee_cushion_multiplier Represents the fee cushion multiplier used to multiply the base fee.
+     * @param string|null $fee_multiplier Represents the fee cushion multiplier used to multiply the base fee.
      *
      * @return self
      */
-    public function setFeeCushionMultiplier($fee_cushion_multiplier)
+    public function setFeeMultiplier($fee_multiplier)
     {
-        $this->container['fee_cushion_multiplier'] = $fee_cushion_multiplier;
+        $this->container['fee_multiplier'] = $fee_multiplier;
 
         return $this;
     }

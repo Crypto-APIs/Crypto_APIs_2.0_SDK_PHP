@@ -63,7 +63,7 @@ class InlineResponse401105 implements ModelInterface, ArrayAccess, \JsonSerializ
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\ListSupportedAssetsE401'
+        'error' => '\CryptoAPIs\Model\DecodeRawTransactionHexE401'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse401105 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\ListSupportedAssetsE401
+     * @return \CryptoAPIs\Model\DecodeRawTransactionHexE401
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse401105 implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\ListSupportedAssetsE401 $error error
+     * @param \CryptoAPIs\Model\DecodeRawTransactionHexE401 $error error
      *
      * @return self
      */

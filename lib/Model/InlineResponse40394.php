@@ -63,7 +63,7 @@ class InlineResponse40394 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\AddTokensToExistingFromAddressE403'
+        'error' => '\CryptoAPIs\Model\DeleteAutomaticCoinsForwardingE403'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40394 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\AddTokensToExistingFromAddressE403
+     * @return \CryptoAPIs\Model\DeleteAutomaticCoinsForwardingE403
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40394 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\AddTokensToExistingFromAddressE403 $error error
+     * @param \CryptoAPIs\Model\DeleteAutomaticCoinsForwardingE403 $error error
      *
      * @return self
      */

@@ -63,7 +63,7 @@ class InlineResponse40096 implements ModelInterface, ArrayAccess, \JsonSerializa
         'api_version' => 'string',
         'request_id' => 'string',
         'context' => 'string',
-        'error' => '\CryptoAPIs\Model\DeleteAutomaticTokensForwardingE400'
+        'error' => '\CryptoAPIs\Model\CreateAutomaticTokensForwardingE400'
     ];
 
     /**
@@ -308,7 +308,7 @@ class InlineResponse40096 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets error
      *
-     * @return \CryptoAPIs\Model\DeleteAutomaticTokensForwardingE400
+     * @return \CryptoAPIs\Model\CreateAutomaticTokensForwardingE400
      */
     public function getError()
     {
@@ -318,7 +318,7 @@ class InlineResponse40096 implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets error
      *
-     * @param \CryptoAPIs\Model\DeleteAutomaticTokensForwardingE400 $error error
+     * @param \CryptoAPIs\Model\CreateAutomaticTokensForwardingE400 $error error
      *
      * @return self
      */
