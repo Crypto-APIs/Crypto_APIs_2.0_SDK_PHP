@@ -9,24 +9,15 @@ For more information, please visit [https://cryptoapis.io](https://cryptoapis.io
 ### Requirements
 
 PHP 7.3 and later.
-Should also work with PHP 8.0 but has not been tested.
 
 ### Composer
 
 To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
 
 ```json
-{
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/Crypto-APIs/Crypto_APIs_2.0_SDK_PHP.git"
+    "require": {
+      "cryptoapis/sdk": "^1.7.0"
     }
-  ],
-  "require": {
-    "Crypto-APIs/Crypto_APIs_2.0_SDK_PHP": "*@dev"
-  }
-}
 ```
 
 Then run `composer install`
