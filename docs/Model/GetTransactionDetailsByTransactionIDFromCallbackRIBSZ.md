@@ -18,6 +18,6 @@ Name | Type | Description | Notes
 **version** | **int** | Defines the version of the transaction. |
 **version_group_id** | **string** | Represents the transaction version group ID |
 **vin** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVin[]**](GetTransactionDetailsByTransactionIDRIBSZVin.md) | Object Array representation of transaction inputs |
-**vout** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDRIBSZVout[]**](GetTransactionDetailsByTransactionIDRIBSZVout.md) | Object Array representation of transaction outputs |
+**vout** | [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDFromCallbackRIBSZVout[]**](GetTransactionDetailsByTransactionIDFromCallbackRIBSZVout.md) | Object Array representation of transaction outputs |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

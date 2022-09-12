@@ -1,13 +1,15 @@
 # CryptoAPIs\TransactionsApi
 
-All URIs are relative to https://rest.cryptoapis.io/v2.
+All URIs are relative to https://rest.cryptoapis.io.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createCoinsTransactionFromAddressForWholeAmount()**](TransactionsApi.md#createCoinsTransactionFromAddressForWholeAmount) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/all-transaction-requests | Create Coins Transaction From Address For Whole Amount
 [**createCoinsTransactionRequestFromAddress()**](TransactionsApi.md#createCoinsTransactionRequestFromAddress) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/transaction-requests | Create Coins Transaction Request from Address
 [**createCoinsTransactionRequestFromWallet()**](TransactionsApi.md#createCoinsTransactionRequestFromWallet) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/transaction-requests | Create Coins Transaction Request from Wallet
+[**createFungibleTokenTransactionRequestFromAddressWithoutFeePriority()**](TransactionsApi.md#createFungibleTokenTransactionRequestFromAddressWithoutFeePriority) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{senderAddress}/feeless-token-transaction-requests | Create Fungible Token Transaction Request From Address Without Fee Priority
 [**createFungibleTokensTransactionRequestFromAddress()**](TransactionsApi.md#createFungibleTokensTransactionRequestFromAddress) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{senderAddress}/token-transaction-requests | Create Fungible Tokens Transaction Request from Address
+[**createSingleTransactionRequestFromAddressWithoutFeePriority()**](TransactionsApi.md#createSingleTransactionRequestFromAddressWithoutFeePriority) | **POST** /wallet-as-a-service/wallets/{walletId}/{blockchain}/{network}/addresses/{address}/feeless-transaction-requests | Create Single Transaction Request From Address Without Fee Priority
 
 
 ## `createCoinsTransactionFromAddressForWholeAmount()`
@@ -224,6 +226,78 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createFungibleTokenTransactionRequestFromAddressWithoutFeePriority()`
+
+```php
+createFungibleTokenTransactionRequestFromAddressWithoutFeePriority($blockchain, $network, $sender_address, $wallet_id, $context, $create_fungible_token_transaction_request_from_address_without_fee_priority_rb): \CryptoAPIs\Model\CreateFungibleTokenTransactionRequestFromAddressWithoutFeePriorityR
+```
+
+Create Fungible Token Transaction Request From Address Without Fee Priority
+
+Through this endpoint customers can make a single feeless token transaction on the Tron blockchain protocol. TRX transactions burn certain resources called Bandwidth and Energy. Each account has 1500 bandwidth free for use every 24 hours and more can be obtained by staking TRX. The unit price of Energy is 280 SUN and of bandwidth - 1000 SUN. If the resources are insufficient, TRX will be burned to pay for them.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new CryptoAPIs\Api\TransactionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$blockchain = tron; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+$network = nile; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+$sender_address = TX8VXpdEoNNrKeEuNTfbEXfa9eZivcyUwD; // string | Defines the specific source address for the transaction.
+$wallet_id = 62b9b5c3b97f4b0008092714; // string | Defines the unique ID of the Wallet.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$create_fungible_token_transaction_request_from_address_without_fee_priority_rb = new \CryptoAPIs\Model\CreateFungibleTokenTransactionRequestFromAddressWithoutFeePriorityRB(); // \CryptoAPIs\Model\CreateFungibleTokenTransactionRequestFromAddressWithoutFeePriorityRB
+
+try {
+    $result = $apiInstance->createFungibleTokenTransactionRequestFromAddressWithoutFeePriority($blockchain, $network, $sender_address, $wallet_id, $context, $create_fungible_token_transaction_request_from_address_without_fee_priority_rb);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TransactionsApi->createFungibleTokenTransactionRequestFromAddressWithoutFeePriority: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
+ **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |
+ **sender_address** | **string**| Defines the specific source address for the transaction. |
+ **wallet_id** | **string**| Defines the unique ID of the Wallet. |
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
+ **create_fungible_token_transaction_request_from_address_without_fee_priority_rb** | [**\CryptoAPIs\Model\CreateFungibleTokenTransactionRequestFromAddressWithoutFeePriorityRB**](../Model/CreateFungibleTokenTransactionRequestFromAddressWithoutFeePriorityRB.md)|  | [optional]
+
+### Return type
+
+[**\CryptoAPIs\Model\CreateFungibleTokenTransactionRequestFromAddressWithoutFeePriorityR**](../Model/CreateFungibleTokenTransactionRequestFromAddressWithoutFeePriorityR.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `createFungibleTokensTransactionRequestFromAddress()`
 
 ```php
@@ -282,6 +356,78 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\CryptoAPIs\Model\CreateFungibleTokensTransactionRequestFromAddressR**](../Model/CreateFungibleTokensTransactionRequestFromAddressR.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `createSingleTransactionRequestFromAddressWithoutFeePriority()`
+
+```php
+createSingleTransactionRequestFromAddressWithoutFeePriority($address, $blockchain, $network, $wallet_id, $context, $create_single_transaction_request_from_address_without_fee_priority_rb): \CryptoAPIs\Model\CreateSingleTransactionRequestFromAddressWithoutFeePriorityR
+```
+
+Create Single Transaction Request From Address Without Fee Priority
+
+Through this endpoint users can create a new single transaction request from one address to another. The difference between this endpoint and \"Create Coins Transaction Request from Address\"  is that for Tron blockchain there is no Fee Priority that defines how fast a transaction can be mined.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new CryptoAPIs\Api\TransactionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$address = TX8VXpdEoNNrKeEuNTfbEXfa9eZivcyUwD; // string | Defines the specific source address for the transaction.
+$blockchain = tron; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+$network = nile; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+$wallet_id = 62b9b5c3b97f4b0008092714; // string | Represents the sender's specific and unique Wallet ID of the sender.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$create_single_transaction_request_from_address_without_fee_priority_rb = new \CryptoAPIs\Model\CreateSingleTransactionRequestFromAddressWithoutFeePriorityRB(); // \CryptoAPIs\Model\CreateSingleTransactionRequestFromAddressWithoutFeePriorityRB
+
+try {
+    $result = $apiInstance->createSingleTransactionRequestFromAddressWithoutFeePriority($address, $blockchain, $network, $wallet_id, $context, $create_single_transaction_request_from_address_without_fee_priority_rb);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TransactionsApi->createSingleTransactionRequestFromAddressWithoutFeePriority: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **address** | **string**| Defines the specific source address for the transaction. |
+ **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
+ **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |
+ **wallet_id** | **string**| Represents the sender&#39;s specific and unique Wallet ID of the sender. |
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
+ **create_single_transaction_request_from_address_without_fee_priority_rb** | [**\CryptoAPIs\Model\CreateSingleTransactionRequestFromAddressWithoutFeePriorityRB**](../Model/CreateSingleTransactionRequestFromAddressWithoutFeePriorityRB.md)|  | [optional]
+
+### Return type
+
+[**\CryptoAPIs\Model\CreateSingleTransactionRequestFromAddressWithoutFeePriorityR**](../Model/CreateSingleTransactionRequestFromAddressWithoutFeePriorityR.md)
 
 ### Authorization
 

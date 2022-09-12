@@ -1,10 +1,11 @@
 # CryptoAPIs\FeaturesApi
 
-All URIs are relative to https://rest.cryptoapis.io/v2.
+All URIs are relative to https://rest.cryptoapis.io.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**broadcastLocallySignedTransaction()**](FeaturesApi.md#broadcastLocallySignedTransaction) | **POST** /blockchain-tools/{blockchain}/{network}/transactions/broadcast | Broadcast Locally Signed Transaction
+[**convertBitcoinCashAddress()**](FeaturesApi.md#convertBitcoinCashAddress) | **POST** /blockchain-tools/{blockchain}/{network}/address/convert | Convert Bitcoin Cash Address
 [**decodeRawTransactionHex()**](FeaturesApi.md#decodeRawTransactionHex) | **POST** /blockchain-tools/{blockchain}/{network}/decode-raw-transaction | Decode Raw Transaction Hex
 [**decodeXAddress()**](FeaturesApi.md#decodeXAddress) | **GET** /blockchain-tools/{blockchain}/{network}/decode-x-address/{xAddress} | Decode X-Address
 [**deriveHDWalletXPubYPubZPubChangeOrReceivingAddresses()**](FeaturesApi.md#deriveHDWalletXPubYPubZPubChangeOrReceivingAddresses) | **GET** /blockchain-tools/{blockchain}/{network}/hd/{extendedPublicKey}/addresses/derive-address | Derive HD Wallet (xPub, yPub, zPub) Change Or Receiving Addresses
@@ -69,6 +70,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\CryptoAPIs\Model\BroadcastLocallySignedTransactionR**](../Model/BroadcastLocallySignedTransactionR.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `convertBitcoinCashAddress()`
+
+```php
+convertBitcoinCashAddress($blockchain, $network, $context, $convert_bitcoin_cash_address_rb): \CryptoAPIs\Model\ConvertBitcoinCashAddressR
+```
+
+Convert Bitcoin Cash Address
+
+Through this endpoint customers will be able to convert addresses for the BCH (Bitcoin Cash) protocol from BCH legacy to cash address and vice versa.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new CryptoAPIs\Api\FeaturesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$blockchain = bitcoin-cash; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+$network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+$convert_bitcoin_cash_address_rb = new \CryptoAPIs\Model\ConvertBitcoinCashAddressRB(); // \CryptoAPIs\Model\ConvertBitcoinCashAddressRB
+
+try {
+    $result = $apiInstance->convertBitcoinCashAddress($blockchain, $network, $context, $convert_bitcoin_cash_address_rb);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FeaturesApi->convertBitcoinCashAddress: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
+ **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
+ **convert_bitcoin_cash_address_rb** | [**\CryptoAPIs\Model\ConvertBitcoinCashAddressRB**](../Model/ConvertBitcoinCashAddressRB.md)|  | [optional]
+
+### Return type
+
+[**\CryptoAPIs\Model\ConvertBitcoinCashAddressR**](../Model/ConvertBitcoinCashAddressR.md)
 
 ### Authorization
 

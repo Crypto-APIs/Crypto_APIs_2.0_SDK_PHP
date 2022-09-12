@@ -1,10 +1,11 @@
 # CryptoAPIs\UnifiedEndpointsApi
 
-All URIs are relative to https://rest.cryptoapis.io/v2.
+All URIs are relative to https://rest.cryptoapis.io.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**estimateTransactionSmartFee()**](UnifiedEndpointsApi.md#estimateTransactionSmartFee) | **GET** /blockchain-data/{blockchain}/{network}/estimate-transaction-smart-fee | Estimate Transaction Smart Fee
+[**getAddressBalance()**](UnifiedEndpointsApi.md#getAddressBalance) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/balance | Get Address Balance
 [**getAddressDetails()**](UnifiedEndpointsApi.md#getAddressDetails) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address} | Get Address Details
 [**getBlockDetailsByBlockHash()**](UnifiedEndpointsApi.md#getBlockDetailsByBlockHash) | **GET** /blockchain-data/{blockchain}/{network}/blocks/hash/{blockHash} | Get Block Details By Block Hash
 [**getBlockDetailsByBlockHeight()**](UnifiedEndpointsApi.md#getBlockDetailsByBlockHeight) | **GET** /blockchain-data/{blockchain}/{network}/blocks/height/{height} | Get Block Details By Block Height
@@ -13,7 +14,6 @@ Method | HTTP request | Description
 [**getNextAvailableNonce()**](UnifiedEndpointsApi.md#getNextAvailableNonce) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/next-available-nonce | Get Next Available Nonce
 [**getRawTransactionData()**](UnifiedEndpointsApi.md#getRawTransactionData) | **GET** /blockchain-data/{blockchain}/{network}/transactions/{transactionId}/raw-data | Get Raw Transaction Data
 [**getTransactionDetailsByTransactionID()**](UnifiedEndpointsApi.md#getTransactionDetailsByTransactionID) | **GET** /blockchain-data/{blockchain}/{network}/transactions/{transactionId} | Get Transaction Details By Transaction ID
-[**listAllUnconfirmedTransactions()**](UnifiedEndpointsApi.md#listAllUnconfirmedTransactions) | **GET** /blockchain-data/{blockchain}/{network}/address-transactions-unconfirmed | List All Unconfirmed Transactions
 [**listConfirmedTokensTransfersByAddressAndTimeRange()**](UnifiedEndpointsApi.md#listConfirmedTokensTransfersByAddressAndTimeRange) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/tokens-transfers-by-time-range | List Confirmed Tokens Transfers By Address And Time Range
 [**listConfirmedTransactionsByAddress()**](UnifiedEndpointsApi.md#listConfirmedTransactionsByAddress) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/transactions | List Confirmed Transactions By Address
 [**listConfirmedTransactionsByAddressAndTimeRange()**](UnifiedEndpointsApi.md#listConfirmedTransactionsByAddressAndTimeRange) | **GET** /blockchain-data/{blockchain}/{network}/addresses/{address}/transactions-by-time-range | List Confirmed Transactions By Address And Time Range
@@ -81,6 +81,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\CryptoAPIs\Model\EstimateTransactionSmartFeeR**](../Model/EstimateTransactionSmartFeeR.md)
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getAddressBalance()`
+
+```php
+getAddressBalance($blockchain, $network, $address, $context): \CryptoAPIs\Model\GetAddressBalanceR
+```
+
+Get Address Balance
+
+Through this endpoint the customer can receive the balance of a given address based on confirmed/synced blocks only. In the case where there are any incoming or outgoing unconfirmed transactions for the specific address, they will not be counted or calculated here. Applies only for coins.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
+
+
+$apiInstance = new CryptoAPIs\Api\UnifiedEndpointsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$blockchain = ethereum; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
+$network = goerli; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
+$address = 0x0902a667d6a3f287835e0a4593cae4167384abc6; // string | Represents the public address, which is a compressed and shortened form of a public key.
+$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
+
+try {
+    $result = $apiInstance->getAddressBalance($blockchain, $network, $address, $context);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UnifiedEndpointsApi->getAddressBalance: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
+ **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |
+ **address** | **string**| Represents the public address, which is a compressed and shortened form of a public key. |
+ **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
+
+### Return type
+
+[**\CryptoAPIs\Model\GetAddressBalanceR**](../Model/GetAddressBalanceR.md)
 
 ### Authorization
 
@@ -621,76 +689,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\CryptoAPIs\Model\GetTransactionDetailsByTransactionIDR**](../Model/GetTransactionDetailsByTransactionIDR.md)
-
-### Authorization
-
-[ApiKey](../../README.md#ApiKey)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `listAllUnconfirmedTransactions()`
-
-```php
-listAllUnconfirmedTransactions($blockchain, $network, $context, $limit, $offset): \CryptoAPIs\Model\ListAllUnconfirmedTransactionsR
-```
-
-List All Unconfirmed Transactions
-
-Through this endpoint customers can list all **unconfirmed**  transactions for a specified blockchain and network.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: ApiKey
-$config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKey('x-api-key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = CryptoAPIs\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-api-key', 'Bearer');
-
-
-$apiInstance = new CryptoAPIs\Api\UnifiedEndpointsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$blockchain = bitcoin; // string | Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc.
-$network = testnet; // string | Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \"mainnet\" is the live network with actual data while networks like \"testnet\", \"ropsten\" are test networks.
-$context = yourExampleString; // string | In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. `context` is specified by the user.
-$limit = 50; // int | Defines how many items should be returned in the response per page basis.
-$offset = 0; // int | The starting index of the response items, i.e. where the response should start listing the returned items.
-
-try {
-    $result = $apiInstance->listAllUnconfirmedTransactions($blockchain, $network, $context, $limit, $offset);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling UnifiedEndpointsApi->listAllUnconfirmedTransactions: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **blockchain** | **string**| Represents the specific blockchain protocol name, e.g. Ethereum, Bitcoin, etc. |
- **network** | **string**| Represents the name of the blockchain network used; blockchain networks are usually identical as technology and software, but they differ in data, e.g. - \&quot;mainnet\&quot; is the live network with actual data while networks like \&quot;testnet\&quot;, \&quot;ropsten\&quot; are test networks. |
- **context** | **string**| In batch situations the user can use the context to correlate responses with requests. This property is present regardless of whether the response was successful or returned as an error. &#x60;context&#x60; is specified by the user. | [optional]
- **limit** | **int**| Defines how many items should be returned in the response per page basis. | [optional] [default to 50]
- **offset** | **int**| The starting index of the response items, i.e. where the response should start listing the returned items. | [optional] [default to 0]
-
-### Return type
-
-[**\CryptoAPIs\Model\ListAllUnconfirmedTransactionsR**](../Model/ListAllUnconfirmedTransactionsR.md)
 
 ### Authorization
 

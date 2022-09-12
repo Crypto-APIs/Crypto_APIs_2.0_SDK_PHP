@@ -15,7 +15,9 @@ Name | Type | Description | Notes
 **gas_price** | [**\CryptoAPIs\Model\ListConfirmedTransactionsByAddressRIBSBSCGasPrice**](ListConfirmedTransactionsByAddressRIBSBSCGasPrice.md) |  |
 **gas_used** | **string** | Represents the exact unit of gas that was used for the transaction. |
 **input_data** | **string** | Represents additional information that is required for the transaction. |
+**internal_transactions_count** | **int** | Represents the total internal transactions count. |
 **nonce** | **int** | Represents the sequential running number for an address, starting from 0 for the first transaction. E.g., if the nonce of a transaction is 10, it would be the 11th transaction sent from the sender&#39;s address. |
+**token_transfers_count** | **int** | Represents the total token transfers count. |
 **transaction_status** | **string** | String representation of the transaction status |
 **binding_sig** | **string** | It is used to enforce balance of Spend and Output transfers, in order to prevent their replay across transactions. |
 **expiry_height** | **int** | Represents a block height after which the transaction will expire. |
