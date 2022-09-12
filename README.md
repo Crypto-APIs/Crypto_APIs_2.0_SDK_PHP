@@ -15,9 +15,11 @@ PHP 7.3 and later.
 To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
 
 ```json
-    "require": {
-      "cryptoapis/sdk": "^1.7.0"
-    }
+{
+  "require": {
+    "cryptoapis/sdk": "^1.7.0"
+  }
+}
 ```
 
 Then run `composer install`
