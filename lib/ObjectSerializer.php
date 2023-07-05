@@ -332,7 +332,11 @@ class ObjectSerializer
 
         /** @psalm-suppress ParadoxicalCondition */
         if (in_array($class, ['DateTime', 'array', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
-            settype($data, $class);
+            if($data instanceof \stdClass) {
+                settype($data, 'array');
+            } else {
+                settype($data, $class);
+            }
             return $data;
         }
 
